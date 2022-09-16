@@ -1,0 +1,6 @@
+.git
+node_modules
+types
+package-lock.json
+package.json
+desktop.ini

@@ -1,0 +1,17 @@
+{
+  "compileOnSave": true,
+  "exclude": ["dist/**/*", "gulpfile/**/*"],
+  "include": ["src/**/*", "typings/**/*.d.ts", "dist/test.js"],
+  "compilerOptions": {
+    "baseUrl": "src",
+    "rootDir": "src",
+    "target": "es5",
+    "module": "amd",
+    "sourceMap": true,
+    "removeComments": true,
+    "noEmitOnError": true,
+    "declaration": true,
+    "lib": ["es5", "dom", "scripthost", "es2015"],
+    "strictNullChecks": false
+  }
+}
