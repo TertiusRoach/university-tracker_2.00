@@ -1,0 +1,1 @@
+define(["require","exports"],function(e,i){"use strict";Object.defineProperty(i,"__esModule",{value:!0}),i.Uitsendings=void 0,(i.Uitsendings||(i.Uitsendings={})).LoadDesign=function(e){console.log("--uitsendings.js Loaded")}});

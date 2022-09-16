@@ -1,0 +1,1 @@
+define(["require","exports"],function(e,i){"use strict";Object.defineProperty(i,"__esModule",{value:!0}),i.Administrasie=void 0,(i.Administrasie||(i.Administrasie={})).LoadDesign=function(e){console.log("--administrasie.js Loaded")}});

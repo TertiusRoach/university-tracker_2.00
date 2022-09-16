@@ -1,0 +1,1 @@
+{"version":3,"sources":["code/utilities/GetColor.ts"],"names":[],"mappings":";;;;IAAA,IAAiB,QAAQ,CAKtB;IALH,WAAiB,QAAQ;QACrB;YACE,gBAAY,IAAY;YACxB,CAAC;YACH,aAAC;QAAD,CAHA,AAGC,IAAA;QAHY,eAAM,SAGlB,CAAA;IACH,CAAC,EALc,QAAQ,GAAR,gBAAQ,KAAR,gBAAQ,QAKtB","file":"GetColor.js","sourceRoot":"../../../src"}

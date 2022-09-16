@@ -1,0 +1,1 @@
+{"version":3,"sources":["code/events/index-footer.ts"],"names":[],"mappings":";;;;IAAA,IAAiB,WAAW,CAQ3B;IARD,WAAiB,WAAW;QAC1B,SAAgB,SAAS,CAAC,QAAmC;YAC3D,QAAQ,QAAQ,EAAE;gBAChB,KAAK,gBAAgB;oBACnB,MAAM;aACT;QAEH,CAAC;QANe,qBAAS,YAMxB,CAAA;IACH,CAAC,EARgB,WAAW,GAAX,mBAAW,KAAX,mBAAW,QAQ3B","file":"index-footer.js","sourceRoot":"../../../src"}

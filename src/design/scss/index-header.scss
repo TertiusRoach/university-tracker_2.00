@@ -1,0 +1,76 @@
+@import 'colors.scss';
+/*--|►| #index-header <header> |◄|--*/
+#index-header {
+  z-index: 2; // Middle
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  grid-template-rows: 40px;
+  filter: drop-shadow(0 0 0.5em $secondary-dark);
+  grid-template-columns: 145px repeat(3, 1fr) 80px;
+
+  .background {
+    z-index: 0;
+    grid-row: 1/2;
+    grid-column: 1/6;
+
+    background-color: $primary-dark;
+  }
+}
+/*--▼ .default-header ▼--*/
+.default-header {
+  div[id*='sharepoint'] {
+    z-index: 1;
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+      background: none;
+      outline: none;
+      border: none;
+      a {
+        text-decoration: none;
+        display: flex;
+        h4 {
+          margin: 4px 0 0 8px;
+          @media only screen and (max-width: 563px) {
+            display: none;
+          }
+        }
+        color: white;
+      }
+      a:hover {
+        svg {
+          color: $secondary-dark;
+        }
+
+        h4 {
+          color: $secondary-medium;
+        }
+      }
+    }
+    /*
+    .active {
+      a {
+        svg{
+          color: $secondary-dark;
+        }
+        
+        h4 {
+          color: $secondary-medium;
+        }
+      }
+    }
+    */
+  }
+  #akademici-sharepoint {
+    grid-column: 2/3;
+  }
+  #administrasie-sharepoint {
+    grid-column: 3/4;
+  }
+  #operasioneel-sharepoint {
+    grid-column: 4/5;
+  }
+}

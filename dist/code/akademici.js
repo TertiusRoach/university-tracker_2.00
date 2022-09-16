@@ -1,0 +1,1 @@
+define(["require","exports"],function(e,i){"use strict";Object.defineProperty(i,"__esModule",{value:!0}),i.Akademici=void 0,(i.Akademici||(i.Akademici={})).LoadDesign=function(e){console.log("--akademici.js Loaded")}});

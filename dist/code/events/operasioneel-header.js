@@ -1,0 +1,1 @@
+define(["require","exports"],function(e,r){"use strict";Object.defineProperty(r,"__esModule",{value:!0}),r.OperasioneelHeader=void 0,(r.OperasioneelHeader||(r.OperasioneelHeader={})).eventsFor=function(e){e}});

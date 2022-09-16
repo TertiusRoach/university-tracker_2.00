@@ -1,0 +1,1 @@
+define(["require","exports"],function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.UitsendingsData=void 0,(t.UitsendingsData||(t.UitsendingsData={})).eventsFor=function(e){e}});

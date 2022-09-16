@@ -1,0 +1,1 @@
+define(["require","exports"],function(e,o){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),o.OperasioneelBody=void 0,(o.OperasioneelBody||(o.OperasioneelBody={})).eventsFor=function(e){e}});

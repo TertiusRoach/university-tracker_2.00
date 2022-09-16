@@ -1,0 +1,1 @@
+{"version":3,"sources":["code/events/akademici-sidebar.ts"],"names":[],"mappings":";;;;IAAA,IAAiB,gBAAgB,CAQhC;IARD,WAAiB,gBAAgB;QAC/B,SAAgB,SAAS,CAAC,QAAoC;YAC5D,QAAQ,QAAQ,EAAE;gBAChB,KAAK,iBAAiB;oBACpB,MAAM;aACT;QAEH,CAAC;QANe,0BAAS,YAMxB,CAAA;IACH,CAAC,EARgB,gBAAgB,GAAhB,wBAAgB,KAAhB,wBAAgB,QAQhC","file":"akademici-sidebar.js","sourceRoot":"../../../src"}

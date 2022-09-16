@@ -1,0 +1,1 @@
+{"version":3,"sources":["code/events/uitsendings-main.ts"],"names":[],"mappings":";;;;IAAA,IAAiB,eAAe,CAQ/B;IARD,WAAiB,eAAe;QAC9B,SAAgB,SAAS,CAAC,QAAiC;YACzD,QAAQ,QAAQ,EAAE;gBAChB,KAAK,cAAc;oBACjB,MAAM;aACT;QAEH,CAAC;QANe,yBAAS,YAMxB,CAAA;IACH,CAAC,EARgB,eAAe,GAAf,uBAAe,KAAf,uBAAe,QAQ/B","file":"uitsendings-main.js","sourceRoot":"../../../src"}

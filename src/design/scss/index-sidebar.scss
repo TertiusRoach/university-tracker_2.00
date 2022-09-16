@@ -1,0 +1,94 @@
+@import 'colors.scss';
+/*--|►| #index-sidebar <aside> |◄|--*/
+#index-sidebar {
+  z-index: 3; // Top
+  grid-row: 2/3;
+  grid-column: 1/3;
+
+  grid-template-rows: repeat(12, 1fr);
+}
+
+/*--▼ .default-sidebar ▼--*/
+.default-sidebar {
+  div[id*='button'] {
+    z-index: 1;
+    grid-column: 1/3;
+    grid-template-columns: 20px 1fr;
+    button {
+      grid-column: 1/3;
+      background: none;
+      outline: none;
+      border: none;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      a {
+        text-decoration: none;
+        h1 {
+          margin-left: 20px;
+        }
+        color: $secondary-dark;
+      }
+      a:hover {
+        color: $secondary-medium;
+      }
+    }
+    .active {
+      a {
+        color: white;
+      }
+    }
+  }
+  #january-button {
+    grid-row: 1/2;
+  }
+  #february-button {
+    grid-row: 2/3;
+  }
+  #march-button {
+    grid-row: 3/4;
+  }
+  #april-button {
+    grid-row: 4/5;
+  }
+  #may-button {
+    grid-row: 5/6;
+  }
+  #june-button {
+    grid-row: 6/7;
+  }
+  #july-button {
+    grid-row: 7/8;
+  }
+  #august-button {
+    grid-row: 8/9;
+  }
+  #september-button {
+    grid-row: 9/10;
+  }
+  #october-button {
+    grid-row: 10/11;
+  }
+  #november-button {
+    grid-row: 11/12;
+  }
+  #december-button {
+    grid-row: 12/13;
+  }
+  .background {
+    z-index: 0;
+    grid-row: 1/14;
+    grid-column: 1/3;
+
+    background-color: $primary-dark;
+  }
+}
+/*
+  @media only screen and (max-width: 1920px) {
+  }
+  @media only screen and (max-width: 1366px) {
+  }
+  @media only screen and (max-width: 1024px) {
+  }
+  */

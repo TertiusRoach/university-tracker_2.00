@@ -1,0 +1,1 @@
+define(["require","exports"],function(e,d){"use strict";Object.defineProperty(d,"__esModule",{value:!0}),d.IndexSidebar=void 0,(d.IndexSidebar||(d.IndexSidebar={})).eventsFor=function(e){e}});

@@ -1,0 +1,1 @@
+define(["require","exports"],function(e,i){"use strict";Object.defineProperty(i,"__esModule",{value:!0}),i.AkademiciData=void 0,(i.AkademiciData||(i.AkademiciData={})).eventsFor=function(e){e}});

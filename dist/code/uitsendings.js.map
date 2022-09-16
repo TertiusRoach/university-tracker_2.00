@@ -1,0 +1,1 @@
+{"version":3,"sources":["code/uitsendings.ts"],"names":[],"mappings":";;;;IAAA,IAAiB,WAAW,CAO3B;IAPD,WAAiB,WAAW;QAC1B;YACE,oBAAY,IAAY;gBACtB,OAAO,CAAC,GAAG,CAAC,yBAAyB,CAAC,CAAC;YACzC,CAAC;YACH,iBAAC;QAAD,CAJA,AAIC,IAAA;QAJY,sBAAU,aAItB,CAAA;IAEH,CAAC,EAPgB,WAAW,GAAX,mBAAW,KAAX,mBAAW,QAO3B","file":"uitsendings.js","sourceRoot":"../../src"}

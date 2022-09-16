@@ -1,0 +1,1 @@
+{"version":3,"sources":["code/events/index-overlay.ts"],"names":[],"mappings":";;;;IAAA,IAAiB,YAAY,CAQ5B;IARD,WAAiB,YAAY;QAC3B,SAAgB,SAAS,CAAC,QAAoC;YAC5D,QAAQ,QAAQ,EAAE;gBAChB,KAAK,iBAAiB;oBACpB,MAAM;aACT;QAEH,CAAC;QANe,sBAAS,YAMxB,CAAA;IACH,CAAC,EARgB,YAAY,GAAZ,oBAAY,KAAZ,oBAAY,QAQ5B","file":"index-overlay.js","sourceRoot":"../../../src"}

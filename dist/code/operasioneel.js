@@ -1,0 +1,1 @@
+define(["require","exports"],function(e,o){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),o.Operasioneel=void 0,(o.Operasioneel||(o.Operasioneel={})).LoadDesign=function(e){console.log("--operasioneel.js Loaded")}});
