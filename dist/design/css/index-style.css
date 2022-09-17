@@ -1,26 +1,26 @@
 @charset "UTF-8";*{font-family:"Baloo Bhai 2",arial;padding:0;margin:0}
 #index-body{display:grid;height:100vh;overflow:hidden;grid-template-columns:80px 65px 1fr 80px;grid-template-rows:40px 1fr 4em}
-.default-body{background:#cfd2d8}.default-body #load-foreground{z-index:20;grid-row:1/4;grid-column:1/5;background:0;opacity:0;display:grid;transition:60s;transform:opacity(0.8);grid-template-rows:40px 1fr 250px 1fr 4em;grid-template-columns:80px 1fr 250px 1fr 80px;background:linear-gradient(to top right,#6e7889,#0e1e3b)}
-.default-body #load-foreground .container{grid-row:3/4;grid-column:3/4;filter:drop-shadow(0 0 4em #cfd2d8)}
+.default-body{background:#adaaaf}.default-body #load-foreground{z-index:20;grid-row:1/4;grid-column:1/5;background:0;opacity:0;display:grid;transition:60s;transform:opacity(0.8);grid-template-rows:40px 1fr 250px 1fr 4em;grid-template-columns:80px 1fr 250px 1fr 80px;background:linear-gradient(to top right,#827d85,#2e0e3b)}
+.default-body #load-foreground .container{grid-row:3/4;grid-column:3/4;filter:drop-shadow(0 0 4em #adaaaf)}
 .default-body #load-foreground .container img{width:275px;height:275px;transition:12s;transform:opacity(0);transform:scale(0.95)}
 .default-body #load-midground{z-index:4;grid-row:1/4;grid-column:1/5;display:grid;grid-template-rows:40px 1fr 4em;grid-template-columns:80px 1fr 80px;transition:10s;transform:opacity(0)}
-#index-header{z-index:2;width:100%;height:40px;position:fixed;grid-template-rows:40px;filter:drop-shadow(0 0 .5em #935e28);grid-template-columns:145px repeat(3,1fr) 80px}
-#index-header .background{z-index:0;grid-row:1/2;grid-column:1/6;background-color:#0e1e3b}
+#index-header{z-index:2;width:100%;height:40px;position:fixed;grid-template-rows:40px;filter:drop-shadow(0 0 .5em #631b19);grid-template-columns:145px repeat(3,1fr) 80px}
+#index-header .background{z-index:0;grid-row:1/2;grid-column:1/6;background-color:#2e0e3b}
 .default-header div[id*=sharepoint]{z-index:1;grid-row:1/2;display:flex;align-items:center;justify-content:center}
 .default-header div[id*=sharepoint] button{background:0;outline:0;border:0}.default-header div[id*=sharepoint] button a{text-decoration:none;display:flex;color:white}
 .default-header div[id*=sharepoint] button a h4{margin:4px 0 0 8px}@media only screen and (max-width:563px){.default-header div[id*=sharepoint] button a h4{display:none}
-}.default-header div[id*=sharepoint] button a:hover svg{color:#935e28}.default-header div[id*=sharepoint] button a:hover h4{color:#be9e7e}
+}.default-header div[id*=sharepoint] button a:hover svg{color:#631b19}.default-header div[id*=sharepoint] button a:hover h4{color:#957e7e}
 .default-header #akademici-sharepoint{grid-column:2/3}.default-header #administrasie-sharepoint{grid-column:3/4}
 .default-header #operasioneel-sharepoint{grid-column:4/5}#index-main{z-index:0;grid-row:1/4;grid-column:1/6;grid-template-columns:145px 1fr 80px;grid-template-rows:40px 1fr 4em}
 #index-main section[id*=overlay]{display:inherit;grid-column:2/4;grid-row:2/3;grid-template-columns:repeat(5,234px) 1fr;grid-template-rows:44px 257px}
-#index-main section[id*=overlay] header{z-index:1;display:flex;grid-row:1/2;cursor:default;grid-column:1/7;justify-content:center;background-color:#0e1e3b;filter:drop-shadow(0 0 .5em #0e1e3b)}
-#index-main section[id*=overlay] header h1{color:#cfd2d8}#index-main section[id*=overlay] div[id*=button]{grid-row:2/3;display:flex;margin-top:21px;align-items:center;justify-content:center}
+#index-main section[id*=overlay] header{z-index:1;display:flex;grid-row:1/2;cursor:default;grid-column:1/7;justify-content:center;background-color:#2e0e3b;filter:drop-shadow(0 0 .5em #2e0e3b)}
+#index-main section[id*=overlay] header h1{color:#adaaaf}#index-main section[id*=overlay] div[id*=button]{grid-row:2/3;display:flex;margin-top:21px;align-items:center;justify-content:center}
 #index-main section[id*=overlay] div[id*=button] button{background:0;outline:0;border:0;height:100%;width:100%;opacity:0;z-index:0}
 #index-main section[id*=overlay] div[id*=button] button:hover{opacity:1}#index-main div[id*=sheet]{grid-row:2/3;grid-column:2/4;display:inherit;overflow:hidden;grid-template-columns:repeat(5,234px) 1fr;grid-template-rows:42px 259px 1fr}
 #index-main div[id*=sheet] header{grid-column:1/6;grid-row:1/3;z-index:-1}#index-main div[id*=sheet] header iframe{height:359px}
 #index-main div[id*=sheet] footer{grid-column:1/7;grid-row:3/4;z-index:0}#index-main div[id*=sheet] header,#index-main div[id*=sheet] footer{overflow:hidden}
 #index-main div[id*=sheet] header iframe,#index-main div[id*=sheet] footer iframe{width:1188px;margin:-30px 0 0 -3px}
-.default-main #buttons-overlay .foreground{z-index:1;grid-row:2/3;grid-column:6/7;background-color:#0e1e3b}
+.default-main #buttons-overlay .foreground{z-index:1;grid-row:2/3;grid-column:6/7;background-color:#2e0e3b}
 .default-main #buttons-overlay #green-button{grid-column:1/2}.default-main #buttons-overlay #green-button button{background-color:#b6d7a8}
 .default-main #buttons-overlay #green-button button a{color:#274e13}.default-main #buttons-overlay #green-button button a:hover{filter:drop-shadow(0 0 .75rem #0f0)}
 .default-main #buttons-overlay #pink-button{grid-column:2/3}.default-main #buttons-overlay #pink-button button{background-color:#d5a6bd}
@@ -31,8 +31,8 @@
 .default-main #buttons-overlay #orange-button button a{color:#783f04}.default-main #buttons-overlay #orange-button button a:hover{filter:drop-shadow(0 0 .75rem #f90)}
 .default-main #buttons-overlay #blue-button{grid-column:5/6}.default-main #buttons-overlay #blue-button button{background-color:#9fc5e8}
 .default-main #buttons-overlay #blue-button button a{color:#333395}.default-main #buttons-overlay #blue-button button a:hover{filter:drop-shadow(0 0 .75rem #3c90ff)}
-.default-main #buttons-overlay #statistics-button{grid-column:1/6;margin-top:0}.default-main #buttons-overlay #statistics-button button{background-color:#0e1e3b}
-.default-main #buttons-overlay #statistics-button button a{color:#cfd2d8}.default-main #buttons-overlay #statistics-button button a:hover{filter:drop-shadow(0 0 2em #fcd5aa)}
+.default-main #buttons-overlay #statistics-button{grid-column:1/6;margin-top:0}.default-main #buttons-overlay #statistics-button button{background-color:#2e0e3b}
+.default-main #buttons-overlay #statistics-button button a{color:#adaaaf}.default-main #buttons-overlay #statistics-button button a:hover{filter:drop-shadow(0 0 2em #c8c0c0)}
 .default-main div[class*=blur]{filter:blur(4px)}@media only screen and (max-height:2160px){main[class*=main] #buttons-overlay .foreground{margin:-44px 0 -1755px 0}
 }@media only screen and (max-height:2159px){main[class*=main] #buttons-overlay .foreground{margin:-44px 0 -1754px 0}
 }@media only screen and (max-height:2158px){main[class*=main] #buttons-overlay .foreground{margin:-44px 0 -1753px 0}
@@ -3499,23 +3499,23 @@ main[class*=main] #buttons-overlay .foreground{margin:-44px 0 -210px 0}}@media o
 }#index-sidebar{z-index:3;grid-row:2/3;grid-column:1/3;grid-template-rows:repeat(12,1fr)}
 .default-sidebar div[id*=button]{z-index:1;grid-column:1/3;grid-template-columns:20px 1fr}
 .default-sidebar div[id*=button] button{grid-column:1/3;background:0;outline:0;border:0;height:100%;display:flex;align-items:center;justify-content:flex-start}
-.default-sidebar div[id*=button] button a{text-decoration:none;color:#935e28}.default-sidebar div[id*=button] button a h1{margin-left:20px}
-.default-sidebar div[id*=button] button a:hover{color:#be9e7e}.default-sidebar div[id*=button] .active a{color:white}
+.default-sidebar div[id*=button] button a{text-decoration:none;color:#631b19}.default-sidebar div[id*=button] button a h1{margin-left:20px}
+.default-sidebar div[id*=button] button a:hover{color:#957e7e}.default-sidebar div[id*=button] .active a{color:white}
 .default-sidebar #january-button{grid-row:1/2}.default-sidebar #february-button{grid-row:2/3}
 .default-sidebar #march-button{grid-row:3/4}.default-sidebar #april-button{grid-row:4/5}
 .default-sidebar #may-button{grid-row:5/6}.default-sidebar #june-button{grid-row:6/7}
 .default-sidebar #july-button{grid-row:7/8}.default-sidebar #august-button{grid-row:8/9}
 .default-sidebar #september-button{grid-row:9/10}.default-sidebar #october-button{grid-row:10/11}
 .default-sidebar #november-button{grid-row:11/12}.default-sidebar #december-button{grid-row:12/13}
-.default-sidebar .background{z-index:0;grid-row:1/14;grid-column:1/3;background-color:#0e1e3b}
-#index-footer{grid-column:1/6;grid-row:3/4;z-index:2}.default-footer .navigation{padding:0 80px;background:#0e1e3b}
+.default-sidebar .background{z-index:0;grid-row:1/14;grid-column:1/3;background-color:#2e0e3b}
+#index-footer{grid-column:1/6;grid-row:3/4;z-index:2}.default-footer .navigation{padding:0 80px;background:#2e0e3b}
 .default-footer .navigation ul{display:flex;justify-content:space-around}.default-footer .navigation ul li{z-index:10;width:70px;height:70px;list-style:none;position:relative}
 .default-footer .navigation ul li a{width:100%;display:flex;position:relative;text-align:center;align-items:center;flex-direction:column;justify-content:center}
-.default-footer .navigation ul li a .icon{display:block;margin-top:4px;transition:.5s;font-size:1.5em;line-height:75px;position:relative;text-align:center;color:#cfd2d8}
-.default-footer .navigation ul li a .icon:hover{color:#935e28;filter:drop-shadow(0 0 2em #fcd5aa)}
-.default-footer .navigation ul li a .text{color:#0e1e3b;transform:translateY(20px)}
-.default-footer .navigation ul li.active a .icon{color:#935e28;transform:translateY(-32px);filter:drop-shadow(0 0 .75rem #0e1e3b)}
-.default-footer .navigation ul li.active a .text{opacity:1;transition:1s;font-weight:800;overflow:hidden;font-size:.75em;position:absolute;letter-spacing:.05em;color:#be9e7e;transform:translateY(10px);filter:drop-shadow(0 0 .75rem black)}
+.default-footer .navigation ul li a .icon{display:block;margin-top:4px;transition:.5s;font-size:1.5em;line-height:75px;position:relative;text-align:center;color:#adaaaf}
+.default-footer .navigation ul li a .icon:hover{color:#631b19;filter:drop-shadow(0 0 2em #c8c0c0)}
+.default-footer .navigation ul li a .text{color:#2e0e3b;transform:translateY(20px)}
+.default-footer .navigation ul li.active a .icon{color:#631b19;transform:translateY(-32px);filter:drop-shadow(0 0 .75rem #2e0e3b)}
+.default-footer .navigation ul li.active a .text{opacity:1;transition:1s;font-weight:800;overflow:hidden;font-size:.75em;position:absolute;letter-spacing:.05em;color:#957e7e;transform:translateY(10px);filter:drop-shadow(0 0 .75rem black)}
 #index-overlay{z-index:1;grid-row:2/3;grid-column:3/5}#index-overlay nav a div,#index-overlay nav ul li{height:100%;display:flex;align-items:center;justify-content:center;clip-path:inset(0 0 0 0);transition:clip-path .25s}
 #index-overlay nav a div button,#index-overlay nav ul li button{text-decoration:none;background:0;outline:0;border:0}
 #index-overlay nav a div button h1,#index-overlay nav a div button svg,#index-overlay nav ul li button h1,#index-overlay nav ul li button svg{cursor:pointer;font-size:2rem}
@@ -3544,11 +3544,11 @@ main[class*=main] #buttons-overlay .foreground{margin:-44px 0 -210px 0}}@media o
 #index-overlay nav a[id*=cloud],#index-overlay nav ul[class*=cloud]{grid-row:4/5}
 .default-overlay #january{display:grid;grid-row:1/6;grid-column:1/7}.header-overlay{grid-template-rows:repeat(12,1fr);grid-template-columns:repeat(3,1fr) 80px !important}
 .header-overlay section{z-index:1;display:flex;align-items:center;flex-direction:column;justify-content:flex-start;height:48px}
-.header-overlay section div{width:260px;display:flex;background:#0e1e3b;justify-content:left !important}
+.header-overlay section div{width:260px;display:flex;background:#2e0e3b;justify-content:left !important}
 .header-overlay section div button{margin-left:20px}.header-overlay section div button a{display:flex;align-items:center}
-.header-overlay section div button a svg,.header-overlay section div button a h1{color:#cfd2d8}
-.header-overlay section div button a h1{padding-left:1rem}.header-overlay section div button a:hover svg{color:#935e28}
-.header-overlay section div button a:hover h1{color:#be9e7e}.header-overlay section div:first-child button{margin-top:8px}
+.header-overlay section div button a svg,.header-overlay section div button a h1{color:#adaaaf}
+.header-overlay section div button a h1{padding-left:1rem}.header-overlay section div button a:hover svg{color:#631b19}
+.header-overlay section div button a:hover h1{color:#957e7e}.header-overlay section div:first-child button{margin-top:8px}
 .header-overlay section div:last-child{border-radius:0 0 8px 8px}.header-overlay section div:last-child button{margin-bottom:8px}
 .header-overlay .akademici{grid-column:1/2;grid-row:1/13}.header-overlay .administrasie{grid-column:2/3;grid-row:1/13}
 .header-overlay .operasioneel{grid-column:3/4;grid-row:1/13}@media only screen and (max-height:2160px){section[class*=overlay]{grid-template-columns:repeat(6,171.3333333333px) 1fr;grid-template-rows:repeat(12,171.3333333333px)}
