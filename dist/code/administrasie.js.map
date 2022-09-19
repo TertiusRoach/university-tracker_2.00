@@ -1,1 +1,0 @@
-{"version":3,"sources":["code/administrasie.ts"],"names":[],"mappings":";;;;IAAA,IAAiB,aAAa,CAO7B;IAPD,WAAiB,aAAa;QAC5B;YACE,oBAAY,IAAY;gBACtB,OAAO,CAAC,GAAG,CAAC,2BAA2B,CAAC,CAAC;YAE3C,CAAC;YACH,iBAAC;QAAD,CALA,AAKC,IAAA;QALY,wBAAU,aAKtB,CAAA;IACH,CAAC,EAPgB,aAAa,GAAb,qBAAa,KAAb,qBAAa,QAO7B","file":"administrasie.js","sourceRoot":"../../src"}

@@ -1,1 +1,0 @@
-{"version":3,"sources":["code/events/akademici-header.ts"],"names":[],"mappings":";;;;IAAA,IAAiB,eAAe,CAQ/B;IARD,WAAiB,eAAe;QAC9B,SAAgB,SAAS,CAAC,QAAmC;YAC3D,QAAQ,QAAQ,EAAE;gBAChB,KAAK,gBAAgB;oBACnB,MAAM;aACT;QAEH,CAAC;QANe,yBAAS,YAMxB,CAAA;IACH,CAAC,EARgB,eAAe,GAAf,uBAAe,KAAf,uBAAe,QAQ/B","file":"akademici-header.js","sourceRoot":"../../../src"}

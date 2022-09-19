@@ -1,1 +1,0 @@
-{"version":3,"sources":["code/operasioneel.ts"],"names":[],"mappings":";;;;IAAA,IAAiB,YAAY,CAO5B;IAPD,WAAiB,YAAY;QAC3B;YACE,oBAAY,IAAY;gBACtB,OAAO,CAAC,GAAG,CAAC,0BAA0B,CAAC,CAAC;YAC1C,CAAC;YACH,iBAAC;QAAD,CAJA,AAIC,IAAA;QAJY,uBAAU,aAItB,CAAA;IAEH,CAAC,EAPgB,YAAY,GAAZ,oBAAY,KAAZ,oBAAY,QAO5B","file":"operasioneel.js","sourceRoot":"../../src"}

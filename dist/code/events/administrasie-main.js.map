@@ -1,1 +1,0 @@
-{"version":3,"sources":["code/events/administrasie-main.ts"],"names":[],"mappings":";;;;IAAA,IAAiB,iBAAiB,CAQjC;IARD,WAAiB,iBAAiB;QAChC,SAAgB,SAAS,CAAC,QAAiC;YACzD,QAAQ,QAAQ,EAAE;gBAChB,KAAK,cAAc;oBACjB,MAAM;aACT;QAEH,CAAC;QANe,2BAAS,YAMxB,CAAA;IACH,CAAC,EARgB,iBAAiB,GAAjB,yBAAiB,KAAjB,yBAAiB,QAQjC","file":"administrasie-main.js","sourceRoot":"../../../src"}

@@ -1,1 +1,0 @@
-{"version":3,"sources":["code/events/akademici-main.ts"],"names":[],"mappings":";;;;IAAA,IAAiB,aAAa,CAQ7B;IARD,WAAiB,aAAa;QAC5B,SAAgB,SAAS,CAAC,QAAiC;YACzD,QAAQ,QAAQ,EAAE;gBAChB,KAAK,cAAc;oBACjB,MAAM;aACT;QAEH,CAAC;QANe,uBAAS,YAMxB,CAAA;IACH,CAAC,EARgB,aAAa,GAAb,qBAAa,KAAb,qBAAa,QAQ7B","file":"akademici-main.js","sourceRoot":"../../../src"}

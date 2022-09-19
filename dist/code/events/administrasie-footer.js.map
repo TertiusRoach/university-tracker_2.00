@@ -1,1 +1,0 @@
-{"version":3,"sources":["code/events/administrasie-footer.ts"],"names":[],"mappings":";;;;IAAA,IAAiB,mBAAmB,CAQnC;IARD,WAAiB,mBAAmB;QAClC,SAAgB,SAAS,CAAC,QAAmC;YAC3D,QAAQ,QAAQ,EAAE;gBAChB,KAAK,gBAAgB;oBACnB,MAAM;aACT;QAEH,CAAC;QANe,6BAAS,YAMxB,CAAA;IACH,CAAC,EARgB,mBAAmB,GAAnB,2BAAmB,KAAnB,2BAAmB,QAQnC","file":"administrasie-footer.js","sourceRoot":"../../../src"}

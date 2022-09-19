@@ -1,1 +1,0 @@
-{"version":3,"sources":["code/events/uitsendings-sidebar.ts"],"names":[],"mappings":";;;;IAAA,IAAiB,kBAAkB,CAQlC;IARD,WAAiB,kBAAkB;QACjC,SAAgB,SAAS,CAAC,QAAoC;YAC5D,QAAQ,QAAQ,EAAE;gBAChB,KAAK,iBAAiB;oBACpB,MAAM;aACT;QAEH,CAAC;QANe,4BAAS,YAMxB,CAAA;IACH,CAAC,EARgB,kBAAkB,GAAlB,0BAAkB,KAAlB,0BAAkB,QAQlC","file":"uitsendings-sidebar.js","sourceRoot":"../../../src"}

@@ -1,1 +1,0 @@
-{"version":3,"sources":["code/akademici.ts"],"names":[],"mappings":";;;;IAAA,IAAiB,SAAS,CAOzB;IAPD,WAAiB,SAAS;QACxB;YACE,oBAAY,IAAY;gBACtB,OAAO,CAAC,GAAG,CAAC,uBAAuB,CAAC,CAAC;YACvC,CAAC;YACH,iBAAC;QAAD,CAJA,AAIC,IAAA;QAJY,oBAAU,aAItB,CAAA;IAEH,CAAC,EAPgB,SAAS,GAAT,iBAAS,KAAT,iBAAS,QAOzB","file":"akademici.js","sourceRoot":"../../src"}

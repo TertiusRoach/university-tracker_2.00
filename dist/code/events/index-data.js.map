@@ -1,1 +1,0 @@
-{"version":3,"sources":["code/events/index-data.ts"],"names":[],"mappings":";;;;IAAA,IAAiB,SAAS,CAQzB;IARD,WAAiB,SAAS;QACxB,SAAgB,SAAS,CAAC,QAAiC;YACzD,QAAQ,QAAQ,EAAE;gBAChB,KAAK,cAAc;oBACjB,MAAM;aACT;QAEH,CAAC;QANe,mBAAS,YAMxB,CAAA;IACH,CAAC,EARgB,SAAS,GAAT,iBAAS,KAAT,iBAAS,QAQzB","file":"index-data.js","sourceRoot":"../../../src"}
