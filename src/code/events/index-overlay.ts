@@ -4,13 +4,23 @@ export namespace IndexOverlay {
       case 'default-overlay':
         break;
       case 'sidebar-overlay':
-        let displayOverlay = () => {};
-        $('#index-sidebar #january-button a h1').on('mouseenter', () => {
+        let indexSidebar = {
+          januaryButton: document.querySelector('#index-sidebar #january-button a h1'),
+          februaryButton: document.querySelector('#index-sidebar #february-button a h1'),
+          marchButton: document.querySelector('#index-sidebar #march-button a h1'),
+          aprilButton: document.querySelector('#index-sidebar #april-button a h1'),
+          mayButton: document.querySelector('#index-sidebar #may-button a h1'),
+          juneButton: document.querySelector('#index-sidebar #june-button a h1'),
+        };
+
+        $(indexSidebar.januaryButton).on('mouseenter', () => {
           IndexOverlay.displayOverlay(pageName, 'january');
-          // $(`.${pageName} #january`).css('display', 'grid');
         });
-        $('#index-sidebar #february-button a h1').on('mouseenter', () => {
+        $(indexSidebar.februaryButton).on('mouseenter', () => {
           IndexOverlay.displayOverlay(pageName, 'february');
+        });
+        $(indexSidebar.marchButton).on('mouseenter', () => {
+          IndexOverlay.displayOverlay(pageName, 'march');
         });
         console.log(`--${pageName} Loaded`);
         break;
