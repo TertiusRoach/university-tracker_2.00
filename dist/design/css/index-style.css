@@ -3536,11 +3536,11 @@ main[class*=main] #buttons-overlay .foreground{margin:-44px 0 -210px 0}}@media o
 .sidebar-overlay nav a[id*=edit],.sidebar-overlay nav ul[class*=edit]{grid-row:2/3}
 .sidebar-overlay nav a[id*=book],.sidebar-overlay nav ul[class*=book]{grid-row:3/4}
 .sidebar-overlay nav a[id*=cloud],.sidebar-overlay nav ul[class*=cloud]{grid-row:4/5}
-.sidebar-overlay nav ul{z-index:-1}.sidebar-overlay nav a div,.sidebar-overlay nav ul li{height:100%;display:flex;align-items:center;justify-content:center;clip-path:inset(0 0 0 0);transition:clip-path .25s}
+.sidebar-overlay nav ul{z-index:-1}.sidebar-overlay nav main{grid-row:5/6;grid-column:1/6;color:#adaaaf;background:#2e0e3b;border-bottom-right-radius:8px;display:flex;align-items:center;justify-content:center}
+.sidebar-overlay nav main h1{cursor:default}.sidebar-overlay nav a div,.sidebar-overlay nav ul li{height:100%;display:flex;align-items:center;justify-content:center;clip-path:inset(0 0 0 0);transition:clip-path .25s}
 .sidebar-overlay nav a div button,.sidebar-overlay nav ul li button{text-decoration:none;background:0;outline:0;border:0}
 .sidebar-overlay nav a div button h1,.sidebar-overlay nav a div button svg,.sidebar-overlay nav ul li button h1,.sidebar-overlay nav ul li button svg{cursor:pointer;font-size:2rem}
-.sidebar-overlay nav a:hover div{clip-path:inset(100% 0 0 0)}.sidebar-overlay nav main{grid-row:5/6;grid-column:1/6;color:#adaaaf;background:#2e0e3b;border-bottom-right-radius:8px;display:flex;align-items:center;justify-content:center}
-.sidebar-overlay nav main h1{cursor:default}.sidebar-overlay nav a[id*=gr]:hover ~ main{background:#b6d7a8}
+.sidebar-overlay nav a:hover div{clip-path:inset(100% 0 0 0)}.sidebar-overlay nav a[id*=gr]:hover ~ main{background:#b6d7a8}
 .sidebar-overlay nav a[id*=gr]:hover ~ main h1{color:#274e13;filter:drop-shadow(0 0 .75rem #0f0)}
 .sidebar-overlay nav a[id*=pi]:hover ~ main{background:#d5a6bd}.sidebar-overlay nav a[id*=pi]:hover ~ main h1{color:#4c1130;filter:drop-shadow(0 0 .75rem #f0f)}
 .sidebar-overlay nav a[id*=ye]:hover ~ main{background:#ffe599}.sidebar-overlay nav a[id*=ye]:hover ~ main h1{color:#7f6000;filter:drop-shadow(0 0 .75rem #ff0)}
