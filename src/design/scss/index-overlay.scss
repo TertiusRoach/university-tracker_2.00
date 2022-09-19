@@ -4,6 +4,128 @@
   z-index: 1; // Middle
   grid-row: 2/3;
   grid-column: 3/5;
+}
+/*--▼ .default-overlay ▼--*/
+.default-overlay {
+  display: none;
+}
+/*--▼ .header-overlay ▼--*/
+.header-overlay {
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(3, 1fr) 80px !important;
+
+  section {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    height: 48px;
+    div {
+      width: 260px;
+      display: flex;
+      background: $primary-dark;
+      justify-content: left !important;
+      button {
+        margin-left: 20px;
+        a {
+          display: flex;
+          align-items: center;
+          svg,
+          h1 {
+            color: $primary-light;
+          }
+          h1 {
+            padding-left: 1rem;
+          }
+        }
+        a:hover {
+          svg {
+            color: $secondary-dark;
+          }
+
+          h1 {
+            color: $secondary-medium;
+          }
+        }
+      }
+    }
+
+    div:first-child {
+      button {
+        margin-top: 8px;
+      }
+    }
+    div:last-child {
+      border-radius: 0 0 8px 8px;
+      button {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  .akademici {
+    grid-column: 1/2;
+    grid-row: 1/13;
+  }
+  .administrasie {
+    grid-column: 2/3;
+    grid-row: 1/13;
+  }
+  .operasioneel {
+    grid-column: 3/4;
+    grid-row: 1/13;
+  }
+}
+/*--▼ .sidebar-overlay ▼--*/
+.sidebar-overlay {
+  /*--|▼| Global Placement & Layout Setup |▼|--*/
+  nav {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    a[id*='gr'],
+    ul[class*='gr'] {
+      grid-column: 1/2;
+    }
+    a[id*='pi'],
+    ul[class*='pi'] {
+      grid-column: 2/3;
+    }
+    a[id*='ye'],
+    ul[class*='ye'] {
+      grid-column: 3/4;
+    }
+    a[id*='or'],
+    ul[class*='or'] {
+      grid-column: 4/5;
+    }
+    a[id*='bl'],
+    ul[class*='bl'] {
+      grid-column: 5/6;
+    }
+
+    a[id*='sheet'],
+    ul[class*='sheet'] {
+      grid-row: 1/2;
+    }
+    a[id*='edit'],
+    ul[class*='edit'] {
+      grid-row: 2/3;
+    }
+    a[id*='book'],
+    ul[class*='book'] {
+      grid-row: 3/4;
+    }
+    a[id*='cloud'],
+    ul[class*='cloud'] {
+      grid-row: 4/5;
+    }
+    ul {
+      z-index: -1;
+    }
+  }
+  /*--|▲| Global Placement & Layout Setup |▲|--*/
   /*--|▼| Scan Animation & Design Default |▼|--*/
   nav {
     a div,
@@ -14,7 +136,6 @@
       justify-content: center;
       clip-path: inset(0 0 0 0);
       transition: clip-path 0.25s;
-      /* background: $secondary-dark; */
       button {
         text-decoration: none;
         background: none;
@@ -33,7 +154,7 @@
   }
   /*--|▲| Scan Animation & Design Default |▲|--*/
   /*--|▼| Button Styling |▼|--*/
-  nav {
+  nav[class*='true'] {
     a[id*='gr'] {
       div {
         background: $green-dark;
@@ -147,144 +268,114 @@
       }
     }
   }
+  nav[class*='false'] {
+    a div {
+      background: $primary-dark;
+      button h1,
+      button svg {
+        color: $primary-light;
+      }
+      button:hover h1,
+      button:hover svg {
+        filter: drop-shadow(0 0 0.75rem $primary-medium);
+      }
+    }
+
+    ul[class*='gr'] li {
+      background: $green-light;
+      button svg {
+        color: $green-dark;
+        filter: drop-shadow(0 0 0.75rem $green-neon);
+      }
+    }
+    ul[class*='pi'] li {
+      background: $pink-light;
+      button svg {
+        color: $pink-dark;
+        filter: drop-shadow(0 0 0.75rem $pink-neon);
+      }
+    }
+    ul[class*='ye'] li {
+      background: $yellow-light;
+      button svg {
+        color: $yellow-dark;
+        filter: drop-shadow(0 0 0.75rem $yellow-neon);
+      }
+    }
+    ul[class*='or'] li {
+      background: $orange-light;
+      button svg {
+        color: $orange-dark;
+        filter: drop-shadow(0 0 0.75rem $orange-neon);
+      }
+    }
+    ul[class*='bl'] li {
+      background: $blue-light;
+      button svg {
+        color: $blue-dark;
+        filter: drop-shadow(0 0 0.75rem $blue-neon);
+      }
+    }
+  }
   /*--|▲| Button Styling |▲|--*/
-  /*--|▼| Global Placement & Layout Setup |▼|--*/
-  nav {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(5, 1fr);
 
-    ul {
-      z-index: -1;
-    }
-
-    a[id*='gr'],
-    ul[class*='gr'] {
-      grid-column: 1/2;
-    }
-    a[id*='pi'],
-    ul[class*='pi'] {
-      grid-column: 2/3;
-    }
-    a[id*='ye'],
-    ul[class*='ye'] {
-      grid-column: 3/4;
-    }
-    a[id*='or'],
-    ul[class*='or'] {
-      grid-column: 4/5;
-    }
-    a[id*='bl'],
-    ul[class*='bl'] {
-      grid-column: 5/6;
-    }
-
-    a[id*='sheet'],
-    ul[class*='sheet'] {
-      grid-row: 1/2;
-    }
-    a[id*='edit'],
-    ul[class*='edit'] {
-      grid-row: 2/3;
-    }
-    a[id*='book'],
-    ul[class*='book'] {
-      grid-row: 3/4;
-    }
-    a[id*='cloud'],
-    ul[class*='cloud'] {
-      grid-row: 4/5;
-    }
-  }
-  /*--|▲| Global Placement & Layout Setup |▲|--*/
-  /*
-  .background {
-    grid-column: 1/9;
-    grid-row: 1/13;
-    z-index: 0;
-
-    background: linear-gradient(to bottom right, rgba(14, 30, 59, 0.2), rgba(14, 30, 59, 0.8));
-  }
-  */
-}
-/*--▼ .default-overlay ▼--*/
-.default-overlay {
-  // display: none;
   #january {
     display: grid;
     grid-row: 1/6;
     grid-column: 1/7;
-  }
-}
-/*--▼ .header-overlay ▼--*/
-.header-overlay {
-  grid-template-rows: repeat(12, 1fr);
-  grid-template-columns: repeat(3, 1fr) 80px !important;
 
-  section {
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-start;
+    a[id*='gr']:hover ~ main {
+      background: $green-light;
+      h1 {
+        color: $green-dark;
+        filter: drop-shadow(0 0 0.75rem $green-neon);
+      }
+    }
+    a[id*='pi']:hover ~ main {
+      background: $pink-light;
+      h1 {
+        color: $pink-dark;
+        filter: drop-shadow(0 0 0.75rem $pink-neon);
+      }
+    }
+    a[id*='ye']:hover ~ main {
+      background: $yellow-light;
+      h1 {
+        color: $yellow-dark;
+        filter: drop-shadow(0 0 0.75rem $yellow-neon);
+      }
+    }
+    a[id*='or']:hover ~ main {
+      background: $orange-light;
+      h1 {
+        color: $orange-dark;
+        filter: drop-shadow(0 0 0.75rem $orange-neon);
+      }
+    }
+    a[id*='bl']:hover ~ main {
+      background: $blue-light;
+      h1 {
+        color: $blue-dark;
+        filter: drop-shadow(0 0 0.75rem $blue-neon);
+      }
+    }
 
-    height: 48px;
-    div {
-      width: 260px;
-      display: flex;
+    main {
+      grid-row: 5/6;
+      grid-column: 1/6;
+      color: $primary-light;
       background: $primary-dark;
-      justify-content: left !important;
-      button {
-        margin-left: 20px;
-        a {
-          display: flex;
-          align-items: center;
-          svg,
-          h1 {
-            color: $primary-light;
-          }
-          h1 {
-            padding-left: 1rem;
-          }
-        }
-        a:hover {
-          svg {
-            color: $secondary-dark;
-          }
+      border-bottom-right-radius: 8px;
 
-          h1 {
-            color: $secondary-medium;
-          }
-        }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h1 {
+        cursor: default;
       }
     }
-
-    div:first-child {
-      button {
-        margin-top: 8px;
-      }
-    }
-    div:last-child {
-      border-radius: 0 0 8px 8px;
-      button {
-        margin-bottom: 8px;
-      }
-    }
-  }
-  .akademici {
-    grid-column: 1/2;
-    grid-row: 1/13;
-  }
-  .administrasie {
-    grid-column: 2/3;
-    grid-row: 1/13;
-  }
-  .operasioneel {
-    grid-column: 3/4;
-    grid-row: 1/13;
   }
 }
-
 /*--▼ Responsive Design ▼--*/
 section[class*='overlay'] {
   @media only screen and (max-height: 2160px) {

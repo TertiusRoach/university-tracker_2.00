@@ -3516,33 +3516,8 @@ main[class*=main] #buttons-overlay .foreground{margin:-44px 0 -210px 0}}@media o
 .default-footer .navigation ul li a .text{color:#2e0e3b;transform:translateY(20px)}
 .default-footer .navigation ul li.active a .icon{color:#631b19;transform:translateY(-32px);filter:drop-shadow(0 0 .75rem #2e0e3b)}
 .default-footer .navigation ul li.active a .text{opacity:1;transition:1s;font-weight:800;overflow:hidden;font-size:.75em;position:absolute;letter-spacing:.05em;color:#957e7e;transform:translateY(10px);filter:drop-shadow(0 0 .75rem black)}
-#index-overlay{z-index:1;grid-row:2/3;grid-column:3/5}#index-overlay nav a div,#index-overlay nav ul li{height:100%;display:flex;align-items:center;justify-content:center;clip-path:inset(0 0 0 0);transition:clip-path .25s}
-#index-overlay nav a div button,#index-overlay nav ul li button{text-decoration:none;background:0;outline:0;border:0}
-#index-overlay nav a div button h1,#index-overlay nav a div button svg,#index-overlay nav ul li button h1,#index-overlay nav ul li button svg{cursor:pointer;font-size:2rem}
-#index-overlay nav a:hover div{clip-path:inset(100% 0 0 0)}#index-overlay nav a[id*=gr] div{background:#274e13}
-#index-overlay nav a[id*=gr] div button h1,#index-overlay nav a[id*=gr] div button svg{color:#b6d7a8}
-#index-overlay nav a[id*=gr] div button:hover h1,#index-overlay nav a[id*=gr] div button:hover svg{filter:drop-shadow(0 0 .75rem #0f0)}
-#index-overlay nav a[id*=pi] div{background:#4c1130}#index-overlay nav a[id*=pi] div button h1,#index-overlay nav a[id*=pi] div button svg{color:#d5a6bd}
-#index-overlay nav a[id*=pi] div button:hover h1,#index-overlay nav a[id*=pi] div button:hover svg{filter:drop-shadow(0 0 .75rem #f0f)}
-#index-overlay nav a[id*=ye] div{background:#7f6000}#index-overlay nav a[id*=ye] div button h1,#index-overlay nav a[id*=ye] div button svg{color:#ffe599}
-#index-overlay nav a[id*=ye] div button:hover h1,#index-overlay nav a[id*=ye] div button:hover svg{filter:drop-shadow(0 0 .75rem #ff0)}
-#index-overlay nav a[id*=or] div{background:#783f04}#index-overlay nav a[id*=or] div button h1,#index-overlay nav a[id*=or] div button svg{color:#f9cb9c}
-#index-overlay nav a[id*=or] div button:hover h1,#index-overlay nav a[id*=or] div button:hover svg{filter:drop-shadow(0 0 .75rem #f90)}
-#index-overlay nav a[id*=bl] div{background:#333395}#index-overlay nav a[id*=bl] div button h1,#index-overlay nav a[id*=bl] div button svg{color:#9fc5e8}
-#index-overlay nav a[id*=bl] div button:hover h1,#index-overlay nav a[id*=bl] div button:hover svg{filter:drop-shadow(0 0 .75rem #3c90ff)}
-#index-overlay nav ul[class*=gr] li{background:#b6d7a8}#index-overlay nav ul[class*=gr] li button svg{color:#274e13;filter:drop-shadow(0 0 .75rem #0f0)}
-#index-overlay nav ul[class*=pi] li{background:#d5a6bd}#index-overlay nav ul[class*=pi] li button svg{color:#4c1130;filter:drop-shadow(0 0 .75rem #f0f)}
-#index-overlay nav ul[class*=ye] li{background:#ffe599}#index-overlay nav ul[class*=ye] li button svg{color:#7f6000;filter:drop-shadow(0 0 .75rem #ff0)}
-#index-overlay nav ul[class*=or] li{background:#f9cb9c}#index-overlay nav ul[class*=or] li button svg{color:#783f04;filter:drop-shadow(0 0 .75rem #f90)}
-#index-overlay nav ul[class*=bl] li{background:#9fc5e8}#index-overlay nav ul[class*=bl] li button svg{color:#333395;filter:drop-shadow(0 0 .75rem #3c90ff)}
-#index-overlay nav{display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(5,1fr)}
-#index-overlay nav ul{z-index:-1}#index-overlay nav a[id*=gr],#index-overlay nav ul[class*=gr]{grid-column:1/2}
-#index-overlay nav a[id*=pi],#index-overlay nav ul[class*=pi]{grid-column:2/3}#index-overlay nav a[id*=ye],#index-overlay nav ul[class*=ye]{grid-column:3/4}
-#index-overlay nav a[id*=or],#index-overlay nav ul[class*=or]{grid-column:4/5}#index-overlay nav a[id*=bl],#index-overlay nav ul[class*=bl]{grid-column:5/6}
-#index-overlay nav a[id*=sheet],#index-overlay nav ul[class*=sheet]{grid-row:1/2}
-#index-overlay nav a[id*=edit],#index-overlay nav ul[class*=edit]{grid-row:2/3}#index-overlay nav a[id*=book],#index-overlay nav ul[class*=book]{grid-row:3/4}
-#index-overlay nav a[id*=cloud],#index-overlay nav ul[class*=cloud]{grid-row:4/5}
-.default-overlay #january{display:grid;grid-row:1/6;grid-column:1/7}.header-overlay{grid-template-rows:repeat(12,1fr);grid-template-columns:repeat(3,1fr) 80px !important}
+#index-overlay{z-index:1;grid-row:2/3;grid-column:3/5}.default-overlay{display:none}
+.header-overlay{grid-template-rows:repeat(12,1fr);grid-template-columns:repeat(3,1fr) 80px !important}
 .header-overlay section{z-index:1;display:flex;align-items:center;flex-direction:column;justify-content:flex-start;height:48px}
 .header-overlay section div{width:260px;display:flex;background:#2e0e3b;justify-content:left !important}
 .header-overlay section div button{margin-left:20px}.header-overlay section div button a{display:flex;align-items:center}
@@ -3551,7 +3526,50 @@ main[class*=main] #buttons-overlay .foreground{margin:-44px 0 -210px 0}}@media o
 .header-overlay section div button a:hover h1{color:#957e7e}.header-overlay section div:first-child button{margin-top:8px}
 .header-overlay section div:last-child{border-radius:0 0 8px 8px}.header-overlay section div:last-child button{margin-bottom:8px}
 .header-overlay .akademici{grid-column:1/2;grid-row:1/13}.header-overlay .administrasie{grid-column:2/3;grid-row:1/13}
-.header-overlay .operasioneel{grid-column:3/4;grid-row:1/13}@media only screen and (max-height:2160px){section[class*=overlay]{grid-template-columns:repeat(6,171.3333333333px) 1fr;grid-template-rows:repeat(12,171.3333333333px)}
+.header-overlay .operasioneel{grid-column:3/4;grid-row:1/13}.sidebar-overlay nav{display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(5,1fr)}
+.sidebar-overlay nav a[id*=gr],.sidebar-overlay nav ul[class*=gr]{grid-column:1/2}
+.sidebar-overlay nav a[id*=pi],.sidebar-overlay nav ul[class*=pi]{grid-column:2/3}
+.sidebar-overlay nav a[id*=ye],.sidebar-overlay nav ul[class*=ye]{grid-column:3/4}
+.sidebar-overlay nav a[id*=or],.sidebar-overlay nav ul[class*=or]{grid-column:4/5}
+.sidebar-overlay nav a[id*=bl],.sidebar-overlay nav ul[class*=bl]{grid-column:5/6}
+.sidebar-overlay nav a[id*=sheet],.sidebar-overlay nav ul[class*=sheet]{grid-row:1/2}
+.sidebar-overlay nav a[id*=edit],.sidebar-overlay nav ul[class*=edit]{grid-row:2/3}
+.sidebar-overlay nav a[id*=book],.sidebar-overlay nav ul[class*=book]{grid-row:3/4}
+.sidebar-overlay nav a[id*=cloud],.sidebar-overlay nav ul[class*=cloud]{grid-row:4/5}
+.sidebar-overlay nav ul{z-index:-1}.sidebar-overlay nav a div,.sidebar-overlay nav ul li{height:100%;display:flex;align-items:center;justify-content:center;clip-path:inset(0 0 0 0);transition:clip-path .25s}
+.sidebar-overlay nav a div button,.sidebar-overlay nav ul li button{text-decoration:none;background:0;outline:0;border:0}
+.sidebar-overlay nav a div button h1,.sidebar-overlay nav a div button svg,.sidebar-overlay nav ul li button h1,.sidebar-overlay nav ul li button svg{cursor:pointer;font-size:2rem}
+.sidebar-overlay nav a:hover div{clip-path:inset(100% 0 0 0)}.sidebar-overlay nav[class*=true] a[id*=gr] div{background:#274e13}
+.sidebar-overlay nav[class*=true] a[id*=gr] div button h1,.sidebar-overlay nav[class*=true] a[id*=gr] div button svg{color:#b6d7a8}
+.sidebar-overlay nav[class*=true] a[id*=gr] div button:hover h1,.sidebar-overlay nav[class*=true] a[id*=gr] div button:hover svg{filter:drop-shadow(0 0 .75rem #0f0)}
+.sidebar-overlay nav[class*=true] a[id*=pi] div{background:#4c1130}.sidebar-overlay nav[class*=true] a[id*=pi] div button h1,.sidebar-overlay nav[class*=true] a[id*=pi] div button svg{color:#d5a6bd}
+.sidebar-overlay nav[class*=true] a[id*=pi] div button:hover h1,.sidebar-overlay nav[class*=true] a[id*=pi] div button:hover svg{filter:drop-shadow(0 0 .75rem #f0f)}
+.sidebar-overlay nav[class*=true] a[id*=ye] div{background:#7f6000}.sidebar-overlay nav[class*=true] a[id*=ye] div button h1,.sidebar-overlay nav[class*=true] a[id*=ye] div button svg{color:#ffe599}
+.sidebar-overlay nav[class*=true] a[id*=ye] div button:hover h1,.sidebar-overlay nav[class*=true] a[id*=ye] div button:hover svg{filter:drop-shadow(0 0 .75rem #ff0)}
+.sidebar-overlay nav[class*=true] a[id*=or] div{background:#783f04}.sidebar-overlay nav[class*=true] a[id*=or] div button h1,.sidebar-overlay nav[class*=true] a[id*=or] div button svg{color:#f9cb9c}
+.sidebar-overlay nav[class*=true] a[id*=or] div button:hover h1,.sidebar-overlay nav[class*=true] a[id*=or] div button:hover svg{filter:drop-shadow(0 0 .75rem #f90)}
+.sidebar-overlay nav[class*=true] a[id*=bl] div{background:#333395}.sidebar-overlay nav[class*=true] a[id*=bl] div button h1,.sidebar-overlay nav[class*=true] a[id*=bl] div button svg{color:#9fc5e8}
+.sidebar-overlay nav[class*=true] a[id*=bl] div button:hover h1,.sidebar-overlay nav[class*=true] a[id*=bl] div button:hover svg{filter:drop-shadow(0 0 .75rem #3c90ff)}
+.sidebar-overlay nav[class*=true] ul[class*=gr] li{background:#b6d7a8}.sidebar-overlay nav[class*=true] ul[class*=gr] li button svg{color:#274e13;filter:drop-shadow(0 0 .75rem #0f0)}
+.sidebar-overlay nav[class*=true] ul[class*=pi] li{background:#d5a6bd}.sidebar-overlay nav[class*=true] ul[class*=pi] li button svg{color:#4c1130;filter:drop-shadow(0 0 .75rem #f0f)}
+.sidebar-overlay nav[class*=true] ul[class*=ye] li{background:#ffe599}.sidebar-overlay nav[class*=true] ul[class*=ye] li button svg{color:#7f6000;filter:drop-shadow(0 0 .75rem #ff0)}
+.sidebar-overlay nav[class*=true] ul[class*=or] li{background:#f9cb9c}.sidebar-overlay nav[class*=true] ul[class*=or] li button svg{color:#783f04;filter:drop-shadow(0 0 .75rem #f90)}
+.sidebar-overlay nav[class*=true] ul[class*=bl] li{background:#9fc5e8}.sidebar-overlay nav[class*=true] ul[class*=bl] li button svg{color:#333395;filter:drop-shadow(0 0 .75rem #3c90ff)}
+.sidebar-overlay nav[class*=false] a div{background:#2e0e3b}.sidebar-overlay nav[class*=false] a div button h1,.sidebar-overlay nav[class*=false] a div button svg{color:#adaaaf}
+.sidebar-overlay nav[class*=false] a div button:hover h1,.sidebar-overlay nav[class*=false] a div button:hover svg{filter:drop-shadow(0 0 .75rem #827d85)}
+.sidebar-overlay nav[class*=false] ul[class*=gr] li{background:#b6d7a8}.sidebar-overlay nav[class*=false] ul[class*=gr] li button svg{color:#274e13;filter:drop-shadow(0 0 .75rem #0f0)}
+.sidebar-overlay nav[class*=false] ul[class*=pi] li{background:#d5a6bd}.sidebar-overlay nav[class*=false] ul[class*=pi] li button svg{color:#4c1130;filter:drop-shadow(0 0 .75rem #f0f)}
+.sidebar-overlay nav[class*=false] ul[class*=ye] li{background:#ffe599}.sidebar-overlay nav[class*=false] ul[class*=ye] li button svg{color:#7f6000;filter:drop-shadow(0 0 .75rem #ff0)}
+.sidebar-overlay nav[class*=false] ul[class*=or] li{background:#f9cb9c}.sidebar-overlay nav[class*=false] ul[class*=or] li button svg{color:#783f04;filter:drop-shadow(0 0 .75rem #f90)}
+.sidebar-overlay nav[class*=false] ul[class*=bl] li{background:#9fc5e8}.sidebar-overlay nav[class*=false] ul[class*=bl] li button svg{color:#333395;filter:drop-shadow(0 0 .75rem #3c90ff)}
+.sidebar-overlay #january{display:grid;grid-row:1/6;grid-column:1/7}.sidebar-overlay #january a[id*=gr]:hover ~ main{background:#b6d7a8}
+.sidebar-overlay #january a[id*=gr]:hover ~ main h1{color:#274e13;filter:drop-shadow(0 0 .75rem #0f0)}
+.sidebar-overlay #january a[id*=pi]:hover ~ main{background:#d5a6bd}.sidebar-overlay #january a[id*=pi]:hover ~ main h1{color:#4c1130;filter:drop-shadow(0 0 .75rem #f0f)}
+.sidebar-overlay #january a[id*=ye]:hover ~ main{background:#ffe599}.sidebar-overlay #january a[id*=ye]:hover ~ main h1{color:#7f6000;filter:drop-shadow(0 0 .75rem #ff0)}
+.sidebar-overlay #january a[id*=or]:hover ~ main{background:#f9cb9c}.sidebar-overlay #january a[id*=or]:hover ~ main h1{color:#783f04;filter:drop-shadow(0 0 .75rem #f90)}
+.sidebar-overlay #january a[id*=bl]:hover ~ main{background:#9fc5e8}.sidebar-overlay #january a[id*=bl]:hover ~ main h1{color:#333395;filter:drop-shadow(0 0 .75rem #3c90ff)}
+.sidebar-overlay #january main{grid-row:5/6;grid-column:1/6;color:#adaaaf;background:#2e0e3b;border-bottom-right-radius:8px;display:flex;align-items:center;justify-content:center}
+.sidebar-overlay #january main h1{cursor:default}@media only screen and (max-height:2160px){section[class*=overlay]{grid-template-columns:repeat(6,171.3333333333px) 1fr;grid-template-rows:repeat(12,171.3333333333px)}
 }@media only screen and (max-height:2159px){section[class*=overlay]{grid-template-columns:repeat(6,171.25px) 1fr;grid-template-rows:repeat(12,171.25px)}
 }@media only screen and (max-height:2158px){section[class*=overlay]{grid-template-columns:repeat(6,171.1666666667px) 1fr;grid-template-rows:repeat(12,171.1666666667px)}
 }@media only screen and (max-height:2157px){section[class*=overlay]{grid-template-columns:repeat(6,171.0833333333px) 1fr;grid-template-rows:repeat(12,171.0833333333px)}
