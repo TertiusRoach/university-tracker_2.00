@@ -65,6 +65,7 @@ export namespace GetEvents {
           IndexData.eventsFor(pageName);
           break;
       }
+      //--► console.log(`--${pageName} Loaded`); ◄--//
     }
   }
   export class forUitsendings {
@@ -93,6 +94,7 @@ export namespace GetEvents {
           UitsendingsData.eventsFor(pageName);
           break;
       }
+      //--► console.log(`--${pageName} Loaded`); ◄--//
     }
   }
   export class forAkademici {
@@ -121,6 +123,7 @@ export namespace GetEvents {
           AkademiciData.eventsFor(pageName);
           break;
       }
+      //--► console.log(`--${pageName} Loaded`); ◄--//
     }
   }
   export class forAdministrasie {
@@ -149,6 +152,7 @@ export namespace GetEvents {
           AdministrasieData.eventsFor(pageName);
           break;
       }
+      //--► console.log(`--${pageName} Loaded`); ◄--//
     }
   }
   export class forOperasioneel {
@@ -177,6 +181,7 @@ export namespace GetEvents {
           OperasioneelData.eventsFor(pageName);
           break;
       }
+      //--► console.log(`--${pageName} Loaded`); ◄--//
     }
   }
 }

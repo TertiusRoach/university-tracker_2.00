@@ -1,1 +1,1 @@
-define(["require","exports"],function(e,n){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n.IndexOverlay=void 0,(n.IndexOverlay||(n.IndexOverlay={})).eventsFor=function(e){e}});
+define(["require","exports"],function(e,o){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),o.IndexOverlay=void 0,(o.IndexOverlay||(o.IndexOverlay={})).eventsFor=function(e){switch(e){case"default-overlay":break;case"sidebar-overlay":console.log("--".concat(e," Loaded"))}}});

@@ -13,18 +13,23 @@ export namespace GetDesign {
         switch (page) {
           case 'index':
             new GetEvents.forIndex(pageName);
+            //--► console.log(`--${pageName} Loaded`); ◄--//
             break;
           case 'uitsendings':
             new GetEvents.forUitsendings(pageName);
+            //--► console.log(`--${pageName} Loaded`); ◄--//
             break;
           case 'akademici':
             new GetEvents.forAkademici(pageName);
+            //--► console.log(`--${pageName} Loaded`); ◄--//
             break;
           case 'administrasie':
             new GetEvents.forAdministrasie(pageName);
+            //--► console.log(`--${pageName} Loaded`); ◄--//
             break;
           case 'operasioneel':
             new GetEvents.forOperasioneel(pageName);
+            //--► console.log(`--${pageName} Loaded`); ◄--//
             break;
         }
       });
