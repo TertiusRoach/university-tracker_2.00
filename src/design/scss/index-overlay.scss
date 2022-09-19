@@ -151,6 +151,56 @@
     a:hover div {
       clip-path: inset(100% 0 0 0);
     }
+    main {
+      grid-row: 5/6;
+      grid-column: 1/6;
+      color: $primary-light;
+      background: $primary-dark;
+      border-bottom-right-radius: 8px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h1 {
+        cursor: default;
+      }
+    }
+
+    a[id*='gr']:hover ~ main {
+      background: $green-light;
+      h1 {
+        color: $green-dark;
+        filter: drop-shadow(0 0 0.75rem $green-neon);
+      }
+    }
+    a[id*='pi']:hover ~ main {
+      background: $pink-light;
+      h1 {
+        color: $pink-dark;
+        filter: drop-shadow(0 0 0.75rem $pink-neon);
+      }
+    }
+    a[id*='ye']:hover ~ main {
+      background: $yellow-light;
+      h1 {
+        color: $yellow-dark;
+        filter: drop-shadow(0 0 0.75rem $yellow-neon);
+      }
+    }
+    a[id*='or']:hover ~ main {
+      background: $orange-light;
+      h1 {
+        color: $orange-dark;
+        filter: drop-shadow(0 0 0.75rem $orange-neon);
+      }
+    }
+    a[id*='bl']:hover ~ main {
+      background: $blue-light;
+      h1 {
+        color: $blue-dark;
+        filter: drop-shadow(0 0 0.75rem $blue-neon);
+      }
+    }
   }
   /*--|▲| Scan Animation & Design Default |▲|--*/
   /*--|▼| Button Styling |▼|--*/
@@ -168,7 +218,6 @@
         }
       }
     }
-
     a[id*='pi'] {
       div {
         background: $pink-dark;
@@ -323,57 +372,6 @@
     display: grid;
     grid-row: 1/6;
     grid-column: 1/7;
-
-    a[id*='gr']:hover ~ main {
-      background: $green-light;
-      h1 {
-        color: $green-dark;
-        filter: drop-shadow(0 0 0.75rem $green-neon);
-      }
-    }
-    a[id*='pi']:hover ~ main {
-      background: $pink-light;
-      h1 {
-        color: $pink-dark;
-        filter: drop-shadow(0 0 0.75rem $pink-neon);
-      }
-    }
-    a[id*='ye']:hover ~ main {
-      background: $yellow-light;
-      h1 {
-        color: $yellow-dark;
-        filter: drop-shadow(0 0 0.75rem $yellow-neon);
-      }
-    }
-    a[id*='or']:hover ~ main {
-      background: $orange-light;
-      h1 {
-        color: $orange-dark;
-        filter: drop-shadow(0 0 0.75rem $orange-neon);
-      }
-    }
-    a[id*='bl']:hover ~ main {
-      background: $blue-light;
-      h1 {
-        color: $blue-dark;
-        filter: drop-shadow(0 0 0.75rem $blue-neon);
-      }
-    }
-
-    main {
-      grid-row: 5/6;
-      grid-column: 1/6;
-      color: $primary-light;
-      background: $primary-dark;
-      border-bottom-right-radius: 8px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      h1 {
-        cursor: default;
-      }
-    }
   }
 }
 /*--▼ Responsive Design ▼--*/

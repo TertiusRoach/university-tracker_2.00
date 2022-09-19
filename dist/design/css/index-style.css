@@ -3539,8 +3539,14 @@ main[class*=main] #buttons-overlay .foreground{margin:-44px 0 -210px 0}}@media o
 .sidebar-overlay nav ul{z-index:-1}.sidebar-overlay nav a div,.sidebar-overlay nav ul li{height:100%;display:flex;align-items:center;justify-content:center;clip-path:inset(0 0 0 0);transition:clip-path .25s}
 .sidebar-overlay nav a div button,.sidebar-overlay nav ul li button{text-decoration:none;background:0;outline:0;border:0}
 .sidebar-overlay nav a div button h1,.sidebar-overlay nav a div button svg,.sidebar-overlay nav ul li button h1,.sidebar-overlay nav ul li button svg{cursor:pointer;font-size:2rem}
-.sidebar-overlay nav a:hover div{clip-path:inset(100% 0 0 0)}.sidebar-overlay nav[class*=true] a[id*=gr] div{background:#274e13}
-.sidebar-overlay nav[class*=true] a[id*=gr] div button h1,.sidebar-overlay nav[class*=true] a[id*=gr] div button svg{color:#b6d7a8}
+.sidebar-overlay nav a:hover div{clip-path:inset(100% 0 0 0)}.sidebar-overlay nav main{grid-row:5/6;grid-column:1/6;color:#adaaaf;background:#2e0e3b;border-bottom-right-radius:8px;display:flex;align-items:center;justify-content:center}
+.sidebar-overlay nav main h1{cursor:default}.sidebar-overlay nav a[id*=gr]:hover ~ main{background:#b6d7a8}
+.sidebar-overlay nav a[id*=gr]:hover ~ main h1{color:#274e13;filter:drop-shadow(0 0 .75rem #0f0)}
+.sidebar-overlay nav a[id*=pi]:hover ~ main{background:#d5a6bd}.sidebar-overlay nav a[id*=pi]:hover ~ main h1{color:#4c1130;filter:drop-shadow(0 0 .75rem #f0f)}
+.sidebar-overlay nav a[id*=ye]:hover ~ main{background:#ffe599}.sidebar-overlay nav a[id*=ye]:hover ~ main h1{color:#7f6000;filter:drop-shadow(0 0 .75rem #ff0)}
+.sidebar-overlay nav a[id*=or]:hover ~ main{background:#f9cb9c}.sidebar-overlay nav a[id*=or]:hover ~ main h1{color:#783f04;filter:drop-shadow(0 0 .75rem #f90)}
+.sidebar-overlay nav a[id*=bl]:hover ~ main{background:#9fc5e8}.sidebar-overlay nav a[id*=bl]:hover ~ main h1{color:#333395;filter:drop-shadow(0 0 .75rem #3c90ff)}
+.sidebar-overlay nav[class*=true] a[id*=gr] div{background:#274e13}.sidebar-overlay nav[class*=true] a[id*=gr] div button h1,.sidebar-overlay nav[class*=true] a[id*=gr] div button svg{color:#b6d7a8}
 .sidebar-overlay nav[class*=true] a[id*=gr] div button:hover h1,.sidebar-overlay nav[class*=true] a[id*=gr] div button:hover svg{filter:drop-shadow(0 0 .75rem #0f0)}
 .sidebar-overlay nav[class*=true] a[id*=pi] div{background:#4c1130}.sidebar-overlay nav[class*=true] a[id*=pi] div button h1,.sidebar-overlay nav[class*=true] a[id*=pi] div button svg{color:#d5a6bd}
 .sidebar-overlay nav[class*=true] a[id*=pi] div button:hover h1,.sidebar-overlay nav[class*=true] a[id*=pi] div button:hover svg{filter:drop-shadow(0 0 .75rem #f0f)}
@@ -3562,14 +3568,7 @@ main[class*=main] #buttons-overlay .foreground{margin:-44px 0 -210px 0}}@media o
 .sidebar-overlay nav[class*=false] ul[class*=ye] li{background:#ffe599}.sidebar-overlay nav[class*=false] ul[class*=ye] li button svg{color:#7f6000;filter:drop-shadow(0 0 .75rem #ff0)}
 .sidebar-overlay nav[class*=false] ul[class*=or] li{background:#f9cb9c}.sidebar-overlay nav[class*=false] ul[class*=or] li button svg{color:#783f04;filter:drop-shadow(0 0 .75rem #f90)}
 .sidebar-overlay nav[class*=false] ul[class*=bl] li{background:#9fc5e8}.sidebar-overlay nav[class*=false] ul[class*=bl] li button svg{color:#333395;filter:drop-shadow(0 0 .75rem #3c90ff)}
-.sidebar-overlay #january{display:grid;grid-row:1/6;grid-column:1/7}.sidebar-overlay #january a[id*=gr]:hover ~ main{background:#b6d7a8}
-.sidebar-overlay #january a[id*=gr]:hover ~ main h1{color:#274e13;filter:drop-shadow(0 0 .75rem #0f0)}
-.sidebar-overlay #january a[id*=pi]:hover ~ main{background:#d5a6bd}.sidebar-overlay #january a[id*=pi]:hover ~ main h1{color:#4c1130;filter:drop-shadow(0 0 .75rem #f0f)}
-.sidebar-overlay #january a[id*=ye]:hover ~ main{background:#ffe599}.sidebar-overlay #january a[id*=ye]:hover ~ main h1{color:#7f6000;filter:drop-shadow(0 0 .75rem #ff0)}
-.sidebar-overlay #january a[id*=or]:hover ~ main{background:#f9cb9c}.sidebar-overlay #january a[id*=or]:hover ~ main h1{color:#783f04;filter:drop-shadow(0 0 .75rem #f90)}
-.sidebar-overlay #january a[id*=bl]:hover ~ main{background:#9fc5e8}.sidebar-overlay #january a[id*=bl]:hover ~ main h1{color:#333395;filter:drop-shadow(0 0 .75rem #3c90ff)}
-.sidebar-overlay #january main{grid-row:5/6;grid-column:1/6;color:#adaaaf;background:#2e0e3b;border-bottom-right-radius:8px;display:flex;align-items:center;justify-content:center}
-.sidebar-overlay #january main h1{cursor:default}@media only screen and (max-height:2160px){section[class*=overlay]{grid-template-columns:repeat(6,171.3333333333px) 1fr;grid-template-rows:repeat(12,171.3333333333px)}
+.sidebar-overlay #january{display:grid;grid-row:1/6;grid-column:1/7}@media only screen and (max-height:2160px){section[class*=overlay]{grid-template-columns:repeat(6,171.3333333333px) 1fr;grid-template-rows:repeat(12,171.3333333333px)}
 }@media only screen and (max-height:2159px){section[class*=overlay]{grid-template-columns:repeat(6,171.25px) 1fr;grid-template-rows:repeat(12,171.25px)}
 }@media only screen and (max-height:2158px){section[class*=overlay]{grid-template-columns:repeat(6,171.1666666667px) 1fr;grid-template-rows:repeat(12,171.1666666667px)}
 }@media only screen and (max-height:2157px){section[class*=overlay]{grid-template-columns:repeat(6,171.0833333333px) 1fr;grid-template-rows:repeat(12,171.0833333333px)}
