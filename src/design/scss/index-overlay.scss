@@ -81,9 +81,8 @@
 .sidebar-overlay {
   /*--|▼| Global Placement & Layout Setup |▼|--*/
   nav {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     a[id*='gr'],
     ul[class*='gr'] {
       grid-column: 1/2;
@@ -368,10 +367,16 @@
   }
   /*--|▲| Button Styling |▲|--*/
 
+  nav {
+    grid-column: 1/6;
+  }
   #january {
     display: grid;
     grid-row: 1/6;
-    grid-column: 1/7;
+  }
+  #february {
+    display: grid;
+    grid-row: 2/7;
   }
 }
 /*--▼ Responsive Design ▼--*/

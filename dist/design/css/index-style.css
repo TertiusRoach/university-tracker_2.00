@@ -3526,7 +3526,7 @@ main[class*=main] #buttons-overlay .foreground{margin:-44px 0 -210px 0}}@media o
 .header-overlay section div button a:hover h1{color:#957e7e}.header-overlay section div:first-child button{margin-top:8px}
 .header-overlay section div:last-child{border-radius:0 0 8px 8px}.header-overlay section div:last-child button{margin-bottom:8px}
 .header-overlay .akademici{grid-column:1/2;grid-row:1/13}.header-overlay .administrasie{grid-column:2/3;grid-row:1/13}
-.header-overlay .operasioneel{grid-column:3/4;grid-row:1/13}.sidebar-overlay nav{display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(5,1fr)}
+.header-overlay .operasioneel{grid-column:3/4;grid-row:1/13}.sidebar-overlay nav{grid-template-rows:repeat(5,1fr);grid-template-columns:repeat(5,1fr)}
 .sidebar-overlay nav a[id*=gr],.sidebar-overlay nav ul[class*=gr]{grid-column:1/2}
 .sidebar-overlay nav a[id*=pi],.sidebar-overlay nav ul[class*=pi]{grid-column:2/3}
 .sidebar-overlay nav a[id*=ye],.sidebar-overlay nav ul[class*=ye]{grid-column:3/4}
@@ -3568,7 +3568,8 @@ main[class*=main] #buttons-overlay .foreground{margin:-44px 0 -210px 0}}@media o
 .sidebar-overlay nav[class*=false] ul[class*=ye] li{background:#ffe599}.sidebar-overlay nav[class*=false] ul[class*=ye] li button svg{color:#7f6000;filter:drop-shadow(0 0 .75rem #ff0)}
 .sidebar-overlay nav[class*=false] ul[class*=or] li{background:#f9cb9c}.sidebar-overlay nav[class*=false] ul[class*=or] li button svg{color:#783f04;filter:drop-shadow(0 0 .75rem #f90)}
 .sidebar-overlay nav[class*=false] ul[class*=bl] li{background:#9fc5e8}.sidebar-overlay nav[class*=false] ul[class*=bl] li button svg{color:#333395;filter:drop-shadow(0 0 .75rem #3c90ff)}
-.sidebar-overlay #january{display:grid;grid-row:1/6;grid-column:1/7}@media only screen and (max-height:2160px){section[class*=overlay]{grid-template-columns:repeat(6,171.3333333333px) 1fr;grid-template-rows:repeat(12,171.3333333333px)}
+.sidebar-overlay nav{grid-column:1/6}.sidebar-overlay #january{display:grid;grid-row:1/6}
+.sidebar-overlay #february{display:grid;grid-row:2/7}@media only screen and (max-height:2160px){section[class*=overlay]{grid-template-columns:repeat(6,171.3333333333px) 1fr;grid-template-rows:repeat(12,171.3333333333px)}
 }@media only screen and (max-height:2159px){section[class*=overlay]{grid-template-columns:repeat(6,171.25px) 1fr;grid-template-rows:repeat(12,171.25px)}
 }@media only screen and (max-height:2158px){section[class*=overlay]{grid-template-columns:repeat(6,171.1666666667px) 1fr;grid-template-rows:repeat(12,171.1666666667px)}
 }@media only screen and (max-height:2157px){section[class*=overlay]{grid-template-columns:repeat(6,171.0833333333px) 1fr;grid-template-rows:repeat(12,171.0833333333px)}
