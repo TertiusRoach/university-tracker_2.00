@@ -3568,8 +3568,9 @@ main[class*=main] #buttons-overlay .foreground{margin:-44px 0 -210px 0}}@media o
 .sidebar-overlay nav[class*=false] ul[class*=ye] li{background:#ffe599}.sidebar-overlay nav[class*=false] ul[class*=ye] li button svg{color:#7f6000;filter:drop-shadow(0 0 .75rem #ff0)}
 .sidebar-overlay nav[class*=false] ul[class*=or] li{background:#f9cb9c}.sidebar-overlay nav[class*=false] ul[class*=or] li button svg{color:#783f04;filter:drop-shadow(0 0 .75rem #f90)}
 .sidebar-overlay nav[class*=false] ul[class*=bl] li{background:#9fc5e8}.sidebar-overlay nav[class*=false] ul[class*=bl] li button svg{color:#333395;filter:drop-shadow(0 0 .75rem #3c90ff)}
-.sidebar-overlay nav{grid-column:1/6}.sidebar-overlay #january{display:grid;grid-row:1/6}
-.sidebar-overlay #february{display:grid;grid-row:2/7}@media only screen and (max-height:2160px){section[class*=overlay]{grid-template-columns:repeat(6,171.3333333333px) 1fr;grid-template-rows:repeat(12,171.3333333333px)}
+.sidebar-overlay nav{display:grid;grid-column:1/6}.sidebar-overlay #january{grid-row:1/6}
+.sidebar-overlay #february{grid-row:2/7}.sidebar-overlay #march{grid-row:3/8}.sidebar-overlay #april{grid-row:4/9}
+.sidebar-overlay #may{grid-row:5/10}.sidebar-overlay #june{grid-row:6/11}@media only screen and (max-height:2160px){section[class*=overlay]{grid-template-columns:repeat(6,171.3333333333px) 1fr;grid-template-rows:repeat(12,171.3333333333px)}
 }@media only screen and (max-height:2159px){section[class*=overlay]{grid-template-columns:repeat(6,171.25px) 1fr;grid-template-rows:repeat(12,171.25px)}
 }@media only screen and (max-height:2158px){section[class*=overlay]{grid-template-columns:repeat(6,171.1666666667px) 1fr;grid-template-rows:repeat(12,171.1666666667px)}
 }@media only screen and (max-height:2157px){section[class*=overlay]{grid-template-columns:repeat(6,171.0833333333px) 1fr;grid-template-rows:repeat(12,171.0833333333px)}

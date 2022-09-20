@@ -368,15 +368,26 @@
   /*--|▲| Button Styling |▲|--*/
 
   nav {
+    display: grid;
     grid-column: 1/6;
   }
   #january {
-    display: grid;
     grid-row: 1/6;
   }
   #february {
-    display: grid;
     grid-row: 2/7;
+  }
+  #march {
+    grid-row: 3/8;
+  }
+  #april {
+    grid-row: 4/9;
+  }
+  #may {
+    grid-row: 5/10;
+  }
+  #june {
+    grid-row: 6/11;
   }
 }
 /*--▼ Responsive Design ▼--*/
