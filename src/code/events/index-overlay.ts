@@ -30,6 +30,24 @@ export namespace IndexOverlay {
         $(sidebarButtons[5]).on('mouseenter', () => {
           displayOverlay(pageName, 'june');
         });
+        $(sidebarButtons[6]).on('mouseenter', () => {
+          displayOverlay(pageName, 'july');
+        });
+        $(sidebarButtons[7]).on('mouseenter', () => {
+          displayOverlay(pageName, 'august');
+        });
+        $(sidebarButtons[8]).on('mouseenter', () => {
+          displayOverlay(pageName, 'september');
+        });
+        $(sidebarButtons[9]).on('mouseenter', () => {
+          displayOverlay(pageName, 'october');
+        });
+        $(sidebarButtons[10]).on('mouseenter', () => {
+          displayOverlay(pageName, 'november');
+        });
+        $(sidebarButtons[11]).on('mouseenter', () => {
+          displayOverlay(pageName, 'december');
+        });
         break;
     }
     //--► console.log(`--${pageName} Loaded`); ◄--//
