@@ -5,6 +5,7 @@ export namespace IndexOverlay {
     const indexMain = document.getElementById('index-main');
     const indexSidebar = document.getElementById('index-sidebar');
     let sidebarButtons = document.querySelectorAll('#index-sidebar > div > button > a > h1');
+    const indexOverlay = document.getElementById('index-overlay');
     const indexFooter = document.getElementById('index-footer');
     const indexData = document.getElementById('index-data');
 
@@ -12,6 +13,9 @@ export namespace IndexOverlay {
       case 'default-overlay':
         break;
       case 'sidebar-overlay':
+        $(sidebarButtons).on('mouseenter', () => {
+          indexOverlay.style.display = 'grid';
+        });
         $(sidebarButtons[0]).on('mouseenter', () => {
           displayOverlay(pageName, 'january');
         });
