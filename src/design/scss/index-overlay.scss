@@ -104,6 +104,18 @@
       grid-column: 5/6;
     }
 
+    ul {
+      z-index: -1;
+    }
+  }
+
+  nav[class*='first-semester'] {
+    main {
+      grid-row: 5/6;
+      grid-column: 1/6;
+      border-bottom-right-radius: 8px;
+    }
+    //--▼ First Semester ▼--//
     a[id*='sheet'],
     ul[class*='sheet'] {
       grid-row: 1/2;
@@ -120,23 +132,43 @@
     ul[class*='cloud'] {
       grid-row: 4/5;
     }
-    ul {
-      z-index: -1;
-    }
+    //--▲ First Semester ▲--//
   }
+  nav[class*='second-semester'] {
+    main {
+      grid-row: 1/2;
+      grid-column: 1/6;
+      border-top-right-radius: 8px;
+    }
+    //--▼ Second Semester ▼--//
+    a[id*='sheet'],
+    ul[class*='sheet'] {
+      grid-row: 5/6;
+    }
+    a[id*='edit'],
+    ul[class*='edit'] {
+      grid-row: 4/5;
+    }
+    a[id*='book'],
+    ul[class*='book'] {
+      grid-row: 3/4;
+    }
+    a[id*='cloud'],
+    ul[class*='cloud'] {
+      grid-row: 2/3;
+    }
+    //--▲ Second Semester ▲--//
+  }
+
   /*--|▲| Global Placement & Layout Setup |▲|--*/
   /*--|▼| Scan Animation & Design Default |▼|--*/
   nav {
     main {
-      grid-row: 5/6;
-      grid-column: 1/6;
-      color: $primary-light;
-      background: $primary-dark;
-      border-bottom-right-radius: 8px;
-
       display: flex;
       align-items: center;
+      color: $primary-light;
       justify-content: center;
+      background: $primary-dark;
       h1 {
         cursor: default;
       }
@@ -371,6 +403,8 @@
     display: grid;
     grid-column: 1/6;
   }
+
+  //--▼ First Semester ▼--//
   #january {
     grid-row: 1/6;
   }
@@ -389,6 +423,27 @@
   #june {
     grid-row: 6/11;
   }
+  //--▲ First Semester ▲--//
+  //--▼ Second Semester ▼--//
+  #july {
+    grid-row: 3/8;
+  }
+  #august {
+    grid-row: 4/9;
+  }
+  #september {
+    grid-row: 5/10;
+  }
+  #october {
+    grid-row: 6/11;
+  }
+  #november {
+    grid-row: 7/12;
+  }
+  #december {
+    grid-row: 8/13;
+  }
+  //--▲ Second Semester ▲--//
 }
 /*--▼ Responsive Design ▼--*/
 section[class*='overlay'] {
