@@ -3523,10 +3523,11 @@ main[class*=main] #buttons-overlay .foreground{margin:-44px 0 -210px 0}}@media o
 .header-overlay section div button{margin-left:20px}.header-overlay section div button a{display:flex;align-items:center}
 .header-overlay section div button a svg,.header-overlay section div button a h1{color:#adaaaf}
 .header-overlay section div button a h1{padding-left:1rem}.header-overlay section div button a:hover svg{color:#631b19}
-.header-overlay section div button a:hover h1{color:#957e7e}.header-overlay section div:first-child button{margin-top:8px}
-.header-overlay section div:last-child{border-radius:0 0 8px 8px}.header-overlay section div:last-child button{margin-bottom:8px}
-.header-overlay .akademici{grid-column:1/2;grid-row:1/13}.header-overlay .administrasie{grid-column:2/3;grid-row:1/13}
-.header-overlay .operasioneel{grid-column:3/4;grid-row:1/13}.sidebar-overlay nav{grid-template-rows:repeat(5,1fr);grid-template-columns:repeat(5,1fr)}
+.header-overlay section div button a:hover h1{color:#957e7e}.header-overlay section div:first-child{border-radius:0 0 8px 8px}
+.header-overlay section div:first-child button{margin-top:8px}.header-overlay section div:last-child{border-radius:0 0 8px 8px}
+.header-overlay section div:last-child button{margin-bottom:8px}.header-overlay .akademici{grid-column:1/2;grid-row:1/13}
+.header-overlay .administrasie{grid-column:2/3;grid-row:1/13}.header-overlay .operasioneel{grid-column:3/4;grid-row:1/13}
+.sidebar-overlay nav{grid-template-rows:repeat(5,1fr);grid-template-columns:repeat(5,1fr)}
 .sidebar-overlay nav a[id*=gr],.sidebar-overlay nav ul[class*=gr]{grid-column:1/2}
 .sidebar-overlay nav a[id*=pi],.sidebar-overlay nav ul[class*=pi]{grid-column:2/3}
 .sidebar-overlay nav a[id*=ye],.sidebar-overlay nav ul[class*=ye]{grid-column:3/4}

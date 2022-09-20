@@ -53,6 +53,7 @@
     }
 
     div:first-child {
+      border-radius: 0 0 8px 8px;
       button {
         margin-top: 8px;
       }
@@ -77,6 +78,7 @@
     grid-row: 1/13;
   }
 }
+
 /*--▼ .sidebar-overlay ▼--*/
 .sidebar-overlay {
   /*--|▼| Global Placement & Layout Setup |▼|--*/
@@ -159,7 +161,6 @@
     }
     //--▲ Second Semester ▲--//
   }
-
   /*--|▲| Global Placement & Layout Setup |▲|--*/
   /*--|▼| Scan Animation & Design Default |▼|--*/
   nav {
@@ -445,6 +446,7 @@
   }
   //--▲ Second Semester ▲--//
 }
+
 /*--▼ Responsive Design ▼--*/
 section[class*='overlay'] {
   @media only screen and (max-height: 2160px) {
