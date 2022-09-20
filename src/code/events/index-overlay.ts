@@ -5,6 +5,7 @@ export namespace IndexOverlay {
     const indexMain = document.getElementById('index-main');
     const indexSidebar = document.getElementById('index-sidebar');
     let sidebarButtons = document.querySelectorAll('#index-sidebar > div > button > a > h1');
+    let activeButtons = document.querySelectorAll('#index-sidebar > div');
     const indexOverlay = document.getElementById('index-overlay');
     const indexFooter = document.getElementById('index-footer');
     const indexData = document.getElementById('index-data');
@@ -13,6 +14,7 @@ export namespace IndexOverlay {
       case 'default-overlay':
         break;
       case 'sidebar-overlay':
+        IndexOverlay.monthHighlight(indexOverlay);
         $(sidebarButtons).on('mouseenter', () => {
           indexOverlay.style.display = 'grid';
         });
@@ -66,5 +68,73 @@ export namespace IndexOverlay {
       $(`.${pageName} #${month[i]}`).css('display', 'none');
     }
     $(`.${pageName} #${display}`).css('display', 'grid');
+  }
+  export function monthHighlight(indexOverlay: HTMLElement) {
+    let januaryButton: HTMLElement = indexOverlay.querySelector('#january');
+    let februaryButton: HTMLElement = indexOverlay.querySelector('#february');
+    let marchButton: HTMLElement = indexOverlay.querySelector('#march');
+    let aprilButton: HTMLElement = indexOverlay.querySelector('#april');
+    let mayButton: HTMLElement = indexOverlay.querySelector('#may');
+    let juneButton: HTMLElement = indexOverlay.querySelector('#june');
+    let julyButton: HTMLElement = indexOverlay.querySelector('#july');
+    let augustButton: HTMLElement = indexOverlay.querySelector('#august');
+    let septemberButton: HTMLElement = indexOverlay.querySelector('#september');
+    let octoberButton: HTMLElement = indexOverlay.querySelector('#october');
+    let novemberButton: HTMLElement = indexOverlay.querySelector('#november');
+    let decemberButton: HTMLElement = indexOverlay.querySelector('#december');
+
+    const date: String = `${new Date()}`;
+    let dateArray: Array<string> = date.split(' ');
+    let month: string = dateArray[1];
+    switch (month) {
+      case 'Jan':
+        januaryButton.classList.remove('false');
+        januaryButton.classList.add('true');
+        break;
+      case 'Feb':
+        februaryButton.classList.remove('false');
+        februaryButton.classList.add('true');
+        break;
+      case 'Mar':
+        marchButton.classList.remove('false');
+        marchButton.classList.add('true');
+        break;
+      case 'Apr':
+        aprilButton.classList.remove('false');
+        aprilButton.classList.add('true');
+        break;
+      case 'May':
+        mayButton.classList.remove('false');
+        mayButton.classList.add('true');
+        break;
+      case 'Jun':
+        juneButton.classList.remove('false');
+        juneButton.classList.add('true');
+        break;
+      case 'Jul':
+        julyButton.classList.remove('false');
+        julyButton.classList.add('true');
+        break;
+      case 'Aug':
+        augustButton.classList.remove('false');
+        augustButton.classList.add('true');
+        break;
+      case 'Sep':
+        septemberButton.classList.remove('false');
+        septemberButton.classList.add('true');
+        break;
+      case 'Oct':
+        octoberButton.classList.remove('false');
+        octoberButton.classList.add('true');
+        break;
+      case 'Nov':
+        novemberButton.classList.remove('false');
+        novemberButton.classList.add('true');
+        break;
+      case 'Dec':
+        decemberButton.classList.remove('false');
+        decemberButton.classList.add('true');
+        break;
+    }
   }
 }

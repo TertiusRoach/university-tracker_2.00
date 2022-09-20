@@ -11,7 +11,7 @@ export namespace IndexSidebar {
     switch (pageName) {
       case 'default-sidebar':
         // Mark the current month as selected
-        monthHighlight(indexSidebar);
+        IndexSidebar.monthHighlight(indexSidebar);
         console.log(`--${pageName} Loaded`);
         break;
     }
