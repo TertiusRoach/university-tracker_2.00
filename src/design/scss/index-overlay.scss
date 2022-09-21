@@ -78,11 +78,12 @@
     grid-row: 1/13;
   }
 }
-
 /*--▼ .sidebar-overlay ▼--*/
 .sidebar-overlay {
   /*--|▼| Global Placement & Layout Setup |▼|--*/
   nav {
+    display: grid;
+    grid-column: 1/6;
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(5, 1fr);
     a[id*='gr'],
@@ -110,7 +111,6 @@
       z-index: -1;
     }
   }
-
   nav[class*='first-semester'] {
     main {
       grid-row: 5/6;
@@ -361,7 +361,14 @@
         filter: drop-shadow(0 0 0.75rem $primary-medium);
       }
     }
-
+    ul li {
+      background: $primary-light;
+      button svg {
+        color: $primary-dark;
+        filter: drop-shadow(0 0 0.75rem $primary-medium);
+      }
+    }
+    /*
     ul[class*='gr'] li {
       background: $green-light;
       button svg {
@@ -397,52 +404,96 @@
         filter: drop-shadow(0 0 0.75rem $blue-neon);
       }
     }
+    */
   }
   /*--|▲| Button Styling |▲|--*/
-
-  nav {
-    display: grid;
-    grid-column: 1/6;
-  }
 
   //--▼ First Semester ▼--//
   #january {
     grid-row: 1/6;
+    #bl-sheet-jan div,
+    .bl-sheet li {
+      border-top-right-radius: 8px;
+    }
   }
   #february {
     grid-row: 2/7;
+    #bl-sheet-feb div,
+    .bl-sheet li {
+      border-top-right-radius: 8px;
+    }
   }
   #march {
     grid-row: 3/8;
+    #bl-sheet-mar div,
+    .bl-sheet li {
+      border-top-right-radius: 8px;
+    }
   }
   #april {
     grid-row: 4/9;
+    #bl-sheet-apr div,
+    .bl-sheet li {
+      border-top-right-radius: 8px;
+    }
   }
   #may {
     grid-row: 5/10;
+    #bl-sheet-may div,
+    .bl-sheet li {
+      border-top-right-radius: 8px;
+    }
   }
   #june {
     grid-row: 6/11;
+    #bl-sheet-jun div,
+    .bl-sheet li {
+      border-top-right-radius: 8px;
+    }
   }
   //--▲ First Semester ▲--//
   //--▼ Second Semester ▼--//
   #july {
     grid-row: 3/8;
+    #bl-sheet-jul div,
+    .bl-sheet li {
+      border-bottom-right-radius: 8px;
+    }
   }
   #august {
     grid-row: 4/9;
+    #bl-sheet-aug div,
+    .bl-sheet li {
+      border-bottom-right-radius: 8px;
+    }
   }
   #september {
     grid-row: 5/10;
+    #bl-sheet-sep div,
+    .bl-sheet li {
+      border-bottom-right-radius: 8px;
+    }
   }
   #october {
     grid-row: 6/11;
+    #bl-sheet-oct div,
+    .bl-sheet li {
+      border-bottom-right-radius: 8px;
+    }
   }
   #november {
     grid-row: 7/12;
+    #bl-sheet-nov div,
+    .bl-sheet li {
+      border-bottom-right-radius: 8px;
+    }
   }
   #december {
     grid-row: 8/13;
+    #bl-sheet-dec div,
+    .bl-sheet li {
+      border-bottom-right-radius: 8px;
+    }
   }
   //--▲ Second Semester ▲--//
 }

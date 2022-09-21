@@ -1,6 +1,6 @@
 @charset "UTF-8";*{font-family:"Baloo Bhai 2",arial;padding:0;margin:0}
 #index-body{display:grid;height:100vh;overflow:hidden;grid-template-columns:80px 65px 1fr 80px;grid-template-rows:40px 1fr 4em}
-.default-body{background:#adaaaf}.default-body #load-foreground{z-index:20;grid-row:1/4;grid-column:1/5;background:0;opacity:0;display:grid;transition:60s;transform:opacity(0.8);grid-template-rows:40px 1fr 250px 1fr 4em;grid-template-columns:80px 1fr 250px 1fr 80px;background:linear-gradient(to top right,#827d85,#2e0e3b)}
+.default-body{background:grey}.default-body #load-foreground{z-index:20;grid-row:1/4;grid-column:1/5;background:0;opacity:0;display:grid;transition:60s;transform:opacity(0.8);grid-template-rows:40px 1fr 250px 1fr 4em;grid-template-columns:80px 1fr 250px 1fr 80px;background:linear-gradient(to top right,#827d85,#2e0e3b)}
 .default-body #load-foreground .container{grid-row:3/4;grid-column:3/4;filter:drop-shadow(0 0 4em #adaaaf)}
 .default-body #load-foreground .container img{width:275px;height:275px;transition:12s;transform:opacity(0);transform:scale(0.95)}
 .default-body #load-midground{z-index:4;grid-row:1/4;grid-column:1/5;display:grid;grid-template-rows:40px 1fr 4em;grid-template-columns:80px 1fr 80px;transition:10s;transform:opacity(0)}
@@ -3527,7 +3527,7 @@ main[class*=main] #buttons-overlay .foreground{margin:-44px 0 -210px 0}}@media o
 .header-overlay section div:first-child button{margin-top:8px}.header-overlay section div:last-child{border-radius:0 0 8px 8px}
 .header-overlay section div:last-child button{margin-bottom:8px}.header-overlay .akademici{grid-column:1/2;grid-row:1/13}
 .header-overlay .administrasie{grid-column:2/3;grid-row:1/13}.header-overlay .operasioneel{grid-column:3/4;grid-row:1/13}
-.sidebar-overlay nav{grid-template-rows:repeat(5,1fr);grid-template-columns:repeat(5,1fr)}
+.sidebar-overlay nav{display:grid;grid-column:1/6;grid-template-rows:repeat(5,1fr);grid-template-columns:repeat(5,1fr)}
 .sidebar-overlay nav a[id*=gr],.sidebar-overlay nav ul[class*=gr]{grid-column:1/2}
 .sidebar-overlay nav a[id*=pi],.sidebar-overlay nav ul[class*=pi]{grid-column:2/3}
 .sidebar-overlay nav a[id*=ye],.sidebar-overlay nav ul[class*=ye]{grid-column:3/4}
@@ -3570,16 +3570,19 @@ main[class*=main] #buttons-overlay .foreground{margin:-44px 0 -210px 0}}@media o
 .sidebar-overlay nav[class*=true] ul[class*=bl] li{background:#9fc5e8}.sidebar-overlay nav[class*=true] ul[class*=bl] li button svg{color:#333395;filter:drop-shadow(0 0 .75rem #3c90ff)}
 .sidebar-overlay nav[class*=false] a div{background:#2e0e3b}.sidebar-overlay nav[class*=false] a div button h1,.sidebar-overlay nav[class*=false] a div button svg{color:#adaaaf}
 .sidebar-overlay nav[class*=false] a div button:hover h1,.sidebar-overlay nav[class*=false] a div button:hover svg{filter:drop-shadow(0 0 .75rem #827d85)}
-.sidebar-overlay nav[class*=false] ul[class*=gr] li{background:#b6d7a8}.sidebar-overlay nav[class*=false] ul[class*=gr] li button svg{color:#274e13;filter:drop-shadow(0 0 .75rem #0f0)}
-.sidebar-overlay nav[class*=false] ul[class*=pi] li{background:#d5a6bd}.sidebar-overlay nav[class*=false] ul[class*=pi] li button svg{color:#4c1130;filter:drop-shadow(0 0 .75rem #f0f)}
-.sidebar-overlay nav[class*=false] ul[class*=ye] li{background:#ffe599}.sidebar-overlay nav[class*=false] ul[class*=ye] li button svg{color:#7f6000;filter:drop-shadow(0 0 .75rem #ff0)}
-.sidebar-overlay nav[class*=false] ul[class*=or] li{background:#f9cb9c}.sidebar-overlay nav[class*=false] ul[class*=or] li button svg{color:#783f04;filter:drop-shadow(0 0 .75rem #f90)}
-.sidebar-overlay nav[class*=false] ul[class*=bl] li{background:#9fc5e8}.sidebar-overlay nav[class*=false] ul[class*=bl] li button svg{color:#333395;filter:drop-shadow(0 0 .75rem #3c90ff)}
-.sidebar-overlay nav{display:grid;grid-column:1/6}.sidebar-overlay #january{grid-row:1/6}
-.sidebar-overlay #february{grid-row:2/7}.sidebar-overlay #march{grid-row:3/8}.sidebar-overlay #april{grid-row:4/9}
-.sidebar-overlay #may{grid-row:5/10}.sidebar-overlay #june{grid-row:6/11}.sidebar-overlay #july{grid-row:3/8}
-.sidebar-overlay #august{grid-row:4/9}.sidebar-overlay #september{grid-row:5/10}.sidebar-overlay #october{grid-row:6/11}
-.sidebar-overlay #november{grid-row:7/12}.sidebar-overlay #december{grid-row:8/13}
+.sidebar-overlay nav[class*=false] ul li{background:#adaaaf}.sidebar-overlay nav[class*=false] ul li button svg{color:#2e0e3b;filter:drop-shadow(0 0 .75rem #827d85)}
+.sidebar-overlay #january{grid-row:1/6}.sidebar-overlay #january #bl-sheet-jan div,.sidebar-overlay #january .bl-sheet li{border-top-right-radius:8px}
+.sidebar-overlay #february{grid-row:2/7}.sidebar-overlay #february #bl-sheet-feb div,.sidebar-overlay #february .bl-sheet li{border-top-right-radius:8px}
+.sidebar-overlay #march{grid-row:3/8}.sidebar-overlay #march #bl-sheet-mar div,.sidebar-overlay #march .bl-sheet li{border-top-right-radius:8px}
+.sidebar-overlay #april{grid-row:4/9}.sidebar-overlay #april #bl-sheet-apr div,.sidebar-overlay #april .bl-sheet li{border-top-right-radius:8px}
+.sidebar-overlay #may{grid-row:5/10}.sidebar-overlay #may #bl-sheet-may div,.sidebar-overlay #may .bl-sheet li{border-top-right-radius:8px}
+.sidebar-overlay #june{grid-row:6/11}.sidebar-overlay #june #bl-sheet-jun div,.sidebar-overlay #june .bl-sheet li{border-top-right-radius:8px}
+.sidebar-overlay #july{grid-row:3/8}.sidebar-overlay #july #bl-sheet-jul div,.sidebar-overlay #july .bl-sheet li{border-bottom-right-radius:8px}
+.sidebar-overlay #august{grid-row:4/9}.sidebar-overlay #august #bl-sheet-aug div,.sidebar-overlay #august .bl-sheet li{border-bottom-right-radius:8px}
+.sidebar-overlay #september{grid-row:5/10}.sidebar-overlay #september #bl-sheet-sep div,.sidebar-overlay #september .bl-sheet li{border-bottom-right-radius:8px}
+.sidebar-overlay #october{grid-row:6/11}.sidebar-overlay #october #bl-sheet-oct div,.sidebar-overlay #october .bl-sheet li{border-bottom-right-radius:8px}
+.sidebar-overlay #november{grid-row:7/12}.sidebar-overlay #november #bl-sheet-nov div,.sidebar-overlay #november .bl-sheet li{border-bottom-right-radius:8px}
+.sidebar-overlay #december{grid-row:8/13}.sidebar-overlay #december #bl-sheet-dec div,.sidebar-overlay #december .bl-sheet li{border-bottom-right-radius:8px}
 @media only screen and (max-height:2160px){section[class*=overlay]{grid-template-columns:repeat(6,171.3333333333px) 1fr;grid-template-rows:repeat(12,171.3333333333px)}
 }@media only screen and (max-height:2159px){section[class*=overlay]{grid-template-columns:repeat(6,171.25px) 1fr;grid-template-rows:repeat(12,171.25px)}
 }@media only screen and (max-height:2158px){section[class*=overlay]{grid-template-columns:repeat(6,171.1666666667px) 1fr;grid-template-rows:repeat(12,171.1666666667px)}
