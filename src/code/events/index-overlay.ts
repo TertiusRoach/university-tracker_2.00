@@ -1,23 +1,108 @@
 export namespace IndexOverlay {
   export function eventsFor(pageName: String | 'default-overlay' | 'sidebar-overlay') {
-    const indexBody = document.getElementById('index-body');
-    const indexHeader = document.getElementById('index-header');
-    const indexMain = document.getElementById('index-main');
-    const indexSidebar = document.getElementById('index-sidebar');
-    let sidebarButtons = document.querySelectorAll('#index-sidebar > div > button > a > h1');
-    let activeButtons = document.querySelectorAll('#index-sidebar > div');
-    const indexOverlay = document.getElementById('index-overlay');
-    const indexFooter = document.getElementById('index-footer');
-    const indexData = document.getElementById('index-data');
+    const indexBody: HTMLElement = document.getElementById('index-body');
+    const indexHeader: HTMLElement = document.getElementById('index-header');
+    const indexMain: HTMLElement = document.getElementById('index-main');
+    const indexSidebar: HTMLElement = document.getElementById('index-sidebar');
+    let sidebarButtons: Object = document.querySelectorAll('#index-sidebar > div > button > a > h1');
+    let activeButtons: Object = document.querySelectorAll('#index-sidebar > div');
+
+    const indexOverlay: HTMLElement = document.getElementById('index-overlay');
+    let januaryBanner: HTMLElement = indexOverlay.querySelector('#january');
+    let februaryBanner: HTMLElement = indexOverlay.querySelector('#february');
+    let marchBanner: HTMLElement = indexOverlay.querySelector('#march');
+    let aprilBanner: HTMLElement = indexOverlay.querySelector('#april');
+    let mayBanner: HTMLElement = indexOverlay.querySelector('#may');
+    let juneBanner: HTMLElement = indexOverlay.querySelector('#june');
+    let julyBanner: HTMLElement = indexOverlay.querySelector('#july');
+    let augustBanner: HTMLElement = indexOverlay.querySelector('#august');
+    let septemberBanner: HTMLElement = indexOverlay.querySelector('#september');
+    let octoberBanner: HTMLElement = indexOverlay.querySelector('#october');
+    let novemberBanner: HTMLElement = indexOverlay.querySelector('#november');
+    let decemberBanner: HTMLElement = indexOverlay.querySelector('#december');
+
+    let overlayBanners: Object = document.querySelectorAll('nav main h1');
+
+    const indexFooter: HTMLElement = document.getElementById('index-footer');
+    const indexData: HTMLElement = document.getElementById('index-data');
 
     switch (pageName) {
       case 'default-overlay':
         break;
       case 'sidebar-overlay':
         IndexOverlay.monthHighlight(indexOverlay);
+
         $(sidebarButtons).on('mouseenter', () => {
           indexOverlay.style.display = 'grid';
         });
+
+        //--|▼| Events toggle through columns: Column #1 |▼|--//
+        $('a[id*="gr-sheet"]').on('mouseenter', () => {});
+        $('a[id*="gr-sheet"]').on('mouseenter', () => {
+          changeBanner('Green Admin');
+        });
+        $('a[id*="pi-sheet"]').on('mouseenter', () => {
+          changeBanner('Pink Admin');
+        });
+        $('a[id*="ye-sheet"]').on('mouseenter', () => {
+          changeBanner('Yellow Admin');
+        });
+        $('a[id*="or-sheet"]').on('mouseenter', () => {
+          changeBanner('Orange Admin');
+        });
+        $('a[id*="bl-sheet"]').on('mouseenter', () => {
+          changeBanner('Blue Admin');
+        });
+        //--|▼| Column #2 |▼|--//
+        $('a[id*="gr-edit"]').on('mouseenter', () => {
+          changeBanner('Green Uploads');
+        });
+        $('a[id*="pi-edit"]').on('mouseenter', () => {
+          changeBanner('Pink Uploads');
+        });
+        $('a[id*="ye-edit"]').on('mouseenter', () => {
+          changeBanner('Yellow Uploads');
+        });
+        $('a[id*="or-edit"]').on('mouseenter', () => {
+          changeBanner('Orange Uploads');
+        });
+        $('a[id*="bl-edit"]').on('mouseenter', () => {
+          changeBanner('Blue Uploads');
+        });
+        //--|▼| Column #3 |▼|--//
+        $('a[id*="gr-book"]').on('mouseenter', () => {
+          changeBanner('Green Bookings');
+        });
+        $('a[id*="pi-book"]').on('mouseenter', () => {
+          changeBanner('Pink Bookings');
+        });
+        $('a[id*="ye-book"]').on('mouseenter', () => {
+          changeBanner('Yellow Bookings');
+        });
+        $('a[id*="or-book"]').on('mouseenter', () => {
+          changeBanner('Orange Bookings');
+        });
+        $('a[id*="bl-book"]').on('mouseenter', () => {
+          changeBanner('Blue Bookings');
+        });
+        //--|▼| Column #4 |▼|--//
+        $('a[id*="gr-cloud"]').on('mouseenter', () => {
+          changeBanner('Green Storage');
+        });
+        $('a[id*="pi-cloud"]').on('mouseenter', () => {
+          changeBanner('Pink Storage');
+        });
+        $('a[id*="ye-cloud"]').on('mouseenter', () => {
+          changeBanner('Yellow Storage');
+        });
+        $('a[id*="or-cloud"]').on('mouseenter', () => {
+          changeBanner('Orange Storage');
+        });
+        $('a[id*="bl-cloud"]').on('mouseenter', () => {
+          changeBanner('Blue Storage');
+        });
+
+        //--|▼| Show Month Overlays: 0 = 'January' |▼|--//
         $(sidebarButtons[0]).on('mouseenter', () => {
           displayOverlay(pageName, 'january');
         });
@@ -54,6 +139,44 @@ export namespace IndexOverlay {
         $(sidebarButtons[11]).on('mouseenter', () => {
           displayOverlay(pageName, 'december');
         });
+
+        //--|▼| When mouse leaves containe, reset banner |▼|--//
+        $(januaryBanner).on('mouseleave', () => {
+          document.querySelector('#january main h1').textContent = 'January';
+        });
+        $(februaryBanner).on('mouseleave', () => {
+          document.querySelector('#february main h1').textContent = 'February';
+        });
+        $(marchBanner).on('mouseleave', () => {
+          document.querySelector('#march main h1').textContent = 'March';
+        });
+        $(aprilBanner).on('mouseleave', () => {
+          document.querySelector('#april main h1').textContent = 'April';
+        });
+        $(mayBanner).on('mouseleave', () => {
+          document.querySelector('#may main h1').textContent = 'May';
+        });
+        $(juneBanner).on('mouseleave', () => {
+          document.querySelector('#june main h1').textContent = 'June';
+        });
+        $(julyBanner).on('mouseleave', () => {
+          document.querySelector('#july main h1').textContent = 'July';
+        });
+        $(augustBanner).on('mouseleave', () => {
+          document.querySelector('#august main h1').textContent = 'August';
+        });
+        $(septemberBanner).on('mouseleave', () => {
+          document.querySelector('#september main h1').textContent = 'September';
+        });
+        $(octoberBanner).on('mouseleave', () => {
+          document.querySelector('#october main h1').textContent = 'October';
+        });
+        $(novemberBanner).on('mouseleave', () => {
+          document.querySelector('#november main h1').textContent = 'November';
+        });
+        $(decemberBanner).on('mouseleave', () => {
+          document.querySelector('#december main h1').textContent = 'December';
+        });
         break;
     }
     //--► console.log(`--${pageName} Loaded`); ◄--//
@@ -70,71 +193,65 @@ export namespace IndexOverlay {
     $(`.${pageName} #${display}`).css('display', 'grid');
   }
   export function monthHighlight(indexOverlay: HTMLElement) {
-    let januaryButton: HTMLElement = indexOverlay.querySelector('#january');
-    let februaryButton: HTMLElement = indexOverlay.querySelector('#february');
-    let marchButton: HTMLElement = indexOverlay.querySelector('#march');
-    let aprilButton: HTMLElement = indexOverlay.querySelector('#april');
-    let mayButton: HTMLElement = indexOverlay.querySelector('#may');
-    let juneButton: HTMLElement = indexOverlay.querySelector('#june');
-    let julyButton: HTMLElement = indexOverlay.querySelector('#july');
-    let augustButton: HTMLElement = indexOverlay.querySelector('#august');
-    let septemberButton: HTMLElement = indexOverlay.querySelector('#september');
-    let octoberButton: HTMLElement = indexOverlay.querySelector('#october');
-    let novemberButton: HTMLElement = indexOverlay.querySelector('#november');
-    let decemberButton: HTMLElement = indexOverlay.querySelector('#december');
+    const toggleClass = (container: HTMLElement) => {
+      container.classList.remove('false');
+      container.classList.add('true');
+    };
 
     const date: String = `${new Date()}`;
     let dateArray: Array<string> = date.split(' ');
     let month: string = dateArray[1];
     switch (month) {
       case 'Jan':
-        januaryButton.classList.remove('false');
-        januaryButton.classList.add('true');
+        toggleClass(indexOverlay.querySelector('#january'));
         break;
       case 'Feb':
-        februaryButton.classList.remove('false');
-        februaryButton.classList.add('true');
+        toggleClass(indexOverlay.querySelector('#february'));
         break;
       case 'Mar':
-        marchButton.classList.remove('false');
-        marchButton.classList.add('true');
+        toggleClass(indexOverlay.querySelector('#march'));
         break;
       case 'Apr':
-        aprilButton.classList.remove('false');
-        aprilButton.classList.add('true');
+        toggleClass(indexOverlay.querySelector('#april'));
         break;
       case 'May':
-        mayButton.classList.remove('false');
-        mayButton.classList.add('true');
+        toggleClass(indexOverlay.querySelector('#may'));
         break;
       case 'Jun':
-        juneButton.classList.remove('false');
-        juneButton.classList.add('true');
+        toggleClass(indexOverlay.querySelector('#june'));
         break;
       case 'Jul':
-        julyButton.classList.remove('false');
-        julyButton.classList.add('true');
+        toggleClass(indexOverlay.querySelector('#july'));
         break;
       case 'Aug':
-        augustButton.classList.remove('false');
-        augustButton.classList.add('true');
+        toggleClass(indexOverlay.querySelector('#august'));
         break;
       case 'Sep':
-        septemberButton.classList.remove('false');
-        septemberButton.classList.add('true');
+        toggleClass(indexOverlay.querySelector('#september'));
         break;
       case 'Oct':
-        octoberButton.classList.remove('false');
-        octoberButton.classList.add('true');
+        toggleClass(indexOverlay.querySelector('#october'));
         break;
       case 'Nov':
-        novemberButton.classList.remove('false');
-        novemberButton.classList.add('true');
+        toggleClass(indexOverlay.querySelector('#november'));
         break;
       case 'Dec':
-        decemberButton.classList.remove('false');
-        decemberButton.classList.add('true');
+        toggleClass(indexOverlay.querySelector('#december'));
         break;
     }
+  }
+  export function changeBanner(text: String) {
+    document.querySelector('#january main h1').textContent = `${text}`;
+    document.querySelector('#february main h1').textContent = `${text}`;
+    document.querySelector('#march main h1').textContent = `${text}`;
+    document.querySelector('#april main h1').textContent = `${text}`;
+    document.querySelector('#may main h1').textContent = `${text}`;
+    document.querySelector('#june main h1').textContent = `${text}`;
+    document.querySelector('#july main h1').textContent = `${text}`;
+    document.querySelector('#august main h1').textContent = `${text}`;
+    document.querySelector('#september main h1').textContent = `${text}`;
+    document.querySelector('#october main h1').textContent = `${text}`;
+    document.querySelector('#november main h1').textContent = `${text}`;
+    document.querySelector('#december main h1').textContent = `${text}`;
   }
 }
