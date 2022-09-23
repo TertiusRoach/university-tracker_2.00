@@ -86,6 +86,39 @@
     grid-column: 1/6;
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(5, 1fr);
+
+    a div,
+    ul li {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      button {
+        text-decoration: none;
+        background: none;
+        outline: none;
+        border: none;
+        h1,
+        svg {
+          cursor: pointer;
+          font-size: 2rem;
+        }
+      }
+    }
+    ul {
+      z-index: -1;
+    }
+    main {
+      display: flex;
+      align-items: center;
+      color: $primary-light;
+      justify-content: center;
+      background: $primary-dark;
+      h1 {
+        cursor: default;
+      }
+    }
+
     a[id*='gr'],
     ul[class*='gr'] {
       grid-column: 1/2;
@@ -105,97 +138,6 @@
     a[id*='bl'],
     ul[class*='bl'] {
       grid-column: 5/6;
-    }
-
-    ul {
-      z-index: -1;
-    }
-  }
-  nav[class*='first-semester'] {
-    main {
-      grid-row: 5/6;
-      grid-column: 1/6;
-      border-bottom-right-radius: 8px;
-    }
-    //--▼ First Semester ▼--//
-    a[id*='sheet'],
-    ul[class*='sheet'] {
-      grid-row: 1/2;
-    }
-    a[id*='edit'],
-    ul[class*='edit'] {
-      grid-row: 2/3;
-    }
-    a[id*='book'],
-    ul[class*='book'] {
-      grid-row: 3/4;
-    }
-    a[id*='cloud'],
-    ul[class*='cloud'] {
-      grid-row: 4/5;
-    }
-    //--▲ First Semester ▲--//
-  }
-  nav[class*='second-semester'] {
-    main {
-      grid-row: 1/2;
-      grid-column: 1/6;
-      border-top-right-radius: 8px;
-    }
-    //--▼ Second Semester ▼--//
-    a[id*='sheet'],
-    ul[class*='sheet'] {
-      grid-row: 5/6;
-    }
-    a[id*='edit'],
-    ul[class*='edit'] {
-      grid-row: 4/5;
-    }
-    a[id*='book'],
-    ul[class*='book'] {
-      grid-row: 3/4;
-    }
-    a[id*='cloud'],
-    ul[class*='cloud'] {
-      grid-row: 2/3;
-    }
-    //--▲ Second Semester ▲--//
-  }
-  /*--|▲| Global Placement & Layout Setup |▲|--*/
-  /*--|▼| Scan Animation & Design Default |▼|--*/
-  nav {
-    main {
-      display: flex;
-      align-items: center;
-      color: $primary-light;
-      justify-content: center;
-      background: $primary-dark;
-      h1 {
-        cursor: default;
-      }
-    }
-    a div,
-    ul li {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      clip-path: inset(0 0 0 0);
-      transition: clip-path 0.25s;
-      button {
-        text-decoration: none;
-        background: none;
-        outline: none;
-        border: none;
-        h1,
-        svg {
-          cursor: pointer;
-          font-size: 2rem;
-        }
-      }
-    }
-    a:hover div {
-      clip-path: inset(100% 0 0 0);
     }
 
     a[id*='gr']:hover ~ main {
@@ -234,6 +176,75 @@
       }
     }
   }
+  nav[class*='first-semester'] {
+    main {
+      grid-row: 5/6;
+      grid-column: 1/6;
+      border-bottom-right-radius: 8px;
+    }
+    //--▼ First Semester ▼--//
+    a div {
+      clip-path: inset(0 0 0 0);
+      transition: clip-path 0.25s;
+    }
+    a:hover div {
+      clip-path: inset(100% 0 0 0);
+    }
+    a[id*='sheet'],
+    ul[class*='sheet'] {
+      grid-row: 1/2;
+    }
+    a[id*='edit'],
+    ul[class*='edit'] {
+      grid-row: 2/3;
+    }
+    a[id*='book'],
+    ul[class*='book'] {
+      grid-row: 3/4;
+    }
+    a[id*='cloud'],
+    ul[class*='cloud'] {
+      grid-row: 4/5;
+    }
+    //--▲ First Semester ▲--//
+  }
+  nav[class*='second-semester'] {
+    main {
+      grid-row: 1/2;
+      grid-column: 1/6;
+      border-top-right-radius: 8px;
+    }
+
+    //--▼ Second Semester ▼--//
+    a div {
+      clip-path: inset(0 0 0 0);
+      transition: clip-path 0.25s;
+    }
+    a:hover div {
+      clip-path: inset(0 0 100% 0);
+    }
+    a[id*='sheet'],
+    ul[class*='sheet'] {
+      grid-row: 5/6;
+    }
+    a[id*='edit'],
+    ul[class*='edit'] {
+      grid-row: 4/5;
+    }
+    a[id*='book'],
+    ul[class*='book'] {
+      grid-row: 3/4;
+    }
+    a[id*='cloud'],
+    ul[class*='cloud'] {
+      grid-row: 2/3;
+    }
+    //--▲ Second Semester ▲--//
+  }
+  /*--|▲| Global Placement & Layout Setup |▲|--*/
+  /*--|▼| Scan Animation & Design Default |▼|--*/
+  // nav {
+  // }
   /*--|▲| Scan Animation & Design Default |▲|--*/
   /*--|▼| Button Styling |▼|--*/
   nav[class*='true'] {
@@ -496,6 +507,13 @@
     }
   }
   //--▲ Second Semester ▲--//
+
+  .background {
+    z-index: -2;
+    grid-row: 1/13;
+    grid-column: 1/8;
+    background: linear-gradient(to bottom right, rgba(46, 14, 59, 0.2), rgba(46, 14, 59, 0.8));
+  }
 }
 
 /*--▼ Responsive Design ▼--*/

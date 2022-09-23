@@ -3528,31 +3528,34 @@ main[class*=main] #buttons-overlay .foreground{margin:-44px 0 -210px 0}}@media o
 .header-overlay section div:last-child button{margin-bottom:8px}.header-overlay .akademici{grid-column:1/2;grid-row:1/13}
 .header-overlay .administrasie{grid-column:2/3;grid-row:1/13}.header-overlay .operasioneel{grid-column:3/4;grid-row:1/13}
 .sidebar-overlay nav{display:grid;grid-column:1/6;grid-template-rows:repeat(5,1fr);grid-template-columns:repeat(5,1fr)}
-.sidebar-overlay nav a[id*=gr],.sidebar-overlay nav ul[class*=gr]{grid-column:1/2}
+.sidebar-overlay nav a div,.sidebar-overlay nav ul li{height:100%;display:flex;align-items:center;justify-content:center}
+.sidebar-overlay nav a div button,.sidebar-overlay nav ul li button{text-decoration:none;background:0;outline:0;border:0}
+.sidebar-overlay nav a div button h1,.sidebar-overlay nav a div button svg,.sidebar-overlay nav ul li button h1,.sidebar-overlay nav ul li button svg{cursor:pointer;font-size:2rem}
+.sidebar-overlay nav ul{z-index:-1}.sidebar-overlay nav main{display:flex;align-items:center;color:#adaaaf;justify-content:center;background:#2e0e3b}
+.sidebar-overlay nav main h1{cursor:default}.sidebar-overlay nav a[id*=gr],.sidebar-overlay nav ul[class*=gr]{grid-column:1/2}
 .sidebar-overlay nav a[id*=pi],.sidebar-overlay nav ul[class*=pi]{grid-column:2/3}
 .sidebar-overlay nav a[id*=ye],.sidebar-overlay nav ul[class*=ye]{grid-column:3/4}
 .sidebar-overlay nav a[id*=or],.sidebar-overlay nav ul[class*=or]{grid-column:4/5}
 .sidebar-overlay nav a[id*=bl],.sidebar-overlay nav ul[class*=bl]{grid-column:5/6}
-.sidebar-overlay nav ul{z-index:-1}.sidebar-overlay nav[class*=first-semester] main{grid-row:5/6;grid-column:1/6;border-bottom-right-radius:8px}
+.sidebar-overlay nav a[id*=gr]:hover ~ main{background:#b6d7a8}.sidebar-overlay nav a[id*=gr]:hover ~ main h1{color:#274e13;filter:drop-shadow(0 0 .75rem #0f0)}
+.sidebar-overlay nav a[id*=pi]:hover ~ main{background:#d5a6bd}.sidebar-overlay nav a[id*=pi]:hover ~ main h1{color:#4c1130;filter:drop-shadow(0 0 .75rem #f0f)}
+.sidebar-overlay nav a[id*=ye]:hover ~ main{background:#ffe599}.sidebar-overlay nav a[id*=ye]:hover ~ main h1{color:#7f6000;filter:drop-shadow(0 0 .75rem #ff0)}
+.sidebar-overlay nav a[id*=or]:hover ~ main{background:#f9cb9c}.sidebar-overlay nav a[id*=or]:hover ~ main h1{color:#783f04;filter:drop-shadow(0 0 .75rem #f90)}
+.sidebar-overlay nav a[id*=bl]:hover ~ main{background:#9fc5e8}.sidebar-overlay nav a[id*=bl]:hover ~ main h1{color:#333395;filter:drop-shadow(0 0 .75rem #3c90ff)}
+.sidebar-overlay nav[class*=first-semester] main{grid-row:5/6;grid-column:1/6;border-bottom-right-radius:8px}
+.sidebar-overlay nav[class*=first-semester] a div{clip-path:inset(0 0 0 0);transition:clip-path .25s}
+.sidebar-overlay nav[class*=first-semester] a:hover div{clip-path:inset(100% 0 0 0)}
 .sidebar-overlay nav[class*=first-semester] a[id*=sheet],.sidebar-overlay nav[class*=first-semester] ul[class*=sheet]{grid-row:1/2}
 .sidebar-overlay nav[class*=first-semester] a[id*=edit],.sidebar-overlay nav[class*=first-semester] ul[class*=edit]{grid-row:2/3}
 .sidebar-overlay nav[class*=first-semester] a[id*=book],.sidebar-overlay nav[class*=first-semester] ul[class*=book]{grid-row:3/4}
 .sidebar-overlay nav[class*=first-semester] a[id*=cloud],.sidebar-overlay nav[class*=first-semester] ul[class*=cloud]{grid-row:4/5}
 .sidebar-overlay nav[class*=second-semester] main{grid-row:1/2;grid-column:1/6;border-top-right-radius:8px}
+.sidebar-overlay nav[class*=second-semester] a div{clip-path:inset(0 0 0 0);transition:clip-path .25s}
+.sidebar-overlay nav[class*=second-semester] a:hover div{clip-path:inset(0 0 100% 0)}
 .sidebar-overlay nav[class*=second-semester] a[id*=sheet],.sidebar-overlay nav[class*=second-semester] ul[class*=sheet]{grid-row:5/6}
 .sidebar-overlay nav[class*=second-semester] a[id*=edit],.sidebar-overlay nav[class*=second-semester] ul[class*=edit]{grid-row:4/5}
 .sidebar-overlay nav[class*=second-semester] a[id*=book],.sidebar-overlay nav[class*=second-semester] ul[class*=book]{grid-row:3/4}
 .sidebar-overlay nav[class*=second-semester] a[id*=cloud],.sidebar-overlay nav[class*=second-semester] ul[class*=cloud]{grid-row:2/3}
-.sidebar-overlay nav main{display:flex;align-items:center;color:#adaaaf;justify-content:center;background:#2e0e3b}
-.sidebar-overlay nav main h1{cursor:default}.sidebar-overlay nav a div,.sidebar-overlay nav ul li{height:100%;display:flex;align-items:center;justify-content:center;clip-path:inset(0 0 0 0);transition:clip-path .25s}
-.sidebar-overlay nav a div button,.sidebar-overlay nav ul li button{text-decoration:none;background:0;outline:0;border:0}
-.sidebar-overlay nav a div button h1,.sidebar-overlay nav a div button svg,.sidebar-overlay nav ul li button h1,.sidebar-overlay nav ul li button svg{cursor:pointer;font-size:2rem}
-.sidebar-overlay nav a:hover div{clip-path:inset(100% 0 0 0)}.sidebar-overlay nav a[id*=gr]:hover ~ main{background:#b6d7a8}
-.sidebar-overlay nav a[id*=gr]:hover ~ main h1{color:#274e13;filter:drop-shadow(0 0 .75rem #0f0)}
-.sidebar-overlay nav a[id*=pi]:hover ~ main{background:#d5a6bd}.sidebar-overlay nav a[id*=pi]:hover ~ main h1{color:#4c1130;filter:drop-shadow(0 0 .75rem #f0f)}
-.sidebar-overlay nav a[id*=ye]:hover ~ main{background:#ffe599}.sidebar-overlay nav a[id*=ye]:hover ~ main h1{color:#7f6000;filter:drop-shadow(0 0 .75rem #ff0)}
-.sidebar-overlay nav a[id*=or]:hover ~ main{background:#f9cb9c}.sidebar-overlay nav a[id*=or]:hover ~ main h1{color:#783f04;filter:drop-shadow(0 0 .75rem #f90)}
-.sidebar-overlay nav a[id*=bl]:hover ~ main{background:#9fc5e8}.sidebar-overlay nav a[id*=bl]:hover ~ main h1{color:#333395;filter:drop-shadow(0 0 .75rem #3c90ff)}
 .sidebar-overlay nav[class*=true] a[id*=gr] div{background:#274e13}.sidebar-overlay nav[class*=true] a[id*=gr] div button h1,.sidebar-overlay nav[class*=true] a[id*=gr] div button svg{color:#b6d7a8}
 .sidebar-overlay nav[class*=true] a[id*=gr] div button:hover h1,.sidebar-overlay nav[class*=true] a[id*=gr] div button:hover svg{filter:drop-shadow(0 0 .75rem #0f0)}
 .sidebar-overlay nav[class*=true] a[id*=pi] div{background:#4c1130}.sidebar-overlay nav[class*=true] a[id*=pi] div button h1,.sidebar-overlay nav[class*=true] a[id*=pi] div button svg{color:#d5a6bd}
@@ -3583,6 +3586,7 @@ main[class*=main] #buttons-overlay .foreground{margin:-44px 0 -210px 0}}@media o
 .sidebar-overlay #october{grid-row:6/11}.sidebar-overlay #october #bl-sheet-oct div,.sidebar-overlay #october .bl-sheet li{border-bottom-right-radius:8px}
 .sidebar-overlay #november{grid-row:7/12}.sidebar-overlay #november #bl-sheet-nov div,.sidebar-overlay #november .bl-sheet li{border-bottom-right-radius:8px}
 .sidebar-overlay #december{grid-row:8/13}.sidebar-overlay #december #bl-sheet-dec div,.sidebar-overlay #december .bl-sheet li{border-bottom-right-radius:8px}
+.sidebar-overlay .background{z-index:-2;grid-row:1/13;grid-column:1/8;background:linear-gradient(to bottom right,rgba(46,14,59,0.2),rgba(46,14,59,0.8))}
 @media only screen and (max-height:2160px){section[class*=overlay]{grid-template-columns:repeat(6,171.3333333333px) 1fr;grid-template-rows:repeat(12,171.3333333333px)}
 }@media only screen and (max-height:2159px){section[class*=overlay]{grid-template-columns:repeat(6,171.25px) 1fr;grid-template-rows:repeat(12,171.25px)}
 }@media only screen and (max-height:2158px){section[class*=overlay]{grid-template-columns:repeat(6,171.1666666667px) 1fr;grid-template-rows:repeat(12,171.1666666667px)}

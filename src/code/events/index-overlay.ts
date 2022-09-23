@@ -8,6 +8,9 @@ export namespace IndexOverlay {
     let activeButtons: Object = document.querySelectorAll('#index-sidebar > div');
 
     const indexOverlay: HTMLElement = document.getElementById('index-overlay');
+    let overlayBackground: HTMLElement = indexOverlay.querySelector('.background');
+    let monthContainers: Object = indexOverlay.querySelectorAll('nav');
+    /*
     let januaryContainer: HTMLElement = indexOverlay.querySelector('#january');
     let februaryContainer: HTMLElement = indexOverlay.querySelector('#february');
     let marchContainer: HTMLElement = indexOverlay.querySelector('#march');
@@ -20,6 +23,7 @@ export namespace IndexOverlay {
     let octoberContainer: HTMLElement = indexOverlay.querySelector('#october');
     let novemberContainer: HTMLElement = indexOverlay.querySelector('#november');
     let decemberContainer: HTMLElement = indexOverlay.querySelector('#december');
+    */
 
     let januaryBanner: HTMLElement = indexOverlay.querySelector('#january main');
     let februaryBanner: HTMLElement = indexOverlay.querySelector('#february main');
@@ -49,70 +53,77 @@ export namespace IndexOverlay {
           indexOverlay.style.display = 'grid';
         });
 
+        $(overlayBackground).on('mouseenter', () => {
+          indexOverlay.style.display = 'none';
+        });
+
         //--|▼| Events toggle through columns: Column #1 |▼|--//
-        $('a[id*="gr-sheet"]').on('mouseenter', () => {});
         $('a[id*="gr-sheet"]').on('mouseenter', () => {
-          changeBanner('Green Admin');
+          changeBanner('gr-sheet');
         });
         $('a[id*="pi-sheet"]').on('mouseenter', () => {
-          changeBanner('Pink Admin');
+          changeBanner('pi-sheet');
+          // changeBanner('sheet');
         });
         $('a[id*="ye-sheet"]').on('mouseenter', () => {
-          changeBanner('Yellow Admin');
+          changeBanner('ye-sheet');
+          // changeBanner('sheet');
         });
         $('a[id*="or-sheet"]').on('mouseenter', () => {
-          changeBanner('Orange Admin');
+          changeBanner('or-sheet');
+          // changeBanner('sheet');
         });
         $('a[id*="bl-sheet"]').on('mouseenter', () => {
-          changeBanner('Blue Admin');
+          changeBanner('bl-sheet');
+          // changeBanner('sheet');
         });
         //--|▼| Column #2 |▼|--//
         $('a[id*="gr-edit"]').on('mouseenter', () => {
-          changeBanner('Green Uploads');
+          changeBanner('gr-edit');
         });
         $('a[id*="pi-edit"]').on('mouseenter', () => {
-          changeBanner('Pink Uploads');
+          changeBanner('pi-edit');
         });
         $('a[id*="ye-edit"]').on('mouseenter', () => {
-          changeBanner('Yellow Uploads');
+          changeBanner('ye-edit');
         });
         $('a[id*="or-edit"]').on('mouseenter', () => {
-          changeBanner('Orange Uploads');
+          changeBanner('or-edit');
         });
         $('a[id*="bl-edit"]').on('mouseenter', () => {
-          changeBanner('Blue Uploads');
+          changeBanner('bl-edit');
         });
         //--|▼| Column #3 |▼|--//
         $('a[id*="gr-book"]').on('mouseenter', () => {
-          changeBanner('Green Bookings');
+          changeBanner('gr-book');
         });
         $('a[id*="pi-book"]').on('mouseenter', () => {
-          changeBanner('Pink Bookings');
+          changeBanner('pi-book');
         });
         $('a[id*="ye-book"]').on('mouseenter', () => {
-          changeBanner('Yellow Bookings');
+          changeBanner('ye-book');
         });
         $('a[id*="or-book"]').on('mouseenter', () => {
-          changeBanner('Orange Bookings');
+          changeBanner('or-book');
         });
         $('a[id*="bl-book"]').on('mouseenter', () => {
-          changeBanner('Blue Bookings');
+          changeBanner('bl-boo');
         });
         //--|▼| Column #4 |▼|--//
         $('a[id*="gr-cloud"]').on('mouseenter', () => {
-          changeBanner('Green Storage');
+          changeBanner('gr-cloud');
         });
         $('a[id*="pi-cloud"]').on('mouseenter', () => {
-          changeBanner('Pink Storage');
+          changeBanner('pi-cloud');
         });
         $('a[id*="ye-cloud"]').on('mouseenter', () => {
-          changeBanner('Yellow Storage');
+          changeBanner('ye-cloud');
         });
         $('a[id*="or-cloud"]').on('mouseenter', () => {
-          changeBanner('Orange Storage');
+          changeBanner('or-cloud');
         });
         $('a[id*="bl-cloud"]').on('mouseenter', () => {
-          changeBanner('Blue Storage');
+          changeBanner('bl-cloud');
         });
 
         //--|▼| Show Month Overlays: 0 = 'January' |▼|--//
@@ -153,85 +164,41 @@ export namespace IndexOverlay {
           displayOverlay(pageName, 'december');
         });
         //--|▼| When mouse leaves containe, reset banner |▼|--//
-        $(januaryContainer).on('mouseleave', () => {
-          document.querySelector('#january main h1').textContent = 'January';
+        $(monthContainers).on('mouseleave', () => {
+          resetBanners();
         });
         $(januaryBanner).on('mouseenter', () => {
           document.querySelector('#january main h1').textContent = 'January';
         });
-
-        $(februaryContainer).on('mouseleave', () => {
-          document.querySelector('#february main h1').textContent = 'February';
-        });
         $(februaryBanner).on('mouseenter', () => {
           document.querySelector('#february main h1').textContent = 'February';
-        });
-
-        $(marchContainer).on('mouseleave', () => {
-          document.querySelector('#march main h1').textContent = 'March';
         });
         $(marchBanner).on('mouseenter', () => {
           document.querySelector('#march main h1').textContent = 'March';
         });
-
-        $(aprilContainer).on('mouseleave', () => {
-          document.querySelector('#april main h1').textContent = 'April';
-        });
         $(aprilBanner).on('mouseenter', () => {
           document.querySelector('#april main h1').textContent = 'April';
-        });
-
-        $(mayContainer).on('mouseleave', () => {
-          document.querySelector('#may main h1').textContent = 'May';
         });
         $(mayBanner).on('mouseenter', () => {
           document.querySelector('#may main h1').textContent = 'May';
         });
-
-        $(juneContainer).on('mouseleave', () => {
-          document.querySelector('#june main h1').textContent = 'June';
-        });
         $(juneBanner).on('mouseenter', () => {
           document.querySelector('#june main h1').textContent = 'June';
-        });
-
-        $(julyContainer).on('mouseleave', () => {
-          document.querySelector('#july main h1').textContent = 'July';
         });
         $(julyBanner).on('mouseenter', () => {
           document.querySelector('#july main h1').textContent = 'July';
         });
-
-        $(augustContainer).on('mouseleave', () => {
-          document.querySelector('#august main h1').textContent = 'August';
-        });
         $(augustBanner).on('mouseenter', () => {
           document.querySelector('#august main h1').textContent = 'August';
-        });
-
-        $(septemberContainer).on('mouseleave', () => {
-          document.querySelector('#september main h1').textContent = 'September';
         });
         $(septemberBanner).on('mouseenter', () => {
           document.querySelector('#september main h1').textContent = 'September';
         });
-
-        $(octoberContainer).on('mouseleave', () => {
-          document.querySelector('#october main h1').textContent = 'October';
-        });
         $(octoberBanner).on('mouseenter', () => {
           document.querySelector('#october main h1').textContent = 'October';
         });
-
-        $(novemberContainer).on('mouseleave', () => {
-          document.querySelector('#november main h1').textContent = 'November';
-        });
         $(novemberBanner).on('mouseenter', () => {
           document.querySelector('#november main h1').textContent = 'November';
-        });
-
-        $(decemberContainer).on('mouseleave', () => {
-          document.querySelector('#december main h1').textContent = 'December';
         });
         $(decemberBanner).on('mouseenter', () => {
           document.querySelector('#december main h1').textContent = 'December';
@@ -299,18 +266,49 @@ export namespace IndexOverlay {
         break;
     }
   }
-  export function changeBanner(text: String) {
-    document.querySelector('#january main h1').textContent = `${text}`;
-    document.querySelector('#february main h1').textContent = `${text}`;
-    document.querySelector('#march main h1').textContent = `${text}`;
-    document.querySelector('#april main h1').textContent = `${text}`;
-    document.querySelector('#may main h1').textContent = `${text}`;
-    document.querySelector('#june main h1').textContent = `${text}`;
-    document.querySelector('#july main h1').textContent = `${text}`;
-    document.querySelector('#august main h1').textContent = `${text}`;
-    document.querySelector('#september main h1').textContent = `${text}`;
-    document.querySelector('#october main h1').textContent = `${text}`;
-    document.querySelector('#november main h1').textContent = `${text}`;
-    document.querySelector('#december main h1').textContent = `${text}`;
+  export function changeBanner(icon: String) {
+    let months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+    for (let i = 0; i < months.length; i++) {
+      var banner: HTMLHeadElement = document.querySelector(`#${months[i]} main h1`);
+      var buttonInfo: String = document.querySelector(`#${months[i]} a[id*='${icon}'] div button h1`).textContent;
+      banner.textContent = `${buttonInfo}`;
+    }
+    /*
+    document.querySelector('#january main h1').textContent = `${document.querySelector(`#january a[id*='${icon}'] div button h1`).textContent}`;
+    document.querySelector('#february main h1').textContent = `${document.querySelector(`#february a[id*='${icon}'] div button h1`).textContent}`;
+    document.querySelector('#march main h1').textContent = `${document.querySelector(`#march a[id*='${icon}'] div button h1`).textContent}`;
+    document.querySelector('#april main h1').textContent = `${document.querySelector(`#april a[id*='${icon}'] div button h1`).textContent}`;
+    document.querySelector('#may main h1').textContent = `${document.querySelector(`#may a[id*='${icon}'] div button h1`).textContent}`;
+    document.querySelector('#june main h1').textContent = `${document.querySelector(`#june a[id*='${icon}'] div button h1`).textContent}`;
+    document.querySelector('#july main h1').textContent = `${document.querySelector(`#july a[id*='${icon}'] div button h1`).textContent}`;
+    document.querySelector('#august main h1').textContent = `${document.querySelector(`#august a[id*='${icon}'] div button h1`).textContent}`;
+    document.querySelector('#september main h1').textContent = `${document.querySelector(`#september a[id*='${icon}'] div button h1`).textContent}`;
+    document.querySelector('#october main h1').textContent = `${document.querySelector(`#october a[id*='${icon}'] div button h1`).textContent}`;
+    document.querySelector('#november main h1').textContent = `${document.querySelector(`#november a[id*='${icon}'] div button h1`).textContent}`;
+    document.querySelector('#december main h1').textContent = `${document.querySelector(`#december a[id*='${icon}'] div button h1`).textContent}`;
+    */
+  }
+  export function resetBanners() {
+    let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    let maande = ['Januarie', 'Februarie', 'Maart', 'April', 'Mei', 'Junie', 'Julie', 'Augustus', 'September', 'Oktober', 'November', 'Desember'];
+
+    for (let i = 0; i < months.length; i++) {
+      document.querySelector(`#${months[i].toLowerCase()} main h1`).textContent = maande[i];
+    }
+
+    /*
+    document.querySelector('#january main h1').textContent = 'January';
+    document.querySelector('#february main h1').textContent = 'February';
+    document.querySelector('#march main h1').textContent = 'March';
+    document.querySelector('#april main h1').textContent = 'April';
+    document.querySelector('#may main h1').textContent = 'May';
+    document.querySelector('#june main h1').textContent = 'June';
+    document.querySelector('#july main h1').textContent = 'July';
+    document.querySelector('#august main h1').textContent = 'August';
+    document.querySelector('#september main h1').textContent = 'September';
+    document.querySelector('#october main h1').textContent = 'October';
+    document.querySelector('#november main h1').textContent = 'November';
+    document.querySelector('#december main h1').textContent = 'December';
+    */
   }
 }
