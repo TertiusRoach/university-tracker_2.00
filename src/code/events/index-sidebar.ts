@@ -13,9 +13,13 @@ export namespace IndexSidebar {
       case 'default-sidebar':
         IndexSidebar.monthHighlight(indexSidebar);
 
+        console.log(indexOverlay.className);
         $(indexSidebar).on('mouseenter', () => {
-          new GetDesign.forPage(`sidebar-overlay`);
+          if (indexOverlay.className !== 'sidebar-overlay') {
+            new GetDesign.forPage(`sidebar-overlay`);
+          }
         });
+
         console.log(`--${pageName} Loaded`);
         break;
     }
