@@ -1,6 +1,11 @@
 @import 'colors.scss';
 /*--|►| #index-main <main> |◄|--*/
 #index-main {
+  grid-row: 2/3;
+  grid-column: 3/6;
+  // z-index: 2;
+  // background: darkred;
+  /*
   z-index: 0; // Back
   grid-row: 1/4;
   grid-column: 1/6;
@@ -78,8 +83,11 @@
       }
     }
   }
+  */
 }
+
 /*--▼ .default-main ▼--*/
+/*
 .default-main {
   #buttons-overlay {
     .foreground {
@@ -167,8 +175,10 @@
     filter: blur(4px);
   }
 }
+*/
 
 /*--▼ Responsive Design ▼--*/
+/*
 main[class*='main'] {
   @media only screen and (max-height: 2160px) {
     #buttons-overlay .foreground {
@@ -17492,3 +17502,4 @@ main[class*='main'] {
     }
   }
 }
+*/

@@ -33,13 +33,12 @@
             margin-top: 4px;
             transition: 0.5s;
             font-size: 1.5em;
-            line-height: 75px;
             position: relative;
             text-align: center;
             color: $primary-light;
           }
           .icon:hover {
-            color: $secondary-dark;
+            color: $secondary-medium;
             filter: drop-shadow(0 0 2em $secondary-light);
           }
           .text {

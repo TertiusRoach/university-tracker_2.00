@@ -1,76 +1,83 @@
 @import 'colors.scss';
 /*--|►| #index-header <header> |◄|--*/
 #index-header {
-  z-index: 2; // Middle
-  width: 100%;
-  height: 40px;
-  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  display: grid;
   grid-template-rows: 40px;
-  filter: drop-shadow(0 0 0.5em $secondary-dark);
-  grid-template-columns: 145px repeat(3, 1fr) 80px;
-
-  .background {
-    z-index: 0;
-    grid-row: 1/2;
-    grid-column: 1/6;
-
-    background-color: $primary-dark;
-  }
+  grid-template-columns: 145px 1fr 250px 2fr 250px 1fr 145px;
 }
 /*--▼ .default-header ▼--*/
 .default-header {
-  div[id*='sharepoint'] {
-    z-index: 1;
+  background: $primary-dark;
+  //--|▼| Button Styling |▼|--//
+  nav {
     grid-row: 1/2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    button {
-      background: none;
-      outline: none;
-      border: none;
-      a {
-        text-decoration: none;
-        display: flex;
-        h4 {
-          margin: 4px 0 0 8px;
-          @media only screen and (max-width: 563px) {
-            display: none;
+    div {
+      display: flex;
+      grid-column: 2/3;
+      justify-content: center;
+      button {
+        border: none;
+        outline: none;
+        background: none;
+        a {
+          display: flex;
+          text-decoration: none;
+          color: $secondary-light;
+          img {
+            height: 34px;
+            margin: 3px 0;
+            display: flex;
+            position: fixed;
+          }
+          h1 {
+            margin: 3px 0 3px 40px;
           }
         }
-        color: white;
-      }
-      a:hover {
-        svg {
-          color: $secondary-dark;
+        //--|▼| Header Button Animation |▼|--//
+        a {
+          img:nth-child(1) {
+            opacity: 100;
+            transition: opacity 0.25s;
+          }
+          img:nth-child(2) {
+            opacity: 0;
+            transition: opacity 0.25s;
+          }
+          h1 {
+            clip-path: inset(0 100% 0 0);
+            transition: clip-path 0.25s;
+          }
         }
-
-        h4 {
-          color: $secondary-medium;
+        //--|▲| Header Button Animation |▲|--//
+      }
+    }
+    div[class*='active'] {
+      button {
+        a {
+          img:nth-child(1) {
+            opacity: 0;
+          }
+          img:nth-child(2) {
+            opacity: 100;
+            filter: drop-shadow(0 0 0.75rem $secondary-light);
+          }
+          h1 {
+            clip-path: inset(0 0 0 0);
+            filter: drop-shadow(0 0 0.75rem $secondary-medium);
+          }
         }
       }
     }
-    /*
-    .active {
-      a {
-        svg{
-          color: $secondary-dark;
-        }
-        
-        h4 {
-          color: $secondary-medium;
-        }
-      }
-    }
-    */
   }
-  #akademici-sharepoint {
-    grid-column: 2/3;
-  }
-  #administrasie-sharepoint {
+  //--|▲| Button Styling |▲|--//
+  //--|▼| Button Placement |▼|--//
+  nav[id*='uitsendings'] {
     grid-column: 3/4;
   }
-  #operasioneel-sharepoint {
-    grid-column: 4/5;
+  nav[id*='departemente'] {
+    grid-column: 5/6;
   }
+  //--|▲| Button Placement |▲|--//
 }

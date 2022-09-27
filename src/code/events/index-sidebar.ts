@@ -1,26 +1,38 @@
 import { GetDesign } from 'code/utilities/GetDesign';
 export namespace IndexSidebar {
   export function eventsFor(pageName: String | 'default-sidebar') {
-    const indexBody = document.getElementById('index-body');
-    const indexHeader = document.getElementById('index-header');
-    const indexMain = document.getElementById('index-main');
-    const indexSidebar = document.getElementById('index-sidebar');
-    let sidebarButtons = document.querySelectorAll('#index-sidebar > div > button > a > h1');
-    const indexOverlay = document.getElementById('index-overlay');
-    const indexFooter = document.getElementById('index-footer');
-    const indexData = document.getElementById('index-data');
+    const indexBody: HTMLElement = document.getElementById('index-body');
+    const indexHeader: HTMLElement = document.getElementById('index-header');
+
+    let headerButtons: Object = indexHeader.querySelectorAll('nav[id*="button"] div');
+    const indexMain: HTMLElement = document.getElementById('index-main');
+
+    const indexSidebar: HTMLElement = document.getElementById('index-sidebar');
+    let sidebarButtons: Object = document.querySelectorAll('#index-sidebar > div > button > a > h1');
+
+    const indexOverlay: HTMLElement = document.getElementById('index-overlay');
+    let overlayBackground: HTMLElement = indexOverlay.querySelector('.background');
+
+    const indexFooter: HTMLElement = document.getElementById('index-footer');
+    const indexData: HTMLElement = document.getElementById('index-data');
+
+    let deactivateButtons = (buttons: Object, container: HTMLElement) => {
+      //--|▼| Deactivate header buttons |▼|--//
+      for (let i = 0; i < Object.keys(buttons).length; i++) {
+        buttons[i].className = '';
+      }
+      container.style.display = 'none';
+    };
+
     switch (pageName) {
       case 'default-sidebar':
         IndexSidebar.monthHighlight(indexSidebar);
-
-        console.log(indexOverlay.className);
         $(indexSidebar).on('mouseenter', () => {
+          deactivateButtons(headerButtons, indexOverlay);
           if (indexOverlay.className !== 'sidebar-overlay') {
             new GetDesign.forPage(`sidebar-overlay`);
           }
         });
-
-        console.log(`--${pageName} Loaded`);
         break;
     }
     //--► console.log(`--${pageName} Loaded`); ◄--//

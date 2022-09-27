@@ -11,76 +11,122 @@
 }
 /*--▼ .header-overlay ▼--*/
 .header-overlay {
+  display: grid;
+  grid-row: 2/3;
+  grid-column: 2/5;
   grid-template-rows: repeat(12, 1fr);
-  grid-template-columns: repeat(3, 1fr) 80px !important;
-
-  section {
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-start;
-
-    height: 48px;
+  grid-template-columns: 1fr 250px 2fr 250px 1fr 145px;
+  nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    //--|▼| Dropdown Button Animation |▼|--//
     div {
-      width: 260px;
-      display: flex;
-      background: $primary-dark;
-      justify-content: left !important;
+      grid-column: 1/2;
+      background: $primary-medium;
+      transition: background 0.25s;
       button {
-        margin-left: 20px;
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        background: none;
         a {
           display: flex;
+          cursor: default;
           align-items: center;
-          svg,
-          h1 {
-            color: $primary-light;
+          justify-content: left;
+          text-decoration: none;
+          filter: drop-shadow(0 0 0.25rem $primary-dark);
+          svg {
+            font-size: 2rem;
+            position: fixed;
+            margin-left: 16px;
+            padding-right: 16px;
           }
-          h1 {
-            padding-left: 1rem;
+          h2 {
+            color: $primary-light;
+            margin: 0 16px 0 64px;
+            transition: color 0.25s;
+          }
+
+          svg:nth-child(1) {
+            opacity: 100;
+            color: $primary-light;
+            transition: opacity 0.25s;
+          }
+          svg:nth-child(2) {
+            opacity: 0;
+            color: $secondary-dark;
+            transition: opacity 0.25s;
           }
         }
         a:hover {
-          svg {
-            color: $secondary-dark;
+          svg:nth-child(1) {
+            opacity: 0;
           }
-
-          h1 {
-            color: $secondary-medium;
+          svg:nth-child(2) {
+            opacity: 100;
+            filter: drop-shadow(0 0 0.75rem $secondary-medium);
+          }
+          h2 {
+            color: $secondary-light;
+            filter: drop-shadow(0 0 0.75rem $secondary-medium);
           }
         }
       }
     }
-
-    div:first-child {
-      border-radius: 0 0 8px 8px;
-      button {
-        margin-top: 8px;
+    div:hover {
+      background: $primary-dark;
+      button a {
+        svg,
+        h2 {
+          cursor: pointer;
+        }
       }
     }
-    div:last-child {
-      border-radius: 0 0 8px 8px;
-      button {
-        margin-bottom: 8px;
-      }
-    }
+    //--|▲| Dropdown Button Animation |▲|--//
   }
-  .akademici {
-    grid-column: 1/2;
-    grid-row: 1/13;
-  }
-  .administrasie {
+  nav[id*='uitsendings'] {
+    grid-row: 1/4;
     grid-column: 2/3;
-    grid-row: 1/13;
+
+    #skofte {
+      grid-row: 1/2;
+    }
+    #kalender {
+      grid-row: 2/3;
+    }
+    #aflaai {
+      grid-row: 3/4;
+      border-radius: 0 0 8px 8px;
+    }
   }
-  .operasioneel {
-    grid-column: 3/4;
+  nav[id*='departemente'] {
+    grid-row: 1/4;
+    grid-column: 4/5;
+    #akademici {
+      grid-row: 1/2;
+    }
+    #administrasie {
+      grid-row: 2/3;
+    }
+    #operasioneel {
+      grid-row: 3/4;
+      border-radius: 0 0 8px 8px;
+    }
+  }
+
+  .background {
+    z-index: -2;
     grid-row: 1/13;
+    grid-column: 1/8;
+    background: linear-gradient(to bottom, $primary-medium-rgba, $primary-light-rgba);
   }
 }
 /*--▼ .sidebar-overlay ▼--*/
 .sidebar-overlay {
-  /*--|▼| Global Placement & Layout Setup |▼|--*/
+  /*--|▼| Global Placement, Layout Setup, Scan Animation & Design Default |▼|--*/
   nav {
     display: grid;
     grid-column: 1/6;
@@ -241,11 +287,7 @@
     }
     //--▲ Second Semester ▲--//
   }
-  /*--|▲| Global Placement & Layout Setup |▲|--*/
-  /*--|▼| Scan Animation & Design Default |▼|--*/
-  // nav {
-  // }
-  /*--|▲| Scan Animation & Design Default |▲|--*/
+  /*--|▲| Global Placement, Layout Setup, Scan Animation & Design Default |▲|--*/
   /*--|▼| Button Styling |▼|--*/
   nav[class*='true'] {
     a[id*='gr'] {
@@ -512,12 +554,12 @@
     z-index: -2;
     grid-row: 1/13;
     grid-column: 1/8;
-    background: linear-gradient(to bottom right, rgba(46, 14, 59, 0.2), rgba(46, 14, 59, 0.8));
+    background: linear-gradient(to bottom right, $primary-light-rgba, $primary-medium-rgba);
   }
 }
 
-/*--▼ Responsive Design ▼--*/
-section[class*='overlay'] {
+/*--▼ Responsive Design (sidebar-overlay) ▼--*/
+section[class*='sidebar'] {
   @media only screen and (max-height: 2160px) {
     grid-template-columns: repeat(6, 171.333333333333px) 1fr;
     grid-template-rows: repeat(12, 171.333333333333px);
