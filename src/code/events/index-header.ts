@@ -23,14 +23,6 @@ export namespace IndexHeader {
 
       headerToggle(indexOverlay);
     };
-    let deactivateButtons = (buttons: Object, container: HTMLElement) => {
-      //--|▼| Deactivate header buttons |▼|--//
-      for (let i = 0; i < Object.keys(buttons).length; i++) {
-        buttons[i].className = '';
-      }
-      container.style.display = 'none';
-    };
-
     switch (pageName) {
       case 'default-header':
         $(indexHeader).on('mouseenter', () => {

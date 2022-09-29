@@ -2,10 +2,11 @@
 /*--|►| #index-header <header> |◄|--*/
 #index-header {
   z-index: 1;
-  width: 100vw;
   display: grid;
+  grid-row: 1/2;
+  grid-column: 2/6;
   grid-template-rows: 40px;
-  grid-template-columns: 145px 1fr 250px 2fr 250px 1fr 145px;
+  grid-template-columns: 1fr 250px 2fr 250px 1fr 145px;
 }
 /*--▼ .default-header ▼--*/
 .default-header {
@@ -74,10 +75,18 @@
   //--|▲| Button Styling |▲|--//
   //--|▼| Button Placement |▼|--//
   nav[id*='uitsendings'] {
-    grid-column: 3/4;
+    grid-column: 2/3;
   }
   nav[id*='departemente'] {
-    grid-column: 5/6;
+    grid-column: 4/5;
   }
   //--|▲| Button Placement |▲|--//
 }
+/*
+@media only screen and (max-width: 1920px) {
+}
+@media only screen and (max-width: 1366px) {
+}
+@media only screen and (max-width: 1024px) {
+}
+*/

@@ -5,6 +5,7 @@ export namespace IndexOverlay {
 
     const indexHeader: HTMLElement = document.getElementById('index-header');
     let headerButtons: Object = indexHeader.querySelectorAll('nav[id*="button"] div');
+
     let headerUitsendings: HTMLElement = indexHeader.querySelector('#uitsendings-button div button');
     let headerDepartemente: HTMLElement = indexHeader.querySelector('#departemente-button div button');
 
@@ -15,8 +16,10 @@ export namespace IndexOverlay {
     let activeButtons: Object = document.querySelectorAll('#index-sidebar > div');
 
     const indexOverlay: HTMLElement = document.getElementById('index-overlay');
-    let overlayBackground: HTMLElement = indexOverlay.querySelector('.background');
     let monthContainers: Object = indexOverlay.querySelectorAll('nav');
+    let overlayDropdowns: Object = indexOverlay.querySelectorAll('nav[id*="dropdown"]');
+    let overlayBackground: HTMLElement = document.querySelector('#index-overlay .background');
+
     let uitsendingsDropdown: HTMLElement = indexOverlay.querySelector('#uitsendings-dropdown');
     let departementeDropdown: HTMLElement = indexOverlay.querySelector('#departemente-dropdown');
 
@@ -61,30 +64,37 @@ export namespace IndexOverlay {
         break;
       case 'header-overlay':
         headerToggle(indexOverlay);
+        $(indexSidebar).on('mouseenter', () => {
+          if (indexOverlay.className !== 'sidebar-overlay') {
+            indexOverlay.style.display = 'none';
+            new GetDesign.forPage('sidebar-overlay');
+            deactivateButtons(headerButtons, indexOverlay);
+          }
+        });
+
         $(headerUitsendings).on('mouseenter', () => {
+          headerToggle(indexOverlay);
           toggleDropdowns(uitsendingsDropdown, departementeDropdown, indexOverlay);
         });
         $(headerDepartemente).on('mouseenter', () => {
+          headerToggle(indexOverlay);
           toggleDropdowns(departementeDropdown, uitsendingsDropdown, indexOverlay);
         });
-        $(overlayBackground).on('mouseenter', () => {
+        $(overlayDropdowns).on('mouseleave', () => {
+          indexOverlay.style.display = 'none';
           deactivateButtons(headerButtons, indexOverlay);
         });
         break;
       case 'sidebar-overlay':
         IndexOverlay.monthHighlight(indexOverlay);
-        // $(indexSidebar).on('mouseenter', () => {
-        //   overlayBackground.style.opacity = '100';
-        //   deactivateButtons(headerButtons, indexOverlay);
-        // });
         $(sidebarButtons).on('mouseenter', () => {
           indexOverlay.style.display = 'grid';
         });
-        $(overlayBackground).on('mouseenter', () => {
-          resetNavigation(indexOverlay);
+        $(monthContainers).on('mouseleave', () => {
           indexOverlay.style.display = 'none';
-          overlayBackground.style.opacity = '0';
+          resetNavigation(indexOverlay);
         });
+
         //--|▼| Column #1 |▼|--//
         $('a[id*="gr-sheet"]').on('mouseenter', () => {
           bannerText('gr-sheet');

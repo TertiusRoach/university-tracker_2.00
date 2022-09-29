@@ -1,71 +1,108 @@
 @import 'colors.scss';
 /*--|►| #index-footer <footer> |◄|--*/
 #index-footer {
-  grid-column: 1/6;
-  grid-row: 3/4;
   z-index: 2;
-}
-/*--▼ .default-footer ▼--*/
-.default-footer {
-  .navigation {
-    padding: 0 80px;
-    ul {
-      display: flex;
-      li {
-        z-index: 10;
-        width: 70px;
-        height: 70px;
-        list-style: none;
-        position: relative;
-        a {
-          width: 100%;
+  display: grid;
+  grid-row: 3/4;
+  grid-column: 2/6;
+  grid-template-rows: 64px;
+  grid-template-columns: 1fr 45px 1fr 45px 1fr 45px 1fr 145px;
+
+  nav {
+    grid-row: 1/2;
+    div {
+      cursor: pointer;
+      button {
+        border: none;
+        outline: none;
+        background: none;
+        li {
           display: flex;
-
-          position: relative;
-          text-align: center;
           align-items: center;
-
-          flex-direction: column;
-          justify-content: center;
-
-          .icon {
-            display: block;
-            margin-top: 4px;
-            transition: 0.5s;
-            font-size: 1.5em;
-            position: relative;
-            text-align: center;
+          text-decoration: none;
+          transition: transform 0.5s;
+          transform: translateY(16px);
+          svg {
+            position: fixed;
+            font-size: 3rem;
             color: $primary-light;
           }
-          .icon:hover {
-            color: $secondary-medium;
-            filter: drop-shadow(0 0 2em $secondary-light);
+
+          svg:nth-child(1) {
+            opacity: 100;
+            color: $primary-light;
+            transition: opacity 0.25s;
           }
-          .text {
-            color: $primary-dark;
-            transform: translateY(20px);
+          svg:nth-child(2) {
+            opacity: 0;
+            color: $secondary-dark;
+            transition: opacity 0.25s;
           }
         }
       }
-      justify-content: space-around;
+      h3 {
+        display: flex;
+
+        align-items: center;
+        color: $primary-light;
+        justify-content: center;
+        transition: transform 0.5s;
+        transform: translateY(32px) scaleY(0);
+      }
     }
-    ul li.active a .icon {
-      color: $secondary-dark;
+  }
+  nav:hover {
+    div {
+      button li {
+        cursor: pointer;
+        transform: translateY(-32px);
+        svg:nth-child(1) {
+          opacity: 0;
+        }
+        svg:nth-child(2) {
+          opacity: 100;
+          filter: drop-shadow(0 0 0.75rem $secondary-light);
+        }
+      }
+      h3 {
+        cursor: pointer;
+        color: $secondary-medium;
+        transform: translateY(0) scaleY(1);
+        filter: drop-shadow(0 0 0.75rem $secondary-light);
+      }
+    }
+  }
+  nav div[class*='active'] {
+    button li {
+      cursor: default;
       transform: translateY(-32px);
-      filter: drop-shadow(0 0 0.75rem $primary-dark);
+      svg:nth-child(1) {
+        opacity: 0;
+      }
+      svg:nth-child(2) {
+        opacity: 100;
+        color: $secondary-dark;
+        filter: drop-shadow(0 0 0.75rem $secondary-light);
+      }
     }
-    ul li.active a .text {
-      opacity: 1;
-      transition: 1s;
-      font-weight: 800;
-      overflow: hidden;
-      font-size: 0.75em;
-      position: absolute;
-      letter-spacing: 0.05em;
+    h3 {
+      cursor: default;
       color: $secondary-medium;
-      transform: translateY(10px);
-      filter: drop-shadow(0 0 0.75rem black);
+      transform: translateY(0) scaleY(1);
+      filter: drop-shadow(0 0 0.75rem $secondary-light);
     }
-    background: $primary-dark;
+  }
+}
+/*--▼ .default-footer ▼--*/
+.default-footer {
+  background: $primary-dark;
+  #opdatering {
+    grid-column: 2/3;
+  }
+  #rooster {
+    grid-column: 4/5;
+  }
+  #statistieke {
+    grid-column: 6/7;
   }
 }
