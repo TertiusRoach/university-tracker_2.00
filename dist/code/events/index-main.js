@@ -1,1 +1,1 @@
-define(["require","exports"],function(e,n){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n.IndexMain=void 0,(n.IndexMain||(n.IndexMain={})).eventsFor=function(e){e}});
+define(["require","exports"],function(e,n){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n.IndexMain=void 0,(n.IndexMain||(n.IndexMain={})).eventsFor=function(e){switch(e){case"default-main":break;case"login-main":case"opdatering-main":console.log("--".concat(e," Loaded"))}}});

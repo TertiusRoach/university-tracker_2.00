@@ -1,24 +1,24 @@
 @import 'colors.scss';
 /*--|►| #index-main <main> |◄|--*/
 #index-main {
+  z-index: 2;
   grid-row: 2/3;
   grid-column: 3/6;
-  // z-index: 2;
   // background: darkred;
-  /*
+
   z-index: 0; // Back
   grid-row: 1/4;
   grid-column: 1/6;
 
-  grid-template-columns: 145px 1fr 80px;
   grid-template-rows: 40px 1fr 4em;
+  grid-template-columns: 145px 1fr 80px;
   section[id*='overlay'] {
     display: inherit;
     grid-column: 2/4;
     grid-row: 2/3;
 
-    grid-template-columns: repeat(5, 234px) 1fr;
     grid-template-rows: 44px 257px;
+    grid-template-columns: repeat(5, 234px) 1fr;
     header {
       z-index: 1;
       display: flex;
@@ -83,11 +83,10 @@
       }
     }
   }
-  */
+  background: linear-gradient(to top right, $primary-dark, $primary-light);
 }
 
-/*--▼ .default-main ▼--*/
-/*
+//--▼ .default-main ▼--//
 .default-main {
   #buttons-overlay {
     .foreground {
@@ -175,10 +174,153 @@
     filter: blur(4px);
   }
 }
-*/
 
-/*--▼ Responsive Design ▼--*/
-/*
+//--▼ .login-main ▼--//
+.login-main {
+  #load-midground {
+    z-index: 4;
+    grid-row: 2/3;
+    grid-column: 2/3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: 40px 1fr 4em;
+    grid-template-columns: 80px 1fr 80px;
+
+    img {
+      height: 50%;
+    }
+    transition: 10s;
+    transform: opacity(0);
+
+    //background: linear-gradient(to bottom left, $primary-medium, $primary-dark);
+  }
+
+  i {
+    height: 125px;
+    position: absolute;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    animation: animate 5s linear infinite;
+    background: linear-gradient(transparent, white);
+  }
+  i:nth-child(3n + 1) {
+    background: linear-gradient(transparent, $primary-dark);
+  }
+  i:nth-child(3n + 2) {
+    background: linear-gradient(transparent, $primary-medium);
+  }
+  i:nth-child(3n + 3) {
+    background: linear-gradient(transparent, $primary-light);
+  }
+  @keyframes animate {
+    0% {
+      transform: translateY(-200px);
+    }
+    100% {
+      transform: translateY(calc(100vh + 200px));
+    }
+  }
+}
+
+//--▼ .opdatering-main ▼--//
+.opdatering-main {
+  #buttons-overlay {
+    .foreground {
+      z-index: 1;
+      grid-row: 2/3;
+      grid-column: 6/7;
+      background-color: $primary-dark;
+      // filter: drop-shadow(0 0 0.5em $secondary-dark);
+    }
+    #green-button {
+      grid-column: 1/2;
+      button {
+        a {
+          color: $green-dark;
+        }
+        a:hover {
+          filter: drop-shadow(0 0 0.75rem $green-neon);
+        }
+        background-color: $green-light;
+      }
+    }
+    #pink-button {
+      grid-column: 2/3;
+      button {
+        a {
+          color: $pink-dark;
+        }
+        a:hover {
+          filter: drop-shadow(0 0 0.75rem $pink-neon);
+        }
+        background-color: $pink-light;
+      }
+    }
+    #yellow-button {
+      grid-column: 3/4;
+      button {
+        a {
+          color: $yellow-dark;
+        }
+        a:hover {
+          filter: drop-shadow(0 0 0.75rem $yellow-neon);
+        }
+        background-color: $yellow-light;
+      }
+    }
+    #orange-button {
+      grid-column: 4/5;
+      button {
+        a {
+          color: $orange-dark;
+        }
+        a:hover {
+          filter: drop-shadow(0 0 0.75rem $orange-neon);
+        }
+        background-color: $orange-light;
+      }
+    }
+    #blue-button {
+      grid-column: 5/6;
+      button {
+        a {
+          color: $blue-dark;
+        }
+        a:hover {
+          filter: drop-shadow(0 0 0.75rem $blue-neon);
+        }
+        background-color: $blue-light;
+      }
+    }
+    #statistics-button {
+      grid-column: 1/6;
+      margin-top: 0px;
+      button {
+        a {
+          color: $primary-light;
+        }
+        a:hover {
+          filter: drop-shadow(0 0 2em $secondary-light);
+        }
+        background-color: $primary-dark;
+      }
+    }
+  }
+  div[class*='blur'] {
+    filter: blur(4px);
+  }
+}
+
+//--▼ .rooster-main ▼--//
+.rooster-main {
+}
+
+//--▼ .statistieke-main ▼--//
+.statistieke-main {
+}
+//--▼ Responsive Design ▼--//
 main[class*='main'] {
   @media only screen and (max-height: 2160px) {
     #buttons-overlay .foreground {
@@ -17502,4 +17644,3 @@ main[class*='main'] {
     }
   }
 }
-*/
