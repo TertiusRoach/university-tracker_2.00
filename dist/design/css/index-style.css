@@ -1,9 +1,14 @@
-@charset "UTF-8";*{font-family:"Baloo Bhai 2",arial;padding:0;margin:0}
-#index-body{display:grid;height:100vh;overflow:hidden;grid-template-columns:145px 1fr 145px;grid-template-rows:40px 1fr 4em}
+@charset "UTF-8";.login-main #load-midground img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
+.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
+.default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+*{font-family:"Baloo Bhai 2",arial;padding:0;margin:0}#index-body{display:grid;height:100vh;overflow:hidden;grid-template-columns:145px 1fr 145px;grid-template-rows:40px 1fr 4em}
 .default-body #load-foreground{z-index:20;grid-row:1/4;grid-column:1/5;background:0;opacity:0;display:grid;transition:60s;transform:opacity(0.8);grid-template-rows:40px 1fr 250px 1fr 4em;grid-template-columns:80px 1fr 250px 1fr 80px;background:linear-gradient(to top right,#827d85,#2e0e3b)}
 .default-body #load-foreground .container{grid-row:3/4;grid-column:3/4;filter:drop-shadow(0 0 4em #adaaaf)}
 .default-body #load-foreground .container img{width:275px;height:275px;transition:12s;transform:opacity(0);transform:scale(0.95)}
 .default-body #load-midground{z-index:4;grid-row:1/4;grid-column:1/5;display:grid;grid-template-rows:40px 1fr 4em;grid-template-columns:80px 1fr 80px;transition:10s;transform:opacity(0)}
+.login-main #load-midground img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
+.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
+.default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
 #index-header{z-index:1;display:grid;grid-row:1/2;grid-column:2/6;grid-template-rows:40px;grid-template-columns:1fr 250px 2fr 250px 1fr 145px}
 .default-header{background:#2e0e3b}.default-header nav{grid-row:1/2}.default-header nav div{display:flex;grid-column:2/3;justify-content:center}
 .default-header nav div button{border:0;outline:0;background:0}.default-header nav div button a{display:flex;text-decoration:none;color:#c8c0c0}
@@ -14,6 +19,9 @@
 .default-header nav div[class*=active] button a img:nth-child(1){opacity:0}.default-header nav div[class*=active] button a img:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #c8c0c0)}
 .default-header nav div[class*=active] button a h1{clip-path:inset(0 0 0 0);filter:drop-shadow(0 0 .75rem #957e7e)}
 .default-header nav[id*=uitsendings]{grid-column:2/3}.default-header nav[id*=departemente]{grid-column:4/5}
+.login-main #load-midground img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
+.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
+.default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
 #index-main{z-index:2;grid-row:2/3;grid-column:3/6;z-index:0;grid-row:1/4;grid-column:1/6;grid-template-rows:40px 1fr 4em;grid-template-columns:145px 1fr 80px;background:linear-gradient(to top right,#2e0e3b,#adaaaf)}
 #index-main section[id*=overlay]{display:inherit;grid-column:2/4;grid-row:2/3;grid-template-rows:44px 257px;grid-template-columns:repeat(5,234px) 1fr}
 #index-main section[id*=overlay] header{z-index:1;display:flex;grid-row:1/2;cursor:default;grid-column:1/7;justify-content:center;background-color:#2e0e3b;filter:drop-shadow(0 0 .5em #2e0e3b)}
@@ -3517,7 +3525,10 @@ main[class*=main] #buttons-overlay .foreground{margin:-44px 0 -210px 0}}@media o
 }@media only screen and (max-height:501px){main[class*=main] div footer iframe{height:151px}
 }@media only screen and (max-height:500px){main[class*=main] div footer iframe{height:150px}
 }@media only screen and (max-height:499px){main[class*=main] div footer iframe{display:none}
-}#index-sidebar{z-index:3;grid-row:1/4;grid-column:1/2;grid-template-rows:40px repeat(12,1fr) 64px}
+}.login-main #load-midground img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
+.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
+.default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+#index-sidebar{z-index:3;grid-row:1/4;grid-column:1/2;grid-template-rows:40px repeat(12,1fr) 64px}
 .default-sidebar{background:#2e0e3b}.default-sidebar div[id*=button]{z-index:1;grid-column:1/2;grid-template-columns:20px 1fr}
 .default-sidebar div[id*=button] button{grid-column:1/3;background:0;outline:0;border:0;height:100%;display:flex;align-items:center;justify-content:flex-start}
 .default-sidebar div[id*=button] button a{text-decoration:none;color:#631b19}.default-sidebar div[id*=button] button a h1{margin-left:20px}
@@ -3528,6 +3539,9 @@ main[class*=main] #buttons-overlay .foreground{margin:-44px 0 -210px 0}}@media o
 .default-sidebar #july-button{grid-row:8/9}.default-sidebar #august-button{grid-row:9/10}
 .default-sidebar #september-button{grid-row:10/11}.default-sidebar #october-button{grid-row:11/12}
 .default-sidebar #november-button{grid-row:12/13}.default-sidebar #december-button{grid-row:13/14}
+.login-main #load-midground img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
+.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
+.default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
 #index-footer{z-index:2;display:grid;grid-row:3/4;grid-column:2/6;grid-template-rows:64px;grid-template-columns:1fr 45px 1fr 45px 1fr 45px 1fr 145px}
 #index-footer nav{grid-row:1/2}#index-footer nav div{cursor:pointer}#index-footer nav div button{border:0;outline:0;background:0}
 #index-footer nav div button li{display:flex;align-items:center;text-decoration:none;transition:transform .5s;transform:translateY(16px)}
@@ -3541,8 +3555,11 @@ main[class*=main] #buttons-overlay .foreground{margin:-44px 0 -210px 0}}@media o
 #index-footer nav div[class*=active] button li svg:nth-child(1){opacity:0}#index-footer nav div[class*=active] button li svg:nth-child(2){opacity:100;color:#631b19;filter:drop-shadow(0 0 .75rem #c8c0c0)}
 #index-footer nav div[class*=active] h3{cursor:default;color:#957e7e;transform:translateY(0) scaleY(1);filter:drop-shadow(0 0 .75rem #c8c0c0)}
 .default-footer{background:#2e0e3b}.default-footer #opdatering{grid-column:2/3}.default-footer #rooster{grid-column:4/5}
-.default-footer #statistieke{grid-column:6/7}#index-overlay{z-index:1;grid-row:2/3;grid-column:2/4}
-.default-overlay{display:none}.header-overlay{display:grid;grid-row:2/3;grid-column:2/5;grid-template-rows:repeat(12,1fr);grid-template-columns:1fr 250px 2fr 250px 1fr 145px}
+.default-footer #statistieke{grid-column:6/7}.login-main #load-midground img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
+.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
+.default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+#index-overlay{z-index:1;grid-row:2/3;grid-column:2/4}.default-overlay{display:none}
+.header-overlay{display:grid;grid-row:2/3;grid-column:2/5;grid-template-rows:repeat(12,1fr);grid-template-columns:1fr 250px 2fr 250px 1fr 145px}
 .header-overlay nav{display:grid;grid-template-columns:1fr;grid-template-rows:repeat(3,1fr)}
 .header-overlay nav div{grid-column:1/2;background:#827d85;transition:background .25s}
 .header-overlay nav div button{width:100%;height:100%;border:0;outline:0;background:0}
@@ -5280,4 +5297,7 @@ main[class*=main] #buttons-overlay .foreground{margin:-44px 0 -210px 0}}@media o
 }@media only screen and (max-height:502px){section[class*=sidebar]{grid-template-columns:repeat(5,33.1666666667px) 1fr;grid-template-rows:repeat(12,33.1666666667px)}
 }@media only screen and (max-height:501px){section[class*=sidebar]{grid-template-columns:repeat(5,33.0833333333px) 1fr;grid-template-rows:repeat(12,33.0833333333px)}
 }@media only screen and (max-height:500px){section[class*=sidebar]{grid-template-columns:repeat(5,33px) 1fr;grid-template-rows:repeat(12,33px)}
-}#index-data{display:none}
+}.login-main #load-midground img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
+.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
+.default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+#index-data{display:none}
