@@ -8,7 +8,7 @@ export namespace IndexFooter {
     const indexFooter: HTMLElement = document.getElementById('index-footer');
     let footerButtons: Object = indexFooter.querySelectorAll('nav > div');
     let footerOpdatering: HTMLElement = indexFooter.querySelector('#opdatering');
-    let footerKalender: HTMLElement = indexFooter.querySelector('#kalender');
+    let footerRooster: HTMLElement = indexFooter.querySelector('#rooster');
     let footerStatistieke: HTMLElement = indexFooter.querySelector('#statistieke');
 
     const indexData: HTMLElement = document.getElementById('index-data');
@@ -28,8 +28,8 @@ export namespace IndexFooter {
         $(footerOpdatering).on('click', () => {
           toggleButtons(footerButtons, footerOpdatering);
         });
-        $(footerKalender).on('click', () => {
-          toggleButtons(footerButtons, footerKalender);
+        $(footerRooster).on('click', () => {
+          toggleButtons(footerButtons, footerRooster);
         });
         $(footerStatistieke).on('click', () => {
           toggleButtons(footerButtons, footerStatistieke);
