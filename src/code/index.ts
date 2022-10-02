@@ -7,7 +7,7 @@ export namespace Index {
 
       /*new GetDesign.forPage(`default-main`);*/
       new GetDesign.forPage(`login-main`);
-      /*new GetDesign.forPage(`opdatering-main`);*/
+      // new GetDesign.forPage(`opdatering-main`);
 
       new GetDesign.forPage(`default-sidebar`);
       new GetDesign.forPage(`default-footer`);
