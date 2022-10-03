@@ -4,10 +4,9 @@
   display: grid;
   grid-row: 2/3;
   grid-column: 2/6;
-
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 145px;
-  background: linear-gradient(to bottom left, $primary-dark, $primary-medium);
+  background: $primary-dark;
+  grid-template-rows: 44px 258px 1fr;
+  grid-template-columns: repeat(5, 234px) 1fr 145px;
   div[class*='blur'] {
     filter: blur(4px);
   }
@@ -59,82 +58,31 @@
 
 //--▼ .opdatering-main ▼--//
 .opdatering-main {
-  header {
+  #opdatering-date {
     display: grid;
     grid-row: 1/2;
     cursor: default;
-    grid-column: 1/3;
+    grid-column: 1/6;
     color: $primary-light;
     grid-template-rows: 44px;
-    grid-template-columns: 234px 1fr 145px;
+    grid-template-columns: 234px 1fr 234px;
     filter: drop-shadow(0 0 8px $primary-dark);
+    background: linear-gradient(to left, $primary-dark, $primary-medium);
 
-    div {
+    .screensaver {
       grid-column: 1/2;
-      button {
-        width: 100%;
-        height: 100%;
-        border: none;
-        outline: none;
-        background: none;
-        li {
-          display: flex;
-          align-items: center;
-          justify-content: left;
-          text-decoration: none;
-          filter: drop-shadow(0 0 0.25rem $primary-dark);
-          svg {
-            cursor: pointer;
-            font-size: 2rem;
-            position: fixed;
-            margin-left: 16px;
-            padding-right: 16px;
-          }
-          h2 {
-            color: $primary-light;
-            margin: 0 16px 0 64px;
-            transition: color 0.25s;
-
-            transition: clip-path 0.25s;
-            clip-path: inset(0 100% 0 0);
-          }
-
-          svg:nth-child(1) {
-            opacity: 100;
-            color: $primary-light;
-            transition: opacity 0.25s;
-          }
-          svg:nth-child(2) {
-            opacity: 0;
-            color: $secondary-dark;
-            transition: opacity 0.25s;
-          }
+      button li {
+        justify-content: left;
+        svg {
+          margin-left: 16px;
+          padding-right: 16px;
         }
-        li:hover {
-          svg:nth-child(1) {
-            opacity: 0;
-          }
-          svg:nth-child(2) {
-            opacity: 100;
-            filter: drop-shadow(0 0 0.75rem $secondary-medium);
-          }
-          h2 {
-            color: $secondary-light;
-            clip-path: inset(0 0 0 0);
-            filter: drop-shadow(0 0 0.75rem $secondary-medium);
-          }
+        h3 {
+          padding: 9.5px 16px 9.5px 64px;
+          clip-path: inset(0 100% 0 0);
         }
       }
     }
-    div:hover {
-      button a {
-        svg,
-        h2 {
-          cursor: pointer;
-        }
-      }
-    }
-
     h1 {
       display: flex;
       cursor: default;
@@ -142,183 +90,274 @@
       align-items: center;
       justify-content: center;
     }
+    .additional {
+      grid-column: 3/4;
+      button li {
+        justify-content: right;
+        svg {
+          margin: 0 16px 0 16px;
+        }
+        h3 {
+          padding: 9.5px 64px 9.5px 16px;
+          clip-path: inset(0 0 0 100%);
+        }
+      }
+    }
+
+    div button {
+      border: none;
+      outline: none;
+      background: none;
+      li {
+        height: 44px;
+        width: 234px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        svg {
+          z-index: 1;
+          cursor: pointer;
+          font-size: 2rem;
+          position: fixed;
+        }
+        h3 {
+          color: $primary-light;
+          transition: color 0.25s;
+          padding: 9.5px 0 9.5px 0;
+          transition: clip-path 0.25s;
+        }
+
+        svg:nth-child(1) {
+          opacity: 100;
+          color: $primary-light;
+          transition: opacity 0.25s;
+        }
+        svg:nth-child(2) {
+          opacity: 0;
+          color: $secondary-dark;
+          transition: opacity 0.25s;
+        }
+      }
+      li:hover {
+        svg:nth-child(1) {
+          opacity: 0;
+        }
+        svg:nth-child(2) {
+          opacity: 100;
+          filter: drop-shadow(0 0 0.75rem $secondary-medium);
+        }
+        h3 {
+          color: $secondary-light;
+          clip-path: inset(0 0 0 0);
+          filter: drop-shadow(0 0 0.75rem $secondary-medium);
+        }
+      }
+      .visible {
+        display: flex;
+      }
+      .hidden {
+        display: none;
+      }
+    }
+  }
+
+  #opdatering-buttons {
+    z-index: 1;
+    display: grid;
+    grid-row: 2/3;
+    grid-column: 1/6;
+
+    grid-template-rows: 23px 1fr;
+    grid-template-columns: repeat(10, 117px);
+
+    //--|▼| Green Buttons |▼|--//
+    div[class*='green'] {
+      /*filter: drop-shadow(0 -16px 8px $green-neon-rgba);*/
+      li {
+        background: linear-gradient(to top, $green-neon, $green-dark);
+        button {
+          a svg {
+            color: $green-light;
+            transition: color 1s;
+            transition: drop-shadow() 2s;
+            filter: drop-shadow(0 0 8px $green-dark);
+          }
+          a svg:hover {
+            color: $green-dark;
+            filter: drop-shadow(0 0 4px $green-neon);
+          }
+        }
+      }
+    }
+    .green-sheet {
+      grid-column: 1/2;
+    }
+    .green-edit {
+      grid-column: 2/3;
+    }
+    //--|▲| Green Buttons |▲|--//
+    //--|▼| Pink Buttons |▼|--//
+    div[class*='pink'] {
+      /*filter: drop-shadow(0 -16px 8px $pink-neon-rgba);*/
+      li {
+        background: linear-gradient(to top, $pink-neon, $pink-dark);
+        button {
+          a svg {
+            color: $pink-light;
+            transition: color 1s;
+            transition: drop-shadow() 2s;
+            filter: drop-shadow(0 0 8px $pink-dark);
+          }
+          a svg:hover {
+            color: $pink-dark;
+            filter: drop-shadow(0 0 4px $pink-neon);
+          }
+        }
+      }
+    }
+    .pink-sheet {
+      grid-column: 3/4;
+    }
+    .pink-edit {
+      grid-column: 4/5;
+    }
+    //--|▲| Pink Buttons |▲|--//
+    //--|▼| Yellow Buttons |▼|--//
+    div[class*='yellow'] {
+      /*filter: drop-shadow(0 -16px 8px $yellow-neon-rgba);*/
+      li {
+        background: linear-gradient(to top, $yellow-neon, $yellow-dark);
+        button {
+          a svg {
+            color: $yellow-light;
+            transition: color 1s;
+            transition: drop-shadow() 2s;
+            filter: drop-shadow(0 0 8px $yellow-dark);
+          }
+          a svg:hover {
+            color: $yellow-dark;
+            filter: drop-shadow(0 0 4px $yellow-neon);
+          }
+        }
+      }
+    }
+    .yellow-sheet {
+      grid-column: 5/6;
+    }
+    .yellow-edit {
+      grid-column: 6/7;
+    }
+    //--|▲| Yellow Buttons |▲|--//
+    //--|▼| Orange Buttons |▼|--//
+    div[class*='orange'] {
+      /*filter: drop-shadow(0 -16px 8px $orange-neon-rgba);*/
+      li {
+        background: linear-gradient(to top, $orange-neon, $orange-dark);
+        button {
+          a svg {
+            color: $orange-light;
+            transition: color 1s;
+            transition: drop-shadow() 2s;
+            filter: drop-shadow(0 0 8px $orange-dark);
+          }
+          a svg:hover {
+            color: $orange-dark;
+            filter: drop-shadow(0 0 4px $orange-neon);
+          }
+        }
+      }
+    }
+    .orange-sheet {
+      grid-column: 7/8;
+    }
+    .orange-edit {
+      grid-column: 8/9;
+    }
+    //--|▲| Orange Buttons |▲|--//
+    //--|▼| Blue Buttons |▼|--//
+    div[class*='blue'] {
+      /*filter: drop-shadow(0 -16px 8px $blue-neon-rgba);*/
+      li {
+        background: linear-gradient(to top, $blue-neon, $blue-dark);
+        button {
+          a svg {
+            color: $blue-light;
+            transition: color 1s;
+            transition: drop-shadow() 2s;
+            filter: drop-shadow(0 0 8px $blue-dark);
+          }
+          a svg:hover {
+            color: $blue-dark;
+            filter: drop-shadow(0 0 4px $blue-neon);
+          }
+        }
+      }
+    }
+    .blue-sheet {
+      grid-column: 9/10;
+    }
+    .blue-edit {
+      grid-column: 10/11;
+    }
+    //--|▲| Blue Buttons |▲|--//
+
+    div {
+      grid-row: 2/3;
+      li {
+        height: 100%;
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+        transition: clip-path 0.25s;
+        clip-path: inset(100% 0 0 0);
+        button {
+          border: none;
+          outline: none;
+          background: none;
+          text-decoration: none;
+          a svg {
+            cursor: pointer;
+            font-size: 4rem;
+          }
+        }
+      }
+    }
+    div:hover li {
+      clip-path: inset(0 0 0 0);
+    }
   }
 
   #opdatering-sheets {
     display: grid;
-    grid-row: 1/2;
-    grid-column: 1/3;
+    grid-row: 2/4;
+    grid-column: 1/6;
 
-    grid-template-rows: 44px 231px 1fr;
+    grid-template-rows: 258px 1fr;
     grid-template-columns: repeat(5, 234px) 1fr;
-    //--|▼| Header (Opadatering) |▼|--//
+    //--|▼| iFrame Cropping |▼|--//
     header {
-      grid-row: 2/3;
-      grid-column: 1/6;
-      overflow: hidden;
-      iframe {
-        height: 359px;
-        width: 1188px;
-        margin: -31px 0 0 -3px;
-      }
-    }
-    //--|▲| Header (Opadatering) |▲|--//
-    //--|▼| Footer (Opadatering) |▼|--//
-    footer {
-      grid-row: 3/4;
-      grid-column: 1/7;
-      iframe {
-        width: 1188px;
-        position: fixed;
-        margin: -31px 0 0 -3px;
-        clip-path: inset(31px 19px 28px 3px);
-      }
-    }
-    //--|▲| Footer (Opadatering) |▲|--//
-
-    /*
-    header,
-    footer {
-      overflow: hidden;
-      iframe {
-        
-        
-      }
-    }
-    */
-  }
-
-  /*
-  #buttons-overlay {
-    display: none;
-    .foreground {
-      z-index: 1;
-      grid-row: 2/3;
-      grid-column: 6/7;
-      background-color: $primary-dark;
-      // filter: drop-shadow(0 0 0.5em $secondary-dark);
-    }
-    #green-button {
-      grid-column: 1/2;
-      button {
-        a {
-          color: $green-dark;
-        }
-        a:hover {
-          filter: drop-shadow(0 0 0.75rem $green-neon);
-        }
-        background-color: $green-light;
-      }
-    }
-    #pink-button {
-      grid-column: 2/3;
-      button {
-        a {
-          color: $pink-dark;
-        }
-        a:hover {
-          filter: drop-shadow(0 0 0.75rem $pink-neon);
-        }
-        background-color: $pink-light;
-      }
-    }
-    #yellow-button {
-      grid-column: 3/4;
-      button {
-        a {
-          color: $yellow-dark;
-        }
-        a:hover {
-          filter: drop-shadow(0 0 0.75rem $yellow-neon);
-        }
-        background-color: $yellow-light;
-      }
-    }
-    #orange-button {
-      grid-column: 4/5;
-      button {
-        a {
-          color: $orange-dark;
-        }
-        a:hover {
-          filter: drop-shadow(0 0 0.75rem $orange-neon);
-        }
-        background-color: $orange-light;
-      }
-    }
-    #blue-button {
-      grid-column: 5/6;
-      button {
-        a {
-          color: $blue-dark;
-        }
-        a:hover {
-          filter: drop-shadow(0 0 0.75rem $blue-neon);
-        }
-        background-color: $blue-light;
-      }
-    }
-    #statistics-button {
-      grid-column: 1/6;
-      margin-top: 0px;
-      button {
-        a {
-          color: $primary-light;
-        }
-        a:hover {
-          filter: drop-shadow(0 0 2em $secondary-light);
-        }
-        background-color: $primary-dark;
-      }
-    }
-  }
-  */
-  /*
-  section[id*='overlay'] {
-    grid-row: 2/3;
-    grid-column: 2/4;
-
-    
-    display: inherit;
-
-
-    grid-template-rows: 44px 257px;
-    grid-template-columns: repeat(5, 234px) 1fr;
-
-    header {
-      z-index: 1;
-      display: flex;
       grid-row: 1/2;
-      cursor: default;
-      grid-column: 1/7;
-      justify-content: center;
-      background-color: $primary-dark;
-      filter: drop-shadow(0 0 0.5em $primary-dark);
-      h1 {
-        color: $primary-light;
+      grid-column: 1/6;
+      overflow: hidden;
+      iframe {
+        height: 358px;
+        width: 1187px;
+        margin: -32px 0 0 -3px;
+        clip-path: inset(32px 20px 28px 3px);
       }
     }
-    div[id*='button'] {
+    footer {
       grid-row: 2/3;
-      display: flex;
-      margin-top: 21px;
-      align-items: center;
-      justify-content: center;
-      button {
-        background: none;
-        outline: none;
-        border: none;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        z-index: 0;
-      }
-      button:hover {
-        opacity: 1;
+      grid-column: 1/7;
+      iframe {
+        width: 1187px;
+        position: fixed;
+        margin: -32px 0 0 -3px;
+        clip-path: inset(32px 20px 28px 3px);
       }
     }
-    
-  }*/
+    //--|▲| iFrame Cropping |▲|--//
+  }
 }
 
 //--▼ .rooster-main ▼--//
