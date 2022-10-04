@@ -19,7 +19,7 @@
   nav {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    filter: drop-shadow(0 0 8px $primary-medium);
     //--|▼| Dropdown Button Animation |▼|--//
     div {
       grid-column: 1/2;
@@ -88,23 +88,30 @@
     //--|▲| Dropdown Button Animation |▲|--//
   }
   nav[id*='uitsendings'] {
-    grid-row: 1/4;
+    grid-row: 1/6;
     grid-column: 2/3;
-
+    grid-template-rows: repeat(5, 1fr);
     #skofte {
       grid-row: 1/2;
     }
-    #kalender {
+    #soek {
       grid-row: 2/3;
     }
-    #aflaai {
+    #kalender {
       grid-row: 3/4;
+    }
+    #aflaai {
+      grid-row: 4/5;
+    }
+    #inligtingsblad {
+      grid-row: 5/6;
       border-radius: 0 0 8px 8px;
     }
   }
   nav[id*='departemente'] {
     grid-row: 1/4;
     grid-column: 4/5;
+    grid-template-rows: repeat(3, 1fr);
     #akademici {
       grid-row: 1/2;
     }
@@ -132,6 +139,7 @@
     grid-column: 1/11;
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(10, 1fr);
+    filter: drop-shadow(0 0 8px $primary-medium);
 
     a div,
     ul li {
@@ -241,7 +249,6 @@
         filter: drop-shadow(0 0 0.75rem $blue-neon);
       }
     }
-
     a[id*='pu']:hover ~ main {
       background: $purple-light;
       h1 {
@@ -284,6 +291,11 @@
       grid-column: 1/6;
       border-bottom-right-radius: 8px;
     }
+    .trigger {
+      opacity: 0;
+      grid-row: 5/6;
+      grid-column: 6/11;
+    }
     //--▼ First Semester ▼--//
     a div {
       clip-path: inset(0 0 0 0);
@@ -315,6 +327,11 @@
       grid-row: 1/2;
       grid-column: 1/6;
       border-top-right-radius: 8px;
+    }
+    .trigger {
+      opacity: 0;
+      grid-row: 1/2;
+      grid-column: 6/11;
     }
 
     //--▼ Second Semester ▼--//

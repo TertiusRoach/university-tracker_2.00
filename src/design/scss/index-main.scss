@@ -343,7 +343,7 @@
         height: 358px;
         width: 1187px;
         margin: -32px 0 0 -3px;
-        clip-path: inset(32px 20px 28px 3px);
+        clip-path: inset(32px 0 73px 3px);
       }
     }
     footer {
@@ -357,6 +357,12 @@
       }
     }
     //--|▲| iFrame Cropping |▲|--//
+  }
+
+  .background {
+    grid-row: 1/4;
+    grid-column: 1/6;
+    background: linear-gradient(to left, $primary-dark, $primary-medium);
   }
 }
 

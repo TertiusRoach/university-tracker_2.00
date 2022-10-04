@@ -4,14 +4,12 @@
   z-index: 3; // Top
   grid-row: 1/4;
   grid-column: 1/2;
-
+  background: $primary-dark;
   grid-template-rows: 40px repeat(12, 1fr) 64px;
 }
 
 /*--▼ .default-sidebar ▼--*/
 .default-sidebar {
-  background: $primary-dark;
-
   div[id*='button'] {
     z-index: 1;
     grid-column: 1/2;
@@ -79,15 +77,14 @@
   #december-button {
     grid-row: 13/14;
   }
-  /*
-  .background {
-    z-index: 0;
-    grid-row: 1/14;
-    grid-column: 1/3;
 
-    background-color: $primary-dark;
+  .shadow {
+    grid-row: 2/14;
+    grid-column: 1/2;
+    background: $primary-dark;
+    clip-path: inset(0 -32px 0 0);
+    filter: drop-shadow(0 0 16px $primary-medium);
   }
-  */
 }
 /*
 @media only screen and (max-width: 1920px) {
