@@ -4,16 +4,10 @@ export namespace IndexSidebar {
     const indexBody: HTMLElement = document.getElementById('index-body');
     const indexHeader: HTMLElement = document.getElementById('index-header');
     const indexMain: HTMLElement = document.getElementById('index-main');
-
     const indexSidebar: HTMLElement = document.getElementById('index-sidebar');
-    let sidebarButtons: Object = document.querySelectorAll('#index-sidebar > div > button > a > h1');
-
     const indexOverlay: HTMLElement = document.getElementById('index-overlay');
-    let overlayBackground: HTMLElement = indexOverlay.querySelector('.background');
-
     const indexFooter: HTMLElement = document.getElementById('index-footer');
     const indexData: HTMLElement = document.getElementById('index-data');
-
     switch (pageName) {
       case 'default-sidebar':
         //--|▼| Highlights the present month |▼|--//
@@ -62,7 +56,7 @@ export namespace IndexSidebar {
         };
         defaultSidebarHighlight(pageName, indexSidebar);
 
-        //--|▼| Gets the overlay for the sidebar buttons |▼|--//
+        //--|▼| Retrieves the overlay for the sidebar buttons |▼|--//
         const sidebarOverlayRetrieve = (indexHeader: HTMLElement, indexSidebar: HTMLElement, indexOverlay: HTMLElement) => {
           $(indexSidebar).on('mouseenter', () => {
             if (indexOverlay.className !== 'sidebar-overlay') {

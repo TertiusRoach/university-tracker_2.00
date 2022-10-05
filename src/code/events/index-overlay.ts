@@ -2,96 +2,24 @@ import { GetDesign } from 'code/utilities/GetDesign';
 export namespace IndexOverlay {
   export function eventsFor(pageName: String | 'default-overlay' | 'header-overlay' | 'sidebar-overlay') {
     const indexBody: HTMLElement = document.getElementById('index-body');
-
     const indexHeader: HTMLElement = document.getElementById('index-header');
-    let headerButtons: Object = indexHeader.querySelectorAll('nav[id*="button"] div');
-
-    let headerUitsendings: HTMLElement = indexHeader.querySelector('#uitsendings-button div button');
-    let headerDepartemente: HTMLElement = indexHeader.querySelector('#departemente-button div button');
-
     const indexMain: HTMLElement = document.getElementById('index-main');
-
     const indexSidebar: HTMLElement = document.getElementById('index-sidebar');
-    let activeButtons: Object = document.querySelectorAll('#index-sidebar > div');
-
     const indexOverlay: HTMLElement = document.getElementById('index-overlay');
-    let monthContainers: Object = document.querySelectorAll('#index-overlay nav');
-    let overlayDropdowns: Object = document.querySelectorAll('#index-overlay nav[id*="dropdown"]');
-    let overlayBackground: HTMLElement = document.querySelector('#index-overlay .background');
-
-    let uitsendingsDropdown: HTMLElement = indexOverlay.querySelector('#uitsendings-dropdown');
-    let departementeDropdown: HTMLElement = indexOverlay.querySelector('#departemente-dropdown');
-
-    let overlayBanners: Object = document.querySelectorAll('nav main h1');
-
     const indexFooter: HTMLElement = document.getElementById('index-footer');
-
     const indexData: HTMLElement = document.getElementById('index-data');
-
-    let toggleButtons = (visible: HTMLElement, hidden: HTMLElement) => {
-      indexOverlay.style.display = 'grid';
-      hidden.parentElement.className = '';
-      visible.parentElement.className = 'active';
-    };
-    let toggleDropdowns = (visible: HTMLElement, hidden: HTMLElement, container: HTMLElement) => {
-      hidden.style.display = 'none';
-      visible.style.display = 'grid';
-      container.style.display = 'grid';
-    };
-    let deactivateButtons = (buttons: Object, container: HTMLElement) => {
-      //--|▼| Deactivate header buttons |▼|--//
-      for (let i = 0; i < Object.keys(buttons).length; i++) {
-        buttons[i].className = '';
-      }
-      container.style.display = 'none';
-    };
-
     switch (pageName) {
       case 'default-overlay':
         break;
       case 'header-overlay':
-        //--|▼| Toggles dropdowns inside overlay |▼|--//
-        const headerOverlayDropdowns = (pageName: String, indexHeader: HTMLElement, indexOverlay: HTMLElement) => {
-          //--▼ 03. Execute first for the dropdown to synch with the global scope ▼--//
-          function toggleDropdown(indexHeader: HTMLElement, indexOverlay: HTMLElement) {
-            let activeString: String = indexHeader.querySelector('nav .active').parentElement.id.split('-')[0];
-            let activeDropdown: HTMLElement = indexOverlay.querySelector(`#${activeString}-dropdown`);
-            let allDropdowns: Object = indexOverlay.querySelectorAll('nav[id*="dropdown"]');
-
-            for (let i = 0; i < Object.keys(allDropdowns).length; i++) {
-              allDropdowns[i].style.display = 'none';
-            }
-            activeDropdown.style.display = 'grid';
-          }
-          toggleDropdown(indexHeader, indexOverlay);
-
-          //--▼ 04. Events now toggle according to the selected buttons within the header ▼--//
-          $('#uitsendings-button').on('mouseenter', () => {
-            toggleDropdown(indexHeader, indexOverlay);
-          });
-          $('#departemente-button').on('mouseenter', () => {
-            toggleDropdown(indexHeader, indexOverlay);
-          });
-
-          $(`.${pageName} .background`).on('mouseenter', () => {
-            indexOverlay.innerHTML = '';
-            indexOverlay.style.display = 'none';
-            indexOverlay.className = 'default-overlay';
-
-            //--▼ Removes highlighted buttons from inside the header ▼--//
-            let headerButtons: Object = indexHeader.querySelectorAll('nav[id*="button"] div');
-            for (let i = 0; i < Object.keys(headerButtons).length; i++) {
-              headerButtons[i].className = '';
-            }
-          });
-        };
-        headerOverlayDropdowns(pageName, indexHeader, indexOverlay);
         break;
       case 'sidebar-overlay':
         let language: String = 'afr';
         //--|▼| Resets navigation containers to its default info before hiding the overlay container |▼|--//
-        const sidebarOverlayHide = (pageName: String, indexOverlay: HTMLElement, language: String | 'afr' | 'eng') => {
+        const sidebarOverlayHide = (pageName: String, container: HTMLElement, language: String | 'afr' | 'eng') => {
           function resetOverlay(container: HTMLElement, language: String | 'afr' | 'eng') {
+            container.style.display = 'none';
+
             //--► Use 'var' to label functions you want to turn into tools ◄--//
             var months: Array<String>;
             switch (language) {
@@ -109,17 +37,13 @@ export namespace IndexOverlay {
               let element: HTMLElement = container.querySelector(`#${monthNavigation[i]}`);
               element.style.display = 'none';
             }
-
-            indexOverlay.innerHTML = '';
-            indexOverlay.style.display = 'none';
-            indexOverlay.className = 'default-overlay';
           }
           $(`.${pageName} .background`).on('mouseenter', () => {
-            resetOverlay(indexOverlay, language);
-            indexOverlay.style.display = 'none';
+            resetOverlay(container, language);
           });
         };
         sidebarOverlayHide(pageName, indexOverlay, language);
+
         //--|▼| Resets banner text to selected month when cursor enters container |▼|--//
         const sidebarOverlayReset = (pageName: String, indexOverlay: HTMLElement, language: String | 'afr' | 'eng') => {
           //--► Use 'var' to label functions you want to turn into tools ◄--//
@@ -496,38 +420,8 @@ export namespace IndexOverlay {
           });
         };
         defaultSidebarButtons(pageName);
-
         break;
     }
     //--► console.log(`--${pageName} Loaded`); ◄--//
   }
-
-  /*
-  export function headerToggle(indexOverlay: HTMLElement) {
-    let activeButton = document.querySelector('#index-header nav .active').parentElement.id.split('-')[0];
-    var uitsendingsDropdown: HTMLElement = indexOverlay.querySelector('#uitsendings-dropdown');
-    var departementeDropdown: HTMLElement = indexOverlay.querySelector('#departemente-dropdown');
-    switch (activeButton) {
-      case 'uitsendings':
-        uitsendingsDropdown.style.display = 'grid';
-        departementeDropdown.style.display = 'none';
-        break;
-      case 'departemente':
-        departementeDropdown.style.display = 'grid';
-        uitsendingsDropdown.style.display = 'none';
-        break;
-      default:
-        indexOverlay.style.display = 'none';
-    }
-  }
-  */
-
-  /*
-  export function hideOverlay(deactivate: Object, container: HTMLElement) {
-    for (let i = 0; i < Object.keys(deactivate).length; i++) {
-      deactivate[i].className = '';
-    }
-    container.style.display = 'none';
-  }
-  */
 }

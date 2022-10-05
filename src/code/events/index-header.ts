@@ -3,57 +3,142 @@ export namespace IndexHeader {
   export function eventsFor(pageName: String | 'default-header') {
     const indexBody: HTMLElement = document.getElementById('index-body');
     const indexHeader: HTMLElement = document.getElementById('index-header');
-    let headerUitsendings: HTMLElement = indexHeader.querySelector('#uitsendings-button div button');
-    let headerDepartemente: HTMLElement = indexHeader.querySelector('#departemente-button div button');
-
     const indexMain: HTMLElement = document.getElementById('index-main');
     const indexSidebar: HTMLElement = document.getElementById('index-sidebar');
     const indexOverlay: HTMLElement = document.getElementById('index-overlay');
-    let overlayBackground: HTMLElement = indexOverlay.querySelector('.background');
-    let uitsendingsDropdown: HTMLElement = indexOverlay.querySelector('#uitsendings-dropdown');
-    let departementeDropdown: HTMLElement = indexOverlay.querySelector('#departemente-dropdown');
-
     const indexFooter: HTMLElement = document.getElementById('index-footer');
     const indexData: HTMLElement = document.getElementById('index-data');
-
-    /*
-    let toggleButtons = (visible: HTMLElement, hidden: HTMLElement) => {
-      indexOverlay.style.display = 'grid';
-      hidden.parentElement.className = '';
-      visible.parentElement.className = 'active';
-
-      headerToggle(indexOverlay);
-    };
-    */
     switch (pageName) {
       case 'default-header':
         //--|▼| Gets the overlay for the header dropdowns |▼|--//
-        const headerOverlayRetrieve = (pageName: String, indexHeader: HTMLElement, indexOverlay: HTMLElement) => {
+        const showDropdown = (indexHeader: HTMLElement, indexOverlay: HTMLElement) => {
           let uitsendingsButton: HTMLDivElement = indexHeader.querySelector('#uitsendings-button div');
           let departementeButton: HTMLDivElement = indexHeader.querySelector('#departemente-button div');
 
-          //--▼ Toggles between buttons inside header ▼--//
-          function toggleButtons(enable: HTMLElement, disable: HTMLElement, indexOverlay: HTMLElement) {
+          $(indexHeader).on('mouseenter', () => {
+            indexOverlay.className = 'header-overlay';
+          });
+
+          //--▼ Used jQuery to append dropdowns within the overlay container ▼--//
+          function toggleDropdowns(enable: HTMLElement, disable: HTMLElement, container: HTMLElement) {
+            const dropdown: String = enable.parentElement.id.split('-')[0];
+
             disable.className = '';
+            container.innerHTML = '';
             enable.className = 'active';
-            indexOverlay.style.display = 'grid';
+            container.style.display = 'grid';
+            switch (dropdown) {
+              case 'uitsendings':
+                $(container).append(`
+                  <nav id="uitsendings-dropdown">
+                    <div id="skofte">
+                      <button>
+                        <a href="#" target="_blank">
+                          <i class="fas fa-clock"></i>
+                          <i class="fad fa-clock"></i>
+                          <h2>Skofte</h2>
+                        </a>
+                      </button>
+                    </div>
+
+                    <div id="soek">
+                      <button>
+                        <a href="#" target="_blank">
+                          <i class="fas fa-search"></i>
+                          <i class="fad fa-search"></i>
+                          <h2>Soek</h2>
+                        </a>
+                      </button>
+                    </div>
+
+                    <div id="kalender">
+                      <button>
+                        <a href="#" target="_blank">
+                          <i class="fas fa-calendar-edit"></i>
+                          <i class="fad fa-calendar-edit"></i>
+                          <h2>Kalender</h2>
+                        </a>
+                      </button>
+                    </div>
+
+                    <div id="aflaai">
+                      <button>
+                        <a href="#" target="_blank">
+                          <i class="fas fa-comment-alt-lines"></i>
+                          <i class="fad fa-comment-alt-lines"></i>
+                          <h2>Aflaai</h2>
+                        </a>
+                      </button>
+                    </div>
+
+                    <div id="inligtingsblad">
+                      <button>
+                        <a href="#" target="_blank">
+                          <i class="fas fa-sitemap"></i>
+                          <i class="fad fa-sitemap"></i>
+                          <h2>Inligtingsblad</h2>
+                        </a>
+                      </button>
+                    </div>
+                  </nav>
+
+                  <div class="background"></div>
+                `);
+                //--► console.log('Show Uitsendings'); ◄--//
+                break;
+              case 'departemente':
+                $(container).append(`
+                  <nav id="departemente-dropdown">
+                    <div id="akademici">
+                      <button>
+                        <a href="#" target="_self">
+                          <i class="fas fa-graduation-cap"></i>
+                          <i class="fad fa-graduation-cap"></i>
+                          <h2>Akademici</h2>
+                        </a>
+                      </button>
+                    </div>
+                  
+                    <div id="administrasie">
+                      <button>
+                        <a href="https://tertiusroach.github.io/workflow-setup/dist/index.html" target="_self">
+                          <i class="fas fa-file-alt"></i>
+                          <i class="fad fa-file-alt"></i>
+                          <h2>Administrasie</h2>
+                        </a>
+                      </button>
+                    </div>
+                  
+                    <div id="operasioneel">
+                      <button>
+                        <a href="#" target="_self">
+                          <i class="fas fa-chart-network"></i>
+                          <i class="fad fa-chart-network"></i>
+                          <h2>Operasioneel</h2>
+                        </a>
+                      </button>
+                    </div>
+                  </nav>
+
+                <div class="background"></div>
+                `);
+                //--► console.log('Show Departemente'); ◄--//
+                break;
+            }
+            $('#index-overlay .background').on('mouseenter', () => {
+              enable.className = '';
+              container.style.display = 'none';
+            });
           }
 
-          //--▼ 01. Mark active button before fetching the HTML ▼--//
-          $(`.${pageName} #uitsendings-button`).on('mouseenter', () => {
-            toggleButtons(uitsendingsButton, departementeButton, indexOverlay);
+          $(uitsendingsButton).on('mouseenter', () => {
+            toggleDropdowns(uitsendingsButton, departementeButton, indexOverlay);
           });
-          $(`.${pageName} #departemente-button`).on('mouseenter', () => {
-            toggleButtons(departementeButton, uitsendingsButton, indexOverlay);
-          });
-          //--▼ 02. Dropdown only works if the class is already toggled to 'active' ▼--//
-          $(indexHeader).on('mouseenter', () => {
-            if (indexOverlay.className !== 'header-overlay') {
-              new GetDesign.forPage('header-overlay');
-            }
+          $(departementeButton).on('mouseenter', () => {
+            toggleDropdowns(departementeButton, uitsendingsButton, indexOverlay);
           });
         };
-        headerOverlayRetrieve(pageName, indexHeader, indexOverlay);
+        showDropdown(indexHeader, indexOverlay);
 
         break;
     }
