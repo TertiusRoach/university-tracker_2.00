@@ -4,10 +4,10 @@
   z-index: 2;
   display: grid;
   grid-row: 3/4;
-  grid-column: 2/6;
+  grid-column: 2/5;
   grid-template-rows: 64px;
   filter: drop-shadow(0 -8px 16px $primary-medium);
-  grid-template-columns: 1fr 45px 1fr 45px 1fr 45px 1fr 145px;
+  grid-template-columns: 1fr 45px 1fr 45px 1fr 45px 1fr;
 
   nav {
     grid-row: 1/2;

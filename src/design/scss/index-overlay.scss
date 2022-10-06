@@ -128,7 +128,7 @@
     z-index: -2;
     grid-row: 1/13;
     grid-column: 1/8;
-    background: linear-gradient(to bottom, $primary-medium-rgba, $primary-light-rgba);
+    background: linear-gradient(to bottom, rgba($primary-dark, 0.8), rgba($primary-dark, 0.4));
   }
 }
 /*--▼ .sidebar-overlay ▼--*/
@@ -749,7 +749,7 @@
     z-index: -2;
     grid-row: 1/13;
     grid-column: 1/12;
-    background: linear-gradient(to bottom right, $primary-light-rgba, $primary-medium-rgba);
+    background: linear-gradient(to bottom right, rgba($primary-dark, 0.8), rgba($primary-dark, 0.4));
   }
 }
 

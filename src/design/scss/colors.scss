@@ -3,68 +3,50 @@ $primary-dark: #2e0e3b; /*--► rgba(46, 14, 59, 1) ◄--*/
 $primary-medium: #827d85; /*--► rgba(46, 14, 59, 0.8) ◄--*/
 $primary-light: #adaaaf; /*--► rgba(46, 14, 59, 0.6) ◄--*/
 
-$primary-dark-rgba: rgba(46, 14, 59, 0.5); /*--► #2e0e3b ◄--*/
-$primary-medium-rgba: rgba(130, 125, 133, 0.5); /*--► #2e0e3bcc ◄--*/
-$primary-light-rgba: rgba(173, 170, 175, 0.5); /*--► #2e0e3b33 ◄--*/
-
 $secondary-dark: #631b19; /*--► rgba(99, 27, 25, 1) ◄--*/
 $secondary-medium: #957e7e; /*--► rgba(99, 27, 25, 0.8) ◄--*/
 $secondary-light: #c8c0c0; /*--► rgba(99, 27, 25, 0.6) ◄--*/
-
-$secondary-dark-rgba: rgba(99, 27, 25, 0.5); /*--► #631b19 ◄--*/
-$secondary-medium-rgba: rgba(149, 126, 126, 0.5); /*--► #631b19cc ◄--*/
-$secondary-light-rgba: rgba(200, 192, 192, 0.5); /*--► #631b1933 ◄--*/
 
 //--|▼| Button Colors |▼|--//
 $green-neon: #00ff00; /*--► rgba(0, 255, 0, 1) ◄--*/
 $green-dark: #274e13; /*--► rgba(39, 78, 19, 1) ◄--*/
 $green-light: #b6d7a8; /*--► rgba(182, 215, 168, 1) ◄--*/
-$green-neon-rgba: rgba(0, 255, 0, 0.5); /*--► #00ff00 ◄--*/
 
 $pink-neon: #ff00ff; /*--► rgba(255, 0, 255, 1) ◄--*/
 $pink-dark: #4c1130; /*--► rgba(76, 17, 48, 1) ◄--*/
 $pink-light: #d5a6bd; /*--► rgba(213, 166, 189, 1) ◄--*/
-$pink-neon-rgba: rgba(255, 0, 255, 0.5); /*--► #ff00ff ◄--*/
 
 $yellow-neon: #ffff00; /*--► rgba(255, 255, 0, 1) ◄--*/
 $yellow-dark: #7f6000; /*--► rgba(127, 96, 0, 1) ◄--*/
 $yellow-light: #ffe599; /*--► rgba(255, 229, 153, 1) ◄--*/
-$yellow-neon-rgba: rgba(255, 255, 0, 0.5); /*--► #ffff00 ◄--*/
 
 $orange-neon: #ff9900; /*--► rgba(255, 153, 0, 1) ◄--*/
 $orange-dark: #783f04; /*--► rgba(120, 63, 4, 1) ◄--*/
 $orange-light: #f9cb9c; /*--► rgba(249, 203, 156, 1) ◄--*/
-$orange-neon-rgba: rgba(255, 153, 0, 0.5); /*--► #ff9900 ◄--*/
 
 $blue-neon: #3c90ff; /*--► rgba(0, 0, 255, 1) ◄--*/
 $blue-dark: #073763; /*--► rgba(127, 17, 224, 1) ◄--*/
 $blue-light: #9fc5e8; /*--► rgba(159, 197, 232, 1) ◄--*/
-$blue-neon-rgba: rgba(0, 0, 255, 0.5); /*--► #3c90ff ◄--*/
 //==========================================//
 $purple-neon: #9900ff; /*--► rgba(153, 0, 255, 1) ◄--*/
 $purple-dark: #20124d; /*--► rgba(32, 18, 77, 1) ◄--*/
 $purple-light: #b4a7d6; /*--► rgba(180, 167, 214, 1) ◄--*/
-$purple-neon-rgba: rgba(153, 0, 255, 0.5); /*--► #9900ff ◄--*/
 
 $red-neon: #ff0000; /*--► rgba(255, 0, 0, 1) ◄--*/
 $red-dark: #660000; /*--► rgba(102, 0, 0, 1) ◄--*/
 $red-light: #ea9999; /*--► rgba(234, 153, 153, 1) ◄--*/
-$red-neon-rgba: rgba(255, 0, 0, 0.5); /*--► #ff0000 ◄--*/
 
 $brown-neon: #a97142; /*--► rgba(169, 113, 66, 1) ◄--*/
 $brown-dark: #4f341d; /*--► rgba(79, 52, 29, 1) ◄--*/
 $brown-light: #ffd3af; /*--► rgba(255, 211, 175, 1) ◄--*/
-$brown-neon-rgba: rgba(169, 113, 66, 0.5); /*--► #a97142 ◄--*/
 
 $grey-neon: #bec2cb; /*--► rgba(190, 194, 203, 1) ◄--*/
 $grey-dark: #434343; /*--► rgba(67, 67, 67, 1) ◄--*/
 $grey-light: #efefef; /*--► rgba(239, 239, 239, 1) ◄--*/
-$grey-neon-rgba: rgba(190, 194, 203, 0.5); /*--► #bec2cb ◄--*/
 
 $turquoise-neon: #00ffff; /*--► rgba(0, 255, 255, 1) ◄--*/
 $turquoise-dark: #0c343d; /*--► rgba(12, 52, 61, 1) ◄--*/
 $turquoise-light: #a2c4c9; /*--► rgba(162, 196, 201, 1) ◄--*/
-$turquoise-neon-rgba: rgba(0, 255, 255, 0.5); /*--► #00ffff ◄--*/
 //--|▲| Button Colors |▲|--//
 
 $universityLogo: '../../images/svg/university/university-white.svg';
@@ -75,14 +57,13 @@ $akademiaLogo: '../../images/svg/akademia/akademia-white.svg';
 $akademiaPrimary: '../../images/svg/akademia/akademia-blue.svg';
 $akademiaSecondary: '../../images/svg/akademia/akademia-bronze.svg';
 */
-
-// .rain-main {
-//   #load-midground {
-//     img[src*='images/svg/**/*.svg'] {
-//       content: url($akademiaPrimary);
-//     }
-//   }
-// }
+.rain-main {
+  #company-logo {
+    img[src*='images/svg/**/*.svg'] {
+      content: url($universityPrimary);
+    }
+  }
+}
 
 .default-header {
   nav {
