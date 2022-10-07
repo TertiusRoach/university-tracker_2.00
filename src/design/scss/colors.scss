@@ -1,4 +1,4 @@
-/*--|►| University Tracker Colors - colors.scss |◄|--*/
+/*--|►| University Tracker Primary colors.scss |◄|--*/
 $primary-dark: #2e0e3b; /*--► rgba(46, 14, 59, 1) ◄--*/
 $primary-medium: #827d85; /*--► rgba(46, 14, 59, 0.8) ◄--*/
 $primary-light: #adaaaf; /*--► rgba(46, 14, 59, 0.6) ◄--*/
@@ -6,31 +6,6 @@ $primary-light: #adaaaf; /*--► rgba(46, 14, 59, 0.6) ◄--*/
 $secondary-dark: #631b19; /*--► rgba(99, 27, 25, 1) ◄--*/
 $secondary-medium: #957e7e; /*--► rgba(99, 27, 25, 0.8) ◄--*/
 $secondary-light: #c8c0c0; /*--► rgba(99, 27, 25, 0.6) ◄--*/
-
-.rain-main {
-  #company-logo {
-    img[src*='images/svg/**/*.svg'] {
-      content: url($universityPrimary);
-    }
-  }
-}
-
-.default-header {
-  nav {
-    div {
-      button {
-        a {
-          img[src*='images/svg/**/*-white.svg'] {
-            content: url($universityLogo);
-          }
-          img[src*='images/svg/**/*-secondary.svg'] {
-            content: url($universitySecondary);
-          }
-        }
-      }
-    }
-  }
-}
 
 //--|▼| Button Colors |▼|--//
 $green-neon: #00ff00; /*--► rgba(0, 255, 0, 1) ◄--*/
@@ -82,3 +57,29 @@ $akademiaLogo: '../../images/svg/akademia/akademia-white.svg';
 $akademiaPrimary: '../../images/svg/akademia/akademia-blue.svg';
 $akademiaSecondary: '../../images/svg/akademia/akademia-bronze.svg';
 */
+
+/*--|►| University Tracker Secondary colors.scss |◄|--*/
+.rain-main {
+  #company-logo {
+    img[src*='images/svg/**/*.svg'] {
+      content: url($universityPrimary);
+    }
+  }
+}
+
+.default-header {
+  nav {
+    div {
+      button {
+        a {
+          img[src*='images/svg/**/*-white.svg'] {
+            content: url($universityLogo);
+          }
+          img[src*='images/svg/**/*-secondary.svg'] {
+            content: url($universitySecondary);
+          }
+        }
+      }
+    }
+  }
+}
