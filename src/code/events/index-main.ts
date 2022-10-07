@@ -44,7 +44,7 @@ export namespace IndexMain {
         toggleNumbers(indexMain);
 
         //--|▼| Clears and resets containers to hide data |▼|--//
-        const showScreensaver = (indexMain: HTMLElement, indexFooter: HTMLElement, indexData: HTMLElement) => {
+        const showScreenOne = (indexMain: HTMLElement, indexFooter: HTMLElement, indexData: HTMLElement) => {
           let hideInfo: HTMLElement = indexMain.querySelector('#opdatering-date .hide-numbers');
           let footerButtons: Object = indexFooter.getElementsByTagName('nav');
 
@@ -60,10 +60,28 @@ export namespace IndexMain {
             new GetDesign.forPage(`rain-main`);
           });
         };
-        showScreensaver(indexMain, indexFooter, indexData);
+        showScreenOne(indexMain, indexFooter, indexData);
 
         break;
       case 'rooster-main':
+        //--|▼| Clears and resets containers to hide data |▼|--//
+        const showScreenTwo = (indexMain: HTMLElement, indexFooter: HTMLElement, indexData: HTMLElement) => {
+          let hideInfo: HTMLElement = indexMain.querySelector('#rooster-date .hide-numbers');
+          let footerButtons: Object = indexFooter.getElementsByTagName('nav');
+
+          function toggleButtons(buttons: Object, indexFooter: HTMLElement, indexData: HTMLElement) {
+            indexData.querySelector('footer p').innerHTML = `${indexFooter.querySelector('nav .active h3').textContent.toLowerCase()}`;
+            //--▼ Deactivates Footer Buttons ▼--//
+            for (let i = 0; i < Object.keys(buttons).length; i++) {
+              buttons[i].querySelector('div').className = '';
+            }
+          }
+          $(hideInfo).on('click', () => {
+            toggleButtons(footerButtons, indexFooter, indexData);
+            new GetDesign.forPage(`rain-main`);
+          });
+        };
+        showScreenTwo(indexMain, indexFooter, indexData);
         break;
       case 'statistieke-main':
         break;
