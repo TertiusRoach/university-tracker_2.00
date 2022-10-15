@@ -15,160 +15,9 @@ export namespace IndexOverlay {
         break;
       case 'sidebar-overlay':
         let language: String = 'afr';
-        //--|▼| Resets navigation containers to its default info before hiding the overlay container |▼|--//
-        const sidebarOverlayHide = (pageName: String, container: HTMLElement, language: String | 'afr' | 'eng') => {
-          function resetOverlay(container: HTMLElement, language: String | 'afr' | 'eng') {
-            container.style.display = 'none';
-
-            //--► Use 'var' to label functions you want to turn into tools ◄--//
-            var months: Array<String>;
-            switch (language) {
-              case 'afr':
-                months = ['Januarie', 'Februarie', 'Maart', 'April', 'Mei', 'Junie', 'Julie', 'Augustus', 'September', 'Oktober', 'November', 'Desember'];
-                break;
-              case 'eng':
-                months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-                break;
-            }
-
-            let monthNavigation: Array<String> = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
-            for (let i = 0; i < monthNavigation.length; i++) {
-              container.querySelector(`.${pageName} #${monthNavigation[i]} main h1`).textContent = `${months[i]}`;
-              let element: HTMLElement = container.querySelector(`#${monthNavigation[i]}`);
-              element.style.display = 'none';
-            }
-          }
-          $(`.${pageName} .background`).on('mouseenter', () => {
-            resetOverlay(container, language);
-          });
-        };
-        sidebarOverlayHide(pageName, indexOverlay, language);
-
-        //--|▼| Resets banner text to selected month when cursor enters container |▼|--//
-        const sidebarOverlayReset = (pageName: String, indexOverlay: HTMLElement, language: String | 'afr' | 'eng') => {
-          //--► Use 'var' to label functions you want to turn into tools ◄--//
-          var months: Array<String>;
-          switch (language) {
-            case 'afr':
-              months = ['Januarie', 'Februarie', 'Maart', 'April', 'Mei', 'Junie', 'Julie', 'Augustus', 'September', 'Oktober', 'November', 'Desember'];
-              break;
-            case 'eng':
-              months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-              break;
-          }
-
-          //--▼ January ▼--//
-          $(`.${pageName} #january main`).on('mouseenter', () => {
-            document.querySelector('#january main h1').textContent = `${months[0]}`;
-          });
-          $(`.${pageName} #january .trigger`).on('mouseenter', () => {
-            document.querySelector('#january main h1').textContent = `${months[0]}`;
-            indexOverlay.style.display = 'none';
-          });
-
-          //--▼ February ▼--//
-          $(`.${pageName} #february main`).on('mouseenter', () => {
-            document.querySelector('#february main h1').textContent = `${months[1]}`;
-          });
-          $(`.${pageName} #february .trigger`).on('mouseenter', () => {
-            document.querySelector('#february main h1').textContent = `${months[1]}`;
-            indexOverlay.style.display = 'none';
-          });
-
-          //--▼ March ▼--//
-          $(`.${pageName} #march main`).on('mouseenter', () => {
-            document.querySelector('#march main h1').textContent = `${months[2]}`;
-          });
-          $(`.${pageName} #march .trigger`).on('mouseenter', () => {
-            document.querySelector('#march main h1').textContent = `${months[2]}`;
-            indexOverlay.style.display = 'none';
-          });
-
-          //--▼ April ▼--//
-          $(`.${pageName} #april main`).on('mouseenter', () => {
-            document.querySelector('#april main h1').textContent = `${months[3]}`;
-          });
-          $(`.${pageName} #april .trigger`).on('mouseenter', () => {
-            document.querySelector('#april main h1').textContent = `${months[3]}`;
-            indexOverlay.style.display = 'none';
-          });
-
-          //--▼ June ▼--//
-          $(`.${pageName} #may main`).on('mouseenter', () => {
-            document.querySelector('#may main h1').textContent = `${months[4]}`;
-          });
-          $(`.${pageName} #may .trigger`).on('mouseenter', () => {
-            document.querySelector('#may main h1').textContent = `${months[4]}`;
-            indexOverlay.style.display = 'none';
-          });
-
-          //--▼ July ▼--//
-          $(`.${pageName} #june main`).on('mouseenter', () => {
-            document.querySelector('#june main h1').textContent = `${months[5]}`;
-          });
-          $(`.${pageName} #june .trigger`).on('mouseenter', () => {
-            document.querySelector('#june main h1').textContent = `${months[5]}`;
-            indexOverlay.style.display = 'none';
-          });
-
-          //--▼ August ▼--//
-          $(`.${pageName} #july main`).on('mouseenter', () => {
-            document.querySelector('#july main h1').textContent = `${months[6]}`;
-          });
-          $(`.${pageName} #july .trigger`).on('mouseenter', () => {
-            document.querySelector('#july main h1').textContent = `${months[6]}`;
-            indexOverlay.style.display = 'none';
-          });
-
-          //--▼ September ▼--//
-          $(`.${pageName} #august main`).on('mouseenter', () => {
-            document.querySelector('#august main h1').textContent = `${months[7]}`;
-          });
-          $(`.${pageName} #august .trigger`).on('mouseenter', () => {
-            document.querySelector('#august main h1').textContent = `${months[7]}`;
-            indexOverlay.style.display = 'none';
-          });
-
-          //--▼ September ▼--//
-          $(`.${pageName} #september main`).on('mouseenter', () => {
-            document.querySelector('#september main h1').textContent = `${months[8]}`;
-          });
-          $(`.${pageName} #september .trigger`).on('mouseenter', () => {
-            document.querySelector('#september main h1').textContent = `${months[8]}`;
-            indexOverlay.style.display = 'none';
-          });
-
-          //--▼ October ▼--//
-          $(`.${pageName} #october main`).on('mouseenter', () => {
-            document.querySelector('#october main h1').textContent = `${months[9]}`;
-          });
-          $(`.${pageName} #october .trigger`).on('mouseenter', () => {
-            document.querySelector('#october main h1').textContent = `${months[9]}`;
-            indexOverlay.style.display = 'none';
-          });
-
-          //--▼ November ▼--//
-          $(`.${pageName} #november main`).on('mouseenter', () => {
-            document.querySelector('#november main h1').textContent = `${months[10]}`;
-          });
-          $(`.${pageName} #november .trigger`).on('mouseenter', () => {
-            document.querySelector('#november main h1').textContent = `${months[10]}`;
-            indexOverlay.style.display = 'none';
-          });
-
-          //--▼ December ▼--//
-          $(`.${pageName} #december main`).on('mouseenter', () => {
-            document.querySelector('#december main h1').textContent = `${months[11]}`;
-          });
-          $(`.${pageName} #december .trigger`).on('mouseenter', () => {
-            document.querySelector('#december main h1').textContent = `${months[11]}`;
-            indexOverlay.style.display = 'none';
-          });
-        };
-        sidebarOverlayReset(pageName, indexOverlay, language);
 
         //--|▼| Highlights the present month navigation |▼|--//
-        const sidebarOverlayHightlight = (indexOverlay: HTMLElement) => {
+        const sidebarOverlayHightlight = (indexMain: HTMLElement, indexOverlay: HTMLElement) => {
           let date: String = `${new Date()}`;
           let dateArray: Array<string> = date.split(' ');
           let month: string = dateArray[1];
@@ -217,7 +66,172 @@ export namespace IndexOverlay {
               break;
           }
         };
-        sidebarOverlayHightlight(indexOverlay);
+        sidebarOverlayHightlight(indexMain, indexOverlay);
+
+        //--|▼| Resets navigation containers to its default info before hiding overlay |▼|--//
+        const sidebarOverlayHide = (pageName: String, container: HTMLElement, language: String | 'afr' | 'eng') => {
+          function resetOverlay(container: HTMLElement, language: String | 'afr' | 'eng') {
+            container.style.display = 'none';
+
+            //--► Use 'var' to label functions you want to turn into tools ◄--//
+            var months: Array<String>;
+            switch (language) {
+              case 'afr':
+                months = ['Januarie', 'Februarie', 'Maart', 'April', 'Mei', 'Junie', 'Julie', 'Augustus', 'September', 'Oktober', 'November', 'Desember'];
+                break;
+              case 'eng':
+                months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                break;
+            }
+
+            let monthNavigation: Array<String> = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+            for (let i = 0; i < monthNavigation.length; i++) {
+              container.querySelector(`.${pageName} #${monthNavigation[i]} main h1`).textContent = `${months[i]}`;
+              let element: HTMLElement = container.querySelector(`#${monthNavigation[i]}`);
+              element.style.display = 'none';
+            }
+          }
+          $(`.${pageName} .background`).on('mouseenter', () => {
+            indexMain.classList.remove('blur');
+            resetOverlay(container, language);
+          });
+        };
+        sidebarOverlayHide(pageName, indexOverlay, language);
+
+        //--|▼| Resets banner text to selected month when cursor enters 'background' container |▼|--//
+        const sidebarOverlayReset = (pageName: String, indexMain: HTMLElement, indexOverlay: HTMLElement, language: String | 'afr' | 'eng') => {
+          //--► Use 'var' to label functions you want to turn into tools ◄--//
+          var months: Array<String>;
+          switch (language) {
+            case 'afr':
+              months = ['Januarie', 'Februarie', 'Maart', 'April', 'Mei', 'Junie', 'Julie', 'Augustus', 'September', 'Oktober', 'November', 'Desember'];
+              break;
+            case 'eng':
+              months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+              break;
+          }
+
+          //--▼ January ▼--//
+          $(`.${pageName} #january main`).on('mouseenter', () => {
+            document.querySelector('#january main h1').textContent = `${months[0]}`;
+          });
+          $(`.${pageName} #january .trigger`).on('mouseenter', () => {
+            document.querySelector('#january main h1').textContent = `${months[0]}`;
+            indexOverlay.style.display = 'none';
+            indexMain.classList.remove('blur');
+          });
+
+          //--▼ February ▼--//
+          $(`.${pageName} #february main`).on('mouseenter', () => {
+            document.querySelector('#february main h1').textContent = `${months[1]}`;
+          });
+          $(`.${pageName} #february .trigger`).on('mouseenter', () => {
+            document.querySelector('#february main h1').textContent = `${months[1]}`;
+            indexOverlay.style.display = 'none';
+            indexMain.classList.remove('blur');
+          });
+
+          //--▼ March ▼--//
+          $(`.${pageName} #march main`).on('mouseenter', () => {
+            document.querySelector('#march main h1').textContent = `${months[2]}`;
+          });
+          $(`.${pageName} #march .trigger`).on('mouseenter', () => {
+            document.querySelector('#march main h1').textContent = `${months[2]}`;
+            indexOverlay.style.display = 'none';
+            indexMain.classList.remove('blur');
+          });
+
+          //--▼ April ▼--//
+          $(`.${pageName} #april main`).on('mouseenter', () => {
+            document.querySelector('#april main h1').textContent = `${months[3]}`;
+          });
+          $(`.${pageName} #april .trigger`).on('mouseenter', () => {
+            document.querySelector('#april main h1').textContent = `${months[3]}`;
+            indexOverlay.style.display = 'none';
+            indexMain.classList.remove('blur');
+          });
+
+          //--▼ June ▼--//
+          $(`.${pageName} #may main`).on('mouseenter', () => {
+            document.querySelector('#may main h1').textContent = `${months[4]}`;
+          });
+          $(`.${pageName} #may .trigger`).on('mouseenter', () => {
+            document.querySelector('#may main h1').textContent = `${months[4]}`;
+            indexOverlay.style.display = 'none';
+            indexMain.classList.remove('blur');
+          });
+
+          //--▼ July ▼--//
+          $(`.${pageName} #june main`).on('mouseenter', () => {
+            document.querySelector('#june main h1').textContent = `${months[5]}`;
+          });
+          $(`.${pageName} #june .trigger`).on('mouseenter', () => {
+            document.querySelector('#june main h1').textContent = `${months[5]}`;
+            indexOverlay.style.display = 'none';
+            indexMain.classList.remove('blur');
+          });
+
+          //--▼ August ▼--//
+          $(`.${pageName} #july main`).on('mouseenter', () => {
+            document.querySelector('#july main h1').textContent = `${months[6]}`;
+          });
+          $(`.${pageName} #july .trigger`).on('mouseenter', () => {
+            document.querySelector('#july main h1').textContent = `${months[6]}`;
+            indexOverlay.style.display = 'none';
+            indexMain.classList.remove('blur');
+          });
+
+          //--▼ September ▼--//
+          $(`.${pageName} #august main`).on('mouseenter', () => {
+            document.querySelector('#august main h1').textContent = `${months[7]}`;
+          });
+          $(`.${pageName} #august .trigger`).on('mouseenter', () => {
+            document.querySelector('#august main h1').textContent = `${months[7]}`;
+            indexOverlay.style.display = 'none';
+            indexMain.classList.remove('blur');
+          });
+
+          //--▼ September ▼--//
+          $(`.${pageName} #september main`).on('mouseenter', () => {
+            document.querySelector('#september main h1').textContent = `${months[8]}`;
+          });
+          $(`.${pageName} #september .trigger`).on('mouseenter', () => {
+            document.querySelector('#september main h1').textContent = `${months[8]}`;
+            indexOverlay.style.display = 'none';
+            indexMain.classList.remove('blur');
+          });
+
+          //--▼ October ▼--//
+          $(`.${pageName} #october main`).on('mouseenter', () => {
+            document.querySelector('#october main h1').textContent = `${months[9]}`;
+          });
+          $(`.${pageName} #october .trigger`).on('mouseenter', () => {
+            document.querySelector('#october main h1').textContent = `${months[9]}`;
+            indexOverlay.style.display = 'none';
+            indexMain.classList.remove('blur');
+          });
+
+          //--▼ November ▼--//
+          $(`.${pageName} #november main`).on('mouseenter', () => {
+            document.querySelector('#november main h1').textContent = `${months[10]}`;
+          });
+          $(`.${pageName} #november .trigger`).on('mouseenter', () => {
+            document.querySelector('#november main h1').textContent = `${months[10]}`;
+            indexOverlay.style.display = 'none';
+            indexMain.classList.remove('blur');
+          });
+
+          //--▼ December ▼--//
+          $(`.${pageName} #december main`).on('mouseenter', () => {
+            document.querySelector('#december main h1').textContent = `${months[11]}`;
+          });
+          $(`.${pageName} #december .trigger`).on('mouseenter', () => {
+            document.querySelector('#december main h1').textContent = `${months[11]}`;
+            indexOverlay.style.display = 'none';
+            indexMain.classList.remove('blur');
+          });
+        };
+        sidebarOverlayReset(pageName, indexMain, indexOverlay, language);
 
         //--|▼| Changes the text of the banner to the selected button |▼|--//
         const sidebarOverlayInformation = (pageName: String) => {
@@ -364,8 +378,8 @@ export namespace IndexOverlay {
         };
         sidebarOverlayInformation(pageName);
 
-        //--|▼| Displays the navigation for the month the cursor selected |▼|--//
-        const defaultSidebarButtons = (pageName: String) => {
+        //--|▼| Displays the navigation for the month the cursor is hovering on |▼|--//
+        const defaultSidebarButtons = (pageName: String, indexMain: HTMLElement) => {
           let sidebarButtons: Object = document.querySelectorAll('#index-sidebar > div > button > a > h1');
           function displayOverlay(
             pageName: String,
@@ -380,6 +394,7 @@ export namespace IndexOverlay {
 
           //--▼ Show Month Overlays: 0 = 'January' ▼--//
           $(sidebarButtons).on('mouseenter', () => {
+            indexMain.classList.add('blur');
             indexOverlay.style.display = 'grid';
           });
           $(sidebarButtons[0]).on('mouseenter', () => {
@@ -419,7 +434,7 @@ export namespace IndexOverlay {
             displayOverlay(pageName, 'december');
           });
         };
-        defaultSidebarButtons(pageName);
+        defaultSidebarButtons(pageName, indexMain);
         break;
     }
     //--► console.log(`--${pageName} Loaded`); ◄--//

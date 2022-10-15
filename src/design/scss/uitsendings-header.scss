@@ -1,0 +1,94 @@
+@import 'colors.scss';
+/*--|►| #uitsendings-header <header> |◄|--*/
+#uitsendings-header {
+  z-index: 1;
+  display: grid;
+  grid-row: 1/2;
+  grid-column: 2/6;
+  grid-template-rows: 40px;
+  grid-template-columns: 1fr 250px 2fr 250px 1fr 145px;
+  filter: drop-shadow(0 8px 16px $primary-medium);
+}
+
+/*--▼ .default-header ▼--*/
+.default-header {
+  background: $primary-dark;
+  //--|▼| Button Placement |▼|--//
+  nav[id*='uitsendings'] {
+    grid-column: 2/3;
+  }
+  nav[id*='departemente'] {
+    grid-column: 4/5;
+  }
+  //--|▲| Button Placement |▲|--//
+  //--|▼| Button Styling |▼|--//
+  nav {
+    grid-row: 1/2;
+    div {
+      display: flex;
+      grid-column: 2/3;
+      justify-content: center;
+      button {
+        border: none;
+        outline: none;
+        background: none;
+        a {
+          display: flex;
+          text-decoration: none;
+          color: $secondary-light;
+          img {
+            height: 34px;
+            margin: 3px 0;
+            display: flex;
+            position: fixed;
+          }
+          h1 {
+            padding: 3px 0 3px 40px;
+          }
+        }
+        //--|▼| Header Button Animation |▼|--//
+        a {
+          img:nth-child(1) {
+            opacity: 100;
+            transition: opacity 0.25s;
+          }
+          img:nth-child(2) {
+            opacity: 0;
+            transition: opacity 0.25s;
+          }
+          h1 {
+            clip-path: inset(0 100% 0 0);
+            transition: clip-path 0.5s;
+          }
+        }
+        //--|▲| Header Button Animation |▲|--//
+      }
+    }
+    div[class*='active'] {
+      button {
+        a {
+          img:nth-child(1) {
+            opacity: 0;
+          }
+          img:nth-child(2) {
+            opacity: 100;
+            filter: drop-shadow(0 0 0.75rem $secondary-light);
+          }
+          h1 {
+            clip-path: inset(0 -40px 0 0);
+            filter: drop-shadow(0 0 0.75rem $secondary-medium);
+          }
+        }
+      }
+    }
+  }
+  //--|▲| Button Styling |▲|--//
+}
+/*
+@media only screen and (max-width: 1920px) {
+}
+@media only screen and (max-width: 1366px) {
+}
+@media only screen and (max-width: 1024px) {
+}
+*/

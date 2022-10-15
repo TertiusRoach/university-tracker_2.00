@@ -1,0 +1,109 @@
+@import 'colors.scss';
+/*--|►| #uitsendings-footer <footer> |◄|--*/
+#uitsendings-footer {
+  z-index: 2;
+  display: grid;
+  grid-row: 3/4;
+  grid-column: 2/5;
+  grid-template-rows: 64px;
+  filter: drop-shadow(0 -8px 16px $primary-medium);
+  grid-template-columns: 1fr 45px 1fr 45px 1fr 45px 1fr;
+
+  nav {
+    grid-row: 1/2;
+    div {
+      cursor: pointer;
+      button {
+        border: none;
+        outline: none;
+        background: none;
+        li {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          transition: transform 0.5s;
+          transform: translateY(16px);
+          svg {
+            position: fixed;
+            font-size: 3rem;
+            color: $primary-light;
+          }
+
+          svg:nth-child(1) {
+            opacity: 100;
+            color: $primary-light;
+            transition: opacity 0.25s;
+          }
+          svg:nth-child(2) {
+            opacity: 0;
+            color: $secondary-dark;
+            transition: opacity 0.25s;
+          }
+        }
+      }
+      h3 {
+        display: flex;
+
+        align-items: center;
+        color: $primary-light;
+        justify-content: center;
+        transition: transform 0.5s;
+        transform: translateY(32px) scaleY(0);
+      }
+    }
+  }
+  nav:hover {
+    div {
+      button li {
+        cursor: pointer;
+        transform: translateY(-32px);
+        svg:nth-child(1) {
+          opacity: 0;
+        }
+        svg:nth-child(2) {
+          opacity: 100;
+          filter: drop-shadow(0 0 0.75rem $secondary-light);
+        }
+      }
+      h3 {
+        cursor: pointer;
+        color: $secondary-medium;
+        transform: translateY(0) scaleY(1);
+        filter: drop-shadow(0 0 0.75rem $secondary-light);
+      }
+    }
+  }
+  nav div[class*='active'] {
+    button li {
+      cursor: default;
+      transform: translateY(-32px);
+      svg:nth-child(1) {
+        opacity: 0;
+      }
+      svg:nth-child(2) {
+        opacity: 100;
+        color: $secondary-dark;
+        filter: drop-shadow(0 0 0.75rem $secondary-light);
+      }
+    }
+    h3 {
+      cursor: default;
+      color: $secondary-medium;
+      transform: translateY(0) scaleY(1);
+      filter: drop-shadow(0 0 0.75rem $secondary-light);
+    }
+  }
+}
+/*--▼ .default-footer ▼--*/
+.default-footer {
+  background: $primary-dark;
+  #opdatering {
+    grid-column: 2/3;
+  }
+  #rooster {
+    grid-column: 4/5;
+  }
+  #statistieke {
+    grid-column: 6/7;
+  }
+}

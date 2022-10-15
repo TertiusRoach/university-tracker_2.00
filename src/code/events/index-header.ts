@@ -11,25 +11,23 @@ export namespace IndexHeader {
     switch (pageName) {
       case 'default-header':
         //--|▼| Gets the overlay for the header dropdowns |▼|--//
-        const showDropdown = (indexHeader: HTMLElement, indexOverlay: HTMLElement) => {
+        const showDropdown = (indexHeader: HTMLElement, indexMain: HTMLElement, indexOverlay: HTMLElement) => {
           let uitsendingsButton: HTMLDivElement = indexHeader.querySelector('#uitsendings-button div');
           let departementeButton: HTMLDivElement = indexHeader.querySelector('#departemente-button div');
 
-          $(indexHeader).on('mouseenter', () => {
-            indexOverlay.className = 'header-overlay';
-          });
-
           //--▼ Used jQuery to append dropdowns within the overlay container ▼--//
-          function toggleDropdowns(enable: HTMLElement, disable: HTMLElement, container: HTMLElement) {
-            const dropdown: String = enable.parentElement.id.split('-')[0];
-
+          function toggleDropdowns(indexMain: HTMLElement, indexOverlay: HTMLElement, enable: HTMLElement, disable: HTMLElement) {
             disable.className = '';
-            container.innerHTML = '';
+            indexOverlay.innerHTML = '';
             enable.className = 'active';
-            container.style.display = 'grid';
+            indexMain.classList.add('blur');
+            indexOverlay.style.display = 'grid';
+            indexOverlay.className = 'header-overlay';
+
+            let dropdown: String = enable.parentElement.id.split('-')[0];
             switch (dropdown) {
               case 'uitsendings':
-                $(container).append(`
+                $(indexOverlay).append(`
                   <nav id="uitsendings-dropdown">
                     <div id="skofte">
                       <button>
@@ -87,7 +85,7 @@ export namespace IndexHeader {
                 //--► console.log('Show Uitsendings'); ◄--//
                 break;
               case 'departemente':
-                $(container).append(`
+                $(indexOverlay).append(`
                   <nav id="departemente-dropdown">
                     <div id="akademici">
                       <button>
@@ -125,21 +123,22 @@ export namespace IndexHeader {
                 //--► console.log('Show Departemente'); ◄--//
                 break;
             }
+
             $('#index-overlay .background').on('mouseenter', () => {
               enable.className = '';
-              container.style.display = 'none';
+              indexMain.classList.remove('blur');
+              indexOverlay.style.display = 'none';
             });
           }
 
           $(uitsendingsButton).on('mouseenter', () => {
-            toggleDropdowns(uitsendingsButton, departementeButton, indexOverlay);
+            toggleDropdowns(indexMain, indexOverlay, uitsendingsButton, departementeButton);
           });
           $(departementeButton).on('mouseenter', () => {
-            toggleDropdowns(departementeButton, uitsendingsButton, indexOverlay);
+            toggleDropdowns(indexMain, indexOverlay, departementeButton, uitsendingsButton);
           });
         };
-        showDropdown(indexHeader, indexOverlay);
-
+        showDropdown(indexHeader, indexMain, indexOverlay);
         break;
     }
     //--► console.log(`--${pageName} Loaded`); ◄--//

@@ -1,8 +1,16 @@
+import { GetDesign } from 'code/utilities/GetDesign';
 export namespace Uitsendings {
   export class LoadDesign {
     constructor(page: String) {
-      console.log('--uitsendings.js Loaded');
+      //--|▼| Pages for events are inside 'code/events/*.ts' |▼|--//
+      new GetDesign.forPage('default-header');
+      new GetDesign.forPage('opdatering-main');
+      new GetDesign.forPage('default-sidebar');
+      new GetDesign.forPage('default-footer');
+      new GetDesign.forPage('default-overlay');
+      new GetDesign.forPage('default-data');
+
+      //--► console.log('--uitsendings.js Loaded'); ◄--//
     }
   }
-  //--► console.log('--uitsendings.js Loaded'); ◄--//
 }

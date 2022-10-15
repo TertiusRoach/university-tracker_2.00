@@ -1,3 +1,4 @@
+import { GetDesign } from 'code/utilities/GetDesign';
 export namespace IndexFooter {
   export function eventsFor(pageName: String | 'default-footer') {
     const indexBody: HTMLElement = document.getElementById('index-body');
@@ -28,17 +29,47 @@ export namespace IndexFooter {
           }
 
           $(footerOpdatering).on('click', () => {
+            new GetDesign.forPage('opdatering-main');
             toggleButtons(footerButtons, footerOpdatering);
+
+            //--▼ Reverts to previously displayed info by using the data container ▼--//
+            if (indexData.querySelector('main p') !== null) {
+              var button: HTMLDivElement = indexMain.querySelector('#opdatering-date div:nth-child(3)');
+              var navigation: HTMLElement = indexMain.querySelector('#opdatering-buttons nav');
+              var information: HTMLIFrameElement = indexMain.querySelector('#opdatering-sheets header iframe');
+              var studios = indexData.querySelector('main p').textContent;
+              switch (studios) {
+                case 'original':
+                  button.classList.remove('hide-additional');
+                  button.classList.add('hide-original');
+
+                  navigation.classList.remove('show-additional');
+                  navigation.classList.add('show-original');
+
+                  information.id = 'original';
+                  break;
+                case 'additional':
+                  button.classList.remove('hide-original');
+                  button.classList.add('hide-additional');
+
+                  navigation.classList.remove('show-original');
+                  navigation.classList.add('show-additional');
+
+                  information.id = 'additional';
+                  break;
+              }
+            }
           });
           $(footerRooster).on('click', () => {
             toggleButtons(footerButtons, footerRooster);
+            new GetDesign.forPage('rooster-main');
           });
           $(footerStatistieke).on('click', () => {
+            new GetDesign.forPage('statistieke-main');
             toggleButtons(footerButtons, footerStatistieke);
           });
         };
         toggleFooter(indexFooter);
-
         break;
     }
     //--► console.log(`--${pageName} Loaded`); ◄--//

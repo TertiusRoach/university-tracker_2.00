@@ -5,82 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--► Tab Icon ▼-->
-    <link rel="shortcut icon" href="../../images/svg/university/university-purple.svg" />
+    <link rel="shortcut icon" href="images/svg/akademia/av-white.svg" />
 
     <!--|▼| Links |▼|-->
     <!--► Baloo Bhai 2 (Google Fonts) ▼-->
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
     <!--► Google Platform Library (https) ▼-->
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content="366326979915-i7bshbvc5dl3kbnb8dnp6kiksfjtjaq4.apps.googleusercontent.com" />
+    <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+    <!-- <meta name="google-signin-client_id" content="366326979915-i7bshbvc5dl3kbnb8dnp6kiksfjtjaq4.apps.googleusercontent.com" /> -->
     <!--|▲| Links |▲|-->
 
     <!--|▼| Vendors |▼|-->
     <!--► RequireJS (Local JavaScript) ▼-->
-    <script data-main="../load-vendors" type="text/javascript" src="../../vendors/requirejs/config.js" defer></script>
-    <!--► Font Awesome Pro (CSS) ▼-->
-    <!-- <link href="../../vendors/font-awesome/css/all.min.css" rel="stylesheet" /> -->
+    <script defer data-main="config" type="text/javascript" src="vendors/requirejs/require-2.3.6.js"></script>
     <!--|▲| Vendors |▲|-->
 
     <!--|▼| Styling |▼|-->
-    <!--► Index Body (CSS) ▼-->
-    <link rel="stylesheet" type="text/css" href="design/css/index-body.css" />
-    <!--► Index Header (CSS) ▼-->
-    <link rel="stylesheet" type="text/css" href="design/css/index-header.css" />
-    <!--► Index Footer (CSS) ▼-->
-    <link rel="stylesheet" type="text/css" href="design/css/index-footer.css" />
-    <!--► Index Main (CSS) ▼-->
-    <link rel="stylesheet" type="text/css" href="design/css/index-main.css" />
-    <!--► Index Sidebar (CSS) ▼-->
-    <link rel="stylesheet" type="text/css" href="design/css/index-sidebar.css" />
-    <!--► Index Overlay (CSS) ▼-->
-    <link rel="stylesheet" type="text/css" href="design/css/index-overlay.css" />
-    <!--► Index Data (CSS) ▼-->
-    <link rel="stylesheet" type="text/css" href="design/css/index-data.css" />
+    <!--► Uitsendings Style (CSS) ▼-->
+    <link rel="stylesheet" type="text/css" href="design/css/uitsendings-style.css" />
     <!--|▲| Styling |▲|-->
 
-    <title>Index</title>
+    <title>Ateljee Admin</title>
   </head>
-  <body id="index-body" class="default-body" style="display: grid">
+  <body id="uitsendings-body" class="default-body" style="display: grid">
     <!--▲ style="display: grid" ▲-->
     <!--► class="default-body" ◄-->
-
     <!--►=========================================================================================================◄-->
-    <header id="index-header" class="default-header" style="display: grid">
+    <header id="uitsendings-header" class="default-header" style="display: grid; z-index: 3">
       <!--▲ Default: style="display: grid" ▲-->
-      <!--► class="header-overlay" ◄-->
+      <!--► class="default-header" ◄-->
     </header>
     <!--►=========================================================================================================◄-->
-    <main id="index-main" class="rain-main" style="display: grid">
+    <main id="uitsendings-main" class="default-main" style="display: grid; z-index: 0">
       <!--▲ Default: style="display: grid" ▲-->
       <!--► class="default-main" ◄-->
     </main>
     <!--►=========================================================================================================◄-->
-    <aside id="index-sidebar" class="default-sidebar" style="display: grid">
+    <aside id="uitsendings-sidebar" class="default-sidebar" style="display: grid; z-index: 4">
       <!--▲ Default: style="display: grid" ▲-->
       <!--► class="default-sidebar" ◄-->
     </aside>
     <!--►=========================================================================================================◄-->
-    <footer id="index-footer" class="default-footer" style="display: grid">
+    <footer id="uitsendings-footer" class="default-footer" style="display: grid; z-index: 2">
       <!--▲ style="display: grid" ▲-->
       <!--► class="default-footer" ◄-->
     </footer>
     <!--►=========================================================================================================◄-->
-    <section id="index-overlay" class="default-overlay" style="display: none">
+    <section id="uitsendings-overlay" class="default-overlay" style="display: none; z-index: 1">
       <!--▲ Default: style="display: none" ▲-->
       <!--► class="default-overlay" ◄-->
     </section>
     <!--►=========================================================================================================◄-->
-    <div id="index-data" class="default-data" style="display: none">
+    <div id="uitsendings-data" class="default-data" style="display: none">
       <!--▲ Default: style="display: none" ▲-->
       <!--► class="default-data" ◄-->
     </div>
-
-    <script>
-      setTimeout(function () {
-        window.location.reload();
-      }, 3600000); //60 Minutes
-    </script>
   </body>
 </html>

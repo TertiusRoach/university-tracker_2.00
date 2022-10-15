@@ -1,0 +1,96 @@
+@import 'colors.scss';
+/*--|►| #akademici-sidebar <aside> |◄|--*/
+#akademici-sidebar {
+  z-index: 3; // Top
+  grid-row: 1/4;
+  grid-column: 1/2;
+  background: $primary-dark;
+  grid-template-rows: 40px repeat(12, 1fr) 64px;
+}
+
+/*--▼ .default-sidebar ▼--*/
+.default-sidebar {
+  div[id*='button'] {
+    z-index: 1;
+    grid-column: 1/2;
+    grid-template-columns: 20px 1fr;
+    button {
+      grid-column: 1/3;
+      background: none;
+      outline: none;
+      border: none;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      a {
+        text-decoration: none;
+        h1 {
+          margin-left: 20px;
+        }
+        color: $secondary-dark;
+      }
+      a:hover {
+        color: $secondary-medium;
+      }
+    }
+    .active {
+      a {
+        color: $primary-light;
+      }
+    }
+  }
+
+  #january-button {
+    grid-row: 2/3;
+  }
+  #february-button {
+    grid-row: 3/4;
+  }
+  #march-button {
+    grid-row: 4/5;
+  }
+  #april-button {
+    grid-row: 5/6;
+  }
+  #may-button {
+    grid-row: 6/7;
+  }
+  #june-button {
+    grid-row: 7/8;
+  }
+  #july-button {
+    grid-row: 8/9;
+  }
+  #august-button {
+    grid-row: 9/10;
+  }
+  #september-button {
+    grid-row: 10/11;
+  }
+  #october-button {
+    grid-row: 11/12;
+  }
+  #november-button {
+    grid-row: 12/13;
+  }
+  #december-button {
+    grid-row: 13/14;
+  }
+
+  .shadow {
+    grid-row: 2/14;
+    grid-column: 1/2;
+    background: $primary-dark;
+    clip-path: inset(0 -32px 0 0);
+    filter: drop-shadow(0 0 16px $primary-medium);
+  }
+}
+/*
+@media only screen and (max-width: 1920px) {
+}
+@media only screen and (max-width: 1366px) {
+}
+@media only screen and (max-width: 1024px) {
+}
+*/

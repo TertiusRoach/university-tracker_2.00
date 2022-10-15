@@ -1,12 +1,8 @@
 @import 'colors.scss';
-/*--|►| #index-main <main> |◄|--*/
+//--|►| #index-main <main> |◄|--//
 #index-main {
   grid-row: 2/3;
   grid-column: 2/4;
-
-  div[class*='blur'] {
-    filter: blur(4px);
-  }
 }
 
 /*--▼ .default-main ▼--//
@@ -596,10 +592,196 @@
     }
     //--|▲| iFrame Cropping |▲|--//
   }
+
+  .background {
+    z-index: -1;
+    grid-row: 1/4;
+    grid-column: 1/13;
+    background: linear-gradient(to left, $primary-dark, $primary-medium);
+  }
 }
 
 //--▼ .statistieke-main ▼--//
 .statistieke-main {
+  display: grid;
+  background: $primary-dark;
+  grid-template-rows: 44px 258px 1fr;
+  grid-template-columns: repeat(5, 234px) 1fr 145px;
+
+  #statistieke-date {
+    display: grid;
+    grid-row: 1/2;
+    cursor: default;
+    grid-column: 1/6;
+    color: $primary-light;
+    grid-template-rows: 44px;
+    grid-template-columns: 234px 1fr 234px;
+    filter: drop-shadow(0 0 8px $primary-dark);
+    background: linear-gradient(to left, $primary-dark, $primary-medium);
+
+    .hide-numbers {
+      grid-column: 1/2;
+      button {
+        border: none;
+        outline: none;
+        background: none;
+
+        li {
+          height: 44px;
+          width: 234px;
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          justify-content: left;
+          svg {
+            z-index: 1;
+            cursor: pointer;
+            font-size: 2rem;
+            position: fixed;
+            margin-left: 16px;
+            padding-right: 16px;
+          }
+
+          svg:nth-child(1) {
+            opacity: 100;
+            color: $primary-light;
+            transition: opacity 0.25s;
+          }
+          svg:nth-child(2) {
+            opacity: 0;
+            color: $secondary-dark;
+            transition: opacity 0.25s;
+          }
+          h3 {
+            color: $primary-light;
+            transition: color 0.25s;
+            padding: 9.5px 0 9.5px 0;
+            transition: clip-path 0.25s;
+            clip-path: inset(0 100% 0 0);
+            padding: 9.5px 16px 9.5px 64px;
+          }
+        }
+        li:hover {
+          svg:nth-child(1) {
+            opacity: 0;
+          }
+          svg:nth-child(2) {
+            opacity: 100;
+            filter: drop-shadow(0 0 0.75rem $secondary-medium);
+          }
+          h3 {
+            color: $secondary-light;
+            clip-path: inset(0 0 0 0);
+            filter: drop-shadow(0 0 0.75rem $secondary-medium);
+          }
+        }
+      }
+    }
+
+    h1 {
+      display: flex;
+      cursor: default;
+      grid-column: 2/3;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  #statistieke-buttons {
+    z-index: 1;
+    display: grid;
+    grid-row: 2/3;
+    grid-column: 1/6;
+    grid-template-columns: 1fr;
+    grid-template-rows: 23px 1fr;
+
+    //--|▼| Statistics Button |▼|--//
+    nav[class*='statistics'] {
+      grid-row: 2/3;
+      grid-column: 1/6;
+      display: inherit;
+      grid-template-rows: 235px;
+      grid-template-columns: repeat(5, 1fr);
+
+      div {
+        grid-row: 1/2;
+        grid-column: 2/5;
+        li {
+          height: 100%;
+          display: flex;
+          list-style-type: none;
+          justify-content: center;
+          transition: clip-path 0.25s;
+          clip-path: inset(100% 0 0 0);
+          background: linear-gradient(to top, $primary-medium, $primary-dark);
+          button {
+            border: none;
+            outline: none;
+            background: none;
+            text-decoration: none;
+            a svg {
+              cursor: pointer;
+              font-size: 8rem;
+              color: $primary-light;
+              transition: color 1s;
+              transition: drop-shadow() 2s;
+              filter: drop-shadow(0 0 8px $primary-dark);
+            }
+            a svg:hover {
+              color: $primary-dark;
+              filter: drop-shadow(0 0 4px $primary-light);
+            }
+          }
+        }
+      }
+      div:hover li {
+        clip-path: inset(0 0 0 0);
+      }
+    }
+    //--|▲| Statistics Button |▲|--//
+  }
+
+  #statistieke-sheets {
+    display: grid;
+    grid-row: 2/4;
+    grid-column: 1/6;
+
+    grid-template-rows: 258px 1fr;
+    grid-template-columns: repeat(5, 234px) 1fr;
+    //--|▼| iFrame Cropping |▼|--//
+    header {
+      grid-row: 1/2;
+      grid-column: 1/6;
+      overflow: hidden;
+      iframe {
+        //--▼ Confirmed Measurements ▼--//
+        height: 330px;
+        width: 1187px;
+        margin: -32px 0 0 -3px;
+        clip-path: inset(32px 18px 28px 3px);
+        //--▲ Confirmed Measurements ▲--//
+      }
+    }
+
+    footer {
+      grid-row: 2/3;
+      grid-column: 1/7;
+      iframe {
+        width: 1187px;
+        position: fixed;
+        margin: -32px 0 0 -3px;
+        clip-path: inset(32px 18px 28px 3px);
+      }
+    }
+    //--|▲| iFrame Cropping |▲|--//
+  }
+
+  .background {
+    z-index: -1;
+    grid-row: 1/4;
+    grid-column: 1/6;
+    background: linear-gradient(to left, $primary-dark, $primary-medium);
+  }
 }
 
 //--▼ .rain-main ▼--//
@@ -718,7 +900,8 @@
 }
 
 //--▼ Responsive Design ▼--//
-main[class*='opdatering'] {
+main[class*='opdatering'],
+main[class*='statistieke'] {
   @media only screen and (max-height: 2160px) {
     section[id*='sheets'] footer iframe {
       height: 1836px;
@@ -18732,4 +18915,9 @@ main[class*='rooster'] {
       height: 270px;
     }
   }
+}
+
+//--▼ Container Changes ▼--//
+main[class*='blur'] {
+  filter: blur(8px);
 }

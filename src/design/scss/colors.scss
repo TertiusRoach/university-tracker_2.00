@@ -1,11 +1,11 @@
-/*--|►| University Tracker Primary colors.scss |◄|--*/
-$primary-dark: #2e0e3b; /*--► rgba(46, 14, 59, 1) ◄--*/
-$primary-medium: #827d85; /*--► rgba(46, 14, 59, 0.8) ◄--*/
-$primary-light: #adaaaf; /*--► rgba(46, 14, 59, 0.6) ◄--*/
+/*--|►| Colors |◄|--*/
+$primary-dark: #0e1e3b; //--► rgba(14, 30, 59, 1) ◄--//
+$primary-medium: #6e7889; //--► rgba(14, 30, 59, 0.6) ◄--/*/
+$primary-light: #cfd2d8; //--► rgba(14, 30, 59, 0.2) ◄--//
 
-$secondary-dark: #631b19; /*--► rgba(99, 27, 25, 1) ◄--*/
-$secondary-medium: #957e7e; /*--► rgba(99, 27, 25, 0.8) ◄--*/
-$secondary-light: #c8c0c0; /*--► rgba(99, 27, 25, 0.6) ◄--*/
+$secondary-dark: #935e28; //--► rgba(147, 94, 40, 1) ◄--//
+$secondary-medium: #be9e7e; //--► rgba(147, 94, 40, 0.6) ◄--//
+$secondary-light: #fcd5aa; //--► rgba(147, 94, 40, 0.2) ◄--//
 
 //--|▼| Button Colors |▼|--//
 $green-neon: #00ff00; /*--► rgba(0, 255, 0, 1) ◄--*/
@@ -48,21 +48,19 @@ $turquoise-neon: #00ffff; /*--► rgba(0, 255, 255, 1) ◄--*/
 $turquoise-dark: #0c343d; /*--► rgba(12, 52, 61, 1) ◄--*/
 $turquoise-light: #a2c4c9; /*--► rgba(162, 196, 201, 1) ◄--*/
 //--|▲| Button Colors |▲|--//
-
+/*
 $universityLogo: '../../images/svg/university/university-white.svg';
 $universityPrimary: '../../images/svg/university/university-purple.svg';
 $universitySecondary: '../../images/svg/university/university-maroon.svg';
-/*
+*/
 $akademiaLogo: '../../images/svg/akademia/akademia-white.svg';
 $akademiaPrimary: '../../images/svg/akademia/akademia-blue.svg';
 $akademiaSecondary: '../../images/svg/akademia/akademia-bronze.svg';
-*/
 
-/*--|►| University Tracker Secondary colors.scss |◄|--*/
 .rain-main {
   #company-logo {
     img[src*='images/svg/**/*.svg'] {
-      content: url($universityPrimary);
+      content: url($akademiaPrimary);
     }
   }
 }
@@ -73,10 +71,10 @@ $akademiaSecondary: '../../images/svg/akademia/akademia-bronze.svg';
       button {
         a {
           img[src*='images/svg/**/*-white.svg'] {
-            content: url($universityLogo);
+            content: url($akademiaLogo);
           }
           img[src*='images/svg/**/*-secondary.svg'] {
-            content: url($universitySecondary);
+            content: url($akademiaSecondary);
           }
         }
       }
