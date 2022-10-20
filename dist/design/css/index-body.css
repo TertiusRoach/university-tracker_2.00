@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/*--|►| University Tracker Primary colors.scss |◄|--*/
+/*--► rgba(46, 14, 59, 1) ◄--*/
+/*--► rgba(46, 14, 59, 0.8) ◄--*/
+/*--► rgba(46, 14, 59, 0.6) ◄--*/
+/*--► rgba(99, 27, 25, 1) ◄--*/
+/*--► rgba(99, 27, 25, 0.8) ◄--*/
+/*--► rgba(99, 27, 25, 0.6) ◄--*/
+/*--► rgba(0, 255, 0, 1) ◄--*/
+/*--► rgba(39, 78, 19, 1) ◄--*/
+/*--► rgba(182, 215, 168, 1) ◄--*/
+/*--► rgba(255, 0, 255, 1) ◄--*/
+/*--► rgba(76, 17, 48, 1) ◄--*/
+/*--► rgba(213, 166, 189, 1) ◄--*/
+/*--► rgba(255, 255, 0, 1) ◄--*/
+/*--► rgba(127, 96, 0, 1) ◄--*/
+/*--► rgba(255, 229, 153, 1) ◄--*/
+/*--► rgba(255, 153, 0, 1) ◄--*/
+/*--► rgba(120, 63, 4, 1) ◄--*/
+/*--► rgba(249, 203, 156, 1) ◄--*/
+/*--► rgba(0, 0, 255, 1) ◄--*/
+/*--► rgba(127, 17, 224, 1) ◄--*/
+/*--► rgba(159, 197, 232, 1) ◄--*/
+/*--► rgba(153, 0, 255, 1) ◄--*/
+/*--► rgba(32, 18, 77, 1) ◄--*/
+/*--► rgba(180, 167, 214, 1) ◄--*/
+/*--► rgba(255, 0, 0, 1) ◄--*/
+/*--► rgba(102, 0, 0, 1) ◄--*/
+/*--► rgba(234, 153, 153, 1) ◄--*/
+/*--► rgba(169, 113, 66, 1) ◄--*/
+/*--► rgba(79, 52, 29, 1) ◄--*/
+/*--► rgba(255, 211, 175, 1) ◄--*/
+/*--► rgba(190, 194, 203, 1) ◄--*/
+/*--► rgba(67, 67, 67, 1) ◄--*/
+/*--► rgba(239, 239, 239, 1) ◄--*/
+/*--► rgba(0, 255, 255, 1) ◄--*/
+/*--► rgba(12, 52, 61, 1) ◄--*/
+/*--► rgba(162, 196, 201, 1) ◄--*/
+/*
+$akademiaLogo: '../../images/svg/akademia/akademia-white.svg';
+$akademiaPrimary: '../../images/svg/akademia/akademia-blue.svg';
+$akademiaSecondary: '../../images/svg/akademia/akademia-bronze.svg';
+*/
+/*--|►| University Tracker Secondary colors.scss |◄|--*/
+.rain-main #company-logo img[src*="images/svg/**/*.svg"] {
+  content: url("../../images/svg/university/university-purple.svg");
+}
+
+.default-header nav div button a img[src*="images/svg/**/*-white.svg"] {
+  content: url("../../images/svg/university/university-white.svg");
+}
+.default-header nav div button a img[src*="images/svg/**/*-secondary.svg"] {
+  content: url("../../images/svg/university/university-maroon.svg");
+}
+
+/*--|►| #index-body <body> |◄|--*/
+* {
+  font-family: "Baloo Bhai 2", arial;
+  padding: 0;
+  margin: 0;
+}
+
+#index-body {
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
+  grid-template-columns: 145px 1fr 145px;
+  grid-template-rows: 40px 1fr 64px;
+}
+
+/*--▼ .default-body ▼--*/
+.default-body #load-foreground {
+  z-index: 20;
+  grid-row: 1/4;
+  grid-column: 1/5;
+  background: none;
+  opacity: 0;
+  display: grid;
+  transition: 60s;
+  transform: opacity(0.8);
+  grid-template-rows: 40px 1fr 250px 1fr 4em;
+  grid-template-columns: 80px 1fr 250px 1fr 80px;
+  background: linear-gradient(to top right, #827d85, #2e0e3b);
+}
+.default-body #load-foreground .container {
+  grid-row: 3/4;
+  grid-column: 3/4;
+  filter: drop-shadow(0 0 4em #adaaaf);
+}
+.default-body #load-foreground .container img {
+  width: 275px;
+  height: 275px;
+  transition: 12s;
+  transform: opacity(0);
+  transform: scale(0.95);
+}
+.default-body #load-midground {
+  z-index: 4;
+  grid-row: 1/4;
+  grid-column: 1/5;
+  display: grid;
+  grid-template-rows: 40px 1fr 4em;
+  grid-template-columns: 80px 1fr 80px;
+  transition: 10s;
+  transform: opacity(0);
+}

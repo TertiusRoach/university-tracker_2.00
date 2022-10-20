@@ -145,7 +145,6 @@ export namespace UitsendingsMain {
           });
         };
         showInfo(uitsendingsMain, uitsendingsFooter, uitsendingsData);
-
         break;
     }
     //--► console.log(`--${pageName} Loaded`); ◄--//

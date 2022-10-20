@@ -68,19 +68,19 @@ export namespace AkademiciHeader {
               case 'departemente':
                 $(akademiciOverlay).append(`
                   <nav id="departemente-dropdown">
-                    <div id="akademici">
+                    <div id="uitsendings">
                       <button>
                         <a href="#" target="_self">
-                          <i class="fas fa-graduation-cap"></i>
-                          <i class="fad fa-graduation-cap"></i>
-                          <h2>Akademici</h2>
+                          <img src="images/svg/akademia/av-white.svg" alt="AV Logo" />
+                          <img src="images/svg/akademia/av-bronze.svg" alt="AV Logo" />
+                          <h2>Uitsendings</h2>
                         </a>
                       </button>
                     </div>
                   
                     <div id="administrasie">
                       <button>
-                        <a href="https://tertiusroach.github.io/workflow-setup/dist/akademici.html" target="_self">
+                        <a href="https://tertiusroach.github.io/workflow-setup/dist/index.html" target="_self">
                           <i class="fas fa-file-alt"></i>
                           <i class="fad fa-file-alt"></i>
                           <h2>Administrasie</h2>

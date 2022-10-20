@@ -5,16 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--► Tab Icon ▼-->
-    <link rel="shortcut icon" href="images/svg/akademia/akademia-blue.svg" />
+    <link rel="shortcut icon" href="images/svg/akademia/akademia-white.svg" />
 
     <!--|▼| Links |▼|-->
     <!--► Baloo Bhai 2 (Google Fonts) ▼-->
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-
-    <!--► Google Platform Library (https) ▼-->
-    <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
-    <!-- <meta name="google-signin-client_id" content="366326979915-i7bshbvc5dl3kbnb8dnp6kiksfjtjaq4.apps.googleusercontent.com" /> -->
-    <!--|▲| Links |▲|-->
 
     <!--|▼| Vendors |▼|-->
     <!--► RequireJS (Local JavaScript) ▼-->
@@ -26,14 +21,14 @@
     <link rel="stylesheet" type="text/css" href="design/css/akademici-style.css" />
     <!--|▲| Styling |▲|-->
 
-    <title>Akademici</title>
+    <title>Akademia Akademici</title>
   </head>
   <body id="akademici-body" class="default-body" style="display: grid">
     <!--▲ style="display: grid" ▲-->
     <!--► class="default-body" ◄-->
 
-    <div id="loading-screen">
-      <img src="../../images/gif/akademia/test.gif" alt="" />
+    <div id="loading-screen" style="z-index: 5">
+      <img class="image" src="images/svg/university/university-purple.svg" />
     </div>
 
     <!--►=========================================================================================================◄-->
@@ -57,7 +52,7 @@
       <!--► class="default-footer" ◄-->
     </footer>
     <!--►=========================================================================================================◄-->
-    <section id="akademici-overlay" class="default-overlay" style="display: grid; z-index: 1">
+    <section id="akademici-overlay" class="default-overlay" style="display: none; z-index: 1">
       <!--▲ Default: style="display: none" ▲-->
       <!--► class="default-overlay" ◄-->
     </section>
@@ -66,11 +61,5 @@
       <!--▲ Default: style="display: none" ▲-->
       <!--► class="default-data" ◄-->
     </div>
-
-    <!-- <script>
-      setTimeout(function () {
-        window.location.reload();
-      }, 3600000); //60 Minutes
-    </script> -->
   </body>
 </html>

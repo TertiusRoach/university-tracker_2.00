@@ -26,6 +26,59 @@ export namespace AkademiciMain {
         //--|▼| Clears data by showing screensaver on button click |▼|--//
         AkademiciMain.showScreensaver('statistieke', akademiciMain, akademiciFooter, akademiciData);
         break;
+      case 'rain-main':
+        //--|▼| Appends rain droplets into containers |▼|--//
+        const rainEffect = (akademiciMain: HTMLElement) => {
+          let topContainer: HTMLElement = akademiciMain.querySelector('.rain-top');
+          let bottomContainer: HTMLElement = akademiciMain.querySelector('.rain-bottom');
+          function addRain(container: HTMLElement, amount: number) {
+            let i: number = 0;
+            let rainDrops: Number = amount;
+            while (i < rainDrops) {
+              var drop = document.createElement('i');
+
+              var size = Math.random() * 5;
+              var posX = Math.floor(Math.random() * window.innerWidth);
+
+              var delay = Math.random() * -20;
+              var duration = Math.random() * 5;
+
+              drop.style.width = 0.2 + size + 'px';
+              drop.style.left = posX + 'px';
+              drop.style.animationDelay = delay + 's';
+              drop.style.animationDuration = 4 + duration + 's';
+
+              container.appendChild(drop);
+
+              i++;
+            }
+          }
+          addRain(topContainer, 65);
+          addRain(bottomContainer, 10);
+        };
+        rainEffect(akademiciMain);
+
+        //--|▼| Reverts back to previously displayed information |▼|--//
+        const showInfo = (akademiciMain: HTMLElement, akademiciFooter: HTMLElement, akademiciData: HTMLElement) => {
+          let revealContent: HTMLButtonElement = akademiciMain.querySelector(' .show-numbers button');
+          let revertMain: String = akademiciData.querySelector('footer p').innerHTML;
+          $(revealContent).on('click', () => {
+            akademiciFooter.querySelector(`#${revertMain} div`).className = 'active';
+            switch (revertMain) {
+              case 'opdatering':
+                new GetDesign.forPage('opdatering-main');
+                break;
+              case 'rooster':
+                new GetDesign.forPage('rooster-main');
+                break;
+              case 'statistieke':
+                new GetDesign.forPage('statistieke-main');
+                break;
+            }
+          });
+        };
+        showInfo(akademiciMain, akademiciFooter, akademiciData);
+        break;
       case 'stars-main':
         /*
         //--|▼| Appends rain droplets into containers |▼|--//

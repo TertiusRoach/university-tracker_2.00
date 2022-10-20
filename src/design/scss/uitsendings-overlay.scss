@@ -293,7 +293,7 @@
     }
     .trigger {
       opacity: 0;
-      grid-row: 5/6;
+      grid-row: 4/6;
       grid-column: 6/11;
     }
     //--▼ First Semester ▼--//
@@ -312,13 +312,44 @@
     ul[class*='edit'] {
       grid-row: 2/3;
     }
-    a[id*='book'],
-    ul[class*='book'] {
+
+    a[id*='gr-book'],
+    ul[class*='gr-book'],
+    a[id*='pi-book'],
+    ul[class*='pi-book'],
+    a[id*='ye-book'],
+    ul[class*='ye-book'],
+    a[id*='or-book'],
+    ul[class*='or-book'],
+    a[id*='bl-book'],
+    ul[class*='bl-book'] {
       grid-row: 3/4;
     }
-    a[id*='cloud'],
-    ul[class*='cloud'] {
+
+    a[id*='gr-cloud'],
+    ul[class*='gr-cloud'],
+    a[id*='pi-cloud'],
+    ul[class*='pi-cloud'],
+    a[id*='ye-cloud'],
+    ul[class*='ye-cloud'],
+    a[id*='or-cloud'],
+    ul[class*='or-cloud'],
+    a[id*='bl-cloud'],
+    ul[class*='bl-cloud'] {
       grid-row: 4/5;
+    }
+
+    a[id*='pu-cloud'],
+    ul[class*='pu-cloud'],
+    a[id*='re-cloud'],
+    ul[class*='re-cloud'],
+    a[id*='br-cloud'],
+    ul[class*='br-cloud'],
+    a[id*='gy-cloud'],
+    ul[class*='gy-cloud'],
+    a[id*='tu-cloud'],
+    ul[class*='tu-cloud'] {
+      grid-row: 3/4;
     }
     //--▲ First Semester ▲--//
   }
@@ -330,7 +361,7 @@
     }
     .trigger {
       opacity: 0;
-      grid-row: 1/2;
+      grid-row: 1/3;
       grid-column: 6/11;
     }
 
@@ -350,18 +381,185 @@
     ul[class*='edit'] {
       grid-row: 4/5;
     }
-    a[id*='book'],
-    ul[class*='book'] {
+
+    a[id*='gr-book'],
+    ul[class*='gr-book'],
+    a[id*='pi-book'],
+    ul[class*='pi-book'],
+    a[id*='ye-book'],
+    ul[class*='ye-book'],
+    a[id*='or-book'],
+    ul[class*='or-book'],
+    a[id*='bl-book'],
+    ul[class*='bl-book'] {
       grid-row: 3/4;
     }
-    a[id*='cloud'],
-    ul[class*='cloud'] {
+
+    a[id*='gr-cloud'],
+    ul[class*='gr-cloud'],
+    a[id*='pi-cloud'],
+    ul[class*='pi-cloud'],
+    a[id*='ye-cloud'],
+    ul[class*='ye-cloud'],
+    a[id*='or-cloud'],
+    ul[class*='or-cloud'],
+    a[id*='bl-cloud'],
+    ul[class*='bl-cloud'] {
       grid-row: 2/3;
+    }
+
+    a[id*='pu-cloud'],
+    ul[class*='pu-cloud'],
+    a[id*='re-cloud'],
+    ul[class*='re-cloud'],
+    a[id*='br-cloud'],
+    ul[class*='br-cloud'],
+    a[id*='gy-cloud'],
+    ul[class*='gy-cloud'],
+    a[id*='tu-cloud'],
+    ul[class*='tu-cloud'] {
+      grid-row: 3/4;
     }
     //--▲ Second Semester ▲--//
   }
   /*--|▲| Global Placement, Layout Setup, Scan Animation & Design Default |▲|--*/
-  /*--|▼| Button Styling |▼|--*/
+  //--▼ First Semester ▼--//
+  #january {
+    grid-row: 1/6;
+    #tu-sheet-jan div,
+    .tu-sheet li {
+      border-top-right-radius: 8px;
+    }
+    #tu-cloud-jan div,
+    .tu-cloud li {
+      border-bottom-right-radius: 8px;
+    }
+  }
+  #february {
+    grid-row: 2/7;
+    #tu-sheet-feb div,
+    .tu-sheet li {
+      border-top-right-radius: 8px;
+    }
+    #tu-cloud-feb div,
+    .tu-cloud li {
+      border-bottom-right-radius: 8px;
+    }
+  }
+  #march {
+    grid-row: 3/8;
+    #tu-sheet-mar div,
+    .tu-sheet li {
+      border-top-right-radius: 8px;
+    }
+    #tu-cloud-mar div,
+    .tu-cloud li {
+      border-bottom-right-radius: 8px;
+    }
+  }
+  #april {
+    grid-row: 4/9;
+    #tu-sheet-apr div,
+    .tu-sheet li {
+      border-top-right-radius: 8px;
+    }
+    #tu-cloud-apr div,
+    .tu-cloud li {
+      border-bottom-right-radius: 8px;
+    }
+  }
+  #may {
+    grid-row: 5/10;
+    #tu-sheet-may div,
+    .tu-sheet li {
+      border-top-right-radius: 8px;
+    }
+    #tu-cloud-may div,
+    .tu-cloud li {
+      border-bottom-right-radius: 8px;
+    }
+  }
+  #june {
+    grid-row: 6/11;
+    #tu-sheet-jun div,
+    .tu-sheet li {
+      border-top-right-radius: 8px;
+    }
+    #tu-cloud-jun div,
+    .tu-cloud li {
+      border-bottom-right-radius: 8px;
+    }
+  }
+  //--▲ First Semester ▲--//
+  //--▼ Second Semester ▼--//
+  #july {
+    grid-row: 3/8;
+    #tu-sheet-jul div,
+    .tu-sheet li {
+      border-bottom-right-radius: 8px;
+    }
+    #tu-cloud-jul div,
+    .tu-cloud li {
+      border-top-right-radius: 8px;
+    }
+  }
+  #august {
+    grid-row: 4/9;
+    #tu-sheet-aug div,
+    .tu-sheet li {
+      border-bottom-right-radius: 8px;
+    }
+    #tu-cloud-aug div,
+    .tu-cloud li {
+      border-top-right-radius: 8px;
+    }
+  }
+  #september {
+    grid-row: 5/10;
+    #tu-sheet-sep div,
+    .tu-sheet li {
+      border-bottom-right-radius: 8px;
+    }
+    #tu-cloud-sep div,
+    .tu-cloud li {
+      border-top-right-radius: 8px;
+    }
+  }
+  #october {
+    grid-row: 6/11;
+    #tu-sheet-oct div,
+    .tu-sheet li {
+      border-bottom-right-radius: 8px;
+    }
+    #tu-cloud-oct div,
+    .tu-cloud li {
+      border-top-right-radius: 8px;
+    }
+  }
+  #november {
+    grid-row: 7/12;
+    #tu-sheet-nov div,
+    .tu-sheet li {
+      border-bottom-right-radius: 8px;
+    }
+    #tu-cloud-nov div,
+    .tu-cloud li {
+      border-top-right-radius: 8px;
+    }
+  }
+  #december {
+    grid-row: 8/13;
+    #tu-sheet-dec div,
+    .tu-sheet li {
+      border-bottom-right-radius: 8px;
+    }
+    #tu-cloud-dec div,
+    .tu-cloud li {
+      border-top-right-radius: 8px;
+    }
+  }
+  //--▲ Second Semester ▲--//
+  //--|▼| Button Styling |▼|--//
   nav[class*='true'] {
     a[id*='gr'] {
       div {
@@ -606,145 +804,7 @@
       }
     }
   }
-  /*--|▲| Button Styling |▲|--*/
-
-  //--▼ First Semester ▼--//
-  #january {
-    grid-row: 1/6;
-    #tu-sheet-jan div,
-    .tu-sheet li {
-      border-top-right-radius: 8px;
-    }
-    #tu-cloud-jan div,
-    .tu-cloud li {
-      border-bottom-right-radius: 8px;
-    }
-  }
-  #february {
-    grid-row: 2/7;
-    #tu-sheet-feb div,
-    .tu-sheet li {
-      border-top-right-radius: 8px;
-    }
-    #tu-cloud-feb div,
-    .tu-cloud li {
-      border-bottom-right-radius: 8px;
-    }
-  }
-  #march {
-    grid-row: 3/8;
-    #tu-sheet-mar div,
-    .tu-sheet li {
-      border-top-right-radius: 8px;
-    }
-    #tu-cloud-mar div,
-    .tu-cloud li {
-      border-bottom-right-radius: 8px;
-    }
-  }
-  #april {
-    grid-row: 4/9;
-    #tu-sheet-apr div,
-    .tu-sheet li {
-      border-top-right-radius: 8px;
-    }
-    #tu-cloud-apr div,
-    .tu-cloud li {
-      border-bottom-right-radius: 8px;
-    }
-  }
-  #may {
-    grid-row: 5/10;
-    #tu-sheet-may div,
-    .tu-sheet li {
-      border-top-right-radius: 8px;
-    }
-    #tu-cloud-may div,
-    .tu-cloud li {
-      border-bottom-right-radius: 8px;
-    }
-  }
-  #june {
-    grid-row: 6/11;
-    #tu-sheet-jun div,
-    .tu-sheet li {
-      border-top-right-radius: 8px;
-    }
-    #tu-cloud-jun div,
-    .tu-cloud li {
-      border-bottom-right-radius: 8px;
-    }
-  }
-  //--▲ First Semester ▲--//
-  //--▼ Second Semester ▼--//
-  #july {
-    grid-row: 3/8;
-    #tu-sheet-jul div,
-    .tu-sheet li {
-      border-bottom-right-radius: 8px;
-    }
-    #tu-cloud-jul div,
-    .tu-cloud li {
-      border-top-right-radius: 8px;
-    }
-  }
-  #august {
-    grid-row: 4/9;
-    #tu-sheet-aug div,
-    .tu-sheet li {
-      border-bottom-right-radius: 8px;
-    }
-    #tu-cloud-aug div,
-    .tu-cloud li {
-      border-top-right-radius: 8px;
-    }
-  }
-  #september {
-    grid-row: 5/10;
-    #tu-sheet-sep div,
-    .tu-sheet li {
-      border-bottom-right-radius: 8px;
-    }
-    #tu-cloud-sep div,
-    .tu-cloud li {
-      border-top-right-radius: 8px;
-    }
-  }
-  #october {
-    grid-row: 6/11;
-    #tu-sheet-oct div,
-    .tu-sheet li {
-      border-bottom-right-radius: 8px;
-    }
-    #tu-cloud-oct div,
-    .tu-cloud li {
-      border-top-right-radius: 8px;
-    }
-  }
-  #november {
-    grid-row: 7/12;
-    #tu-sheet-nov div,
-    .tu-sheet li {
-      border-bottom-right-radius: 8px;
-    }
-    #tu-cloud-nov div,
-    .tu-cloud li {
-      border-top-right-radius: 8px;
-    }
-  }
-  #december {
-    grid-row: 8/13;
-    #tu-sheet-dec div,
-    .tu-sheet li {
-      border-bottom-right-radius: 8px;
-    }
-    #tu-cloud-dec div,
-    .tu-cloud li {
-      border-top-right-radius: 8px;
-    }
-  }
-  //--▲ Second Semester ▲--//
-
+  //--|▲| Button Styling |▲|--//
   .background {
     z-index: -2;
     grid-row: 1/13;

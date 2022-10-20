@@ -7,9 +7,12 @@ export namespace Uitsendings {
       new GetDesign.forPage('opdatering-main');
       new GetDesign.forPage('default-sidebar');
       new GetDesign.forPage('default-footer');
-      new GetDesign.forPage('default-overlay');
-      new GetDesign.forPage('default-data');
 
+      new GetDesign.forPage('header-overlay');
+      new GetDesign.forPage('sidebar-overlay');
+      new GetDesign.forPage('default-overlay');
+
+      new GetDesign.forPage('default-data');
       //--► console.log('--uitsendings.js Loaded'); ◄--//
     }
   }

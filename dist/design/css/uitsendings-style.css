@@ -1,11 +1,9 @@
 @charset "UTF-8";.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
-*{font-family:"Baloo Bhai 2",arial;padding:0;margin:0}#uitsendings-body{display:grid;height:100vh;overflow:hidden;grid-template-columns:145px 1fr 145px;grid-template-rows:40px 1fr 64px}
-.default-body #load-foreground{z-index:20;grid-row:1/4;grid-column:1/5;background:0;opacity:0;display:grid;transition:60s;transform:opacity(0.8);grid-template-rows:40px 1fr 250px 1fr 4em;grid-template-columns:80px 1fr 250px 1fr 80px;background:linear-gradient(to top right,#827d85,#2e0e3b)}
-.default-body #load-foreground .container{grid-row:3/4;grid-column:3/4;filter:drop-shadow(0 0 4em #adaaaf)}
-.default-body #load-foreground .container img{width:275px;height:275px;transition:12s;transform:opacity(0);transform:scale(0.95)}
-.default-body #load-midground{z-index:4;grid-row:1/4;grid-column:1/5;display:grid;grid-template-rows:40px 1fr 4em;grid-template-columns:80px 1fr 80px;transition:10s;transform:opacity(0)}
+*{font-family:"Baloo Bhai 2",arial;padding:0;margin:0}#uitsendings-body{display:grid;height:100vh;overflow:hidden;grid-template-rows:40px 1fr 64px;grid-template-columns:145px 1fr 145px}
+#uitsendings-body #loading-screen{grid-row:1/4;grid-column:1/4;display:inherit;grid-template-rows:1fr 250px 1fr;grid-template-columns:1fr 250px 1fr;background:linear-gradient(to bottom left,#827d85,#2e0e3b)}
+#uitsendings-body #loading-screen img{height:100%;grid-row:2/3;grid-column:2/3;filter:drop-shadow(0 0 8px #adaaaf)}
 .rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
@@ -122,7 +120,7 @@
 .rooster-main #rooster-date header div button li:hover h3{color:#c8c0c0;clip-path:inset(0 0 0 0);filter:drop-shadow(0 0 .75rem #957e7e)}
 .rooster-main #rooster-date header div button .visible{display:flex}.rooster-main #rooster-date header div button .hidden{display:none}
 .rooster-main #rooster-sheets{display:grid;grid-row:2/3;grid-column:1/13;grid-template-rows:1fr;grid-template-columns:128px 52px repeat(10,99px)}
-.rooster-main #rooster-sheets iframe{width:1189px;position:fixed;margin:-32px 0 0 -3px;clip-path:inset(32px 18px 28px 3px)}
+.rooster-main #rooster-sheets iframe{width:1189px;position:fixed;margin:-35px 0 0 -3px;clip-path:inset(35px 18px 28px 3px)}
 .rooster-main .background{z-index:-1;grid-row:1/4;grid-column:1/13;background:linear-gradient(to left,#2e0e3b,#827d85)}
 .statistieke-main{display:grid;background:#2e0e3b;grid-template-rows:44px 258px 1fr;grid-template-columns:repeat(5,234px) 1fr 145px}
 .statistieke-main #statistieke-date{display:grid;grid-row:1/2;cursor:default;grid-column:1/6;color:#adaaaf;grid-template-rows:44px;grid-template-columns:234px 1fr 234px;filter:drop-shadow(0 0 8px #2e0e3b);background:linear-gradient(to left,#2e0e3b,#827d85)}
@@ -3849,21 +3847,47 @@
 .sidebar-overlay nav a[id*=gy]:hover ~ main{background:#efefef}.sidebar-overlay nav a[id*=gy]:hover ~ main h1{color:#434343;filter:drop-shadow(0 0 .75rem #bec2cb)}
 .sidebar-overlay nav a[id*=tu]:hover ~ main{background:#a2c4c9}.sidebar-overlay nav a[id*=tu]:hover ~ main h1{color:#0c343d;filter:drop-shadow(0 0 .75rem #0ff)}
 .sidebar-overlay nav[class*=first-semester] main{grid-row:5/6;grid-column:1/6;border-bottom-right-radius:8px}
-.sidebar-overlay nav[class*=first-semester] .trigger{opacity:0;grid-row:5/6;grid-column:6/11}
+.sidebar-overlay nav[class*=first-semester] .trigger{opacity:0;grid-row:4/6;grid-column:6/11}
 .sidebar-overlay nav[class*=first-semester] a div{clip-path:inset(0 0 0 0);transition:clip-path .25s}
 .sidebar-overlay nav[class*=first-semester] a:hover div{clip-path:inset(100% 0 0 0)}
 .sidebar-overlay nav[class*=first-semester] a[id*=sheet],.sidebar-overlay nav[class*=first-semester] ul[class*=sheet]{grid-row:1/2}
 .sidebar-overlay nav[class*=first-semester] a[id*=edit],.sidebar-overlay nav[class*=first-semester] ul[class*=edit]{grid-row:2/3}
-.sidebar-overlay nav[class*=first-semester] a[id*=book],.sidebar-overlay nav[class*=first-semester] ul[class*=book]{grid-row:3/4}
-.sidebar-overlay nav[class*=first-semester] a[id*=cloud],.sidebar-overlay nav[class*=first-semester] ul[class*=cloud]{grid-row:4/5}
+.sidebar-overlay nav[class*=first-semester] a[id*=gr-book],.sidebar-overlay nav[class*=first-semester] ul[class*=gr-book],.sidebar-overlay nav[class*=first-semester] a[id*=pi-book],.sidebar-overlay nav[class*=first-semester] ul[class*=pi-book],.sidebar-overlay nav[class*=first-semester] a[id*=ye-book],.sidebar-overlay nav[class*=first-semester] ul[class*=ye-book],.sidebar-overlay nav[class*=first-semester] a[id*=or-book],.sidebar-overlay nav[class*=first-semester] ul[class*=or-book],.sidebar-overlay nav[class*=first-semester] a[id*=bl-book],.sidebar-overlay nav[class*=first-semester] ul[class*=bl-book]{grid-row:3/4}
+.sidebar-overlay nav[class*=first-semester] a[id*=gr-cloud],.sidebar-overlay nav[class*=first-semester] ul[class*=gr-cloud],.sidebar-overlay nav[class*=first-semester] a[id*=pi-cloud],.sidebar-overlay nav[class*=first-semester] ul[class*=pi-cloud],.sidebar-overlay nav[class*=first-semester] a[id*=ye-cloud],.sidebar-overlay nav[class*=first-semester] ul[class*=ye-cloud],.sidebar-overlay nav[class*=first-semester] a[id*=or-cloud],.sidebar-overlay nav[class*=first-semester] ul[class*=or-cloud],.sidebar-overlay nav[class*=first-semester] a[id*=bl-cloud],.sidebar-overlay nav[class*=first-semester] ul[class*=bl-cloud]{grid-row:4/5}
+.sidebar-overlay nav[class*=first-semester] a[id*=pu-cloud],.sidebar-overlay nav[class*=first-semester] ul[class*=pu-cloud],.sidebar-overlay nav[class*=first-semester] a[id*=re-cloud],.sidebar-overlay nav[class*=first-semester] ul[class*=re-cloud],.sidebar-overlay nav[class*=first-semester] a[id*=br-cloud],.sidebar-overlay nav[class*=first-semester] ul[class*=br-cloud],.sidebar-overlay nav[class*=first-semester] a[id*=gy-cloud],.sidebar-overlay nav[class*=first-semester] ul[class*=gy-cloud],.sidebar-overlay nav[class*=first-semester] a[id*=tu-cloud],.sidebar-overlay nav[class*=first-semester] ul[class*=tu-cloud]{grid-row:3/4}
 .sidebar-overlay nav[class*=second-semester] main{grid-row:1/2;grid-column:1/6;border-top-right-radius:8px}
-.sidebar-overlay nav[class*=second-semester] .trigger{opacity:0;grid-row:1/2;grid-column:6/11}
+.sidebar-overlay nav[class*=second-semester] .trigger{opacity:0;grid-row:1/3;grid-column:6/11}
 .sidebar-overlay nav[class*=second-semester] a div{clip-path:inset(0 0 0 0);transition:clip-path .25s}
 .sidebar-overlay nav[class*=second-semester] a:hover div{clip-path:inset(0 0 100% 0)}
 .sidebar-overlay nav[class*=second-semester] a[id*=sheet],.sidebar-overlay nav[class*=second-semester] ul[class*=sheet]{grid-row:5/6}
 .sidebar-overlay nav[class*=second-semester] a[id*=edit],.sidebar-overlay nav[class*=second-semester] ul[class*=edit]{grid-row:4/5}
-.sidebar-overlay nav[class*=second-semester] a[id*=book],.sidebar-overlay nav[class*=second-semester] ul[class*=book]{grid-row:3/4}
-.sidebar-overlay nav[class*=second-semester] a[id*=cloud],.sidebar-overlay nav[class*=second-semester] ul[class*=cloud]{grid-row:2/3}
+.sidebar-overlay nav[class*=second-semester] a[id*=gr-book],.sidebar-overlay nav[class*=second-semester] ul[class*=gr-book],.sidebar-overlay nav[class*=second-semester] a[id*=pi-book],.sidebar-overlay nav[class*=second-semester] ul[class*=pi-book],.sidebar-overlay nav[class*=second-semester] a[id*=ye-book],.sidebar-overlay nav[class*=second-semester] ul[class*=ye-book],.sidebar-overlay nav[class*=second-semester] a[id*=or-book],.sidebar-overlay nav[class*=second-semester] ul[class*=or-book],.sidebar-overlay nav[class*=second-semester] a[id*=bl-book],.sidebar-overlay nav[class*=second-semester] ul[class*=bl-book]{grid-row:3/4}
+.sidebar-overlay nav[class*=second-semester] a[id*=gr-cloud],.sidebar-overlay nav[class*=second-semester] ul[class*=gr-cloud],.sidebar-overlay nav[class*=second-semester] a[id*=pi-cloud],.sidebar-overlay nav[class*=second-semester] ul[class*=pi-cloud],.sidebar-overlay nav[class*=second-semester] a[id*=ye-cloud],.sidebar-overlay nav[class*=second-semester] ul[class*=ye-cloud],.sidebar-overlay nav[class*=second-semester] a[id*=or-cloud],.sidebar-overlay nav[class*=second-semester] ul[class*=or-cloud],.sidebar-overlay nav[class*=second-semester] a[id*=bl-cloud],.sidebar-overlay nav[class*=second-semester] ul[class*=bl-cloud]{grid-row:2/3}
+.sidebar-overlay nav[class*=second-semester] a[id*=pu-cloud],.sidebar-overlay nav[class*=second-semester] ul[class*=pu-cloud],.sidebar-overlay nav[class*=second-semester] a[id*=re-cloud],.sidebar-overlay nav[class*=second-semester] ul[class*=re-cloud],.sidebar-overlay nav[class*=second-semester] a[id*=br-cloud],.sidebar-overlay nav[class*=second-semester] ul[class*=br-cloud],.sidebar-overlay nav[class*=second-semester] a[id*=gy-cloud],.sidebar-overlay nav[class*=second-semester] ul[class*=gy-cloud],.sidebar-overlay nav[class*=second-semester] a[id*=tu-cloud],.sidebar-overlay nav[class*=second-semester] ul[class*=tu-cloud]{grid-row:3/4}
+.sidebar-overlay #january{grid-row:1/6}.sidebar-overlay #january #tu-sheet-jan div,.sidebar-overlay #january .tu-sheet li{border-top-right-radius:8px}
+.sidebar-overlay #january #tu-cloud-jan div,.sidebar-overlay #january .tu-cloud li{border-bottom-right-radius:8px}
+.sidebar-overlay #february{grid-row:2/7}.sidebar-overlay #february #tu-sheet-feb div,.sidebar-overlay #february .tu-sheet li{border-top-right-radius:8px}
+.sidebar-overlay #february #tu-cloud-feb div,.sidebar-overlay #february .tu-cloud li{border-bottom-right-radius:8px}
+.sidebar-overlay #march{grid-row:3/8}.sidebar-overlay #march #tu-sheet-mar div,.sidebar-overlay #march .tu-sheet li{border-top-right-radius:8px}
+.sidebar-overlay #march #tu-cloud-mar div,.sidebar-overlay #march .tu-cloud li{border-bottom-right-radius:8px}
+.sidebar-overlay #april{grid-row:4/9}.sidebar-overlay #april #tu-sheet-apr div,.sidebar-overlay #april .tu-sheet li{border-top-right-radius:8px}
+.sidebar-overlay #april #tu-cloud-apr div,.sidebar-overlay #april .tu-cloud li{border-bottom-right-radius:8px}
+.sidebar-overlay #may{grid-row:5/10}.sidebar-overlay #may #tu-sheet-may div,.sidebar-overlay #may .tu-sheet li{border-top-right-radius:8px}
+.sidebar-overlay #may #tu-cloud-may div,.sidebar-overlay #may .tu-cloud li{border-bottom-right-radius:8px}
+.sidebar-overlay #june{grid-row:6/11}.sidebar-overlay #june #tu-sheet-jun div,.sidebar-overlay #june .tu-sheet li{border-top-right-radius:8px}
+.sidebar-overlay #june #tu-cloud-jun div,.sidebar-overlay #june .tu-cloud li{border-bottom-right-radius:8px}
+.sidebar-overlay #july{grid-row:3/8}.sidebar-overlay #july #tu-sheet-jul div,.sidebar-overlay #july .tu-sheet li{border-bottom-right-radius:8px}
+.sidebar-overlay #july #tu-cloud-jul div,.sidebar-overlay #july .tu-cloud li{border-top-right-radius:8px}
+.sidebar-overlay #august{grid-row:4/9}.sidebar-overlay #august #tu-sheet-aug div,.sidebar-overlay #august .tu-sheet li{border-bottom-right-radius:8px}
+.sidebar-overlay #august #tu-cloud-aug div,.sidebar-overlay #august .tu-cloud li{border-top-right-radius:8px}
+.sidebar-overlay #september{grid-row:5/10}.sidebar-overlay #september #tu-sheet-sep div,.sidebar-overlay #september .tu-sheet li{border-bottom-right-radius:8px}
+.sidebar-overlay #september #tu-cloud-sep div,.sidebar-overlay #september .tu-cloud li{border-top-right-radius:8px}
+.sidebar-overlay #october{grid-row:6/11}.sidebar-overlay #october #tu-sheet-oct div,.sidebar-overlay #october .tu-sheet li{border-bottom-right-radius:8px}
+.sidebar-overlay #october #tu-cloud-oct div,.sidebar-overlay #october .tu-cloud li{border-top-right-radius:8px}
+.sidebar-overlay #november{grid-row:7/12}.sidebar-overlay #november #tu-sheet-nov div,.sidebar-overlay #november .tu-sheet li{border-bottom-right-radius:8px}
+.sidebar-overlay #november #tu-cloud-nov div,.sidebar-overlay #november .tu-cloud li{border-top-right-radius:8px}
+.sidebar-overlay #december{grid-row:8/13}.sidebar-overlay #december #tu-sheet-dec div,.sidebar-overlay #december .tu-sheet li{border-bottom-right-radius:8px}
+.sidebar-overlay #december #tu-cloud-dec div,.sidebar-overlay #december .tu-cloud li{border-top-right-radius:8px}
 .sidebar-overlay nav[class*=true] a[id*=gr] div{background:#274e13}.sidebar-overlay nav[class*=true] a[id*=gr] div button h1,.sidebar-overlay nav[class*=true] a[id*=gr] div button svg{color:#b6d7a8}
 .sidebar-overlay nav[class*=true] a[id*=gr] div button:hover h1,.sidebar-overlay nav[class*=true] a[id*=gr] div button:hover svg{filter:drop-shadow(0 0 .75rem #0f0)}
 .sidebar-overlay nav[class*=true] a[id*=pi] div{background:#4c1130}.sidebar-overlay nav[class*=true] a[id*=pi] div button h1,.sidebar-overlay nav[class*=true] a[id*=pi] div button svg{color:#d5a6bd}
@@ -3897,30 +3921,6 @@
 .sidebar-overlay nav[class*=false] a div{background:#2e0e3b}.sidebar-overlay nav[class*=false] a div button h1,.sidebar-overlay nav[class*=false] a div button svg{color:#adaaaf}
 .sidebar-overlay nav[class*=false] a div button:hover h1,.sidebar-overlay nav[class*=false] a div button:hover svg{filter:drop-shadow(0 0 .75rem #827d85)}
 .sidebar-overlay nav[class*=false] ul li{background:#adaaaf}.sidebar-overlay nav[class*=false] ul li button svg{color:#2e0e3b;filter:drop-shadow(0 0 .75rem #827d85)}
-.sidebar-overlay #january{grid-row:1/6}.sidebar-overlay #january #tu-sheet-jan div,.sidebar-overlay #january .tu-sheet li{border-top-right-radius:8px}
-.sidebar-overlay #january #tu-cloud-jan div,.sidebar-overlay #january .tu-cloud li{border-bottom-right-radius:8px}
-.sidebar-overlay #february{grid-row:2/7}.sidebar-overlay #february #tu-sheet-feb div,.sidebar-overlay #february .tu-sheet li{border-top-right-radius:8px}
-.sidebar-overlay #february #tu-cloud-feb div,.sidebar-overlay #february .tu-cloud li{border-bottom-right-radius:8px}
-.sidebar-overlay #march{grid-row:3/8}.sidebar-overlay #march #tu-sheet-mar div,.sidebar-overlay #march .tu-sheet li{border-top-right-radius:8px}
-.sidebar-overlay #march #tu-cloud-mar div,.sidebar-overlay #march .tu-cloud li{border-bottom-right-radius:8px}
-.sidebar-overlay #april{grid-row:4/9}.sidebar-overlay #april #tu-sheet-apr div,.sidebar-overlay #april .tu-sheet li{border-top-right-radius:8px}
-.sidebar-overlay #april #tu-cloud-apr div,.sidebar-overlay #april .tu-cloud li{border-bottom-right-radius:8px}
-.sidebar-overlay #may{grid-row:5/10}.sidebar-overlay #may #tu-sheet-may div,.sidebar-overlay #may .tu-sheet li{border-top-right-radius:8px}
-.sidebar-overlay #may #tu-cloud-may div,.sidebar-overlay #may .tu-cloud li{border-bottom-right-radius:8px}
-.sidebar-overlay #june{grid-row:6/11}.sidebar-overlay #june #tu-sheet-jun div,.sidebar-overlay #june .tu-sheet li{border-top-right-radius:8px}
-.sidebar-overlay #june #tu-cloud-jun div,.sidebar-overlay #june .tu-cloud li{border-bottom-right-radius:8px}
-.sidebar-overlay #july{grid-row:3/8}.sidebar-overlay #july #tu-sheet-jul div,.sidebar-overlay #july .tu-sheet li{border-bottom-right-radius:8px}
-.sidebar-overlay #july #tu-cloud-jul div,.sidebar-overlay #july .tu-cloud li{border-top-right-radius:8px}
-.sidebar-overlay #august{grid-row:4/9}.sidebar-overlay #august #tu-sheet-aug div,.sidebar-overlay #august .tu-sheet li{border-bottom-right-radius:8px}
-.sidebar-overlay #august #tu-cloud-aug div,.sidebar-overlay #august .tu-cloud li{border-top-right-radius:8px}
-.sidebar-overlay #september{grid-row:5/10}.sidebar-overlay #september #tu-sheet-sep div,.sidebar-overlay #september .tu-sheet li{border-bottom-right-radius:8px}
-.sidebar-overlay #september #tu-cloud-sep div,.sidebar-overlay #september .tu-cloud li{border-top-right-radius:8px}
-.sidebar-overlay #october{grid-row:6/11}.sidebar-overlay #october #tu-sheet-oct div,.sidebar-overlay #october .tu-sheet li{border-bottom-right-radius:8px}
-.sidebar-overlay #october #tu-cloud-oct div,.sidebar-overlay #october .tu-cloud li{border-top-right-radius:8px}
-.sidebar-overlay #november{grid-row:7/12}.sidebar-overlay #november #tu-sheet-nov div,.sidebar-overlay #november .tu-sheet li{border-bottom-right-radius:8px}
-.sidebar-overlay #november #tu-cloud-nov div,.sidebar-overlay #november .tu-cloud li{border-top-right-radius:8px}
-.sidebar-overlay #december{grid-row:8/13}.sidebar-overlay #december #tu-sheet-dec div,.sidebar-overlay #december .tu-sheet li{border-bottom-right-radius:8px}
-.sidebar-overlay #december #tu-cloud-dec div,.sidebar-overlay #december .tu-cloud li{border-top-right-radius:8px}
 .sidebar-overlay .background{z-index:-2;grid-row:1/13;grid-column:1/12;background:linear-gradient(to bottom right,rgba(46,14,59,0.8),rgba(46,14,59,0.4))}
 @media only screen and (max-height:2160px){section[class*=sidebar]{grid-template-columns:repeat(10,171.3333333333px) 1fr;grid-template-rows:repeat(12,171.3333333333px)}
 }@media only screen and (max-height:2159px){section[class*=sidebar]{grid-template-columns:repeat(10,171.25px) 1fr;grid-template-rows:repeat(12,171.25px)}

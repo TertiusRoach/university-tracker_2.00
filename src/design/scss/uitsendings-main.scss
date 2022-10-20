@@ -587,8 +587,8 @@
       // height: 90%;
       width: 1189px;
       position: fixed;
-      margin: -32px 0 0 -3px;
-      clip-path: inset(32px 18px 28px 3px);
+      margin: -35px 0 0 -3px;
+      clip-path: inset(35px 18px 28px 3px);
     }
     //--|▲| iFrame Cropping |▲|--//
   }
@@ -847,6 +847,7 @@
       }
     }
   }
+
   #company-logo {
     display: flex;
     grid-row: 1/5;

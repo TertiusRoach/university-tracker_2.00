@@ -97,8 +97,16 @@ export namespace UitsendingsOverlay {
         };
         sidebarOverlayHide(pageName, uitsendingsOverlay, language);
 
-        //--|▼| Resets banner text to selected month when cursor enters 'background' container |▼|--//
+        //--|▼| Resets banner text to default month |▼|--//
         const sidebarOverlayReset = (pageName: String, uitsendingsMain: HTMLElement, uitsendingsOverlay: HTMLElement, language: String | 'afr' | 'eng') => {
+          function resetBanner(pageName: String, language: Array<String>) {
+            let monthNavigation: Array<String> = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+            for (let i = 0; i < monthNavigation.length; i++) {
+              let container = document.querySelector(`.${pageName} #${monthNavigation[i]}`);
+              container.querySelector('main h1').textContent = `${language[i]}`;
+            }
+          }
+
           //--► Use 'var' to label functions you want to turn into tools ◄--//
           var months: Array<String>;
           switch (language) {
@@ -109,6 +117,11 @@ export namespace UitsendingsOverlay {
               months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
               break;
           }
+
+          //--▼ Resets all navigation banners to its default state ▼--//
+          $(`.${pageName} nav`).on('mouseleave', () => {
+            resetBanner(pageName, months);
+          });
 
           //--▼ January ▼--//
           $(`.${pageName} #january main`).on('mouseenter', () => {

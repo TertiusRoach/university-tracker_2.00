@@ -1,0 +1,150 @@
+@import 'colors.scss';
+/*--|►| #administrasie-overlay <section> |◄|--*/
+#administrasie-overlay {
+  z-index: 1; // Middle
+  grid-row: 2/3;
+  grid-column: 2/4;
+}
+/*--▼ .default-overlay ▼--*/
+.default-overlay {
+  display: none;
+}
+/*--▼ .header-overlay ▼--*/
+.header-overlay {
+  display: grid;
+  grid-row: 2/3;
+  grid-column: 2/5;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: 1fr 250px 2fr 250px 1fr 145px;
+  nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    filter: drop-shadow(0 0 8px $primary-medium);
+    //--|▼| Dropdown Button Animation |▼|--//
+    div {
+      grid-column: 1/2;
+      background: $primary-medium;
+      transition: background 0.25s;
+      button {
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        background: none;
+        a {
+          display: flex;
+          cursor: default;
+          align-items: center;
+          justify-content: left;
+          text-decoration: none;
+          filter: drop-shadow(0 0 0.25rem $primary-dark);
+
+          img {
+            width: 2rem;
+            position: fixed;
+            cursor: pointer;
+            margin-left: 16px;
+            padding-right: 16px;
+          }
+          img:nth-child(1) {
+            opacity: 100;
+            transition: opacity 0.25s;
+          }
+          img:nth-child(2) {
+            opacity: 0;
+            transition: opacity 0.25s;
+          }
+
+          svg {
+            font-size: 2rem;
+            position: fixed;
+            margin-left: 16px;
+            padding-right: 16px;
+          }
+          svg:nth-child(1) {
+            opacity: 100;
+            color: $primary-light;
+            transition: opacity 0.25s;
+          }
+          svg:nth-child(2) {
+            opacity: 0;
+            color: $secondary-dark;
+            transition: opacity 0.25s;
+          }
+
+          h2 {
+            color: $primary-light;
+            margin: 0 16px 0 64px;
+            transition: color 0.25s;
+          }
+        }
+        a:hover {
+          img:nth-child(1) {
+            opacity: 0;
+          }
+          img:nth-child(2) {
+            opacity: 100;
+            filter: drop-shadow(0 0 0.75rem $secondary-medium);
+          }
+
+          svg:nth-child(1) {
+            opacity: 0;
+          }
+          svg:nth-child(2) {
+            opacity: 100;
+            filter: drop-shadow(0 0 0.75rem $secondary-medium);
+          }
+
+          h2 {
+            color: $secondary-light;
+            filter: drop-shadow(0 0 0.75rem $secondary-medium);
+          }
+        }
+      }
+    }
+    div:hover {
+      background: $primary-dark;
+      button a {
+        svg,
+        h2 {
+          cursor: pointer;
+        }
+      }
+    }
+    //--|▲| Dropdown Button Animation |▲|--//
+  }
+  nav[id*='administrasie'] {
+    grid-row: 1/3;
+    grid-column: 2/3;
+    grid-template-rows: repeat(2, 1fr);
+    #registers {
+      grid-row: 1/2;
+    }
+    #beplanning {
+      grid-row: 2/3;
+      border-radius: 0 0 8px 8px;
+    }
+  }
+  nav[id*='departemente'] {
+    grid-row: 1/4;
+    grid-column: 4/5;
+    grid-template-rows: repeat(3, 1fr);
+    #akademici {
+      grid-row: 1/2;
+    }
+    #uitsendings {
+      grid-row: 2/3;
+    }
+    #operasioneel {
+      grid-row: 3/4;
+      border-radius: 0 0 8px 8px;
+    }
+  }
+
+  .background {
+    z-index: -2;
+    grid-row: 1/13;
+    grid-column: 1/8;
+    background: linear-gradient(to bottom, rgba($primary-dark, 0.8), rgba($primary-dark, 0.4));
+  }
+}
