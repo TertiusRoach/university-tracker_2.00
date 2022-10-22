@@ -1,0 +1,32 @@
+@import 'colors.scss';
+/*--|►| #index-body <body> |◄|--*/
+* {
+  font-family: 'Baloo Bhai 2', arial;
+  padding: 0;
+  margin: 0;
+}
+#operasioneel-body {
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
+  grid-template-rows: 40px 1fr 64px;
+  grid-template-columns: 145px 1fr 145px;
+
+  #loading-screen {
+    grid-row: 1/4;
+    grid-column: 1/4;
+    display: inherit;
+    grid-template-rows: 1fr 250px 1fr;
+    grid-template-columns: 1fr 250px 1fr;
+    background: linear-gradient(to bottom left, $primary-medium, $primary-dark);
+    img {
+      height: 100%;
+      grid-row: 2/3;
+      grid-column: 2/3;
+      filter: drop-shadow(0 0 8px $primary-light);
+    }
+  }
+}
+/*--▼ .default-body ▼--*/
+/*.default-body {
+}*/

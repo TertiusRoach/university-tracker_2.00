@@ -16,7 +16,7 @@ export namespace AkademiciOverlay {
       case 'sidebar-overlay':
         let language: String = 'afr';
 
-        //--|▼| Highlights the present month navigation |▼|--//
+        //--|▼| Highlights the present month inside the sidebar |▼|--//
         const sidebarOverlayHightlight = (akademiciMain: HTMLElement, akademiciOverlay: HTMLElement) => {
           let date: String = `${new Date()}`;
           let dateArray: Array<string> = date.split(' ');
@@ -68,7 +68,7 @@ export namespace AkademiciOverlay {
         };
         sidebarOverlayHightlight(akademiciMain, akademiciOverlay);
 
-        //--|▼| Resets navigation containers to its default info before hiding overlay |▼|--//
+        //--|▼| Resets navigation containers to its default info |▼|--//
         const sidebarOverlayHide = (pageName: String, container: HTMLElement, language: String | 'afr' | 'eng') => {
           function resetOverlay(container: HTMLElement, language: String | 'afr' | 'eng') {
             container.style.display = 'none';
@@ -91,6 +91,7 @@ export namespace AkademiciOverlay {
               element.style.display = 'none';
             }
           }
+
           $(`.${pageName} .background`).on('mouseenter', () => {
             akademiciMain.classList.remove('blur');
             resetOverlay(container, language);
@@ -98,8 +99,16 @@ export namespace AkademiciOverlay {
         };
         sidebarOverlayHide(pageName, akademiciOverlay, language);
 
-        //--|▼| Resets banner text to selected month when cursor enters 'background' container |▼|--//
+        //--|▼| Resets banner text to default month |▼|--//
         const sidebarOverlayReset = (pageName: String, akademiciMain: HTMLElement, akademiciOverlay: HTMLElement, language: String | 'afr' | 'eng') => {
+          function resetBanner(pageName: String, language: Array<String>) {
+            let monthNavigation: Array<String> = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+            for (let i = 0; i < monthNavigation.length; i++) {
+              let container = document.querySelector(`.${pageName} #${monthNavigation[i]}`);
+              container.querySelector('main h1').textContent = `${language[i]}`;
+            }
+          }
+
           //--► Use 'var' to label functions you want to turn into tools ◄--//
           var months: Array<String>;
           switch (language) {
@@ -110,6 +119,11 @@ export namespace AkademiciOverlay {
               months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
               break;
           }
+
+          //--▼ Resets all navigation banners to its default state ▼--//
+          $(`.${pageName} nav`).on('mouseleave', () => {
+            resetBanner(pageName, months);
+          });
 
           //--▼ January ▼--//
           $(`.${pageName} #january main`).on('mouseenter', () => {
@@ -264,21 +278,6 @@ export namespace AkademiciOverlay {
             changeText('bl-sheet');
             // changeBanner('sheet');
           });
-          $('a[id*="pu-sheet"]').on('mouseenter', () => {
-            changeText('pu-sheet');
-          });
-          $('a[id*="re-sheet"]').on('mouseenter', () => {
-            changeText('re-sheet');
-          });
-          $('a[id*="br-sheet"]').on('mouseenter', () => {
-            changeText('br-sheet');
-          });
-          $('a[id*="gy-sheet"]').on('mouseenter', () => {
-            changeText('gy-sheet');
-          });
-          $('a[id*="tu-sheet"]').on('mouseenter', () => {
-            changeText('tu-sheet');
-          });
 
           //--▼ Row #2 ▼--//
           $('a[id*="gr-edit"]').on('mouseenter', () => {
@@ -295,21 +294,6 @@ export namespace AkademiciOverlay {
           });
           $('a[id*="bl-edit"]').on('mouseenter', () => {
             changeText('bl-edit');
-          });
-          $('a[id*="pu-edit"]').on('mouseenter', () => {
-            changeText('pu-edit');
-          });
-          $('a[id*="re-edit"]').on('mouseenter', () => {
-            changeText('re-edit');
-          });
-          $('a[id*="br-edit"]').on('mouseenter', () => {
-            changeText('br-edit');
-          });
-          $('a[id*="gy-edit"]').on('mouseenter', () => {
-            changeText('gy-edit');
-          });
-          $('a[id*="tu-edit"]').on('mouseenter', () => {
-            changeText('tu-edit');
           });
 
           //--▼ Row #3 ▼--//
@@ -328,21 +312,6 @@ export namespace AkademiciOverlay {
           $('a[id*="bl-book"]').on('mouseenter', () => {
             changeText('bl-boo');
           });
-          $('a[id*="pu-book"]').on('mouseenter', () => {
-            changeText('pu-book');
-          });
-          $('a[id*="re-book"]').on('mouseenter', () => {
-            changeText('re-book');
-          });
-          $('a[id*="br-book"]').on('mouseenter', () => {
-            changeText('br-book');
-          });
-          $('a[id*="gy-book"]').on('mouseenter', () => {
-            changeText('gy-book');
-          });
-          $('a[id*="tu-book"]').on('mouseenter', () => {
-            changeText('tu-boo');
-          });
 
           //--▼ Row #4 ▼--//
           $('a[id*="gr-cloud"]').on('mouseenter', () => {
@@ -359,21 +328,6 @@ export namespace AkademiciOverlay {
           });
           $('a[id*="bl-cloud"]').on('mouseenter', () => {
             changeText('bl-cloud');
-          });
-          $('a[id*="pu-cloud"]').on('mouseenter', () => {
-            changeText('pu-cloud');
-          });
-          $('a[id*="re-cloud"]').on('mouseenter', () => {
-            changeText('re-cloud');
-          });
-          $('a[id*="br-cloud"]').on('mouseenter', () => {
-            changeText('br-cloud');
-          });
-          $('a[id*="gy-cloud"]').on('mouseenter', () => {
-            changeText('gy-cloud');
-          });
-          $('a[id*="tu-cloud"]').on('mouseenter', () => {
-            changeText('tu-cloud');
           });
         };
         sidebarOverlayInformation(pageName);
@@ -392,44 +346,56 @@ export namespace AkademiciOverlay {
             $(`.${pageName} #${display}`).css('display', 'grid');
           }
 
-          //--▼ Show Month Overlays: 0 = 'January' ▼--//
+          //--▼ Toggle sidebar-overlay display from 'none' to 'grid' ▼--//
           $(sidebarButtons).on('mouseenter', () => {
             akademiciMain.classList.add('blur');
             akademiciOverlay.style.display = 'grid';
           });
+          //--▼ January ▼--//
           $(sidebarButtons[0]).on('mouseenter', () => {
             displayOverlay(pageName, 'january');
           });
+          //--▼ February ▼--//
           $(sidebarButtons[1]).on('mouseenter', () => {
             displayOverlay(pageName, 'february');
           });
+          //--▼ March ▼--//
           $(sidebarButtons[2]).on('mouseenter', () => {
             displayOverlay(pageName, 'march');
           });
+          //--▼ April ▼--//
           $(sidebarButtons[3]).on('mouseenter', () => {
             displayOverlay(pageName, 'april');
           });
+          //--▼ May ▼--//
           $(sidebarButtons[4]).on('mouseenter', () => {
             displayOverlay(pageName, 'may');
           });
+          //--▼ June ▼--//
           $(sidebarButtons[5]).on('mouseenter', () => {
             displayOverlay(pageName, 'june');
           });
+          //--▼ July ▼--//
           $(sidebarButtons[6]).on('mouseenter', () => {
             displayOverlay(pageName, 'july');
           });
+          //--▼ August ▼--//
           $(sidebarButtons[7]).on('mouseenter', () => {
             displayOverlay(pageName, 'august');
           });
+          //--▼ September ▼--//
           $(sidebarButtons[8]).on('mouseenter', () => {
             displayOverlay(pageName, 'september');
           });
+          //--▼ October ▼--//
           $(sidebarButtons[9]).on('mouseenter', () => {
             displayOverlay(pageName, 'october');
           });
+          //--▼ November ▼--//
           $(sidebarButtons[10]).on('mouseenter', () => {
             displayOverlay(pageName, 'november');
           });
+          //--▼ December ▼--//
           $(sidebarButtons[11]).on('mouseenter', () => {
             displayOverlay(pageName, 'december');
           });
