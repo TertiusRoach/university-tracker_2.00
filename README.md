@@ -4,15 +4,15 @@ Paperwork is an integral part for any company and that's where this system comes
 
 ## Links
 
-[Index](https://tertiusroach.github.io/university-tracker/dist/index.html)
+[Index](https://tertiusroach.github.io/university-tracker_2.00/dist/index.html)
 
-[Academics](https://tertiusroach.github.io/university-tracker/dist/akademici.html)
+[Academics](https://tertiusroach.github.io/university-tracker_2.00/dist/akademici.html)
 
-[Administration](https://tertiusroach.github.io/university-tracker/dist/administrasie.html)
+[Administration](https://tertiusroach.github.io/university-tracker_2.00/dist/administrasie.html)
 
-[Operational](https://tertiusroach.github.io/university-tracker/dist/operasioneel.html)
+[Operational](https://tertiusroach.github.io/university-tracker_2.00/dist/operasioneel.html)
 
-[Broadcasts](https://tertiusroach.github.io/university-tracker/dist/uitsendings.html)
+[Broadcasts](https://tertiusroach.github.io/university-tracker_2.00/dist/uitsendings.html)
 
 ## NPM Install Commands for workflow (Gulp, Sass, jQuery & TypeScript)
 
