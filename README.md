@@ -2,6 +2,18 @@
 
 Paperwork is an integral part for any company and that's where this system comes in to facilitate the means to make administration easier by linking everything on the cloud.
 
+## Links
+
+[Index](https://tertiusroach.github.io/university-tracker/dist/index.html)
+
+[Academics](https://tertiusroach.github.io/university-tracker/dist/akademici.html)
+
+[Administration](https://tertiusroach.github.io/university-tracker/dist/administrasie.html)
+
+[Operational](https://tertiusroach.github.io/university-tracker/dist/operasioneel.html)
+
+[Broadcasts](https://tertiusroach.github.io/university-tracker/dist/uitsendings.html)
+
 ## NPM Install Commands for workflow (Gulp, Sass, jQuery & TypeScript)
 
     npm init -y
