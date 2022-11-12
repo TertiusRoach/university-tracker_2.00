@@ -1,6 +1,6 @@
 import { GetDesign } from 'code/utilities/GetDesign';
 export namespace UitsendingsMain {
-  export function eventsFor(pageName: String | 'default-main') {
+  export function eventsFor(pageName: String | 'login-main' | 'opdatering-main' | 'rooster-main' | 'statistieke-main' | 'rain-main') {
     const uitsendingsBody: HTMLElement = document.getElementById('uitsendings-body');
     const uitsendingsHeader: HTMLElement = document.getElementById('uitsendings-header');
     const uitsendingsMain: HTMLElement = document.getElementById('uitsendings-main');
@@ -11,6 +11,11 @@ export namespace UitsendingsMain {
 
     switch (pageName) {
       case 'default-main':
+        //--|▼| Displays progress update  |▼|--//
+        $('.show-numbers button').on('click', () => {
+          uitsendingsFooter.querySelector('#opdatering div').className = 'active';
+          new GetDesign.forPage('opdatering-main');
+        });
         break;
       case 'opdatering-main':
         //--|▼| Change header date to present |▼|--//

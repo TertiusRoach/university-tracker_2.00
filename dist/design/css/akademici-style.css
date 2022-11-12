@@ -1,12 +1,12 @@
-@charset "UTF-8";.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
-.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
+@charset "UTF-8";.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 *{font-family:"Baloo Bhai 2",arial;padding:0;margin:0}#akademici-body{display:grid;height:100vh;overflow:hidden;grid-template-rows:40px 1fr 64px;grid-template-columns:145px 1fr 145px}
 #akademici-body #loading-screen{grid-row:1/4;grid-column:1/4;display:inherit;grid-template-rows:1fr 250px 1fr;grid-template-columns:1fr 250px 1fr;background:linear-gradient(to bottom left,#827d85,#2e0e3b)}
 #akademici-body #loading-screen img{height:100%;grid-row:2/3;grid-column:2/3;filter:drop-shadow(0 0 8px #adaaaf)}
-.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 #akademici-header{z-index:1;display:grid;grid-row:1/2;grid-column:2/6;grid-template-rows:40px;grid-template-columns:1fr 250px 2fr 250px 1fr 145px;filter:drop-shadow(0 8px 16px #827d85)}
 .default-header{background:#2e0e3b}.default-header nav[id*=akademici]{grid-column:2/3}
 .default-header nav[id*=akademici] div button a h1{padding:3px 0 3px 46px}.default-header nav[id*=departemente]{grid-column:4/5}
@@ -23,9 +23,9 @@
 .default-header nav div[class*=active] button a svg:nth-child(1){opacity:0}.default-header nav div[class*=active] button a svg:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #c8c0c0)}
 .default-header nav div[class*=active] button a img:nth-child(1){opacity:0}.default-header nav div[class*=active] button a img:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #c8c0c0)}
 .default-header nav div[class*=active] button a h1{clip-path:inset(0 -40px 0 0);filter:drop-shadow(0 0 .75rem #957e7e)}
-.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 #akademici-main{grid-row:2/3;grid-column:2/4}.rooster-main{display:grid;background:#2e0e3b;grid-template-rows:44px 1fr;grid-template-columns:128px 52px repeat(10,99px) 1fr 145px}
 .rooster-main #rooster-date{grid-row:1/2;grid-column:1/13}.rooster-main #rooster-date header{z-index:1;display:grid;grid-row:1/2;cursor:default;grid-column:1/4;color:#adaaaf;grid-template-rows:44px;grid-template-columns:234px 1fr 234px;background:linear-gradient(to left,#2e0e3b,#827d85)}
 .rooster-main #rooster-date header .hide-numbers{grid-column:1/2}.rooster-main #rooster-date header .hide-numbers button li{justify-content:left}
@@ -3705,9 +3705,9 @@
 }@media only screen and (max-height:362px){main[class*=statistieke] section[id*=sheets] footer iframe{height:38px}
 }@media only screen and (max-height:361px){main[class*=statistieke] section[id*=sheets] footer iframe{height:37px}
 }@media only screen and (max-height:360px){main[class*=statistieke] section[id*=sheets] footer iframe{height:36px}
-}main[class*=blur]{filter:blur(8px)}.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
-.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
+}main[class*=blur]{filter:blur(8px)}.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 #akademici-sidebar{z-index:3;grid-row:1/4;grid-column:1/2;background:#2e0e3b;grid-template-rows:40px repeat(12,1fr) 64px}
 .default-sidebar div[id*=button]{z-index:1;grid-column:1/2;grid-template-columns:20px 1fr}
 .default-sidebar div[id*=button] button{grid-column:1/3;background:0;outline:0;border:0;height:100%;display:flex;align-items:center;justify-content:flex-start}
@@ -3720,9 +3720,9 @@
 .default-sidebar #september-button{grid-row:10/11}.default-sidebar #october-button{grid-row:11/12}
 .default-sidebar #november-button{grid-row:12/13}.default-sidebar #december-button{grid-row:13/14}
 .default-sidebar .shadow{grid-row:2/14;grid-column:1/2;background:#2e0e3b;clip-path:inset(0 -32px 0 0);filter:drop-shadow(0 0 16px #827d85)}
-.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 #akademici-footer{z-index:2;display:grid;grid-row:3/4;grid-column:2/5;grid-template-rows:64px;filter:drop-shadow(0 -8px 16px #827d85);grid-template-columns:1fr 45px 1fr 45px 1fr}
 #akademici-footer nav{grid-row:1/2}#akademici-footer nav div{cursor:pointer}#akademici-footer nav div button{border:0;outline:0;background:0}
 #akademici-footer nav div button li{display:flex;align-items:center;text-decoration:none;transition:transform .5s;transform:translateY(16px)}
@@ -3737,9 +3737,9 @@
 #akademici-footer nav div[class*=active] button li svg:nth-child(1){opacity:0}#akademici-footer nav div[class*=active] button li svg:nth-child(2){opacity:100;color:#631b19;filter:drop-shadow(0 0 .75rem #c8c0c0)}
 #akademici-footer nav div[class*=active] h3{cursor:default;color:#957e7e;transform:translateY(0) scaleY(1);filter:drop-shadow(0 0 .75rem #c8c0c0)}
 .default-footer{background:#2e0e3b}.default-footer #rooster{grid-column:2/3}.default-footer #statistieke{grid-column:4/5}
-.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 #akademici-overlay{z-index:1;grid-row:2/3;grid-column:2/4}.default-overlay{display:none}
 .header-overlay{display:grid;grid-row:2/3;grid-column:2/5;grid-template-rows:repeat(12,1fr);grid-template-columns:1fr 250px 2fr 250px 1fr 145px}
 .header-overlay nav{display:grid;grid-template-columns:1fr;filter:drop-shadow(0 0 8px #827d85)}
@@ -5496,7 +5496,7 @@
 }@media only screen and (max-height:502px){section[class*=sidebar]{grid-template-columns:repeat(5,33.1666666667px) 1fr;grid-template-rows:repeat(12,33.1666666667px)}
 }@media only screen and (max-height:501px){section[class*=sidebar]{grid-template-columns:repeat(5,33.0833333333px) 1fr;grid-template-rows:repeat(12,33.0833333333px)}
 }@media only screen and (max-height:500px){section[class*=sidebar]{grid-template-columns:repeat(5,33px) 1fr;grid-template-rows:repeat(12,33px)}
-}.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
-.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
+}.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 #akademici-data{display:none}

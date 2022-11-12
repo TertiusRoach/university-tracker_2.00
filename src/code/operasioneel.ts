@@ -3,7 +3,7 @@ export namespace Operasioneel {
   export class LoadDesign {
     constructor(page: String) {
       new GetDesign.forPage('default-header');
-      new GetDesign.forPage('rooster-main');
+      new GetDesign.forPage('projekte-main');
       new GetDesign.forPage('default-sidebar');
       new GetDesign.forPage('default-footer');
 

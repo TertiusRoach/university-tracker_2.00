@@ -1,0 +1,72 @@
+<!--▲ Default: style="display: grid" ▲-->
+<!--► class="login-main" ◄-->
+<section id="google-login" style="z-index: 2">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+  <div
+    id="g_id_onload"
+    data-client_id="366326979915-i7bshbvc5dl3kbnb8dnp6kiksfjtjaq4.apps.googleusercontent.com"
+    data-login_uri="https://tertiusroach.github.io"
+    data-callback="handleCredentialResponse"
+    data-auto_prompt="false"
+  ></div>
+
+  <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline" data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left"></div>
+
+  <script type="text/javascript">
+    const { OAuth2Client } = require('google-auth-library');
+    const client = new OAuth2Client(CLIENT_ID);
+    async function verify() {
+      const ticket = await client.verifyIdToken({
+        idToken: token,
+        audience: CLIENT_ID, // Specify the CLIENT_ID of the app that accesses the backend
+        // Or, if multiple clients access the backend:
+        //[CLIENT_ID_1, CLIENT_ID_2, CLIENT_ID_3]
+      });
+      const payload = ticket.getPayload();
+      const userid = payload['sub'];
+      // If request specified a G Suite domain:
+      // const domain = payload['hd'];
+    }
+    verify().catch(console.error);
+    /*
+    function onSignIn(googleUser) {
+      var profile = googleUser.getBasicProfile();
+      console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+      console.log('Name: ' + profile.getName());
+      console.log('Image URL: ' + profile.getImageUrl());
+      console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    }
+    */
+    /*
+    function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function () {
+        console.log('User signed out.');
+      });
+    }
+    */
+  </script>
+</section>
+
+<main id="company-logo" style="z-index: 1">
+  <img src="images/svg/**/*.svg" alt="Company Logo" />
+</main>
+
+<section id="background" style="z-index: 0">
+  <div class="gradient-one">
+    <span></span>
+  </div>
+  <div class="gradient-two">
+    <span></span>
+  </div>
+  <div class="gradient-three">
+    <span></span>
+  </div>
+  <div class="gradient-four">
+    <span></span>
+  </div>
+</section>
+
+<!-- data-login_uri="https://tertiusroach.github.io" -->
+<!-- data-login_uri="https://tertiusroach.github.io/workflow-setup/dist/uitsendings.html" -->

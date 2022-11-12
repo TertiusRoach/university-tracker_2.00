@@ -12,19 +12,19 @@ export namespace OperasioneelMain {
     switch (pageName) {
       case 'default-main':
         break;
-      case 'rooster-main':
+      case 'projekte-main':
         //--|▼| Change header date to present |▼|--//
         operasioneelMain.querySelector(`#${pageName.split('-')[0]}-date h1`).innerHTML = OperasioneelMain.getPresent('Weekday, 00 Month YYYY');
 
         //--|▼| Clears data by showing screensaver on button click |▼|--//
-        OperasioneelMain.showScreensaver('rooster', operasioneelMain, operasioneelFooter, operasioneelData);
+        OperasioneelMain.showScreensaver('projekte', operasioneelMain, operasioneelFooter, operasioneelData);
         break;
-      case 'statistieke-main':
+      case 'ateljees-main':
         //--|▼| Change header date to present |▼|--//
         operasioneelMain.querySelector(`#${pageName.split('-')[0]}-date h1`).innerHTML = OperasioneelMain.getPresent('Weekday, 00 Month YYYY');
 
         //--|▼| Clears data by showing screensaver on button click |▼|--//
-        OperasioneelMain.showScreensaver('statistieke', operasioneelMain, operasioneelFooter, operasioneelData);
+        OperasioneelMain.showScreensaver('ateljees', operasioneelMain, operasioneelFooter, operasioneelData);
         break;
       case 'rain-main':
         //--|▼| Appends rain droplets into containers |▼|--//
@@ -60,89 +60,26 @@ export namespace OperasioneelMain {
 
         //--|▼| Reverts back to previously displayed information |▼|--//
         const showInfo = (operasioneelMain: HTMLElement, operasioneelFooter: HTMLElement, operasioneelData: HTMLElement) => {
-          let revealContent: HTMLButtonElement = operasioneelMain.querySelector(' .show-numbers button');
+          let revealContent: HTMLButtonElement = operasioneelMain.querySelector('.show-numbers button');
           let revertMain: String = operasioneelData.querySelector('footer p').innerHTML;
           $(revealContent).on('click', () => {
             operasioneelFooter.querySelector(`#${revertMain} div`).className = 'active';
             switch (revertMain) {
-              case 'opdatering':
-                new GetDesign.forPage('opdatering-main');
+              case 'projekte':
+                new GetDesign.forPage('projekte-main');
                 break;
-              case 'rooster':
-                new GetDesign.forPage('rooster-main');
-                break;
-              case 'statistieke':
-                new GetDesign.forPage('statistieke-main');
+              case 'ateljees':
+                new GetDesign.forPage('ateljees-main');
                 break;
             }
           });
         };
         showInfo(operasioneelMain, operasioneelFooter, operasioneelData);
-        break;
-      case 'stars-main':
-        /*
-        //--|▼| Appends rain droplets into containers |▼|--//
-        const rainEffect = (operasioneelMain: HTMLElement) => {
-          let topContainer: HTMLElement = operasioneelMain.querySelector('.rain-top');
-          let bottomContainer: HTMLElement = operasioneelMain.querySelector('.rain-bottom');
-          function addRain(container: HTMLElement, amount: number) {
-            let i: number = 0;
-            let rainDrops: Number = amount;
-            while (i < rainDrops) {
-              var drop = document.createElement('i');
-
-              var size = Math.random() * 5;
-              var posX = Math.floor(Math.random() * window.innerWidth);
-
-              var delay = Math.random() * -20;
-              var duration = Math.random() * 5;
-
-              drop.style.width = 0.2 + size + 'px';
-              drop.style.left = posX + 'px';
-              drop.style.animationDelay = delay + 's';
-              drop.style.animationDuration = 4 + duration + 's';
-
-              container.appendChild(drop);
-
-              i++;
-            }
-          }
-          addRain(topContainer, 65);
-          addRain(bottomContainer, 10);
-        };
-        rainEffect(operasioneelMain);
-
-        //--|▼| Reverts back to previously displayed information |▼|--//
-        const showInfo = (operasioneelMain: HTMLElement, operasioneelFooter: HTMLElement, operasioneelData: HTMLElement) => {
-          let revealContent: HTMLButtonElement = operasioneelMain.querySelector(' .show-numbers button');
-          let revertMain: String = operasioneelData.querySelector('footer p').innerHTML;
-          $(revealContent).on('click', () => {
-            operasioneelFooter.querySelector(`#${revertMain} div`).className = 'active';
-            switch (revertMain) {
-              case 'opdatering':
-                new GetDesign.forPage('opdatering-main');
-                break;
-              case 'rooster':
-                new GetDesign.forPage('rooster-main');
-                break;
-              case 'statistieke':
-                new GetDesign.forPage('statistieke-main');
-                break;
-            }
-          });
-        };
-        showInfo(operasioneelMain, operasioneelFooter, operasioneelData);
-        */
         break;
     }
     //--► console.log(`--${pageName} Loaded`); ◄--//
   }
-  export function showScreensaver(
-    container: 'opdatering' | 'rooster' | 'statistieke',
-    operasioneelMain: HTMLElement,
-    operasioneelFooter: HTMLElement,
-    operasioneelData: HTMLElement
-  ) {
+  export function showScreensaver(container: 'projekte' | 'ateljees', operasioneelMain: HTMLElement, operasioneelFooter: HTMLElement, operasioneelData: HTMLElement) {
     let hideInfo: HTMLElement = operasioneelMain.querySelector(`#${container}-date  .hide-numbers`);
     let footerButtons: Object = operasioneelFooter.getElementsByTagName('nav');
 

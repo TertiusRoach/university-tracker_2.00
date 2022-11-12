@@ -1,12 +1,12 @@
-@charset "UTF-8";.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
-.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
+@charset "UTF-8";.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 *{font-family:"Baloo Bhai 2",arial;padding:0;margin:0}#uitsendings-body{display:grid;height:100vh;overflow:hidden;grid-template-rows:40px 1fr 64px;grid-template-columns:145px 1fr 145px}
 #uitsendings-body #loading-screen{grid-row:1/4;grid-column:1/4;display:inherit;grid-template-rows:1fr 250px 1fr;grid-template-columns:1fr 250px 1fr;background:linear-gradient(to bottom left,#827d85,#2e0e3b)}
 #uitsendings-body #loading-screen img{height:100%;grid-row:2/3;grid-column:2/3;filter:drop-shadow(0 0 8px #adaaaf)}
-.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 #uitsendings-header{z-index:1;display:grid;grid-row:1/2;grid-column:2/6;grid-template-rows:40px;grid-template-columns:1fr 250px 2fr 250px 1fr 145px;filter:drop-shadow(0 8px 16px #827d85)}
 .default-header{background:#2e0e3b}.default-header nav[id*=uitsendings]{grid-column:2/3}
 .default-header nav[id*=departemente]{grid-column:4/5}.default-header nav{grid-row:1/2}
@@ -18,10 +18,28 @@
 .default-header nav div button a h1{clip-path:inset(0 100% 0 0);transition:clip-path .5s}
 .default-header nav div[class*=active] button a img:nth-child(1){opacity:0}.default-header nav div[class*=active] button a img:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #c8c0c0)}
 .default-header nav div[class*=active] button a h1{clip-path:inset(0 -40px 0 0);filter:drop-shadow(0 0 .75rem #957e7e)}
-.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
-#uitsendings-main{grid-row:2/3;grid-column:2/4}.opdatering-main{display:grid;background:#2e0e3b;grid-template-rows:44px 258px 1fr;grid-template-columns:repeat(5,234px) 1fr 145px}
+.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
+#uitsendings-main{grid-row:2/3;grid-column:2/4}.default-main{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:44px repeat(3,1fr);background:red}
+.default-main .show-numbers{grid-row:1/2;grid-column:1/2}.default-main .show-numbers button{border:0;outline:0;background:0}
+.default-main .show-numbers button li{height:44px;width:234px;display:flex;align-items:center;justify-content:left;text-decoration:none}
+.default-main .show-numbers button li svg{z-index:1;cursor:pointer;font-size:2rem;position:fixed;margin-left:16px;padding-right:16px;filter:drop-shadow(0 0 4px #2e0e3b)}
+.default-main .show-numbers button li svg:nth-child(1){opacity:100;color:#adaaaf;transition:opacity .25s}
+.default-main .show-numbers button li svg:nth-child(2){opacity:0;color:#631b19;transition:opacity .25s}
+.default-main .show-numbers button li h3{color:#adaaaf;transition:clip-path .25s;clip-path:inset(0 100% 0 0);padding:9.5px 16px 9.5px 64px}
+.default-main .show-numbers button li:hover svg:nth-child(1){opacity:0}.default-main .show-numbers button li:hover svg:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #957e7e)}
+.default-main .show-numbers button li:hover h3{color:#c8c0c0;clip-path:inset(0 -16px -16px 0);filter:drop-shadow(0 0 .75rem #957e7e)}
+.default-main #company-logo{display:flex;grid-row:1/5;grid-column:2/3;align-items:center;justify-content:center}
+.default-main #company-logo img{opacity:0;animation-delay:5s;animation-name:zoomIn;animation-duration:10s;animation-fill-mode:forwards;filter:drop-shadow(0 0 32px #adaaaf)}
+@keyframes zoomIn{0%{opacity:1;height:0}100%{opacity:1;height:33.33%}
+}.default-main .background{display:grid;grid-row:1/6;grid-column:1/4;grid-template-rows:1fr;grid-template-columns:1fr;background:radial-gradient(circle,#827d85,#2e0e3b 95%)}
+.default-main .background .gradient-one{z-index:4}.default-main .background .gradient-one span{background:linear-gradient(to top right,#827d85,#2e0e3b)}
+.default-main .background .gradient-two{z-index:3}.default-main .background .gradient-two span{animation-delay:60s;background:linear-gradient(to bottom right,#827d85,#2e0e3b)}
+.default-main .background .gradient-three{z-index:2}.default-main .background .gradient-three span{animation-delay:120s;background:linear-gradient(to bottom left,#827d85,#2e0e3b)}
+.default-main .background .gradient-four{z-index:1}.default-main .background .gradient-four span{animation-delay:180s;background:linear-gradient(to top left,#827d85,#2e0e3b)}
+.default-main .background div[class*=gradient]{grid-row:1/2;grid-column:1/2}.default-main .background div[class*=gradient] span{height:100%;display:flex;animation-name:fadeOut;animation-duration:60s;animation-fill-mode:forwards}
+@keyframes fadeOut{0%{opacity:1}100%{opacity:0}}.opdatering-main{display:grid;background:#2e0e3b;grid-template-rows:44px 258px 1fr;grid-template-columns:repeat(5,234px) 1fr 145px}
 .opdatering-main #opdatering-date{display:grid;grid-row:1/2;cursor:default;grid-column:1/6;color:#adaaaf;grid-template-rows:44px;grid-template-columns:234px 1fr 234px;filter:drop-shadow(0 0 8px #2e0e3b);background:linear-gradient(to left,#2e0e3b,#827d85)}
 .opdatering-main #opdatering-date .hide-numbers{grid-column:1/2}.opdatering-main #opdatering-date .hide-numbers button li{justify-content:left}
 .opdatering-main #opdatering-date .hide-numbers button li svg{margin-left:16px;padding-right:16px}
@@ -3765,9 +3783,9 @@
 }@media only screen and (max-height:362px){main[class*=rooster] section[id*=sheets] iframe{height:272px}
 }@media only screen and (max-height:361px){main[class*=rooster] section[id*=sheets] iframe{height:271px}
 }@media only screen and (max-height:360px){main[class*=rooster] section[id*=sheets] iframe{height:270px}
-}main[class*=blur]{filter:blur(8px)}.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
-.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
+}main[class*=blur]{filter:blur(8px)}.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 #uitsendings-sidebar{z-index:3;grid-row:1/4;grid-column:1/2;background:#2e0e3b;grid-template-rows:40px repeat(12,1fr) 64px}
 .default-sidebar div[id*=button]{z-index:1;grid-column:1/2;grid-template-columns:20px 1fr}
 .default-sidebar div[id*=button] button{grid-column:1/3;background:0;outline:0;border:0;height:100%;display:flex;align-items:center;justify-content:flex-start}
@@ -3780,9 +3798,9 @@
 .default-sidebar #september-button{grid-row:10/11}.default-sidebar #october-button{grid-row:11/12}
 .default-sidebar #november-button{grid-row:12/13}.default-sidebar #december-button{grid-row:13/14}
 .default-sidebar .shadow{grid-row:2/14;grid-column:1/2;background:#2e0e3b;clip-path:inset(0 -32px 0 0);filter:drop-shadow(0 0 16px #827d85)}
-.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 #uitsendings-footer{z-index:2;display:grid;grid-row:3/4;grid-column:2/5;grid-template-rows:64px;filter:drop-shadow(0 -8px 16px #827d85);grid-template-columns:1fr 45px 1fr 45px 1fr 45px 1fr}
 #uitsendings-footer nav{grid-row:1/2}#uitsendings-footer nav div{cursor:pointer}#uitsendings-footer nav div button{border:0;outline:0;background:0}
 #uitsendings-footer nav div button li{display:flex;align-items:center;text-decoration:none;transition:transform .5s;transform:translateY(16px)}
@@ -3797,9 +3815,9 @@
 #uitsendings-footer nav div[class*=active] button li svg:nth-child(1){opacity:0}#uitsendings-footer nav div[class*=active] button li svg:nth-child(2){opacity:100;color:#631b19;filter:drop-shadow(0 0 .75rem #c8c0c0)}
 #uitsendings-footer nav div[class*=active] h3{cursor:default;color:#957e7e;transform:translateY(0) scaleY(1);filter:drop-shadow(0 0 .75rem #c8c0c0)}
 .default-footer{background:#2e0e3b}.default-footer #opdatering{grid-column:2/3}.default-footer #rooster{grid-column:4/5}
-.default-footer #statistieke{grid-column:6/7}.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
-.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
+.default-footer #statistieke{grid-column:6/7}.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 #uitsendings-overlay{z-index:1;grid-row:2/3;grid-column:2/4}.default-overlay{display:none}
 .header-overlay{display:grid;grid-row:2/3;grid-column:2/5;grid-template-rows:repeat(12,1fr);grid-template-columns:1fr 250px 2fr 250px 1fr 145px}
 .header-overlay nav{display:grid;grid-template-columns:1fr;filter:drop-shadow(0 0 8px #827d85)}
@@ -5583,7 +5601,7 @@
 }@media only screen and (max-height:502px){section[class*=sidebar]{grid-template-columns:repeat(10,33.1666666667px) 1fr;grid-template-rows:repeat(12,33.1666666667px)}
 }@media only screen and (max-height:501px){section[class*=sidebar]{grid-template-columns:repeat(10,33.0833333333px) 1fr;grid-template-rows:repeat(12,33.0833333333px)}
 }@media only screen and (max-height:500px){section[class*=sidebar]{grid-template-columns:repeat(10,33px) 1fr;grid-template-rows:repeat(12,33px)}
-}.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
-.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
+}.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 #uitsendings-data{display:none}
