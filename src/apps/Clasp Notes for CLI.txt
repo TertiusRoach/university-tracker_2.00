@@ -1,0 +1,52 @@
+    
+    clasp pull
+    clasp push -w
+
+------------------------------
+
+uitsendings-main
+clasp clone "1zUZ37HVk-IIDvqArC_z6NAivLjDZz_Xoiz3k30rZ3KlZjDX1Pn4jFb4A" --rootDir src/apps/clasp/uitsendings
+
+------------------------------
+NPM Sheet Commands (Ateljees)
+clasp clone "17mQsQJdyvM42xyivCsMxXx_C3wzJ-HePTMwE3yMj_Pte-8b6eZneSSIJ" --rootDir src/apps/clasp/uitsendings/ateljees/01_groen
+clasp clone "1Mk9UUcwMIMfdWNTzCudd_alWBZcvXfiIz2z36LPHAvGUe3HQ3s_MNcy4" --rootDir src/apps/clasp/uitsendings/ateljees/02_pienk
+clasp clone "1kDqu9cDnOQJtMrGyw9JCI7sGEV1kxpJNnjQYjqtrmxkC4RfywGQH72iX" --rootDir src/apps/clasp/uitsendings/ateljees/03_geel
+clasp clone "1kCIQbRDsK3YmFNQ0eR3iumR0QKaS772EeOQsGraFY8MCdjLYxU3JfzNj" --rootDir src/apps/clasp/uitsendings/ateljees/04_oranje
+clasp clone "1BxLI1xL9eajImzXtqOtoWfTTaoFsl5Fu_EK7RiFtXlz8l6qP4mHVnLNw" --rootDir src/apps/clasp/uitsendings/ateljees/05_blou
+------------------------------
+
+Groen
+https://docs.google.com/spreadsheets/d/1xuJVQ5Zj2oatoog6avT8BogMjgg7VNQ0lQffWbvTbFI/edit#gid=518032628
+Apps Script
+https://script.google.com/home/projects/17mQsQJdyvM42xyivCsMxXx_C3wzJ-HePTMwE3yMj_Pte-8b6eZneSSIJ/edit
+
+------------------------------
+
+Pienk
+https://docs.google.com/spreadsheets/d/1EAjozPPcEimictMtnICz4QQi1Uz8GPEG8aEQ3z4VF1g/edit#gid=1358726214
+Apps Script
+https://script.google.com/home/projects/1Mk9UUcwMIMfdWNTzCudd_alWBZcvXfiIz2z36LPHAvGUe3HQ3s_MNcy4/edit
+
+------------------------------
+
+Geel
+https://docs.google.com/spreadsheets/d/1Dv1a_cjmwLgmegSjUQ14qer0iFvXW8FhHZAl-HtoNj4/edit#gid=1527479448
+Apps Script
+https://script.google.com/home/projects/1kDqu9cDnOQJtMrGyw9JCI7sGEV1kxpJNnjQYjqtrmxkC4RfywGQH72iX/edit
+
+------------------------------
+
+Oranje
+https://docs.google.com/spreadsheets/d/1udEldz36gVKIYSJiJt_nN4aTnFbjxtM2So95sY3lFS4/edit#gid=1868544127
+Apps Script
+https://script.google.com/home/projects/1kCIQbRDsK3YmFNQ0eR3iumR0QKaS772EeOQsGraFY8MCdjLYxU3JfzNj/edit
+
+------------------------------
+
+Blou
+https://docs.google.com/spreadsheets/d/1StIWIao3Bz740HknNt_-XcMLMtDJnrP8-NkNpPyGQNk/edit#gid=1634400437
+Apps Script
+https://script.google.com/home/projects/1BxLI1xL9eajImzXtqOtoWfTTaoFsl5Fu_EK7RiFtXlz8l6qP4mHVnLNw/edit
+
+------------------------------
