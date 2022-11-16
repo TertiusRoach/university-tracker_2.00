@@ -82,7 +82,7 @@ const cleanupCSS = (pageName) => {
     };
     cssFiles.forEach(remove);
   };
-  setTimeout(cleanup, 5000, pageName);
+  setTimeout(cleanup, 10000, pageName);
   //--|▲| Remove @charset "UTF-8" from *.css files |▲|--//
 };
 const concatCSS = (pageName) => {
@@ -111,7 +111,7 @@ const concatCSS = (pageName) => {
       //--| Push the concatenated *.css file into the designated folder |--//
       .pipe(dest('dist/design/css/'));
   };
-  setTimeout(concatenate, 10000, pageName);
+  setTimeout(concatenate, 15000, pageName);
 };
 const deleteCSS = (pageName) => {
   let erase = (pageName) => {
@@ -128,7 +128,7 @@ const deleteCSS = (pageName) => {
     cssFiles.forEach(remove);
     return gulp.src('dist/design/css/cleanup', { read: false }).pipe(clean());
   };
-  setTimeout(erase, 15000, pageName);
+  setTimeout(erase, 20000, pageName);
 };
 const copyHTML = (pageName) => {
   //--|▼| Copy design HTML files to 'dist' |▼|--//
