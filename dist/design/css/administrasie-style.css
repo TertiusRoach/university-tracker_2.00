@@ -1,60 +1,60 @@
-@charset "UTF-8";.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/akademia/akademia-white.svg")}
-.default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/akademia/akademia-bronze.svg")}
-.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/akademia/akademia-blue.svg")}
+@charset "UTF-8";.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
+.default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 *{font-family:"Baloo Bhai 2",arial;padding:0;margin:0}#administrasie-body{display:grid;height:100vh;overflow:hidden;grid-template-rows:40px 1fr 64px;grid-template-columns:145px 1fr 145px}
-#administrasie-body #loading-screen{grid-row:1/4;grid-column:1/4;display:inherit;grid-template-rows:1fr 250px 1fr;grid-template-columns:1fr 250px 1fr;background:linear-gradient(to bottom left,#6e7889,#0e1e3b)}
-#administrasie-body #loading-screen img{height:100%;grid-row:2/3;grid-column:2/3;filter:drop-shadow(0 0 8px #cfd2d8)}
-.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/akademia/akademia-white.svg")}
-.default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/akademia/akademia-bronze.svg")}
-.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/akademia/akademia-blue.svg")}
-#administrasie-header{z-index:1;display:grid;grid-row:1/2;grid-column:2/6;grid-template-rows:40px;grid-template-columns:1fr 250px 2fr 250px 1fr 145px;filter:drop-shadow(0 8px 16px #6e7889)}
-.default-header{background:#0e1e3b}.default-header nav[id*=administrasie]{grid-column:2/3}
+#administrasie-body #loading-screen{grid-row:1/4;grid-column:1/4;display:inherit;grid-template-rows:1fr 250px 1fr;grid-template-columns:1fr 250px 1fr;background:linear-gradient(to bottom left,#827d85,#2e0e3b)}
+#administrasie-body #loading-screen img{height:100%;grid-row:2/3;grid-column:2/3;filter:drop-shadow(0 0 8px #adaaaf)}
+.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
+.default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
+#administrasie-header{z-index:1;display:grid;grid-row:1/2;grid-column:2/6;grid-template-rows:40px;grid-template-columns:1fr 250px 2fr 250px 1fr 145px;filter:drop-shadow(0 8px 16px #827d85)}
+.default-header{background:#2e0e3b}.default-header nav[id*=administrasie]{grid-column:2/3}
 .default-header nav[id*=administrasie] div button a h1{padding:3px 0 3px 46px}.default-header nav[id*=departemente]{grid-column:4/5}
 .default-header nav[id*=departemente] div button a h1{padding:3px 0 3px 40px}.default-header nav{grid-row:1/2}
 .default-header nav div{display:flex;grid-column:2/3;justify-content:center}.default-header nav div button{border:0;outline:0;background:0}
-.default-header nav div button a{display:flex;text-decoration:none;color:#fcd5aa}
-.default-header nav div button a svg{margin:3px 0;position:fixed;font-size:2rem;color:#cfd2d8}
+.default-header nav div button a{display:flex;text-decoration:none;color:#c8c0c0}
+.default-header nav div button a svg{margin:3px 0;position:fixed;font-size:2rem;color:#adaaaf}
 .default-header nav div button a img{height:34px;margin:3px 0;display:flex;position:fixed}
-.default-header nav div button a svg:nth-child(1){opacity:100;color:#cfd2d8;transition:opacity .25s}
-.default-header nav div button a svg:nth-child(2){opacity:0;color:#935e28;transition:opacity .25s}
+.default-header nav div button a svg:nth-child(1){opacity:100;color:#adaaaf;transition:opacity .25s}
+.default-header nav div button a svg:nth-child(2){opacity:0;color:#631b19;transition:opacity .25s}
 .default-header nav div button a img:nth-child(1){opacity:100;transition:opacity .25s}
 .default-header nav div button a img:nth-child(2){opacity:0;transition:opacity .25s}
 .default-header nav div button a h1{clip-path:inset(0 100% 0 0);transition:clip-path .5s}
-.default-header nav div[class*=active] button a svg:nth-child(1){opacity:0}.default-header nav div[class*=active] button a svg:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #fcd5aa)}
-.default-header nav div[class*=active] button a img:nth-child(1){opacity:0}.default-header nav div[class*=active] button a img:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #fcd5aa)}
-.default-header nav div[class*=active] button a h1{clip-path:inset(0 -40px 0 0);filter:drop-shadow(0 0 .75rem #be9e7e)}
-.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/akademia/akademia-white.svg")}
-.default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/akademia/akademia-bronze.svg")}
-.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/akademia/akademia-blue.svg")}
-#administrasie-main{grid-row:2/3;grid-column:2/4}.rooster-main{display:grid;background:#0e1e3b;grid-template-rows:44px 1fr;grid-template-columns:128px 52px repeat(10,99px) 1fr 145px}
-.rooster-main #rooster-date{grid-row:1/2;grid-column:1/13}.rooster-main #rooster-date header{z-index:1;display:grid;grid-row:1/2;cursor:default;grid-column:1/4;color:#cfd2d8;grid-template-rows:44px;grid-template-columns:234px 1fr 234px;background:linear-gradient(to left,#0e1e3b,#6e7889)}
+.default-header nav div[class*=active] button a svg:nth-child(1){opacity:0}.default-header nav div[class*=active] button a svg:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #c8c0c0)}
+.default-header nav div[class*=active] button a img:nth-child(1){opacity:0}.default-header nav div[class*=active] button a img:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #c8c0c0)}
+.default-header nav div[class*=active] button a h1{clip-path:inset(0 -40px 0 0);filter:drop-shadow(0 0 .75rem #957e7e)}
+.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
+.default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
+#administrasie-main{grid-row:2/3;grid-column:2/4}.rooster-main{display:grid;background:#2e0e3b;grid-template-rows:44px 1fr;grid-template-columns:128px 52px repeat(10,99px) 1fr 145px}
+.rooster-main #rooster-date{grid-row:1/2;grid-column:1/13}.rooster-main #rooster-date header{z-index:1;display:grid;grid-row:1/2;cursor:default;grid-column:1/4;color:#adaaaf;grid-template-rows:44px;grid-template-columns:234px 1fr 234px;background:linear-gradient(to left,#2e0e3b,#827d85)}
 .rooster-main #rooster-date header .hide-numbers{grid-column:1/2}.rooster-main #rooster-date header .hide-numbers button li{justify-content:left}
 .rooster-main #rooster-date header .hide-numbers button li svg{margin-left:16px;padding-right:16px}
 .rooster-main #rooster-date header .hide-numbers button li h3{padding:9.5px 16px 9.5px 64px;clip-path:inset(0 100% 0 0)}
 .rooster-main #rooster-date header h1{display:flex;grid-row:1/2;cursor:default;grid-column:2/3;align-items:center;justify-content:center}
 .rooster-main #rooster-date header div button{border:0;outline:0;background:0}.rooster-main #rooster-date header div button li{height:44px;width:234px;display:flex;align-items:center;text-decoration:none}
 .rooster-main #rooster-date header div button li svg{z-index:1;cursor:pointer;font-size:2rem;position:fixed}
-.rooster-main #rooster-date header div button li h3{color:#cfd2d8;transition:color .25s;padding:9.5px 0 9.5px 0;transition:clip-path .25s}
-.rooster-main #rooster-date header div button li svg:nth-child(1){opacity:100;color:#cfd2d8;transition:opacity .25s}
-.rooster-main #rooster-date header div button li svg:nth-child(2){opacity:0;color:#935e28;transition:opacity .25s}
+.rooster-main #rooster-date header div button li h3{color:#adaaaf;transition:color .25s;padding:9.5px 0 9.5px 0;transition:clip-path .25s}
+.rooster-main #rooster-date header div button li svg:nth-child(1){opacity:100;color:#adaaaf;transition:opacity .25s}
+.rooster-main #rooster-date header div button li svg:nth-child(2){opacity:0;color:#631b19;transition:opacity .25s}
 .rooster-main #rooster-date header div button li:hover svg:nth-child(1){opacity:0}
-.rooster-main #rooster-date header div button li:hover svg:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #be9e7e)}
-.rooster-main #rooster-date header div button li:hover h3{color:#fcd5aa;clip-path:inset(0 0 0 0);filter:drop-shadow(0 0 .75rem #be9e7e)}
+.rooster-main #rooster-date header div button li:hover svg:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #957e7e)}
+.rooster-main #rooster-date header div button li:hover h3{color:#c8c0c0;clip-path:inset(0 0 0 0);filter:drop-shadow(0 0 .75rem #957e7e)}
 .rooster-main #rooster-date header div button .visible{display:flex}.rooster-main #rooster-date header div button .hidden{display:none}
 .rooster-main #rooster-sheets{display:grid;grid-row:2/3;grid-column:1/13;grid-template-rows:1fr;grid-template-columns:128px 52px repeat(10,99px)}
 .rooster-main #rooster-sheets iframe{width:1189px;position:fixed;margin:-35px 0 0 -3px;clip-path:inset(35px 18px 28px 3px)}
-.rooster-main .background{z-index:-1;grid-row:1/4;grid-column:1/13;background:linear-gradient(to left,#0e1e3b,#6e7889)}
-.statistieke-main{display:grid;background:#0e1e3b;grid-template-rows:44px 258px 1fr;grid-template-columns:repeat(5,234px) 1fr 145px}
-.statistieke-main #statistieke-date{display:grid;grid-row:1/2;cursor:default;grid-column:1/6;color:#cfd2d8;grid-template-rows:44px;grid-template-columns:234px 1fr 234px;filter:drop-shadow(0 0 8px #0e1e3b);background:linear-gradient(to left,#0e1e3b,#6e7889)}
+.rooster-main .background{z-index:-1;grid-row:1/4;grid-column:1/13;background:linear-gradient(to left,#2e0e3b,#827d85)}
+.statistieke-main{display:grid;background:#2e0e3b;grid-template-rows:44px 258px 1fr;grid-template-columns:repeat(5,234px) 1fr 145px}
+.statistieke-main #statistieke-date{display:grid;grid-row:1/2;cursor:default;grid-column:1/6;color:#adaaaf;grid-template-rows:44px;grid-template-columns:234px 1fr 234px;filter:drop-shadow(0 0 8px #2e0e3b);background:linear-gradient(to left,#2e0e3b,#827d85)}
 .statistieke-main #statistieke-date .hide-numbers{grid-column:1/2}.statistieke-main #statistieke-date .hide-numbers button{border:0;outline:0;background:0}
 .statistieke-main #statistieke-date .hide-numbers button li{height:44px;width:234px;display:flex;align-items:center;text-decoration:none;justify-content:left}
 .statistieke-main #statistieke-date .hide-numbers button li svg{z-index:1;cursor:pointer;font-size:2rem;position:fixed;margin-left:16px;padding-right:16px}
-.statistieke-main #statistieke-date .hide-numbers button li svg:nth-child(1){opacity:100;color:#cfd2d8;transition:opacity .25s}
-.statistieke-main #statistieke-date .hide-numbers button li svg:nth-child(2){opacity:0;color:#935e28;transition:opacity .25s}
-.statistieke-main #statistieke-date .hide-numbers button li h3{color:#cfd2d8;transition:color .25s;padding:9.5px 0 9.5px 0;transition:clip-path .25s;clip-path:inset(0 100% 0 0);padding:9.5px 16px 9.5px 64px}
+.statistieke-main #statistieke-date .hide-numbers button li svg:nth-child(1){opacity:100;color:#adaaaf;transition:opacity .25s}
+.statistieke-main #statistieke-date .hide-numbers button li svg:nth-child(2){opacity:0;color:#631b19;transition:opacity .25s}
+.statistieke-main #statistieke-date .hide-numbers button li h3{color:#adaaaf;transition:color .25s;padding:9.5px 0 9.5px 0;transition:clip-path .25s;clip-path:inset(0 100% 0 0);padding:9.5px 16px 9.5px 64px}
 .statistieke-main #statistieke-date .hide-numbers button li:hover svg:nth-child(1){opacity:0}
-.statistieke-main #statistieke-date .hide-numbers button li:hover svg:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #be9e7e)}
-.statistieke-main #statistieke-date .hide-numbers button li:hover h3{color:#fcd5aa;clip-path:inset(0 0 0 0);filter:drop-shadow(0 0 .75rem #be9e7e)}
+.statistieke-main #statistieke-date .hide-numbers button li:hover svg:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #957e7e)}
+.statistieke-main #statistieke-date .hide-numbers button li:hover h3{color:#c8c0c0;clip-path:inset(0 0 0 0);filter:drop-shadow(0 0 .75rem #957e7e)}
 .statistieke-main #statistieke-date h1{display:flex;cursor:default;grid-column:2/3;align-items:center;justify-content:center}
 .statistieke-main #statistieke-buttons{z-index:1;display:grid;grid-row:2/3;grid-column:1/6;grid-template-columns:1fr;grid-template-rows:23px 1fr}
 .statistieke-main #statistieke-buttons nav div[class*=green] li{background:linear-gradient(to top,#0f0,#274e13)}
@@ -86,22 +86,22 @@
 .statistieke-main #statistieke-sheets header{grid-row:1/2;grid-column:1/6;overflow:hidden}
 .statistieke-main #statistieke-sheets header iframe{height:330px;width:1187px;margin:-32px 0 0 -3px;clip-path:inset(32px 18px 28px 3px)}
 .statistieke-main #statistieke-sheets footer{grid-row:2/3;grid-column:1/7}.statistieke-main #statistieke-sheets footer iframe{width:1187px;position:fixed;margin:-32px 0 0 -3px;clip-path:inset(32px 18px 28px 3px)}
-.statistieke-main .background{z-index:-1;grid-row:1/4;grid-column:1/6;background:linear-gradient(to left,#0e1e3b,#6e7889)}
-.rain-main{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:44px repeat(3,1fr);background:linear-gradient(to bottom left,#6e7889,#0e1e3b)}
+.statistieke-main .background{z-index:-1;grid-row:1/4;grid-column:1/6;background:linear-gradient(to left,#2e0e3b,#827d85)}
+.rain-main{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:44px repeat(3,1fr);background:linear-gradient(to bottom left,#827d85,#2e0e3b)}
 .rain-main .show-numbers{grid-row:1/2;grid-column:1/2}.rain-main .show-numbers button{border:0;outline:0;background:0}
 .rain-main .show-numbers button li{height:44px;width:234px;display:flex;align-items:center;justify-content:left;text-decoration:none}
-.rain-main .show-numbers button li svg{z-index:1;cursor:pointer;font-size:2rem;position:fixed;margin-left:16px;padding-right:16px;filter:drop-shadow(0 0 4px #0e1e3b)}
-.rain-main .show-numbers button li svg:nth-child(1){opacity:100;color:#cfd2d8;transition:opacity .25s}
-.rain-main .show-numbers button li svg:nth-child(2){opacity:0;color:#935e28;transition:opacity .25s}
-.rain-main .show-numbers button li h3{color:#cfd2d8;transition:clip-path .25s;clip-path:inset(0 100% 0 0);padding:9.5px 16px 9.5px 64px}
-.rain-main .show-numbers button li:hover svg:nth-child(1){opacity:0}.rain-main .show-numbers button li:hover svg:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #be9e7e)}
-.rain-main .show-numbers button li:hover h3{color:#fcd5aa;clip-path:inset(0 -16px -16px 0);filter:drop-shadow(0 0 .75rem #be9e7e)}
+.rain-main .show-numbers button li svg{z-index:1;cursor:pointer;font-size:2rem;position:fixed;margin-left:16px;padding-right:16px;filter:drop-shadow(0 0 4px #2e0e3b)}
+.rain-main .show-numbers button li svg:nth-child(1){opacity:100;color:#adaaaf;transition:opacity .25s}
+.rain-main .show-numbers button li svg:nth-child(2){opacity:0;color:#631b19;transition:opacity .25s}
+.rain-main .show-numbers button li h3{color:#adaaaf;transition:clip-path .25s;clip-path:inset(0 100% 0 0);padding:9.5px 16px 9.5px 64px}
+.rain-main .show-numbers button li:hover svg:nth-child(1){opacity:0}.rain-main .show-numbers button li:hover svg:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #957e7e)}
+.rain-main .show-numbers button li:hover h3{color:#c8c0c0;clip-path:inset(0 -16px -16px 0);filter:drop-shadow(0 0 .75rem #957e7e)}
 .rain-main #company-logo{display:flex;grid-row:1/5;grid-column:2/3;align-items:center;justify-content:center}
-.rain-main #company-logo img{height:33.33%;filter:drop-shadow(0 0 16px #cfd2d8)}.rain-main .rain-bottom{filter:blur(2px)}
+.rain-main #company-logo img{height:33.33%;filter:drop-shadow(0 0 16px #adaaaf)}.rain-main .rain-bottom{filter:blur(2px)}
 .rain-main section{display:flex;grid-row:1/5;grid-column:1/4}.rain-main section i{height:125px;position:absolute;border-bottom-left-radius:5px;border-bottom-right-radius:5px;animation:animate 5s linear infinite}
-.rain-main section i:nth-child(3n+1){background:linear-gradient(transparent,#cfd2d8)}
-.rain-main section i:nth-child(3n+2){background:linear-gradient(transparent,#6e7889)}
-.rain-main section i:nth-child(3n+3){background:linear-gradient(transparent,#0e1e3b)}
+.rain-main section i:nth-child(3n+1){background:linear-gradient(transparent,#adaaaf)}
+.rain-main section i:nth-child(3n+2){background:linear-gradient(transparent,#827d85)}
+.rain-main section i:nth-child(3n+3){background:linear-gradient(transparent,#2e0e3b)}
 @keyframes animate{0%{transform:translateY(-200px)}100%{transform:translateY(calc(100vh + 200px))}
 }@media only screen and (max-height:2160px){main[class*=rooster] section[id*=sheets] iframe{height:2070px}
 }@media only screen and (max-height:2159px){main[class*=rooster] section[id*=sheets] iframe{height:2069px}
@@ -3705,66 +3705,66 @@
 }@media only screen and (max-height:362px){main[class*=statistieke] section[id*=sheets] footer iframe{height:38px}
 }@media only screen and (max-height:361px){main[class*=statistieke] section[id*=sheets] footer iframe{height:37px}
 }@media only screen and (max-height:360px){main[class*=statistieke] section[id*=sheets] footer iframe{height:36px}
-}main[class*=blur]{filter:blur(8px)}.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/akademia/akademia-white.svg")}
-.default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/akademia/akademia-bronze.svg")}
-.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/akademia/akademia-blue.svg")}
-#administrasie-sidebar{z-index:3;grid-row:1/4;grid-column:1/2;background:#0e1e3b;grid-template-rows:40px repeat(12,1fr) 64px}
+}main[class*=blur]{filter:blur(8px)}.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
+.default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
+#administrasie-sidebar{z-index:3;grid-row:1/4;grid-column:1/2;background:#2e0e3b;grid-template-rows:40px repeat(12,1fr) 64px}
 .default-sidebar div[id*=button]{z-index:1;grid-column:1/2;grid-template-columns:20px 1fr}
 .default-sidebar div[id*=button] button{grid-column:1/3;background:0;outline:0;border:0;height:100%;display:flex;align-items:center;justify-content:flex-start}
-.default-sidebar div[id*=button] button a{text-decoration:none;color:#935e28}.default-sidebar div[id*=button] button a h1{margin-left:20px}
-.default-sidebar div[id*=button] button a:hover{color:#be9e7e}.default-sidebar div[id*=button] .active a{color:#cfd2d8}
+.default-sidebar div[id*=button] button a{text-decoration:none;color:#631b19}.default-sidebar div[id*=button] button a h1{margin-left:20px}
+.default-sidebar div[id*=button] button a:hover{color:#957e7e}.default-sidebar div[id*=button] .active a{color:#adaaaf}
 .default-sidebar #january-button{grid-row:2/3}.default-sidebar #february-button{grid-row:3/4}
 .default-sidebar #march-button{grid-row:4/5}.default-sidebar #april-button{grid-row:5/6}
 .default-sidebar #may-button{grid-row:6/7}.default-sidebar #june-button{grid-row:7/8}
 .default-sidebar #july-button{grid-row:8/9}.default-sidebar #august-button{grid-row:9/10}
 .default-sidebar #september-button{grid-row:10/11}.default-sidebar #october-button{grid-row:11/12}
 .default-sidebar #november-button{grid-row:12/13}.default-sidebar #december-button{grid-row:13/14}
-.default-sidebar .shadow{grid-row:2/14;grid-column:1/2;background:#0e1e3b;clip-path:inset(0 -32px 0 0);filter:drop-shadow(0 0 16px #6e7889)}
-.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/akademia/akademia-white.svg")}
-.default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/akademia/akademia-bronze.svg")}
-.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/akademia/akademia-blue.svg")}
-#administrasie-footer{z-index:2;display:grid;grid-row:3/4;grid-column:2/5;grid-template-rows:64px;filter:drop-shadow(0 -8px 16px #6e7889);grid-template-columns:1fr 45px 1fr}
+.default-sidebar .shadow{grid-row:2/14;grid-column:1/2;background:#2e0e3b;clip-path:inset(0 -32px 0 0);filter:drop-shadow(0 0 16px #827d85)}
+.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
+.default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
+#administrasie-footer{z-index:2;display:grid;grid-row:3/4;grid-column:2/5;grid-template-rows:64px;filter:drop-shadow(0 -8px 16px #827d85);grid-template-columns:1fr 45px 1fr}
 #administrasie-footer nav{grid-row:1/2}#administrasie-footer nav div{cursor:pointer}
 #administrasie-footer nav div button{border:0;outline:0;background:0}#administrasie-footer nav div button li{display:flex;align-items:center;text-decoration:none;transition:transform .5s;transform:translateY(16px)}
-#administrasie-footer nav div button li svg{position:fixed;font-size:3rem;color:#cfd2d8}
-#administrasie-footer nav div button li svg:nth-child(1){opacity:100;color:#cfd2d8;transition:opacity .25s}
-#administrasie-footer nav div button li svg:nth-child(2){opacity:0;color:#935e28;transition:opacity .25s}
-#administrasie-footer nav div h3{display:flex;align-items:center;color:#cfd2d8;justify-content:center;transition:transform .5s;transform:translateY(32px) scaleY(0)}
+#administrasie-footer nav div button li svg{position:fixed;font-size:3rem;color:#adaaaf}
+#administrasie-footer nav div button li svg:nth-child(1){opacity:100;color:#adaaaf;transition:opacity .25s}
+#administrasie-footer nav div button li svg:nth-child(2){opacity:0;color:#631b19;transition:opacity .25s}
+#administrasie-footer nav div h3{display:flex;align-items:center;color:#adaaaf;justify-content:center;transition:transform .5s;transform:translateY(32px) scaleY(0)}
 #administrasie-footer nav:hover div button li{cursor:pointer;transform:translateY(-32px)}
-#administrasie-footer nav:hover div button li svg:nth-child(1){opacity:0}#administrasie-footer nav:hover div button li svg:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #fcd5aa)}
-#administrasie-footer nav:hover div h3{cursor:pointer;color:#be9e7e;transform:translateY(0) scaleY(1);filter:drop-shadow(0 0 .75rem #fcd5aa)}
+#administrasie-footer nav:hover div button li svg:nth-child(1){opacity:0}#administrasie-footer nav:hover div button li svg:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #c8c0c0)}
+#administrasie-footer nav:hover div h3{cursor:pointer;color:#957e7e;transform:translateY(0) scaleY(1);filter:drop-shadow(0 0 .75rem #c8c0c0)}
 #administrasie-footer nav div[class*=active] button li{cursor:default;transform:translateY(-32px)}
 #administrasie-footer nav div[class*=active] button li svg:nth-child(1){opacity:0}
-#administrasie-footer nav div[class*=active] button li svg:nth-child(2){opacity:100;color:#935e28;filter:drop-shadow(0 0 .75rem #fcd5aa)}
-#administrasie-footer nav div[class*=active] h3{cursor:default;color:#be9e7e;transform:translateY(0) scaleY(1);filter:drop-shadow(0 0 .75rem #fcd5aa)}
-.default-footer{background:#0e1e3b}.default-footer #rooster{grid-column:2/3}.default-footer #statistieke{grid-column:4/5}
-.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/akademia/akademia-white.svg")}
-.default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/akademia/akademia-bronze.svg")}
-.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/akademia/akademia-blue.svg")}
+#administrasie-footer nav div[class*=active] button li svg:nth-child(2){opacity:100;color:#631b19;filter:drop-shadow(0 0 .75rem #c8c0c0)}
+#administrasie-footer nav div[class*=active] h3{cursor:default;color:#957e7e;transform:translateY(0) scaleY(1);filter:drop-shadow(0 0 .75rem #c8c0c0)}
+.default-footer{background:#2e0e3b}.default-footer #rooster{grid-column:2/3}.default-footer #statistieke{grid-column:4/5}
+.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
+.default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 #administrasie-overlay{z-index:1;grid-row:2/3;grid-column:2/4}.default-overlay{display:none}
 .header-overlay{display:grid;grid-row:2/3;grid-column:2/5;grid-template-rows:repeat(12,1fr);grid-template-columns:1fr 250px 2fr 250px 1fr 145px}
-.header-overlay nav{display:grid;grid-template-columns:1fr;filter:drop-shadow(0 0 8px #6e7889)}
-.header-overlay nav div{grid-column:1/2;background:#6e7889;transition:background .25s}
+.header-overlay nav{display:grid;grid-template-columns:1fr;filter:drop-shadow(0 0 8px #827d85)}
+.header-overlay nav div{grid-column:1/2;background:#827d85;transition:background .25s}
 .header-overlay nav div button{width:100%;height:100%;border:0;outline:0;background:0}
-.header-overlay nav div button a{display:flex;cursor:default;align-items:center;justify-content:left;text-decoration:none;filter:drop-shadow(0 0 .25rem #0e1e3b)}
+.header-overlay nav div button a{display:flex;cursor:default;align-items:center;justify-content:left;text-decoration:none;filter:drop-shadow(0 0 .25rem #2e0e3b)}
 .header-overlay nav div button a img{width:2rem;position:fixed;cursor:pointer;margin-left:16px;padding-right:16px}
 .header-overlay nav div button a img:nth-child(1){opacity:100;transition:opacity .25s}
 .header-overlay nav div button a img:nth-child(2){opacity:0;transition:opacity .25s}
 .header-overlay nav div button a svg{font-size:2rem;position:fixed;margin-left:16px;padding-right:16px}
-.header-overlay nav div button a svg:nth-child(1){opacity:100;color:#cfd2d8;transition:opacity .25s}
-.header-overlay nav div button a svg:nth-child(2){opacity:0;color:#935e28;transition:opacity .25s}
-.header-overlay nav div button a h2{color:#cfd2d8;margin:0 16px 0 64px;transition:color .25s}
-.header-overlay nav div button a:hover img:nth-child(1){opacity:0}.header-overlay nav div button a:hover img:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #be9e7e)}
-.header-overlay nav div button a:hover svg:nth-child(1){opacity:0}.header-overlay nav div button a:hover svg:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #be9e7e)}
-.header-overlay nav div button a:hover h2{color:#fcd5aa;filter:drop-shadow(0 0 .75rem #be9e7e)}
-.header-overlay nav div:hover{background:#0e1e3b}.header-overlay nav div:hover button a svg,.header-overlay nav div:hover button a h2{cursor:pointer}
+.header-overlay nav div button a svg:nth-child(1){opacity:100;color:#adaaaf;transition:opacity .25s}
+.header-overlay nav div button a svg:nth-child(2){opacity:0;color:#631b19;transition:opacity .25s}
+.header-overlay nav div button a h2{color:#adaaaf;margin:0 16px 0 64px;transition:color .25s}
+.header-overlay nav div button a:hover img:nth-child(1){opacity:0}.header-overlay nav div button a:hover img:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #957e7e)}
+.header-overlay nav div button a:hover svg:nth-child(1){opacity:0}.header-overlay nav div button a:hover svg:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #957e7e)}
+.header-overlay nav div button a:hover h2{color:#c8c0c0;filter:drop-shadow(0 0 .75rem #957e7e)}
+.header-overlay nav div:hover{background:#2e0e3b}.header-overlay nav div:hover button a svg,.header-overlay nav div:hover button a h2{cursor:pointer}
 .header-overlay nav[id*=administrasie]{grid-row:1/3;grid-column:2/3;grid-template-rows:repeat(2,1fr)}
 .header-overlay nav[id*=administrasie] #registers{grid-row:1/2}.header-overlay nav[id*=administrasie] #beplanning{grid-row:2/3;border-radius:0 0 8px 8px}
 .header-overlay nav[id*=departemente]{grid-row:1/4;grid-column:4/5;grid-template-rows:repeat(3,1fr)}
 .header-overlay nav[id*=departemente] #akademici{grid-row:1/2}.header-overlay nav[id*=departemente] #uitsendings{grid-row:2/3}
 .header-overlay nav[id*=departemente] #operasioneel{grid-row:3/4;border-radius:0 0 8px 8px}
-.header-overlay .background{z-index:-2;grid-row:1/13;grid-column:1/8;background:linear-gradient(to bottom,rgba(14,30,59,0.8),rgba(14,30,59,0.4))}
-.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/akademia/akademia-white.svg")}
-.default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/akademia/akademia-bronze.svg")}
-.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/akademia/akademia-blue.svg")}
+.header-overlay .background{z-index:-2;grid-row:1/13;grid-column:1/8;background:linear-gradient(to bottom,rgba(46,14,59,0.8),rgba(46,14,59,0.4))}
+.default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
+.default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
+.default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
 #administrasie-data{display:none}
