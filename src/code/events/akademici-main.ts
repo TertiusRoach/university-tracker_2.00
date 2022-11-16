@@ -1,4 +1,5 @@
 import { GetDesign } from 'code/utilities/GetDesign';
+import { GetArray } from 'code/utilities/GetArray';
 export namespace AkademiciMain {
   export function eventsFor(pageName: String | 'default-main' | 'opdatering-main' | 'rooster-main' | 'statistieke-main' | 'rain-main') {
     const akademiciBody: HTMLElement = document.getElementById('akademici-body');
@@ -11,6 +12,11 @@ export namespace AkademiciMain {
 
     switch (pageName) {
       case 'default-main':
+        //--|▼| Displays calender update  |▼|--//
+        $('.show-numbers button').on('click', () => {
+          akademiciFooter.querySelector('#rooster div').className = 'active';
+          new GetDesign.forPage('rooster-main');
+        });
         break;
       case 'rooster-main':
         //--|▼| Change header date to present |▼|--//
@@ -25,6 +31,208 @@ export namespace AkademiciMain {
 
         //--|▼| Clears data by showing screensaver on button click |▼|--//
         AkademiciMain.showScreensaver('statistieke', akademiciMain, akademiciFooter, akademiciData);
+
+        //--|▼| Replace links for this months' sheets |▼|--//
+        const statistiekeMainLinks = (akademiciMain: HTMLElement) => {
+          let date: String = `${new Date()}`;
+          let dateArray: Array<string> = date.split(' ');
+          let month: string = dateArray[1];
+          switch (month) {
+            case 'Jan':
+              $('.green-book li button a').attr('href', new GetArray.Akademici('main')[0].greenBookings);
+              $('.green-edit li button a').attr('href', new GetArray.Akademici('main')[0].greenLinks);
+
+              $('.pink-book li button a').attr('href', new GetArray.Akademici('main')[0].greenBookings);
+              $('.pink-edit li button a').attr('href', new GetArray.Akademici('main')[0].greenLinks);
+
+              $('.yellow-book li button a').attr('href', new GetArray.Akademici('main')[0].greenBookings);
+              $('.yellow-edit li button a').attr('href', new GetArray.Akademici('main')[0].greenLinks);
+
+              $('.orange-book li button a').attr('href', new GetArray.Akademici('main')[0].greenBookings);
+              $('.orange-edit li button a').attr('href', new GetArray.Akademici('main')[0].greenLinks);
+
+              $('.blue-book li button a').attr('href', new GetArray.Akademici('main')[1].greenBookings);
+              $('.blue-edit li button a').attr('href', new GetArray.Akademici('main')[1].greenLinks);
+              break;
+            case 'Feb':
+              $('.green-book li button a').attr('href', new GetArray.Akademici('main')[1].greenBookings);
+              $('.green-edit li button a').attr('href', new GetArray.Akademici('main')[1].greenLinks);
+
+              $('.pink-book li button a').attr('href', new GetArray.Akademici('main')[1].greenBookings);
+              $('.pink-edit li button a').attr('href', new GetArray.Akademici('main')[1].greenLinks);
+
+              $('.yellow-book li button a').attr('href', new GetArray.Akademici('main')[1].greenBookings);
+              $('.yellow-edit li button a').attr('href', new GetArray.Akademici('main')[1].greenLinks);
+
+              $('.orange-book li button a').attr('href', new GetArray.Akademici('main')[1].greenBookings);
+              $('.orange-edit li button a').attr('href', new GetArray.Akademici('main')[1].greenLinks);
+
+              $('.blue-book li button a').attr('href', new GetArray.Akademici('main')[1].greenBookings);
+              $('.blue-edit li button a').attr('href', new GetArray.Akademici('main')[1].greenLinks);
+              break;
+            case 'Mar':
+              $('.green-book li button a').attr('href', new GetArray.Akademici('main')[2].greenBookings);
+              $('.green-edit li button a').attr('href', new GetArray.Akademici('main')[2].greenLinks);
+
+              $('.pink-book li button a').attr('href', new GetArray.Akademici('main')[2].greenBookings);
+              $('.pink-edit li button a').attr('href', new GetArray.Akademici('main')[2].greenLinks);
+
+              $('.yellow-book li button a').attr('href', new GetArray.Akademici('main')[2].greenBookings);
+              $('.yellow-edit li button a').attr('href', new GetArray.Akademici('main')[2].greenLinks);
+
+              $('.orange-book li button a').attr('href', new GetArray.Akademici('main')[2].greenBookings);
+              $('.orange-edit li button a').attr('href', new GetArray.Akademici('main')[2].greenLinks);
+
+              $('.blue-book li button a').attr('href', new GetArray.Akademici('main')[2].greenBookings);
+              $('.blue-edit li button a').attr('href', new GetArray.Akademici('main')[2].greenLinks);
+              break;
+            case 'Apr':
+              $('.green-book li button a').attr('href', new GetArray.Akademici('main')[3].greenBookings);
+              $('.green-edit li button a').attr('href', new GetArray.Akademici('main')[3].greenLinks);
+
+              $('.pink-book li button a').attr('href', new GetArray.Akademici('main')[3].greenBookings);
+              $('.pink-edit li button a').attr('href', new GetArray.Akademici('main')[3].greenLinks);
+
+              $('.yellow-book li button a').attr('href', new GetArray.Akademici('main')[3].greenBookings);
+              $('.yellow-edit li button a').attr('href', new GetArray.Akademici('main')[3].greenLinks);
+
+              $('.orange-book li button a').attr('href', new GetArray.Akademici('main')[3].greenBookings);
+              $('.orange-edit li button a').attr('href', new GetArray.Akademici('main')[3].greenLinks);
+
+              $('.blue-book li button a').attr('href', new GetArray.Akademici('main')[3].greenBookings);
+              $('.blue-edit li button a').attr('href', new GetArray.Akademici('main')[3].greenLinks);
+              break;
+            case 'May':
+              $('.green-book li button a').attr('href', new GetArray.Akademici('main')[4].greenBookings);
+              $('.green-edit li button a').attr('href', new GetArray.Akademici('main')[4].greenLinks);
+
+              $('.pink-book li button a').attr('href', new GetArray.Akademici('main')[4].greenBookings);
+              $('.pink-edit li button a').attr('href', new GetArray.Akademici('main')[4].greenLinks);
+
+              $('.yellow-book li button a').attr('href', new GetArray.Akademici('main')[4].greenBookings);
+              $('.yellow-edit li button a').attr('href', new GetArray.Akademici('main')[4].greenLinks);
+
+              $('.orange-book li button a').attr('href', new GetArray.Akademici('main')[4].greenBookings);
+              $('.orange-edit li button a').attr('href', new GetArray.Akademici('main')[4].greenLinks);
+
+              $('.blue-book li button a').attr('href', new GetArray.Akademici('main')[4].greenBookings);
+              $('.blue-edit li button a').attr('href', new GetArray.Akademici('main')[4].greenLinks);
+              break;
+            case 'Jun':
+              $('.green-book li button a').attr('href', new GetArray.Akademici('main')[5].greenBookings);
+              $('.green-edit li button a').attr('href', new GetArray.Akademici('main')[5].greenLinks);
+
+              $('.pink-book li button a').attr('href', new GetArray.Akademici('main')[5].greenBookings);
+              $('.pink-edit li button a').attr('href', new GetArray.Akademici('main')[5].greenLinks);
+
+              $('.yellow-book li button a').attr('href', new GetArray.Akademici('main')[5].greenBookings);
+              $('.yellow-edit li button a').attr('href', new GetArray.Akademici('main')[5].greenLinks);
+
+              $('.orange-book li button a').attr('href', new GetArray.Akademici('main')[5].greenBookings);
+              $('.orange-edit li button a').attr('href', new GetArray.Akademici('main')[5].greenLinks);
+
+              $('.blue-book li button a').attr('href', new GetArray.Akademici('main')[5].greenBookings);
+              $('.blue-edit li button a').attr('href', new GetArray.Akademici('main')[5].greenLinks);
+              break;
+            case 'Jul':
+              $('.green-book li button a').attr('href', new GetArray.Akademici('main')[6].greenBookings);
+              $('.green-edit li button a').attr('href', new GetArray.Akademici('main')[6].greenLinks);
+
+              $('.pink-book li button a').attr('href', new GetArray.Akademici('main')[6].greenBookings);
+              $('.pink-edit li button a').attr('href', new GetArray.Akademici('main')[6].greenLinks);
+
+              $('.yellow-book li button a').attr('href', new GetArray.Akademici('main')[6].greenBookings);
+              $('.yellow-edit li button a').attr('href', new GetArray.Akademici('main')[6].greenLinks);
+
+              $('.orange-book li button a').attr('href', new GetArray.Akademici('main')[6].greenBookings);
+              $('.orange-edit li button a').attr('href', new GetArray.Akademici('main')[6].greenLinks);
+
+              $('.blue-book li button a').attr('href', new GetArray.Akademici('main')[6].greenBookings);
+              $('.blue-edit li button a').attr('href', new GetArray.Akademici('main')[6].greenLinks);
+              break;
+            case 'Aug':
+              $('.green-book li button a').attr('href', new GetArray.Akademici('main')[7].greenBookings);
+              $('.green-edit li button a').attr('href', new GetArray.Akademici('main')[7].greenLinks);
+
+              $('.pink-book li button a').attr('href', new GetArray.Akademici('main')[7].greenBookings);
+              $('.pink-edit li button a').attr('href', new GetArray.Akademici('main')[7].greenLinks);
+
+              $('.yellow-book li button a').attr('href', new GetArray.Akademici('main')[7].greenBookings);
+              $('.yellow-edit li button a').attr('href', new GetArray.Akademici('main')[7].greenLinks);
+
+              $('.orange-book li button a').attr('href', new GetArray.Akademici('main')[7].greenBookings);
+              $('.orange-edit li button a').attr('href', new GetArray.Akademici('main')[7].greenLinks);
+
+              $('.blue-book li button a').attr('href', new GetArray.Akademici('main')[7].greenBookings);
+              $('.blue-edit li button a').attr('href', new GetArray.Akademici('main')[7].greenLinks);
+              break;
+            case 'Sep':
+              $('.green-book li button a').attr('href', new GetArray.Akademici('main')[8].greenBookings);
+              $('.green-edit li button a').attr('href', new GetArray.Akademici('main')[8].greenLinks);
+
+              $('.pink-book li button a').attr('href', new GetArray.Akademici('main')[8].greenBookings);
+              $('.pink-edit li button a').attr('href', new GetArray.Akademici('main')[8].greenLinks);
+
+              $('.yellow-book li button a').attr('href', new GetArray.Akademici('main')[8].greenBookings);
+              $('.yellow-edit li button a').attr('href', new GetArray.Akademici('main')[8].greenLinks);
+
+              $('.orange-book li button a').attr('href', new GetArray.Akademici('main')[8].greenBookings);
+              $('.orange-edit li button a').attr('href', new GetArray.Akademici('main')[8].greenLinks);
+
+              $('.blue-book li button a').attr('href', new GetArray.Akademici('main')[8].greenBookings);
+              $('.blue-edit li button a').attr('href', new GetArray.Akademici('main')[8].greenLinks);
+              break;
+            case 'Oct':
+              $('.green-book li button a').attr('href', new GetArray.Akademici('main')[9].greenBookings);
+              $('.green-edit li button a').attr('href', new GetArray.Akademici('main')[9].greenLinks);
+
+              $('.pink-book li button a').attr('href', new GetArray.Akademici('main')[9].greenBookings);
+              $('.pink-edit li button a').attr('href', new GetArray.Akademici('main')[9].greenLinks);
+
+              $('.yellow-book li button a').attr('href', new GetArray.Akademici('main')[9].greenBookings);
+              $('.yellow-edit li button a').attr('href', new GetArray.Akademici('main')[9].greenLinks);
+
+              $('.orange-book li button a').attr('href', new GetArray.Akademici('main')[9].greenBookings);
+              $('.orange-edit li button a').attr('href', new GetArray.Akademici('main')[9].greenLinks);
+
+              $('.blue-book li button a').attr('href', new GetArray.Akademici('main')[9].greenBookings);
+              $('.blue-edit li button a').attr('href', new GetArray.Akademici('main')[9].greenLinks);
+              break;
+            case 'Nov':
+              $('.green-book li button a').attr('href', new GetArray.Akademici('main')[10].greenBookings);
+              $('.green-edit li button a').attr('href', new GetArray.Akademici('main')[10].greenLinks);
+
+              $('.pink-book li button a').attr('href', new GetArray.Akademici('main')[10].greenBookings);
+              $('.pink-edit li button a').attr('href', new GetArray.Akademici('main')[10].greenLinks);
+
+              $('.yellow-book li button a').attr('href', new GetArray.Akademici('main')[10].greenBookings);
+              $('.yellow-edit li button a').attr('href', new GetArray.Akademici('main')[10].greenLinks);
+
+              $('.orange-book li button a').attr('href', new GetArray.Akademici('main')[10].greenBookings);
+              $('.orange-edit li button a').attr('href', new GetArray.Akademici('main')[10].greenLinks);
+
+              $('.blue-book li button a').attr('href', new GetArray.Akademici('main')[10].greenBookings);
+              $('.blue-edit li button a').attr('href', new GetArray.Akademici('main')[10].greenLinks);
+              break;
+            case 'Dec':
+              $('.green-book li button a').attr('href', new GetArray.Akademici('main')[11].greenBookings);
+              $('.green-edit li button a').attr('href', new GetArray.Akademici('main')[11].greenLinks);
+
+              $('.pink-book li button a').attr('href', new GetArray.Akademici('main')[11].greenBookings);
+              $('.pink-edit li button a').attr('href', new GetArray.Akademici('main')[11].greenLinks);
+
+              $('.yellow-book li button a').attr('href', new GetArray.Akademici('main')[11].greenBookings);
+              $('.yellow-edit li button a').attr('href', new GetArray.Akademici('main')[11].greenLinks);
+
+              $('.orange-book li button a').attr('href', new GetArray.Akademici('main')[11].greenBookings);
+              $('.orange-edit li button a').attr('href', new GetArray.Akademici('main')[11].greenLinks);
+
+              $('.blue-book li button a').attr('href', new GetArray.Akademici('main')[11].greenBookings);
+              $('.blue-edit li button a').attr('href', new GetArray.Akademici('main')[11].greenLinks);
+              break;
+          }
+        };
+        statistiekeMainLinks(akademiciMain);
         break;
       case 'rain-main':
         //--|▼| Appends rain droplets into containers |▼|--//
@@ -137,6 +345,7 @@ export namespace AkademiciMain {
     }
     //--► console.log(`--${pageName} Loaded`); ◄--//
   }
+
   export function showScreensaver(container: 'opdatering' | 'rooster' | 'statistieke', akademiciMain: HTMLElement, akademiciFooter: HTMLElement, akademiciData: HTMLElement) {
     let hideInfo: HTMLElement = akademiciMain.querySelector(`#${container}-date  .hide-numbers`);
     let footerButtons: Object = akademiciFooter.getElementsByTagName('nav');
@@ -153,7 +362,6 @@ export namespace AkademiciMain {
       new GetDesign.forPage('rain-main');
     });
   }
-
   export function getPresent(format: String | '2000-01-01' | 'Weekday, 00 Month YYYY' | '00 Weekday, Month YYYY') {
     const presentDate: String = Date();
     let monthDay: String | Number = presentDate.split(' ')[2];

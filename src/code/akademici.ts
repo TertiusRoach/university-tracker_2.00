@@ -4,7 +4,7 @@ export namespace Akademici {
     constructor(page: String) {
       //--|▼| Pages for events are inside 'code/events/*.ts' |▼|--//
       new GetDesign.forPage('default-header');
-      new GetDesign.forPage('rooster-main');
+      new GetDesign.forPage('default-main');
       new GetDesign.forPage('default-sidebar');
       new GetDesign.forPage('default-footer');
 

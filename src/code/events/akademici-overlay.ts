@@ -1,4 +1,5 @@
 import { GetDesign } from 'code/utilities/GetDesign';
+import { GetArray } from 'code/utilities/GetArray';
 export namespace AkademiciOverlay {
   export function eventsFor(pageName: String | 'default-overlay' | 'header-overlay' | 'sidebar-overlay') {
     const akademiciBody: HTMLElement = document.getElementById('akademici-body');
@@ -401,6 +402,30 @@ export namespace AkademiciOverlay {
           });
         };
         defaultSidebarButtons(pageName, akademiciMain);
+
+        //--|▼| Replace links for sidebar overlay |▼|--//
+        const sidebarOverlayLinks = () => {
+          let month = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+
+          for (let i = 0; i < month.length; i++) {
+            $(`#gr-book-${month[i]}`).attr('href', new GetArray.Akademici('overlay')[i].greenBookings);
+            $(`#gr-edit-${month[i]}`).attr('href', new GetArray.Akademici('overlay')[i].greenInformation);
+
+            $(`#pi-book-${month[i]}`).attr('href', new GetArray.Akademici('overlay')[i].pinkBookings);
+            $(`#pi-edit-${month[i]}`).attr('href', new GetArray.Akademici('overlay')[i].pinkInformation);
+
+            $(`#ye-book-${month[i]}`).attr('href', new GetArray.Akademici('overlay')[i].yellowBookings);
+            $(`#ye-edit-${month[i]}`).attr('href', new GetArray.Akademici('overlay')[i].yellowInformation);
+
+            $(`#or-book-${month[i]}`).attr('href', new GetArray.Akademici('overlay')[i].orangeBookings);
+            $(`#or-edit-${month[i]}`).attr('href', new GetArray.Akademici('overlay')[i].orangeInformation);
+
+            $(`#bl-book-${month[i]}`).attr('href', new GetArray.Akademici('overlay')[i].homeRecordings);
+            $(`#bl-edit-${month[i]}`).attr('href', new GetArray.Akademici('overlay')[i].blueInformation);
+          }
+        };
+        sidebarOverlayLinks();
+
         break;
     }
     //--► console.log(`--${pageName} Loaded`); ◄--//

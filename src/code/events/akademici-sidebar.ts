@@ -1,4 +1,5 @@
 import { GetDesign } from 'code/utilities/GetDesign';
+import { GetArray } from 'code/utilities/GetArray';
 export namespace AkademiciSidebar {
   export function eventsFor(pageName: String | 'default-sidebar') {
     const akademiciBody: HTMLElement = document.getElementById('akademici-body');
@@ -71,6 +72,23 @@ export namespace AkademiciSidebar {
           });
         };
         sidebarOverlayRetrieve(akademiciHeader, akademiciSidebar, akademiciOverlay);
+
+        //--|▼| Replace links of sidebar for each month to Google Drive |▼|--//
+        const defaultSidebarLinks = () => {
+          $('#january-button button a').attr('href', new GetArray.Akademici('sidebar')[0].jan);
+          $('#february-button button a').attr('href', new GetArray.Akademici('sidebar')[0].feb);
+          $('#march-button button a').attr('href', new GetArray.Akademici('sidebar')[0].mar);
+          $('#april-button button a').attr('href', new GetArray.Akademici('sidebar')[0].apr);
+          $('#may-button button a').attr('href', new GetArray.Akademici('sidebar')[0].may);
+          $('#june-button button a').attr('href', new GetArray.Akademici('sidebar')[0].jun);
+          $('#july-button button a').attr('href', new GetArray.Akademici('sidebar')[0].jul);
+          $('#august-button button a').attr('href', new GetArray.Akademici('sidebar')[0].aug);
+          $('#september-button button a').attr('href', new GetArray.Akademici('sidebar')[0].sep);
+          $('#october-button button a').attr('href', new GetArray.Akademici('sidebar')[0].oct);
+          $('#november-button button a').attr('href', new GetArray.Akademici('sidebar')[0].nov);
+          $('#december-button button a').attr('href', new GetArray.Akademici('sidebar')[0].dec);
+        };
+        defaultSidebarLinks();
         break;
     }
     //--► console.log(`--${pageName} Loaded`); ◄--//

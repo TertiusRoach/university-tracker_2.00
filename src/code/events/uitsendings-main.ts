@@ -1,6 +1,19 @@
 import { GetDesign } from 'code/utilities/GetDesign';
 export namespace UitsendingsMain {
-  export function eventsFor(pageName: String | 'login-main' | 'opdatering-main' | 'rooster-main' | 'statistieke-main' | 'rain-main') {
+  export function eventsFor(
+    pageName:
+      | String
+      | 'login-main'
+      | 'opdatering-main'
+      | 'rooster-main'
+      | 'statistieke-main'
+      | 'rain-main'
+      | 'purple-main'
+      | 'red-main'
+      | 'brown-main'
+      | 'grey-main'
+      | 'turquoise-main'
+  ) {
     const uitsendingsBody: HTMLElement = document.getElementById('uitsendings-body');
     const uitsendingsHeader: HTMLElement = document.getElementById('uitsendings-header');
     const uitsendingsMain: HTMLElement = document.getElementById('uitsendings-main');
@@ -83,6 +96,31 @@ export namespace UitsendingsMain {
 
         //--|▼| Clears data by showing screensaver on button click |▼|--//
         UitsendingsMain.showScreensaver('opdatering', uitsendingsMain, uitsendingsFooter, uitsendingsData);
+
+        //--|▼| Temporary placeholders for unfinished sheets |▼|--//
+        const workInProgress = (uitsendingsFooter: HTMLElement) => {
+          $('[class*="purple"]').on('click', () => {
+            uitsendingsFooter.querySelector('#opdatering div').className = '';
+            new GetDesign.forPage('purple-main');
+          });
+          $('[class*="red"]').on('click', () => {
+            uitsendingsFooter.querySelector('#opdatering div').className = '';
+            new GetDesign.forPage('red-main');
+          });
+          $('[class*="brown"]').on('click', () => {
+            uitsendingsFooter.querySelector('#opdatering div').className = '';
+            new GetDesign.forPage('brown-main');
+          });
+          $('[class*="grey"]').on('click', () => {
+            uitsendingsFooter.querySelector('#opdatering div').className = '';
+            new GetDesign.forPage('grey-main');
+          });
+          $('[class*="turquoise"]').on('click', () => {
+            uitsendingsFooter.querySelector('#opdatering div').className = '';
+            new GetDesign.forPage('turquoise-main');
+          });
+        };
+        workInProgress(uitsendingsFooter);
         break;
       case 'rooster-main':
         //--|▼| Change header date to present |▼|--//
@@ -132,7 +170,7 @@ export namespace UitsendingsMain {
 
         //--|▼| Reverts back to previously displayed information |▼|--//
         const showInfo = (uitsendingsMain: HTMLElement, uitsendingsFooter: HTMLElement, uitsendingsData: HTMLElement) => {
-          let revealContent: HTMLButtonElement = uitsendingsMain.querySelector(' .show-numbers button');
+          let revealContent: HTMLButtonElement = uitsendingsMain.querySelector('.show-numbers button');
           let revertMain: String = uitsendingsData.querySelector('footer p').innerHTML;
           $(revealContent).on('click', () => {
             uitsendingsFooter.querySelector(`#${revertMain} div`).className = 'active';
@@ -151,9 +189,60 @@ export namespace UitsendingsMain {
         };
         showInfo(uitsendingsMain, uitsendingsFooter, uitsendingsData);
         break;
+      case 'purple-main':
+        //--|▼| Goes back to update view inside main container |▼|--//
+        const purpleBack = (uitsendingsFooter: HTMLElement) => {
+          $('.show-numbers button').on('click', () => {
+            uitsendingsFooter.querySelector('#opdatering div').className = 'active';
+            new GetDesign.forPage('opdatering-main');
+          });
+        };
+        purpleBack(uitsendingsFooter);
+        break;
+      case 'red-main':
+        //--|▼| Goes back to update view inside main container |▼|--//
+        const redBack = (uitsendingsFooter: HTMLElement) => {
+          $('.show-numbers button').on('click', () => {
+            uitsendingsFooter.querySelector('#opdatering div').className = 'active';
+            new GetDesign.forPage('opdatering-main');
+          });
+        };
+        redBack(uitsendingsFooter);
+        break;
+      case 'brown-main':
+        //--|▼| Goes back to update view inside main container |▼|--//
+        const brownBack = (uitsendingsFooter: HTMLElement) => {
+          $('.show-numbers button').on('click', () => {
+            uitsendingsFooter.querySelector('#opdatering div').className = 'active';
+            new GetDesign.forPage('opdatering-main');
+          });
+        };
+        brownBack(uitsendingsFooter);
+        break;
+      case 'grey-main':
+        //--|▼| Goes back to update view inside main container |▼|--//
+        const greyBack = (uitsendingsFooter: HTMLElement) => {
+          $('.show-numbers button').on('click', () => {
+            uitsendingsFooter.querySelector('#opdatering div').className = 'active';
+            new GetDesign.forPage('opdatering-main');
+          });
+        };
+        greyBack(uitsendingsFooter);
+        break;
+      case 'turquoise-main':
+        //--|▼| Goes back to update view inside main container |▼|--//
+        const turquoiseBack = (uitsendingsFooter: HTMLElement) => {
+          $('.show-numbers button').on('click', () => {
+            uitsendingsFooter.querySelector('#opdatering div').className = 'active';
+            new GetDesign.forPage('opdatering-main');
+          });
+        };
+        turquoiseBack(uitsendingsFooter);
+        break;
     }
     //--► console.log(`--${pageName} Loaded`); ◄--//
   }
+
   export function showScreensaver(container: 'opdatering' | 'rooster' | 'statistieke', uitsendingsMain: HTMLElement, uitsendingsFooter: HTMLElement, uitsendingsData: HTMLElement) {
     let hideInfo: HTMLElement = uitsendingsMain.querySelector(`#${container}-date  .hide-numbers`);
     let footerButtons: Object = uitsendingsFooter.getElementsByTagName('nav');
@@ -170,7 +259,6 @@ export namespace UitsendingsMain {
       new GetDesign.forPage('rain-main');
     });
   }
-
   export function getPresent(format: String | '2000-01-01' | 'Weekday, 00 Month YYYY' | '00 Weekday, Month YYYY') {
     const presentDate: String = Date();
     let monthDay: String | Number = presentDate.split(' ')[2];

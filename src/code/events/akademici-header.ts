@@ -1,4 +1,5 @@
 import { GetDesign } from 'code/utilities/GetDesign';
+import { GetArray } from 'code/utilities/GetArray';
 export namespace AkademiciHeader {
   export function eventsFor(pageName: String | 'default-header') {
     const akademiciBody: HTMLElement = document.getElementById('akademici-body');
@@ -10,12 +11,17 @@ export namespace AkademiciHeader {
     const akademiciData: HTMLElement = document.getElementById('akademici-data');
     switch (pageName) {
       case 'default-header':
-        //--|▼| Gets the overlay for the header dropdowns |▼|--//
+        const defaultHeaderLinks = () => {
+          $('#akademici-button div button a').attr('href', new GetArray.Akademici('header')[0].sharepoint);
+          $('#departemente-button div button a').attr('href', new GetArray.Akademici('header')[0].akademia);
+        };
+        defaultHeaderLinks();
+
+        //--|▼| Retrieve overlay dropdowns for header buttons |▼|--//
         const showDropdown = (akademiciHeader: HTMLElement, akademiciMain: HTMLElement, akademiciOverlay: HTMLElement) => {
           let akademiciButton: HTMLDivElement = akademiciHeader.querySelector('#akademici-button div');
           let departementeButton: HTMLDivElement = akademiciHeader.querySelector('#departemente-button div');
 
-          console.log(akademiciButton);
           //--▼ Used jQuery to append dropdowns within the overlay container ▼--//
           function toggleDropdowns(akademiciMain: HTMLElement, akademiciOverlay: HTMLElement, enable: HTMLElement, disable: HTMLElement) {
             disable.className = '';
@@ -32,7 +38,7 @@ export namespace AkademiciHeader {
                   <nav id="akademici-dropdown">
                     <div id="argief">
                       <button>
-                        <a href="#" target="_blank">
+                        <a href="${new GetArray.Akademici('header')[0].archive}" target="_blank">
                           <i class="fas fa-archive"></i>
                           <i class="fad fa-archive"></i>
                           <h2>Argief</h2>
@@ -42,7 +48,7 @@ export namespace AkademiciHeader {
                   
                     <div id="epos">
                       <button>
-                        <a href="#" target="_blank">
+                        <a href="${new GetArray.Akademici('header')[0].email}" target="_blank">
                           <i class="fas fa-envelope-open-text"></i>
                           <i class="fad fa-envelope-open-text"></i>
                           <h2>E-pos</h2>
@@ -50,12 +56,22 @@ export namespace AkademiciHeader {
                       </button>
                     </div>
                   
-                    <div id="kalender">
+                    <div id="week-kalender">
                       <button>
-                        <a href="#" target="_blank">
-                          <i class="fas fa-users-class"></i>
-                          <i class="fad fa-users-class"></i>
-                          <h2>Kalender</h2>
+                        <a href="${new GetArray.Akademici('header')[0].weekCalender}" target="_blank">
+                          <i class="fas fa-calendar-week"></i>
+                          <i class="fad fa-calendar-week"></i>
+                          <h2>Week Kalender</h2>
+                        </a>
+                      </button>
+                    </div>
+                  
+                    <div id="maand-kalender">
+                      <button>
+                        <a href="${new GetArray.Akademici('header')[0].monthCalender}" target="_blank">
+                          <i class="fas fa-calendar-alt"></i>
+                          <i class="fad fa-calendar-alt"></i>
+                          <h2>Maand Kalender</h2>
                         </a>
                       </button>
                     </div>
@@ -63,14 +79,14 @@ export namespace AkademiciHeader {
 
                   <div class="background"></div>
                 `);
-                //--► console.log('Show Uitsendings'); ◄--//
+                //--► console.log('Show Akademici'); ◄--//
                 break;
               case 'departemente':
                 $(akademiciOverlay).append(`
                   <nav id="departemente-dropdown">
                     <div id="uitsendings">
                       <button>
-                        <a href="#" target="_self">
+                        <a href="${new GetArray.Akademici('header')[1].uitsendings}" target="_self">
                           <img src="images/svg/akademia/av-white.svg" alt="AV Logo" />
                           <img src="images/svg/akademia/av-bronze.svg" alt="AV Logo" />
                           <h2>Uitsendings</h2>
@@ -80,7 +96,7 @@ export namespace AkademiciHeader {
                   
                     <div id="administrasie">
                       <button>
-                        <a href="https://tertiusroach.github.io/workflow-setup/dist/index.html" target="_self">
+                        <a href="${new GetArray.Akademici('header')[1].administrasie}" target="_self">
                           <i class="fas fa-file-alt"></i>
                           <i class="fad fa-file-alt"></i>
                           <h2>Administrasie</h2>
@@ -90,7 +106,7 @@ export namespace AkademiciHeader {
                   
                     <div id="operasioneel">
                       <button>
-                        <a href="#" target="_self">
+                        <a href="${new GetArray.Akademici('header')[1].operasioneel}" target="_self">
                           <i class="fas fa-chart-network"></i>
                           <i class="fad fa-chart-network"></i>
                           <h2>Operasioneel</h2>
@@ -101,7 +117,7 @@ export namespace AkademiciHeader {
 
                 <div class="background"></div>
                 `);
-                //--► console.log('Show Departemente'); ◄--//
+                //--► console.log('Show Departements'); ◄--//
                 break;
             }
 
