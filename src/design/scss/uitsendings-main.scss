@@ -1122,19 +1122,19 @@
     h1 {
       color: $purple-light;
       padding-bottom: 2rem;
-      animation-duration: 5s;
+      animation-duration: 2s;
       animation-name: zoomText;
     }
     svg {
       color: $purple-dark;
-      animation-duration: 10s;
+      animation-duration: 5s;
       animation-name: zoomIcon;
     }
     h1,
     svg {
       opacity: 0;
       cursor: default;
-      animation-delay: 2s;
+      /*animation-delay: 2s;*/
       animation-fill-mode: forwards;
       filter: drop-shadow(0 0 64px rgba($purple-neon, 0.5));
     }
@@ -1297,19 +1297,19 @@
     h1 {
       color: $red-light;
       padding-bottom: 2rem;
-      animation-duration: 5s;
+      animation-duration: 2s;
       animation-name: zoomText;
     }
     svg {
       color: $red-dark;
-      animation-duration: 10s;
+      animation-duration: 5s;
       animation-name: zoomIcon;
     }
     h1,
     svg {
       opacity: 0;
       cursor: default;
-      animation-delay: 2s;
+      /*animation-delay: 2s;*/
       animation-fill-mode: forwards;
       filter: drop-shadow(0 0 64px rgba($red-neon, 0.5));
     }
@@ -1472,19 +1472,19 @@
     h1 {
       color: $brown-light;
       padding-bottom: 2rem;
-      animation-duration: 5s;
+      animation-duration: 2s;
       animation-name: zoomText;
     }
     svg {
       color: $brown-dark;
-      animation-duration: 10s;
+      animation-duration: 5s;
       animation-name: zoomIcon;
     }
     h1,
     svg {
       opacity: 0;
       cursor: default;
-      animation-delay: 2s;
+      /*animation-delay: 2s;*/
       animation-fill-mode: forwards;
       filter: drop-shadow(0 0 64px rgba($brown-neon, 0.5));
     }
@@ -1647,19 +1647,19 @@
     h1 {
       color: $grey-light;
       padding-bottom: 2rem;
-      animation-duration: 5s;
+      animation-duration: 2s;
       animation-name: zoomText;
     }
     svg {
       color: $grey-dark;
-      animation-duration: 10s;
+      animation-duration: 5s;
       animation-name: zoomIcon;
     }
     h1,
     svg {
       opacity: 0;
       cursor: default;
-      animation-delay: 2s;
+      /*animation-delay: 2s;*/
       animation-fill-mode: forwards;
       filter: drop-shadow(0 0 64px rgba($grey-neon, 0.5));
     }
@@ -1820,21 +1820,21 @@
     justify-content: center;
 
     h1 {
-      color: $turquoise-light;
       padding-bottom: 2rem;
-      animation-duration: 5s;
+      animation-duration: 2s;
+      color: $turquoise-light;
       animation-name: zoomText;
     }
     svg {
       color: $turquoise-dark;
-      animation-duration: 10s;
+      animation-duration: 5s;
       animation-name: zoomIcon;
     }
     h1,
     svg {
       opacity: 0;
       cursor: default;
-      animation-delay: 2s;
+      /*animation-delay: 2s;*/
       animation-fill-mode: forwards;
       filter: drop-shadow(0 0 64px rgba($turquoise-neon, 0.5));
     }

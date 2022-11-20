@@ -73,22 +73,20 @@ export namespace UitsendingsSidebar {
         };
         sidebarOverlayRetrieve(uitsendingsHeader, uitsendingsSidebar, uitsendingsOverlay);
 
-        //--|▼| Replace links of sidebar for each month to Google Drive |▼|--//
+        //--|▼| Replace sidebar links to Google Drive URL's |▼|--//
         const defaultSidebarLinks = () => {
-          /*
-          $('#january-button button a').attr('href', GetArray.uitsendings('sidebar')[0].jan);
-          $('#february-button button a').attr('href', GetArray.uitsendings('sidebar')[0].feb);
-          $('#march-button button a').attr('href', GetArray.uitsendings('sidebar')[0].mar);
-          $('#april-button button a').attr('href', GetArray.uitsendings('sidebar')[0].apr);
-          $('#may-button button a').attr('href', GetArray.uitsendings('sidebar')[0].may);
-          $('#june-button button a').attr('href', GetArray.uitsendings('sidebar')[0].jun);
-          $('#july-button button a').attr('href', GetArray.uitsendings('sidebar')[0].jul);
-          $('#august-button button a').attr('href', GetArray.uitsendings('sidebar')[0].aug);
-          $('#september-button button a').attr('href', GetArray.uitsendings('sidebar')[0].sep);
-          $('#october-button button a').attr('href', GetArray.uitsendings('sidebar')[0].oct);
-          $('#november-button button a').attr('href', GetArray.uitsendings('sidebar')[0].nov);
-          $('#december-button button a').attr('href', GetArray.uitsendings('sidebar')[0].dec);
-          */
+          $('#january-button button a').attr('href', new GetArray.Uitsendings('sidebar')[0].jan);
+          $('#february-button button a').attr('href', new GetArray.Uitsendings('sidebar')[0].feb);
+          $('#march-button button a').attr('href', new GetArray.Uitsendings('sidebar')[0].mar);
+          $('#april-button button a').attr('href', new GetArray.Uitsendings('sidebar')[0].apr);
+          $('#may-button button a').attr('href', new GetArray.Uitsendings('sidebar')[0].may);
+          $('#june-button button a').attr('href', new GetArray.Uitsendings('sidebar')[0].jun);
+          $('#july-button button a').attr('href', new GetArray.Uitsendings('sidebar')[0].jul);
+          $('#august-button button a').attr('href', new GetArray.Uitsendings('sidebar')[0].aug);
+          $('#september-button button a').attr('href', new GetArray.Uitsendings('sidebar')[0].sep);
+          $('#october-button button a').attr('href', new GetArray.Uitsendings('sidebar')[0].oct);
+          $('#november-button button a').attr('href', new GetArray.Uitsendings('sidebar')[0].nov);
+          $('#december-button button a').attr('href', new GetArray.Uitsendings('sidebar')[0].dec);
         };
         defaultSidebarLinks();
         break;

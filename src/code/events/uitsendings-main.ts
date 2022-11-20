@@ -27,6 +27,7 @@ export namespace UitsendingsMain {
         //--|▼| Displays progress update  |▼|--//
         $('.show-numbers button').on('click', () => {
           uitsendingsFooter.querySelector('#opdatering div').className = 'active';
+          uitsendingsData.querySelector('footer p').textContent = 'opdatering';
           new GetDesign.forPage('opdatering-main');
         });
         break;
@@ -191,53 +192,38 @@ export namespace UitsendingsMain {
         break;
       case 'purple-main':
         //--|▼| Goes back to update view inside main container |▼|--//
-        const purpleBack = (uitsendingsFooter: HTMLElement) => {
-          $('.show-numbers button').on('click', () => {
-            uitsendingsFooter.querySelector('#opdatering div').className = 'active';
-            new GetDesign.forPage('opdatering-main');
-          });
-        };
-        purpleBack(uitsendingsFooter);
+        $('.show-numbers button').on('click', () => {
+          //--|▼| Retrieves previously active page for main container |▼|--//
+          UitsendingsMain.retrieveMain(uitsendingsFooter, uitsendingsData);
+        });
         break;
       case 'red-main':
         //--|▼| Goes back to update view inside main container |▼|--//
-        const redBack = (uitsendingsFooter: HTMLElement) => {
-          $('.show-numbers button').on('click', () => {
-            uitsendingsFooter.querySelector('#opdatering div').className = 'active';
-            new GetDesign.forPage('opdatering-main');
-          });
-        };
-        redBack(uitsendingsFooter);
+        $('.show-numbers button').on('click', () => {
+          //--|▼| Retrieves previously active page for main container |▼|--//
+          UitsendingsMain.retrieveMain(uitsendingsFooter, uitsendingsData);
+        });
         break;
       case 'brown-main':
         //--|▼| Goes back to update view inside main container |▼|--//
-        const brownBack = (uitsendingsFooter: HTMLElement) => {
-          $('.show-numbers button').on('click', () => {
-            uitsendingsFooter.querySelector('#opdatering div').className = 'active';
-            new GetDesign.forPage('opdatering-main');
-          });
-        };
-        brownBack(uitsendingsFooter);
+        $('.show-numbers button').on('click', () => {
+          //--|▼| Retrieves previously active page for main container |▼|--//
+          UitsendingsMain.retrieveMain(uitsendingsFooter, uitsendingsData);
+        });
         break;
       case 'grey-main':
         //--|▼| Goes back to update view inside main container |▼|--//
-        const greyBack = (uitsendingsFooter: HTMLElement) => {
-          $('.show-numbers button').on('click', () => {
-            uitsendingsFooter.querySelector('#opdatering div').className = 'active';
-            new GetDesign.forPage('opdatering-main');
-          });
-        };
-        greyBack(uitsendingsFooter);
+        $('.show-numbers button').on('click', () => {
+          //--|▼| Retrieves previously active page for main container |▼|--//
+          UitsendingsMain.retrieveMain(uitsendingsFooter, uitsendingsData);
+        });
         break;
       case 'turquoise-main':
         //--|▼| Goes back to update view inside main container |▼|--//
-        const turquoiseBack = (uitsendingsFooter: HTMLElement) => {
-          $('.show-numbers button').on('click', () => {
-            uitsendingsFooter.querySelector('#opdatering div').className = 'active';
-            new GetDesign.forPage('opdatering-main');
-          });
-        };
-        turquoiseBack(uitsendingsFooter);
+        $('.show-numbers button').on('click', () => {
+          //--|▼| Retrieves previously active page for main container |▼|--//
+          UitsendingsMain.retrieveMain(uitsendingsFooter, uitsendingsData);
+        });
         break;
     }
     //--► console.log(`--${pageName} Loaded`); ◄--//
@@ -287,6 +273,16 @@ export namespace UitsendingsMain {
         return `${monthDay} ${weekdag}, ${maand} ${year}`;
       default:
         return 'Undefined date format';
+    }
+  }
+
+  export function retrieveMain(uitsendingsFooter: HTMLElement, uitsendingsData: HTMLElement) {
+    var activeFooter: String = uitsendingsData.querySelector('footer p').textContent;
+    if (activeFooter === '') {
+      new GetDesign.forPage('default-main');
+    } else {
+      uitsendingsFooter.querySelector(`#${activeFooter} div`).className = 'active';
+      new GetDesign.forPage(`${activeFooter}-main`);
     }
   }
 }

@@ -191,9 +191,9 @@
 .purple-main .show-numbers button li:hover svg:nth-child(1){opacity:0}.purple-main .show-numbers button li:hover svg:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #957e7e)}
 .purple-main .show-numbers button li:hover h3{color:#c8c0c0;clip-path:inset(0 -16px -16px 0);filter:drop-shadow(0 0 .75rem #957e7e)}
 .purple-main #working-icon{display:flex;grid-row:1/5;grid-column:1/4;align-items:center;flex-direction:column;justify-content:center}
-.purple-main #working-icon h1{color:#b4a7d6;padding-bottom:2rem;animation-duration:5s;animation-name:zoomText}
-.purple-main #working-icon svg{color:#20124d;animation-duration:10s;animation-name:zoomIcon}
-.purple-main #working-icon h1,.purple-main #working-icon svg{opacity:0;cursor:default;animation-delay:2s;animation-fill-mode:forwards;filter:drop-shadow(0 0 64px rgba(153,0,255,0.5))}
+.purple-main #working-icon h1{color:#b4a7d6;padding-bottom:2rem;animation-duration:2s;animation-name:zoomText}
+.purple-main #working-icon svg{color:#20124d;animation-duration:5s;animation-name:zoomIcon}
+.purple-main #working-icon h1,.purple-main #working-icon svg{opacity:0;cursor:default;animation-fill-mode:forwards;filter:drop-shadow(0 0 64px rgba(153,0,255,0.5))}
 @keyframes zoomIcon{0%{opacity:1;font-size:0}100%{opacity:1;font-size:1000%}
 }@keyframes zoomText{0%{opacity:1;font-size:0}100%{opacity:1;font-size:32px}
 }.purple-main .background{display:grid;grid-row:1/6;grid-column:1/4;grid-template-rows:1fr;grid-template-columns:1fr;background:radial-gradient(circle,#b4a7d6,#20124d 95%)}
@@ -212,9 +212,9 @@
 .red-main .show-numbers button li:hover svg:nth-child(1){opacity:0}.red-main .show-numbers button li:hover svg:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #957e7e)}
 .red-main .show-numbers button li:hover h3{color:#c8c0c0;clip-path:inset(0 -16px -16px 0);filter:drop-shadow(0 0 .75rem #957e7e)}
 .red-main #working-icon{display:flex;grid-row:1/5;grid-column:1/4;align-items:center;flex-direction:column;justify-content:center}
-.red-main #working-icon h1{color:#ea9999;padding-bottom:2rem;animation-duration:5s;animation-name:zoomText}
-.red-main #working-icon svg{color:#600;animation-duration:10s;animation-name:zoomIcon}
-.red-main #working-icon h1,.red-main #working-icon svg{opacity:0;cursor:default;animation-delay:2s;animation-fill-mode:forwards;filter:drop-shadow(0 0 64px rgba(255,0,0,0.5))}
+.red-main #working-icon h1{color:#ea9999;padding-bottom:2rem;animation-duration:2s;animation-name:zoomText}
+.red-main #working-icon svg{color:#600;animation-duration:5s;animation-name:zoomIcon}
+.red-main #working-icon h1,.red-main #working-icon svg{opacity:0;cursor:default;animation-fill-mode:forwards;filter:drop-shadow(0 0 64px rgba(255,0,0,0.5))}
 @keyframes zoomIcon{0%{opacity:1;font-size:0}100%{opacity:1;font-size:1000%}
 }@keyframes zoomText{0%{opacity:1;font-size:0}100%{opacity:1;font-size:32px}
 }.red-main .background{display:grid;grid-row:1/6;grid-column:1/4;grid-template-rows:1fr;grid-template-columns:1fr;background:radial-gradient(circle,#ea9999,#600 95%)}
@@ -233,9 +233,9 @@
 .brown-main .show-numbers button li:hover svg:nth-child(1){opacity:0}.brown-main .show-numbers button li:hover svg:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #957e7e)}
 .brown-main .show-numbers button li:hover h3{color:#c8c0c0;clip-path:inset(0 -16px -16px 0);filter:drop-shadow(0 0 .75rem #957e7e)}
 .brown-main #working-icon{display:flex;grid-row:1/5;grid-column:1/4;align-items:center;flex-direction:column;justify-content:center}
-.brown-main #working-icon h1{color:#ffd3af;padding-bottom:2rem;animation-duration:5s;animation-name:zoomText}
-.brown-main #working-icon svg{color:#4f341d;animation-duration:10s;animation-name:zoomIcon}
-.brown-main #working-icon h1,.brown-main #working-icon svg{opacity:0;cursor:default;animation-delay:2s;animation-fill-mode:forwards;filter:drop-shadow(0 0 64px rgba(169,113,66,0.5))}
+.brown-main #working-icon h1{color:#ffd3af;padding-bottom:2rem;animation-duration:2s;animation-name:zoomText}
+.brown-main #working-icon svg{color:#4f341d;animation-duration:5s;animation-name:zoomIcon}
+.brown-main #working-icon h1,.brown-main #working-icon svg{opacity:0;cursor:default;animation-fill-mode:forwards;filter:drop-shadow(0 0 64px rgba(169,113,66,0.5))}
 @keyframes zoomIcon{0%{opacity:1;font-size:0}100%{opacity:1;font-size:1000%}
 }@keyframes zoomText{0%{opacity:1;font-size:0}100%{opacity:1;font-size:32px}
 }.brown-main .background{display:grid;grid-row:1/6;grid-column:1/4;grid-template-rows:1fr;grid-template-columns:1fr;background:radial-gradient(circle,#ffd3af,#4f341d 95%)}
@@ -254,9 +254,9 @@
 .grey-main .show-numbers button li:hover svg:nth-child(1){opacity:0}.grey-main .show-numbers button li:hover svg:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #957e7e)}
 .grey-main .show-numbers button li:hover h3{color:#c8c0c0;clip-path:inset(0 -16px -16px 0);filter:drop-shadow(0 0 .75rem #957e7e)}
 .grey-main #working-icon{display:flex;grid-row:1/5;grid-column:1/4;align-items:center;flex-direction:column;justify-content:center}
-.grey-main #working-icon h1{color:#efefef;padding-bottom:2rem;animation-duration:5s;animation-name:zoomText}
-.grey-main #working-icon svg{color:#434343;animation-duration:10s;animation-name:zoomIcon}
-.grey-main #working-icon h1,.grey-main #working-icon svg{opacity:0;cursor:default;animation-delay:2s;animation-fill-mode:forwards;filter:drop-shadow(0 0 64px rgba(190,194,203,0.5))}
+.grey-main #working-icon h1{color:#efefef;padding-bottom:2rem;animation-duration:2s;animation-name:zoomText}
+.grey-main #working-icon svg{color:#434343;animation-duration:5s;animation-name:zoomIcon}
+.grey-main #working-icon h1,.grey-main #working-icon svg{opacity:0;cursor:default;animation-fill-mode:forwards;filter:drop-shadow(0 0 64px rgba(190,194,203,0.5))}
 @keyframes zoomIcon{0%{opacity:1;font-size:0}100%{opacity:1;font-size:1000%}
 }@keyframes zoomText{0%{opacity:1;font-size:0}100%{opacity:1;font-size:32px}
 }.grey-main .background{display:grid;grid-row:1/6;grid-column:1/4;grid-template-rows:1fr;grid-template-columns:1fr;background:radial-gradient(circle,#efefef,#434343 95%)}
@@ -275,9 +275,9 @@
 .turquoise-main .show-numbers button li:hover svg:nth-child(1){opacity:0}.turquoise-main .show-numbers button li:hover svg:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #957e7e)}
 .turquoise-main .show-numbers button li:hover h3{color:#c8c0c0;clip-path:inset(0 -16px -16px 0);filter:drop-shadow(0 0 .75rem #957e7e)}
 .turquoise-main #working-icon{display:flex;grid-row:1/5;grid-column:1/4;align-items:center;flex-direction:column;justify-content:center}
-.turquoise-main #working-icon h1{color:#a2c4c9;padding-bottom:2rem;animation-duration:5s;animation-name:zoomText}
-.turquoise-main #working-icon svg{color:#0c343d;animation-duration:10s;animation-name:zoomIcon}
-.turquoise-main #working-icon h1,.turquoise-main #working-icon svg{opacity:0;cursor:default;animation-delay:2s;animation-fill-mode:forwards;filter:drop-shadow(0 0 64px rgba(0,255,255,0.5))}
+.turquoise-main #working-icon h1{padding-bottom:2rem;animation-duration:2s;color:#a2c4c9;animation-name:zoomText}
+.turquoise-main #working-icon svg{color:#0c343d;animation-duration:5s;animation-name:zoomIcon}
+.turquoise-main #working-icon h1,.turquoise-main #working-icon svg{opacity:0;cursor:default;animation-fill-mode:forwards;filter:drop-shadow(0 0 64px rgba(0,255,255,0.5))}
 @keyframes zoomIcon{0%{opacity:1;font-size:0}100%{opacity:1;font-size:1000%}
 }@keyframes zoomText{0%{opacity:1;font-size:0}100%{opacity:1;font-size:32px}
 }.turquoise-main .background{display:grid;grid-row:1/6;grid-column:1/4;grid-template-rows:1fr;grid-template-columns:1fr;background:radial-gradient(circle,#a2c4c9,#0c343d 95%)}

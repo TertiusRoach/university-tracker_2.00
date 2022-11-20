@@ -1,3 +1,5 @@
+import { GetDesign } from 'code/utilities/GetDesign';
+import { GetArray } from 'code/utilities/GetArray';
 export namespace UitsendingsOverlay {
   export function eventsFor(pageName: String | 'default-overlay') {
     const uitsendingsBody: HTMLElement = document.getElementById('uitsendings-body');
@@ -447,8 +449,195 @@ export namespace UitsendingsOverlay {
           });
         };
         defaultSidebarButtons(pageName, uitsendingsMain);
+
+        //--|▼| Replace overlay links for quick access |▼|--//
+        const sidebarOverlayLinks = (uitsendingsOverlay: HTMLElement) => {
+          let month = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+
+          for (let i = 0; i < month.length; i++) {
+            $(`#gr-sheet-${month[i]}`).attr('href', new GetArray.Uitsendings('overlay')[i].greenSheet);
+            $(`#gr-edit-${month[i]}`).attr('href', new GetArray.Uitsendings('overlay')[i].greenLinks);
+            $(`#gr-cloud-${month[i]}`).attr('href', new GetArray.Uitsendings('overlay')[i].greenStorage);
+
+            $(`#pi-sheet-${month[i]}`).attr('href', new GetArray.Uitsendings('overlay')[i].pinkSheet);
+            $(`#pi-edit-${month[i]}`).attr('href', new GetArray.Uitsendings('overlay')[i].pinkLinks);
+            $(`#pi-cloud-${month[i]}`).attr('href', new GetArray.Uitsendings('overlay')[i].pinkStorage);
+
+            $(`#ye-sheet-${month[i]}`).attr('href', new GetArray.Uitsendings('overlay')[i].yellowSheet);
+            $(`#ye-edit-${month[i]}`).attr('href', new GetArray.Uitsendings('overlay')[i].yellowLinks);
+            $(`#ye-cloud-${month[i]}`).attr('href', new GetArray.Uitsendings('overlay')[i].yellowStorage);
+
+            $(`#or-sheet-${month[i]}`).attr('href', new GetArray.Uitsendings('overlay')[i].orangeSheet);
+            $(`#or-edit-${month[i]}`).attr('href', new GetArray.Uitsendings('overlay')[i].orangeLinks);
+            $(`#or-cloud-${month[i]}`).attr('href', new GetArray.Uitsendings('overlay')[i].orangeStorage);
+
+            $(`#bl-sheet-${month[i]}`).attr('href', new GetArray.Uitsendings('overlay')[i].homeRecordings);
+            $(`#bl-edit-${month[i]}`).attr('href', new GetArray.Uitsendings('overlay')[i].blueLinks);
+            $(`#bl-cloud-${month[i]}`).attr('href', new GetArray.Uitsendings('overlay')[i].blueStorage);
+          }
+
+          //--|▼| Replace storage for active month for accurate storage |▼|--//
+          $('.true').on('mouseenter', () => {
+            let storageButtons: Object = uitsendingsOverlay.querySelectorAll('.true [id*="cloud"]');
+            //--▼ Minus 5 to exclude extra paperwork ▼--//
+            for (let i = 0; i < Object.keys(storageButtons).length - 5; i++) {
+              //--▼ Retrieve studio color based on its id tag ▼--//
+              var studioColor: String = storageButtons[i].id.split('-')[0];
+              $(storageButtons[i]).attr('href', assembleStorage(studioColor));
+            }
+          });
+        };
+        sidebarOverlayLinks(uitsendingsOverlay);
+
+        //--|▼| Temporary placeholders for unfinished sheets |▼|--//
+        const workInProgress = (uitsendingsOverlay: HTMLElement, uitsendingsFooter: HTMLElement, uitsendingsData: HTMLElement) => {
+          /*
+          function downplayFooter(uitsendingsFooter: HTMLElement, uitsendingsData: HTMLElement) {
+            var activeFooter: String = uitsendingsData.querySelector('footer p').textContent;
+            if (activeFooter !== '') {
+              uitsendingsFooter.querySelector(`#${activeFooter} div`).className = '';
+            }
+          }
+          */
+          $('[id*="pu"]').on('click', () => {
+            //--|▼| Clears active buttons inside footer element |▼|--//
+            UitsendingsOverlay.downplayFooter(uitsendingsFooter, uitsendingsData);
+            uitsendingsOverlay.style.display = 'none';
+            new GetDesign.forPage('purple-main');
+          });
+          $('[id*="re"]').on('click', () => {
+            //--|▼| Clears active buttons inside footer element |▼|--//
+            UitsendingsOverlay.downplayFooter(uitsendingsFooter, uitsendingsData);
+            uitsendingsOverlay.style.display = 'none';
+            new GetDesign.forPage('red-main');
+          });
+          $('[id*="br"]').on('click', () => {
+            //--|▼| Clears active buttons inside footer element |▼|--//
+            UitsendingsOverlay.downplayFooter(uitsendingsFooter, uitsendingsData);
+            uitsendingsOverlay.style.display = 'none';
+            new GetDesign.forPage('brown-main');
+          });
+          $('[id*="gy"]').on('click', () => {
+            //--|▼| Clears active buttons inside footer element |▼|--//
+            UitsendingsOverlay.downplayFooter(uitsendingsFooter, uitsendingsData);
+            uitsendingsOverlay.style.display = 'none';
+            new GetDesign.forPage('grey-main');
+          });
+          $('[id*="tu"]').on('click', () => {
+            //--|▼| Clears active buttons inside footer element |▼|--//
+            UitsendingsOverlay.downplayFooter(uitsendingsFooter, uitsendingsData);
+            uitsendingsOverlay.style.display = 'none';
+            new GetDesign.forPage('turquoise-main');
+          });
+        };
+        workInProgress(uitsendingsOverlay, uitsendingsFooter, uitsendingsData);
         break;
     }
     //--► console.log(`--${pageName} Loaded`); ◄--//
+  }
+
+  export function assembleStorage(studio: String | 'gr' | 'pi' | 'ye' | 'or' | 'bl' | 'pu' | 're' | 'br' | 'gy' | 'tu') {
+    let storage: String;
+    let present: String = Date();
+    let year: String = present.split(' ')[3];
+    let dayWeek = `${present.split(' ')[0]}`;
+    let monthAbbr: String = present.split(' ')[1];
+    let dayNumber: number = parseInt(`${present.split(' ')[2]}`);
+    switch (studio) {
+      case 'gr':
+        storage = 'Groen';
+        break;
+      case 'pi':
+        storage = 'Pienk';
+        break;
+      case 'ye':
+        storage = 'Geel';
+        break;
+      case 'or':
+        storage = 'Oranje';
+        break;
+      case 'bl':
+        storage = 'Blou';
+        break;
+      case 'pu':
+        storage = 'Pers';
+        break;
+      case 're':
+        storage = 'Rooi';
+        break;
+      case 'br':
+        storage = 'Bruin';
+        break;
+      case 'gy':
+        storage = 'Grys';
+        break;
+      case 'tu':
+        storage = 'Turkoois';
+        break;
+    }
+
+    const getMonth = (month: String) => {
+      switch (month) {
+        case 'Jan':
+          return '01. Januarie';
+        case 'Feb':
+          return '02. Februarie';
+        case 'Mar':
+          return '03. Maart';
+        case 'Apr':
+          return '04. April';
+        case 'May':
+          return '05. Mei';
+        case 'Jun':
+          return '06. Junie';
+        case 'Jul':
+          return '07. Julie';
+        case 'Aug':
+          return '08. Augustus';
+        case 'Sep':
+          return '09. September';
+        case 'Oct':
+          return '10. Oktober';
+        case 'Nov':
+          return '11. November';
+        case 'Dec':
+          return '12. Desember';
+      }
+    };
+
+    const getDay = (day: number | String, week: String) => {
+      let dayString: String;
+      if (day < 10) {
+        dayString = `0${day}.`;
+      } else {
+        dayString = `${day}.`;
+      }
+
+      switch (week) {
+        case 'Mon':
+          return `${dayString} Maandag`;
+        case 'Tue':
+          return `${dayString} Dinsdag`;
+        case 'Wed':
+          return `${dayString} Woensdag`;
+        case 'Thu':
+          return `${dayString} Donderdag`;
+        case 'Fri':
+          return `${dayString} Vrydag`;
+        case 'Sat':
+          return `${dayString} Saterdag`;
+        case 'Sun':
+          return `${dayString} Sondag`;
+      }
+    };
+
+    return `https://akademia900.sharepoint.com/sites/${storage}Ateljee/Shared%20Documents/${year}/${getMonth(monthAbbr)}/${getDay(dayNumber, dayWeek)}`;
+  }
+
+  export function downplayFooter(uitsendingsFooter: HTMLElement, uitsendingsData: HTMLElement) {
+    var activeFooter: String = uitsendingsData.querySelector('footer p').textContent;
+    if (activeFooter !== '') {
+      uitsendingsFooter.querySelector(`#${activeFooter} div`).className = '';
+    }
   }
 }

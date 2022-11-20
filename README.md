@@ -88,9 +88,7 @@ The [npm commands website](https://www.npmjs.com/package/gulp) for Gulp is a gre
 
 ### Visual Studio Code (Setup)
 
-Press (Ctrl + ,) to open Settings and search for 'Exclude' to hide files and folders that clutter the workspace.
-Alternative Way: File -> Preferences -> Settings -> Search for 'Exclude'
-
-Press (Ctrl + alt + s) to save without formatting
+Press (Ctrl + ,) or go to File -> Preferences -> Settings andd search for 'Exclude' to open to hide any clutter.
+Press (Ctrl + alt + s) to save without prettier reformatting the file.
 
 ---

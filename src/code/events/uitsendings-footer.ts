@@ -13,7 +13,7 @@ export namespace UitsendingsFooter {
     switch (pageName) {
       case 'default-footer':
         //--|▼| Changes button to the clicked icon |▼|--//
-        const toggleFooter = (uitsendingsFooter: HTMLElement) => {
+        const toggleFooter = (uitsendingsFooter: HTMLElement, uitsendingsData: HTMLElement) => {
           let footerButtons: Object = uitsendingsFooter.querySelectorAll('nav > div');
           let footerOpdatering: HTMLElement = uitsendingsFooter.querySelector('#opdatering');
           let footerRooster: HTMLElement = uitsendingsFooter.querySelector('#rooster');
@@ -31,6 +31,7 @@ export namespace UitsendingsFooter {
           $(footerOpdatering).on('click', () => {
             new GetDesign.forPage('opdatering-main');
             toggleButtons(footerButtons, footerOpdatering);
+            uitsendingsData.querySelector('footer p').textContent = 'opdatering';
 
             //--▼ Reverts to previously displayed info by using the data container ▼--//
             if (uitsendingsData.querySelector('main p') !== null) {
@@ -61,15 +62,17 @@ export namespace UitsendingsFooter {
             }
           });
           $(footerRooster).on('click', () => {
-            toggleButtons(footerButtons, footerRooster);
             new GetDesign.forPage('rooster-main');
+            toggleButtons(footerButtons, footerRooster);
+            uitsendingsData.querySelector('footer p').textContent = 'rooster';
           });
           $(footerStatistieke).on('click', () => {
             new GetDesign.forPage('statistieke-main');
             toggleButtons(footerButtons, footerStatistieke);
+            uitsendingsData.querySelector('footer p').textContent = 'statistieke';
           });
         };
-        toggleFooter(uitsendingsFooter);
+        toggleFooter(uitsendingsFooter, uitsendingsData);
         break;
     }
     //--► console.log(`--${pageName} Loaded`); ◄--//
