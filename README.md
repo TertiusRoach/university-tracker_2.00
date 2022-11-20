@@ -44,6 +44,7 @@ Paperwork is an integral part for any company and that's where this system comes
 ---
 
     npm install --save-dev @types/jquery
+    npm install --save-dev @google/clasp
 
 ---
 
