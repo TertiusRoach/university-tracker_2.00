@@ -5,30 +5,36 @@ import { Akademici } from './code/akademici';
 import { Index } from './code/index';
 namespace Main {
   //==================================//
-  /* console.log(document.referrer); */
+  //--|▼| Link Coil monetization services |▼|--//
+  const link = document.querySelector('link[rel="monetization"]');
+  link.addEventListener('monetization', () => {
+    // console.log(monetization);
+    console.log('Yippie! Monetization is on.');
+  });
   //==================================//
   //--|▼| Finds the location of the *.html file |▼|--//
   const page: String = window.location.href.split('/').pop().split('.')[0];
   switch (page) {
     case 'index':
-      console.log('Load index.ts');
       new Index.LoadDesign(page);
+      //--► console.log('--index.js Loaded'); ◄--//
       break;
     case 'uitsendings':
-      // console.log('Load uitsendings.ts');
       new Uitsendings.LoadDesign(page);
+      //--► console.log('--uitsendings.js Loaded'); ◄--//
       break;
     case 'akademici':
-      // console.log('Load akademici.ts');
+      // console.log('Load .ts');
       new Akademici.LoadDesign(page);
+      //--► console.log('--akademici.js Loaded'); ◄--//
       break;
     case 'administrasie':
-      // console.log('Load administrasie.ts');
       new Administrasie.LoadDesign(page);
+      //--► console.log('--administrasie.js Loaded'); ◄--//
       break;
     case 'operasioneel':
-      // console.log('Load operasioneel.ts');
       new Operasioneel.LoadDesign(page);
+      //--► console.log('--operasioneel.js Loaded'); ◄--//
       break;
   }
 }

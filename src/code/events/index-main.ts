@@ -11,14 +11,16 @@ export namespace IndexMain {
 
     switch (pageName) {
       case 'default-main':
+        /*
         console.log(pageName);
-        /* const monetization = document.querySelector('meta[name="monetization"]'); */
+        // const monetization = document.querySelector('meta[name="monetization"]');
         const link = document.querySelector('link[rel="monetization"]');
 
         link.addEventListener('monetization', () => {
           // console.log(monetization);
           console.log('Yippie! Monetization is on.');
         });
+        */
 
         break;
       case 'opdatering-main':
