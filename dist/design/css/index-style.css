@@ -23,7 +23,16 @@
 .default-header nav div button a img[src*="images/svg/**/*-white.svg"]{content:url("../../images/svg/university/university-white.svg")}
 .default-header nav div button a img[src*="images/svg/**/*-secondary.svg"]{content:url("../../images/svg/university/university-maroon.svg")}
 .default-main #company-logo img[src*="images/svg/**/*.svg"],.rain-main #company-logo img[src*="images/svg/**/*.svg"]{content:url("../../images/svg/university/university-purple.svg")}
-#index-main{grid-row:2/3;grid-column:2/4}#index-main #monitization{display:none}.default-main{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:44px repeat(3,1fr)}
+#index-main{grid-row:2/3;grid-column:2/4}#index-main section button[id*=monetization]{display:none;border:0;outline:0;background:0}
+#index-main section button[id*=monetization] li{height:44px;width:234px;display:flex;align-items:center;justify-content:left;text-decoration:none}
+#index-main section button[id*=monetization] li svg{z-index:1;cursor:pointer;font-size:2rem;position:fixed;margin-left:16px;padding-right:16px;filter:drop-shadow(0 0 4px #2e0e3b)}
+#index-main section button[id*=monetization] li svg:nth-child(1){opacity:100;color:#adaaaf;transition:opacity .25s}
+#index-main section button[id*=monetization] li svg:nth-child(2){opacity:0;color:#631b19;transition:opacity .25s}
+#index-main section button[id*=monetization] li h3{color:#adaaaf;transition:clip-path .25s;clip-path:inset(0 100% 0 0);padding:9.5px 16px 9.5px 64px}
+#index-main section button[id*=monetization] li:hover svg:nth-child(1){opacity:0}
+#index-main section button[id*=monetization] li:hover svg:nth-child(2){opacity:100;filter:drop-shadow(0 0 .75rem #957e7e)}
+#index-main section button[id*=monetization] li:hover h3{color:#c8c0c0;clip-path:inset(0 -16px -16px 0);filter:drop-shadow(0 0 .75rem #957e7e)}
+.default-main{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:44px repeat(3,1fr)}
 .default-main .not-monitized{grid-row:1/2;grid-column:1/2}.default-main .not-monitized button{border:0;outline:0;background:0}
 .default-main .not-monitized button li{height:44px;width:234px;display:flex;align-items:center;justify-content:left;text-decoration:none}
 .default-main .not-monitized button li svg{z-index:1;cursor:pointer;font-size:2rem;position:fixed;margin-left:16px;padding-right:16px;filter:drop-shadow(0 0 4px #2e0e3b)}
