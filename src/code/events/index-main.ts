@@ -11,8 +11,8 @@ export namespace IndexMain {
 
     switch (pageName) {
       case 'default-main':
-        const monetizationOff = document.querySelector('link[rel="monitization"]');
-        monetizationOff.addEventListener('monetization', () => {
+        const monetizationOn = document.querySelector('meta[name*="monetization"]');
+        monetizationOn.addEventListener('monetization', () => {
           console.log('Yippie! Monetization is on.');
         });
         break;
