@@ -11,6 +11,10 @@ export namespace IndexMain {
 
     switch (pageName) {
       case 'default-main':
+        const monetizationOff = document.querySelector('link[rel="monitization"]');
+        monetizationOff.addEventListener('monetization', () => {
+          console.log('Yippie! Monetization is on.');
+        });
         break;
       case 'opdatering-main':
         //--|▼| Change header date to present |▼|--//
